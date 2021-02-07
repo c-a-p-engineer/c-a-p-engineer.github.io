@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Categories on こぴぺたん ログ</title>
+    <link>https://c-a-p-engineer.github.io/categories/</link>
+    <description>Recent content in Categories on こぴぺたん ログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
+    
+        <atom:link href="https://c-a-p-engineer.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>syntax</title>
+        <link>https://c-a-p-engineer.github.io/categories/syntax/</link>
+        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        
+        
+        <guid>https://c-a-p-engineer.github.io/categories/syntax/</guid>
+        <description></description>
+        
+        <dc:creator>こぴぺたん</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>themes</title>
+        <link>https://c-a-p-engineer.github.io/categories/themes/</link>
+        <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
+        
+        
+        <guid>https://c-a-p-engineer.github.io/categories/themes/</guid>
+        <description></description>
+        
+        <dc:creator>こぴぺたん</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>hugo</title>
+        <link>https://c-a-p-engineer.github.io/categories/hugo/</link>
+        <pubDate>Wed, 18 Dec 2019 10:33:41 +0900</pubDate>
+        
+        
+        <guid>https://c-a-p-engineer.github.io/categories/hugo/</guid>
+        <description></description>
+        
+        <dc:creator>こぴぺたん</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>diagram</title>
+        <link>https://c-a-p-engineer.github.io/categories/diagram/</link>
+        <pubDate>Mon, 18 Nov 2019 21:00:06 +0900</pubDate>
+        
+        
+        <guid>https://c-a-p-engineer.github.io/categories/diagram/</guid>
+        <description></description>
+        
+        <dc:creator>こぴぺたん</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>math</title>
+        <link>https://c-a-p-engineer.github.io/categories/math/</link>
+        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
+        
+        
+        <guid>https://c-a-p-engineer.github.io/categories/math/</guid>
+        <description></description>
+        
+        <dc:creator>こぴぺたん</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

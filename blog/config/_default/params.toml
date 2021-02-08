@@ -4,7 +4,7 @@ description = "こぴぺたんの色んなメモ"
 custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
-meta_image = ""
+meta_image = "https://c-a-p-engineer.github.io/images/whoami/avatar.jpg"
 themecolor = ""
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]

@@ -22,5 +22,4 @@ date = "2021-02-01"
 ## お問い合わせ
 
 Twitterからお願いします。
-また個別に記事の指摘などがあれば、記事のコメント欄からお願いします。
-[Twitter](https://twitter.com/c_a_p_engineer)
+<a href="https://twitter.com/c_a_p_engineer" target="_blank">Twitter</a>

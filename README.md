@@ -31,7 +31,7 @@ hugo server
 hugo
 ```
 
-ファイル出力
+ファイル出力（削除 & 出力 & フォルダ移動）
 ```
 rm -rf ../docs;hugo && mv -fv ./public/ ../docs/
 ```

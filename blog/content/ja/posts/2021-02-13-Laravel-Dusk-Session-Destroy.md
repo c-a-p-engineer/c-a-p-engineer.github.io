@@ -93,7 +93,7 @@ class LoginTest extends DuskTestCase
 ## クッキーの削除
 人によっては ```createBrowsersFor``` だけでは不十分のようで、setup時にクッキーを破棄して対応をする必要があるようです。
 
-``` php {linenos=table,hl_lines=[12]}
+``` php {linenos=table,hl_lines=[11]}
 <?php
 class LoginTest extends DuskTestCase
 {

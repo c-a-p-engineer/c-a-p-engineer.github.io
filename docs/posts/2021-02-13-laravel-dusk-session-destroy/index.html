@@ -1329,7 +1329,7 @@
 <meta name="keywords" content="PHP,Laravel,テスト">
 
 <meta name="created" content="2021-02-13T09:00:00&#43;0900">
-<meta name="modified" content="2021-02-13T09:00:00&#43;0900">
+<meta name="modified" content="2021-02-16T09:00:00&#43;0900">
 <meta property="article:published_time" content="2021-02-13T09:00:00&#43;0900">
 
 <meta name="author" content="こぴぺたん">
@@ -1387,7 +1387,7 @@
     "@type": "WebPage",
     "headline": "Laravel Dusk テスト間でセッションデータを破棄する方法",
     "datePublished": "2021-02-13T09:00:00+09:00",
-    "dateModified": "2021-02-13T09:00:00+09:00",
+    "dateModified": "2021-02-16T09:00:00+09:00",
     "url" : "https://c-a-p-engineer.github.io/posts/2021-02-13-laravel-dusk-session-destroy/",
     "description": "Laravel Duskだと1クラス内でのテストケースだと同一ブラウザがテストされてしまいます。それを防ぐための対策です。",
     "keywords": ["PHP","Laravel","テスト"],
@@ -1627,6 +1627,8 @@
 <div class="single__infos">
   <time class="single__info" title="作成日">📅&nbsp;2021/2/13 </time>
   
+  &nbsp;&middot;&nbsp; <time class="single__info" title="編集日"> 📝&nbsp;2021/2/16 </time>
+  
   &nbsp;&middot;&nbsp; <span class="single__info" title="読了時間"> ☕&nbsp;2&nbsp;分で読めます </span>
   
   <span class="single__info">
@@ -1665,6 +1667,11 @@
     <li><a href="#サンプルテスト成功">サンプルテスト（成功）</a></li>
     <li><a href="#クッキーの削除">クッキーの削除</a></li>
     <li><a href="#参考">参考</a></li>
+    <li><a href="#追記20210216">追記（2021/02/16）</a>
+      <ul>
+        <li><a href="#laravel-dusk-バージョン">Laravel Dusk バージョン</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1842,6 +1849,13 @@
 </div>
 </div><h2 id="参考">参考</h2>
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://stackoverflow.com/questions/44906797/laravel-dusk-how-to-destroy-session-data-between-tests" data-iframely-url="//cdn.iframe.ly/UkvIDtL"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<h2 id="追記20210216">追記（2021/02/16）</h2>
+<p>僕の場合 <code>createBrowsersFor</code> ではうまく行かなかったので <code>browse</code> で <code>deleteAllCookies</code> で対応いたしました。</p>
+<h3 id="laravel-dusk-バージョン">Laravel Dusk バージョン</h3>
+<blockquote>
+<p>Laravel Dusk 6.11</p>
+</blockquote>
+
     </article>
     
     
@@ -2552,6 +2566,11 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#サンプルテスト成功">サンプルテスト（成功）</a></li>
     <li><a href="#クッキーの削除">クッキーの削除</a></li>
     <li><a href="#参考">参考</a></li>
+    <li><a href="#追記20210216">追記（2021/02/16）</a>
+      <ul>
+        <li><a href="#laravel-dusk-バージョン">Laravel Dusk バージョン</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>

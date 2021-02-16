@@ -23,7 +23,7 @@
         <link>https://c-a-p-engineer.github.io/posts/2021-02-13-laravel-dusk-session-destroy/</link>
         <pubDate>Sat, 13 Feb 2021 09:00:00 +0900</pubDate>
         
-        <atom:modified>Sat, 13 Feb 2021 09:00:00 +0900</atom:modified>
+        <atom:modified>Tue, 16 Feb 2021 09:00:00 +0900</atom:modified>
         <guid>https://c-a-p-engineer.github.io/posts/2021-02-13-laravel-dusk-session-destroy/</guid>
         <description>Laravel Dusk テスト間でセッションデータを破棄する方法 Laravel Duskでテストを作成していると1クラス内で複数のテストメソッドを作った場合に同じブラウザでテ</description>
         

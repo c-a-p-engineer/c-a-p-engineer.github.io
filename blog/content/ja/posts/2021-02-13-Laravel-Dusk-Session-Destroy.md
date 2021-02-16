@@ -1,6 +1,7 @@
 ---
 title: "Laravel Dusk テスト間でセッションデータを破棄する方法"
 date: 2021-02-13T09:00:00+09:00
+LastMod: 2021-02-16T09:00:00+09:00
 description: "Laravel Duskだと1クラス内でのテストケースだと同一ブラウザがテストされてしまいます。それを防ぐための対策です。"
 draft: false
 enableToc: true
@@ -112,3 +113,9 @@ class LoginTest extends DuskTestCase
 
 ## 参考
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://stackoverflow.com/questions/44906797/laravel-dusk-how-to-destroy-session-data-between-tests" data-iframely-url="//cdn.iframe.ly/UkvIDtL"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+
+## 追記（2021/02/16）
+僕の場合 ```createBrowsersFor``` ではうまく行かなかったので ```browse``` で ```deleteAllCookies``` で対応いたしました。
+
+### Laravel Dusk バージョン
+>Laravel Dusk 6.11

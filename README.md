@@ -31,9 +31,14 @@ hugo server
 hugo
 ```
 
+ファイル出力（圧縮）
+```
+hugo --minify
+```
+
 ファイル出力（削除 & 出力 & フォルダ移動）
 ```
-rm -rf ../docs;hugo && mv -fv ./public/ ../docs/
+rm -rf ../docs;hugo --minify && mv -fv ./public/ ../docs/
 ```
 
 # Usage

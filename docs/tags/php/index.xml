@@ -12,11 +12,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 13 Feb 2021 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2021 09:00:00 +0900</lastBuildDate>
     
         <atom:link href="https://c-a-p-engineer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>【PHP】uniqidの危険性</title>
+        <link>https://c-a-p-engineer.github.io/posts/2021-02-18-php-uniqid/</link>
+        <pubDate>Thu, 18 Feb 2021 09:00:00 +0900</pubDate>
+        
+        <atom:modified>Thu, 18 Feb 2021 09:00:00 +0900</atom:modified>
+        <guid>https://c-a-p-engineer.github.io/posts/2021-02-18-php-uniqid/</guid>
+        <description>uniqidの危険性 PHPでは uniqid という一意のIDを生成するという意味の名を持つ関数が存在します。 ですがこれを安易に使用するととても危険です。</description>
+        
+        <dc:creator>こぴぺたん</dc:creator>
+        <media:content url="https://c-a-p-engineer.github.io/images/thumbnail/php.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>PHP</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Laravel Dusk テスト間でセッションデータを破棄する方法</title>

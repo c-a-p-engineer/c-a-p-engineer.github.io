@@ -10,6 +10,8 @@ tags:
 - PHP
 - Laravel
 - テスト
+categories: 
+- PHP
 image: images/thumbnail/laravel-l-slant.png
 ---
 
@@ -112,7 +114,7 @@ class LoginTest extends DuskTestCase
 
 
 ## 参考
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://stackoverflow.com/questions/44906797/laravel-dusk-how-to-destroy-session-data-between-tests" data-iframely-url="//cdn.iframe.ly/UkvIDtL"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<a href="https://stackoverflow.com/questions/44906797/laravel-dusk-how-to-destroy-session-data-between-tests" target="_blank">php - Laravel Dusk, how to destroy session data between tests - Stack Overflow</a>
 
 ## 追記（2021/02/16）
 僕の場合 ```createBrowsersFor``` ではうまく行かなかったので ```browse``` で ```deleteAllCookies``` で対応いたしました。

@@ -11,7 +11,7 @@ tags:
 - Laravel
 - テスト
 categories: 
-- PHP
+- Laravel
 image: images/thumbnail/laravel-l-slant.png
 ---
 

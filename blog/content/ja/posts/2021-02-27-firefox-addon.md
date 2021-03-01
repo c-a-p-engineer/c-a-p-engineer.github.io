@@ -13,7 +13,7 @@ image: images/thumbnail/firefox-logo.svg
 image_description: 'Firefoxは、米国およびその他の国におけるMozillaFoundationの商標です。'
 ---
 
-# Firefox
+# Firefoxアドオンまとめ
 開発などで使用しているアドオンメモ
 
 ## 便利系

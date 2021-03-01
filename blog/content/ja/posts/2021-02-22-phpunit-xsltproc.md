@@ -60,7 +60,7 @@ vendor/bin/phpunit
 {{< codes yum apt-get >}}
   {{< code >}}
   ```bush:yum
-  yum install xsltproc
+  yum -y install libxslt cf.
   ```
   {{< /code >}}
 

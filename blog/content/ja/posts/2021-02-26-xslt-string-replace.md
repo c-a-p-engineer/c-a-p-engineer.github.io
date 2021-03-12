@@ -19,7 +19,7 @@ xlstのバージョン1.0では文字の置換は可能なのですが、1文字
 ## テンプレート導入
 xsltファイル内に以下のテンプレートを追記。
 
-``` xml:string-replace-all.xslt
+``` xml:string-replace-all.xslt {linenos=table}
 <xsl:template name="string-replace-all">
   <xsl:param name="text" />
   <xsl:param name="replace" />
@@ -43,7 +43,7 @@ xsltファイル内に以下のテンプレートを追記。
 
 ## 使用方法
 実際に使用してみます。
-``` xml:sample.xml
+``` xml:sample.xml {linenos=table}
 <xsl:variable name="myVariable">
   <xsl:call-template name="string-replace-all">
     <xsl:with-param name="text" select="'This is a {old} text'" />
@@ -55,7 +55,7 @@ xsltファイル内に以下のテンプレートを追記。
 ```
 
 説明付き
-``` xml:sample.xml
+``` xml:sample.xml {linenos=table}
 <!-- 変数 myVariable の宣言 -->
 <xsl:variable name="myVariable">
   <!-- テンプレート string-replace-all を呼び出す -->

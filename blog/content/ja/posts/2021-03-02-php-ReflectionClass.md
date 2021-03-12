@@ -94,7 +94,7 @@ PHP Fatal error:  Uncaught Error: Call to private method SampleClass::output() f
 ### ReflectionClassを使用
 実際に ReflectionClass を使用してprivateなproperty、Methodに読み書き、使用してみる。
 
-``` php
+``` php {linenos=table}
 <?php
 $sample = new SampleClass();
 $refrection = new ReflectionClass(get_class($sample));

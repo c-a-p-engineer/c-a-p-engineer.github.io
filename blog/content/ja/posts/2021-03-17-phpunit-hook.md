@@ -7,6 +7,7 @@ enableToc: true
 enableTocContent: true
 tags: 
 - PHP
+- PHPUnit
 - テスト
 categories: 
 - PHP
@@ -121,38 +122,6 @@ AfterLastTestHook
     public function executeAfterTestWarning(string $test, string $message, float $time): void{
         // AfterTestWarningHook
         // テスト警告
-    }
-
-    /**
-     * @interface BeforeFirstTestHook
-     */
-    public function executeBeforeFirstTest(): void{
-        // BeforeFirstTestHook
-        // 全テスト開始前
-    }
-
-    /**
-     * @interface AfterLastTestHook
-     */
-    public function executeBeforeTest(string $test): void{
-        // BeforeTestHook
-        // テスト開始
-    }
-    
-    /**
-     * @interface AfterLastTestHook
-     */
-    public function executeAfterLastTest(): void{
-        // AfterLastTestHook
-        // 全テスト終了
-    }
-
-    /**
-     * @interface AfterTestHook
-     */
-    public function executeAfterTest(string $test, float $time): void{
-        // AfterTestHook
-        // テスト終了後
     }
 }
 ```

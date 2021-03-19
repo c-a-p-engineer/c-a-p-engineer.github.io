@@ -131,10 +131,8 @@ Exception: error
 
 There was 1 warning:
 
-1) Tests\ExampleTest::testWarning
-PHPUnit\Util\Xml\Exception: Could not read "example.file".
-
-/var/www/php/tests/ExampleTest.php:70
+1) Tests\Example::testWarning
+assertNotIsWritable() is deprecated and will be removed in PHPUnit 10. Refactor your code to use assertIsNotWritable() instead.
 
 --
 

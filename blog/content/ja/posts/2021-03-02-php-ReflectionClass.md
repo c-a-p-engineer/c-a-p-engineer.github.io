@@ -72,9 +72,9 @@ $sample = new SampleClass();
 echo $sample->text;
 ```
 
-↓実行結果
+実行結果
 
-```bash:実行結果
+```bash
 PHP Fatal error:  Uncaught Error: Cannot access private property SampleClass::$text
 ```
 
@@ -140,9 +140,9 @@ $sum->setAccessible(true);
 echo $sum->invoke($sample, 1, 2).PHP_EOL;
 ```
 
-↓実行結果
+実行結果
 
-``` bash:実行結果
+``` bash
 Private Property Before--------------------
 text
 

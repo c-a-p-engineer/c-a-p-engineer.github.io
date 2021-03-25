@@ -20,9 +20,9 @@ image: images/thumbnail/php.png
 これは PHPUnit のフックインターフェイスのテスト用のテストサンプル。
 PHPUnit の Error や Warning など色んなテスト結果出力させます。
 
-## 前提
-* PHPUnit 9,5
+## 確認環境
 * PHP 7.4
+* PHPUnit 9,5
 
 ## テストファイル作成
 以下のテスト結果が発生するようにしています。
@@ -115,7 +115,7 @@ class ExampleTest extends TestCase
 phpunit Tests/ExampleTest.php
 ```
 
-``` bash:phpunit実行結果
+``` bash
 .IRSEFW                                                             7 / 7 (100%)
 
 Time: 00:10.407, Memory: 12.00 MB

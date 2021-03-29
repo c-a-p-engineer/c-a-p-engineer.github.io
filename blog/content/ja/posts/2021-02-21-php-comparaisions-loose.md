@@ -20,7 +20,7 @@ PHP は比較演算子の ```==``` を使用した際に緩やかな比較を行
 
 比較する際に数値の ```0``` と 数字の ```'0'``` を比較して ```true``` になるようになっています。
 これはとてもありがたいのですが、バグの元になりやすいです。
-<a href="https://www.php.net/manual/ja/types.comparisons.php#types.comparisions-loose" target="_blank">PHP: PHP 型比較表 - Manual</a>
+<a href="https://www.php.net/manual/ja/types.comparisons.php#types.comparisions-loose" target="_blank" rel="noopener">PHP: PHP 型比較表 - Manual</a>
 
 ## == による緩やかな比較表
 |         | true  | false | 1     | 0     | -1    | "1"   | "0"   | "-1"  | null  | array() | "php" | ""    | 

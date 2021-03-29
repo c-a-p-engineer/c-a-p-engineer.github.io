@@ -68,7 +68,7 @@ array(2) {
 
 ### intval関数
 intval関数を使用した際に、int型の最大値を超えた float型の値を、強制的に int型にするため発生します。
-<a href="https://www.php.net/manual/ja/function.uniqid.php" target="_blank">PHP: intval - Manual</a>
+<a href="https://www.php.net/manual/ja/function.uniqid.php" target="_blank" rel="noopener">PHP: intval - Manual</a>
 
 ``` php {linenos=table}
 <?php

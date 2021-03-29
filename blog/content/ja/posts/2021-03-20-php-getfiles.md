@@ -17,10 +17,10 @@ PHP サブフォルダ内のファイルをまとめて取得する。
 
 ## ファイルの取得
 以下の2つを使用します。
-* <a href="https://www.php.net/manual/ja/class.recursivedirectoryiterator.php" target="_blank">RecursiveIteratorIterator - Manual - PHP</a>
+* <a href="https://www.php.net/manual/ja/class.recursivedirectoryiterator.php" target="_blank" rel="noopener">RecursiveIteratorIterator - Manual - PHP</a>
 再帰的なイテレータの反復処理に使用します。 
 
-* <a href="https://www.php.net/manual/ja/class.recursivedirectoryiterator.php" target="_blank">RecursiveDirectoryIterator - Manual - PHP</a>
+* <a href="https://www.php.net/manual/ja/class.recursivedirectoryiterator.php" target="_blank" rel="noopener">RecursiveDirectoryIterator - Manual - PHP</a>
 RecursiveDirectoryIterator は、 ファイルシステムのディレクトリを再帰的に反復処理するためのインターフェイスです。 
 
 ``` php:sample.php {linenos=table}
@@ -67,5 +67,5 @@ array(4) {
 
 * ``FilesystemIterator::SKIP_DOTS`` は ```.```, ```..``` をスキップします。
 * ```FilesystemIterator::KEY_AS_PATHNAME``` で 配列の ```key``` にパス名が入るようになります。
-* ```FilesystemIterator::CURRENT_AS_FILEINFO``` を設定すると ```$info``` に <a href="https://www.php.net/manual/ja/class.splfileinfo.php" target="_blank">SplFileInfo</a>が入ります。
+* ```FilesystemIterator::CURRENT_AS_FILEINFO``` を設定すると ```$info``` に <a href="https://www.php.net/manual/ja/class.splfileinfo.php" target="_blank" rel="noopener">SplFileInfo</a>が入ります。
 そうすると ```$info->getATime()``` を行うとファイルの最終アクセス時刻を取得することなど出来ます。

@@ -17,4 +17,4 @@ date = "2021-02-01"
 ## お問い合わせ
 
 Twitterからお願いします。
-<a href="https://twitter.com/c_a_p_engineer" target="_blank">Twitter</a>
+<a href="https://twitter.com/c_a_p_engineer" target="_blank" rel="noopener">Twitter</a>

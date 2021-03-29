@@ -114,7 +114,7 @@ class LoginTest extends DuskTestCase
 
 
 ## 参考
-<a href="https://stackoverflow.com/questions/44906797/laravel-dusk-how-to-destroy-session-data-between-tests" target="_blank">php - Laravel Dusk, how to destroy session data between tests - Stack Overflow</a>
+<a href="https://stackoverflow.com/questions/44906797/laravel-dusk-how-to-destroy-session-data-between-tests" target="_blank" rel="noopener">php - Laravel Dusk, how to destroy session data between tests - Stack Overflow</a>
 
 ## 追記（2021/02/16）
 僕の場合 ```createBrowsersFor``` ではうまく行かなかったので ```browse``` で ```deleteAllCookies``` で対応いたしました。

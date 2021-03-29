@@ -66,7 +66,7 @@ trait MailMultiPartViewTextTrait
 ## メールを使用する
 
 サンプルはこちらから使用
-<a href="https://readouble.com/laravel/7.x/ja/mail.html#view-data" target="_blank">Laravel 7.x メール</a>
+<a href="https://readouble.com/laravel/7.x/ja/mail.html#view-data" target="_blank" rel="noopener">Laravel 7.x メール</a>
 
 ```use``` に ```MailMultiPartViewTextTrait``` を追加する。
 

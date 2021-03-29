@@ -74,4 +74,4 @@ xsltファイル内に以下のテンプレートを追記。
 ```
 
 ## 参考
-<a href="https://stackoverflow.com/questions/3067113/xslt-string-replace" target="_blank">xpath - XSLT string replace - Stack Overflow</a>
+<a href="https://stackoverflow.com/questions/3067113/xslt-string-replace" target="_blank" rel="noopener">xpath - XSLT string replace - Stack Overflow</a>

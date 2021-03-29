@@ -17,7 +17,7 @@ image: images/thumbnail/php.png
 # uniqidの危険性
 PHPでは ```uniqid``` という一意のIDを生成するという意味の名を持つ関数が存在します。
 ですがこれを安易に使用するととても危険です。
-<a href="https://www.php.net/manual/ja/function.uniqid.php" target="_blank">PHP: uniqid - Manual</a>
+<a href="https://www.php.net/manual/ja/function.uniqid.php" target="_blank" rel="noopener">PHP: uniqid - Manual</a>
 
 ## 確認環境
 {{< alert theme="info" >}}
@@ -35,19 +35,19 @@ PHP Version:8.0.1
 
 ### uniqidの生成方法
 ```uniqid``` のPHPのソース側を見てもらえればわかるのですが、IDを生成する際にマイクロ秒の値を使用しています。
-<a href="https://github.com/php/php-src/blob/master/ext/standard/uniqid.c" target="_blank">php-src/uniqid.c at master · php/php-src</a>
+<a href="https://github.com/php/php-src/blob/master/ext/standard/uniqid.c" target="_blank" rel="noopener">php-src/uniqid.c at master · php/php-src</a>
 
 そのため、全く同じマイクロ秒で処理を行われた場合に一意のIDになりません。
 実際にここに記載されている人はマシンスペックが凄いのか全て同じIDが出力されたようです。
-<a href="https://www.php.net/manual/ja/function.uniqid.php#94959" target="_blank">PHP: uniqid - Manual#hackan at gmail dot com</a>
+<a href="https://www.php.net/manual/ja/function.uniqid.php#94959" target="_blank" rel="noopener">PHP: uniqid - Manual#hackan at gmail dot com</a>
 
 ## 本当に一意のID
 簡単なのがUUIDを使う。
-<a href="https://ja.wikipedia.org/wiki/UUID" target="_blank">UUID - Wikipedia</a>
+<a href="https://ja.wikipedia.org/wiki/UUID" target="_blank" rel="noopener">UUID - Wikipedia</a>
 
 最近のFWではUUIDの生成をサポートしているので使用するのが良いでしょう。
 LaravelではUUIDは ```Str::uuid()``` で生成出来ます。
-<a href="htthttps://readouble.com/laravel/8.x/ja/helpers.html#method-str-uuid" target="_blank">Str::uuid</a>
+<a href="htthttps://readouble.com/laravel/8.x/ja/helpers.html#method-str-uuid" target="_blank" rel="noopener">Str::uuid</a>
 ### 一意になるように作る
 
 普通にこれだけを実行してもわかるのですが近似値になります。
@@ -64,7 +64,7 @@ for($i = 0; $i < 20; $i++) {
 
 #### ランダムな文字列
 先程の同じIDが出力されると例に出したリンクですがこの中で行っています。
-<a href="https://www.php.net/manual/ja/function.uniqid.php#94959" target="_blank">PHP: uniqid - Manual#hackan at gmail dot com</a>
+<a href="https://www.php.net/manual/ja/function.uniqid.php#94959" target="_blank" rel="noopener">PHP: uniqid - Manual#hackan at gmail dot com</a>
 
 ``` php {linenos=table}
 <?php
@@ -116,7 +116,7 @@ uniqid() 	 uniqidReal()
 
 #### UUIDの生成
 UUIDの生成サンプル
-<a href="https://www.php.net/manual/ja/function.uniqid.php#120123" target="_blank">PHP: uniqid - Manual#Andrew Moore</a>
+<a href="https://www.php.net/manual/ja/function.uniqid.php#120123" target="_blank" rel="noopener">PHP: uniqid - Manual#Andrew Moore</a>
 
 ``` php {linenos=table}
 <?php

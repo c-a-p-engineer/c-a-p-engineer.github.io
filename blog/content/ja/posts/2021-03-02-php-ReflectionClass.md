@@ -17,7 +17,7 @@ image: images/thumbnail/php.png
 その時のメモです。
 
 ## ReflectionClass
-<a href="https://www.php.net/manual/ja/class.reflectionclass.php" target="_blank">ReflectionClass</a>
+<a href="https://www.php.net/manual/ja/class.reflectionclass.php" target="_blank" rel="noopener">ReflectionClass</a>
 ReflectionClass を使用することで指定されたクラスのことを調べることが可能です。
 
 ## サンプルコード

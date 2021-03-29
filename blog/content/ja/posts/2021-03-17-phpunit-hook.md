@@ -21,7 +21,7 @@ PHPUnit を拡張してテスト実行時にテストの成功や失敗、エラ
 ## phpunit.xmlに追加
 
 ```phpunit.xml``` にextensionを追加する
-<a href="https://phpunit.readthedocs.io/ja/latest/configuration.html#appendixes-configuration-extensions" target="_blank">TestRunner エクステンションの組み込み</a>
+<a href="https://phpunit.readthedocs.io/ja/latest/configuration.html#appendixes-configuration-extensions" target="_blank" rel="noopener">TestRunner エクステンションの組み込み</a>
 
 ``` xml:phpunit.xml {linenos=table,hl_lines=[4,5]}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +37,7 @@ PHPUnit を拡張してテスト実行時にテストの成功や失敗、エラ
 
 PHPUnit 実行時のフックするためのファイル作成。
 使用可能なフックインターフェイスを実装した例です。
-<a href="https://phpunit.readthedocs.io/ja/latest/extending-phpunit.html#extending-phpunit-hooks" target="_blank">利用可能なフックインターフェイス</a>
+<a href="https://phpunit.readthedocs.io/ja/latest/extending-phpunit.html#extending-phpunit-hooks" target="_blank" rel="noopener">利用可能なフックインターフェイス</a>
 
 ``` php:Tests\Extension\TestHooksExtension.php {linenos=table}
 <?php

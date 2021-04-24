@@ -14,4 +14,10 @@
   identifier = "posts"
   name = "Posts"
   url = "posts"
-  weight = 5
+  weight = 100
+
+[[main]]
+  identifier = "incident"
+  name = "Incident"
+  url = "incident"
+  weight = 90

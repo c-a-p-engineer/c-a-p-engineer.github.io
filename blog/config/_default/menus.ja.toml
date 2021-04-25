@@ -11,13 +11,13 @@
   weight = 2
 
 [[main]]
-  identifier = "posts"
-  name = "Posts"
-  url = "posts"
-  weight = 100
+  identifier = "blog"
+  name = "Blog"
+  url = "blog"
+  weight = 10
 
 [[main]]
-  identifier = "incident"
-  name = "Incident"
-  url = "incident"
-  weight = 90
+  identifier = "news"
+  name = "News"
+  url = "news"
+  weight = 20

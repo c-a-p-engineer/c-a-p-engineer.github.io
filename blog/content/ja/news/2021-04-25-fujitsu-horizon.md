@@ -7,9 +7,9 @@ enableToc: true
 enableTocContent: true
 tags: 
 - 富士通
-- 不具合
+- バグ
 categories: 
-- 不具合
+- バグ
 image: images/thumbnail/taiho_rouya.png
 ---
 
@@ -31,7 +31,7 @@ image: images/thumbnail/taiho_rouya.png
 
 * 2000～14年
 
-## 元記事
+## 記事
 > ［ロンドン発］英郵便システムを支えてきた元準郵便局長736人が2000～14年に富士通の会計システム「ホライゾン」の欠陥で不正会計や窃盗の罪で起訴された事件で、39人の有罪判決が23日、控訴裁判所で破棄されました。これで有罪判決の破棄は計45人。
 > 
 > 「信頼できない会計システムによって示された会計上の不足を、疑いのない損失とみなし、損失が発生しなかったことを被告人に証明するよう糾弾するかのように裁判は進められた」と3人の判事は裁判所の非を全面的に認めました。英史上最大の冤罪事件であることを司法が認めたのです。
@@ -43,6 +43,8 @@ image: images/thumbnail/taiho_rouya.png
 > 
 > ロンドン高裁判事は「ホライゾンは最初の10年間は完璧には程遠く、バグ、エラー、欠陥が含まれており、その後も問題を抱えている」と結論付けました。
 
-元記事：<a href="https://news.yahoo.co.jp/byline/kimuramasato/20210424-00234384/" target="_blank">富士通の会計システム欠陥で英史上最悪の冤罪　736人起訴中45人の有罪破棄　和解金87億円</a>
-関連記事：<a href="https://www.postofficetrial.com/" target="_blank">ニック・ウォーリス氏のブログ「ポストオフィス裁判」</a>
+### 元記事
+* <a href="https://news.yahoo.co.jp/byline/kimuramasato/20210424-00234384/" target="_blank">富士通の会計システム欠陥で英史上最悪の冤罪　736人起訴中45人の有罪破棄　和解金87億円</a>
+### 関連記事
+* <a href="https://www.postofficetrial.com/" target="_blank">ニック・ウォーリス氏のブログ「ポストオフィス裁判」</a>
 

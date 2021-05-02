@@ -45,8 +45,8 @@ image: images/thumbnail/linux.png
 > 
 
 ### 元記事
-* <a href="https://gigazine.net/news/20210422-linux-ban-university/" target="_blank">Linuxカーネルに意図的にバグを混入したとして大学にコミュニティ出禁措置</a>
+* <a href="https://gigazine.net/news/20210422-linux-ban-university/" target="_blank" rel="noopener">Linuxカーネルに意図的にバグを混入したとして大学にコミュニティ出禁措置</a>
 
 ### 関連記事
-* <a href="https://www.neowin.net/news/linux-bans-university-of-minnesota-for-sending-buggy-patches-in-the-name-of-research/" target="_blank">Linux bans University of Minnesota for sending buggy patches in the name of research [Update] - Neowin</a><br>Linuxが研究の名の下にバグのあるパッチを送信したとしてミネソタ大学を禁止しました
-* <a href="https://cse.umn.edu/cs/statement-cse-linux-kernel-research-april-21-2021" target="_blank">Statement from CS&E on Linux Kernel research - April 21, 2021 | Department of Computer Science and Engineering | College of Science and Engineering</a><br>Linuxカーネル研究に関するCS＆Eの声明 - 2021年4月21日
+* <a href="https://www.neowin.net/news/linux-bans-university-of-minnesota-for-sending-buggy-patches-in-the-name-of-research/" target="_blank" rel="noopener">Linux bans University of Minnesota for sending buggy patches in the name of research [Update] - Neowin</a><br>Linuxが研究の名の下にバグのあるパッチを送信したとしてミネソタ大学を禁止しました
+* <a href="https://cse.umn.edu/cs/statement-cse-linux-kernel-research-april-21-2021" target="_blank" rel="noopener">Statement from CS&E on Linux Kernel research - April 21, 2021 | Department of Computer Science and Engineering | College of Science and Engineering</a><br>Linuxカーネル研究に関するCS＆Eの声明 - 2021年4月21日

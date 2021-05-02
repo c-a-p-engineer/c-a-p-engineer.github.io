@@ -22,7 +22,7 @@ UbuntuにNode.js をインストールする備忘録
 ## PPAを利用して Node.js をインストール
 
 `16.x` の箇所を変更することで他のバージョンをインストールすることが可能です。
-使用可能なバージョンは <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank">NodeSourceドキュメント</a> で確認が可能です。
+使用可能なバージョンは <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">NodeSourceドキュメント</a> で確認が可能です。
 
 ``` bash {linenos=table}
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -40,4 +40,4 @@ v16.0.0
 ```
 
 ## 参考
-* <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-ja" target="_blank">Ubuntu 20.04にNode.jsをインストールする方法 | DigitalOcean</a>
+* <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-ja" target="_blank" rel="noopener">Ubuntu 20.04にNode.jsをインストールする方法 | DigitalOcean</a>

@@ -44,7 +44,7 @@ image: images/thumbnail/taiho_rouya.png
 > ロンドン高裁判事は「ホライゾンは最初の10年間は完璧には程遠く、バグ、エラー、欠陥が含まれており、その後も問題を抱えている」と結論付けました。
 
 ### 元記事
-* <a href="https://news.yahoo.co.jp/byline/kimuramasato/20210424-00234384/" target="_blank">富士通の会計システム欠陥で英史上最悪の冤罪　736人起訴中45人の有罪破棄　和解金87億円</a>
+* <a href="https://news.yahoo.co.jp/byline/kimuramasato/20210424-00234384/" target="_blank" rel="noopener">富士通の会計システム欠陥で英史上最悪の冤罪　736人起訴中45人の有罪破棄　和解金87億円</a>
 ### 関連記事
-* <a href="https://www.postofficetrial.com/" target="_blank">ニック・ウォーリス氏のブログ「ポストオフィス裁判」</a>
+* <a href="https://www.postofficetrial.com/" target="_blank" rel="noopener">ニック・ウォーリス氏のブログ「ポストオフィス裁判」</a>
 

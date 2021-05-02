@@ -57,4 +57,4 @@ npm start
 ```
 
 ## 参考
-* <a href="https://github.com/electron/electron/issues/19454" target="_blank">electron-quick-start on debian _ --no-sandbox is not supported · Issue #19454 · electron/electron</a>
+* <a href="https://github.com/electron/electron/issues/19454" target="_blank" rel="noopener">electron-quick-start on debian _ --no-sandbox is not supported · Issue #19454 · electron/electron</a>

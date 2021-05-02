@@ -40,4 +40,4 @@ image: images/thumbnail/tatemono_bank_money.png
 >　静岡銀行によると、現時点で顧客被害などは確認していないという。2020年7⽉20⽇以降に該当サービスを新規に申し込んだ顧客については、「第三者からアクセスできない設定に変更されている」（静岡銀行）ことから被害の恐れはないとしている。 
 
 ### 元記事
-* <a href="https://active.nikkeibp.co.jp/atcl/act/19/00012/042300462/?ST=act-security&i_cid=nbpnxta_pgmn_list_security" target="_blank">静岡銀行で第三者アクセス、セールスフォース製品の設定不備</a>
+* <a href="https://active.nikkeibp.co.jp/atcl/act/19/00012/042300462/?ST=act-security&i_cid=nbpnxta_pgmn_list_security" target="_blank" rel="noopener">静岡銀行で第三者アクセス、セールスフォース製品の設定不備</a>

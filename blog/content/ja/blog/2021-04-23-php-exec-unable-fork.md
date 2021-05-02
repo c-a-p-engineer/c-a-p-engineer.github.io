@@ -56,5 +56,5 @@ kill [プロセスID]
 ```
 
 ## 参考
-* <a href="https://cloud6.net/so/php/1218923" target="_blank">php - 警告:exec():PHPでforkできません - ITツールウェブ</a>
-* <a href="https://teratail.com/questions/99949" target="_blank">CakePHP - CakePHP3からrmコマンドを実行したら警告エラーが出てファイルが削除されない｜teratail</a>
+* <a href="https://cloud6.net/so/php/1218923" target="_blank" rel="noopener">php - 警告:exec():PHPでforkできません - ITツールウェブ</a>
+* <a href="https://teratail.com/questions/99949" target="_blank" rel="noopener">CakePHP - CakePHP3からrmコマンドを実行したら警告エラーが出てファイルが削除されない｜teratail</a>

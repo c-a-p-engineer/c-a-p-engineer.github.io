@@ -13,7 +13,7 @@ image: images/thumbnail/xlst.png
 ---
 
 # xlst の バージョン 1.0 では文字列置換が出来ない
-こちらの記事（<a href="/posts/2021-02-22-phpunit-xsltproc" target="_blank">【PHP】PHPUnit の出力ログを見やすくHTMLに変換</a>）で ```xsltproc``` を入れてxlstを使用したのですが ```xlstprc``` ではバージョン1.0しかサポートしておらず、文字列の置換が出来ません。
+こちらの記事（<a href="/blog/2021-02-22-phpunit-xsltproc" target="_blank">【PHP】PHPUnit の出力ログを見やすくHTMLに変換</a>）で ```xsltproc``` を入れてxlstを使用したのですが ```xlstprc``` ではバージョン1.0しかサポートしておらず、文字列の置換が出来ません。
 xlstのバージョン1.0では文字の置換は可能なのですが、1文字単位で置換を行うため、**文字列の置換**を導入致しました。
 
 ## テンプレート導入

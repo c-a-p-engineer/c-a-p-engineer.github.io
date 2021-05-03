@@ -453,7 +453,7 @@ xsltproc phpunit.xslt tests/log/logfile.xml > output.html
 ```
 
 これで ```output.html``` が出力されるようにされます。
-![output.html](/images/posts/2021-02-22-phpunit-xsltproc/output.html.png "output.html") 
+![output.html](/images/blog/2021-02-22-phpunit-xsltproc/output.html.png "output.html") 
 
 ## 効率化を図って
 PHPUnit = 試験表になるようにすれば業務効率化出来るかと思い調べました。

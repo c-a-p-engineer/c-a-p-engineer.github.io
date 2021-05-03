@@ -16,7 +16,7 @@ image: images/thumbnail/php.png
 
 # PHPUnit のテスト用のテストサンプル
 
-以前の <a href="/posts/2021-03-17-phpunit-hook/" target="_blank">PHPUnit テスト実行時に利用可能なフックインターフェイス</a> のテスト用のテストサンプルを作りました。
+以前の <a href="/blog/2021-03-17-phpunit-hook/" target="_blank">PHPUnit テスト実行時に利用可能なフックインターフェイス</a> のテスト用のテストサンプルを作りました。
 これは PHPUnit のフックインターフェイスのテスト用のテストサンプル。
 PHPUnit の Error や Warning など色んなテスト結果出力させます。
 

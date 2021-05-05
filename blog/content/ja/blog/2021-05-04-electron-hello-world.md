@@ -1,6 +1,7 @@
 ---
-title: "【Electron】Hello,World!"
+title: "【Electron】Hello,World! を表示するまで"
 date: 2021-05-04T08:30:00+09:00
+LastMod: 2021-05-04T02:30:00+09:00
 description: "Electron で Hello,World! を表示するまでを行っていきます。"
 draft: false
 enableToc: true
@@ -38,7 +39,7 @@ my-electron-app/
 ``` bash
 mkdir my-electron-app && cd my-electron-app
 npm init -y
-npm i --save-dev electron
+npm install -D electron
 ```
 
 ### ファイル作成
@@ -128,11 +129,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 ### 実行
 以下のコマンドにて実行できます。
-```
+``` bash
 npm start
 ```
 
 ![Hello,World!](/images/blog/2021-05-04-electron-hello-world/electron-hello-world.png "Hello,World!") 
 
 実行時に `--no-sandbox` というエラーが出たら以下のリンクの対処を行ってください。
-<a href="blog/2021-05-01-electron-error-no-sandbox" target="_blank">【Electron】Running as root without --no-sandbox is not supported. エラーのの対処法</a>
+<a href="/blog/2021-05-01-electron-error-no-sandbox" target="_blank">【Electron】Running as root without --no-sandbox is not supported. エラーのの対処法</a>

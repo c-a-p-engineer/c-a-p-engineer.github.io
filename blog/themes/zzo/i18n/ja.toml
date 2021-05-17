@@ -2,7 +2,7 @@
 other = "検索"
 
 [summary-dateformat]
-other = "2006/1/2"
+other = "2006/01/02"
 
 [reading-time]
 other = "分で読めます"

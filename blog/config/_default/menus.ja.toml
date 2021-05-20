@@ -15,9 +15,3 @@
   name = "Blog"
   url = "blog"
   weight = 10
-
-[[main]]
-  identifier = "news"
-  name = "News"
-  url = "news"
-  weight = 20

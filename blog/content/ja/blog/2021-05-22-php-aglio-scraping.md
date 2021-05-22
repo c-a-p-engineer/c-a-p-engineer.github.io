@@ -101,7 +101,7 @@ foreach($content as $ivalue){
         }
 
         // Body
-        $responseBodyElem = $ixpath->query('//div[contains(*, "Response")][4]/following::div[' . $key . '][contains(@class, "collapse-content")]/div[1]/pre[2]/code');
+        $responseBodyElem = $ixpath->query('//div[contains(*, "Response")]/following::div[' . $key . '][contains(@class, "collapse-content")]/div[1]/pre[2]/code');
         $response[] = [
             'responseStatus' => $elements->nodeValue ?? null,
             'responseHeder' => $responseHeder,

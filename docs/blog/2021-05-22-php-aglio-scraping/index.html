@@ -310,7 +310,7 @@ gtag('config','G-RD9K77EWVP');</script><script data-ad-client=ca-pub-91165425490
         <span class=p>}</span>
 
         <span class=c1>// Body
-</span><span class=c1></span>        <span class=nv>$responseBodyElem</span> <span class=o>=</span> <span class=nv>$ixpath</span><span class=o>-&gt;</span><span class=na>query</span><span class=p>(</span><span class=s1>&#39;//div[contains(*, &#34;Response&#34;)][4]/following::div[&#39;</span> <span class=o>.</span> <span class=nv>$key</span> <span class=o>.</span> <span class=s1>&#39;][contains(@class, &#34;collapse-content&#34;)]/div[1]/pre[2]/code&#39;</span><span class=p>);</span>
+</span><span class=c1></span>        <span class=nv>$responseBodyElem</span> <span class=o>=</span> <span class=nv>$ixpath</span><span class=o>-&gt;</span><span class=na>query</span><span class=p>(</span><span class=s1>&#39;//div[contains(*, &#34;Response&#34;)]/following::div[&#39;</span> <span class=o>.</span> <span class=nv>$key</span> <span class=o>.</span> <span class=s1>&#39;][contains(@class, &#34;collapse-content&#34;)]/div[1]/pre[2]/code&#39;</span><span class=p>);</span>
         <span class=nv>$response</span><span class=p>[]</span> <span class=o>=</span> <span class=p>[</span>
             <span class=s1>&#39;responseStatus&#39;</span> <span class=o>=&gt;</span> <span class=nv>$elements</span><span class=o>-&gt;</span><span class=na>nodeValue</span> <span class=o>??</span> <span class=k>null</span><span class=p>,</span>
             <span class=s1>&#39;responseHeder&#39;</span> <span class=o>=&gt;</span> <span class=nv>$responseHeder</span><span class=p>,</span>

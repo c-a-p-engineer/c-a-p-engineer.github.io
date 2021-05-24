@@ -120,6 +120,7 @@ foreach($content as $ivalue){
 
         $temp = [];
         for($j = $responseCount; 0 < $j; $j--){
+            $key = $j - 1;
             $temp[$response[$j]['responseStatus']] = $response[$j];
         }
 

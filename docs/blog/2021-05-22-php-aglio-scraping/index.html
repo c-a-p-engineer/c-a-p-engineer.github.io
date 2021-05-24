@@ -234,6 +234,7 @@ gtag('config','G-RD9K77EWVP');</script><script data-ad-client=ca-pub-91165425490
 </span><span class=lnt>126
 </span><span class=lnt>127
 </span><span class=lnt>128
+</span><span class=lnt>129
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php:scraping.php data-lang=php:scraping.php><span class=cp>&lt;?php</span>
 
 <span class=k>use</span> <span class=nx>DOMDocument</span><span class=p>;</span>
@@ -329,6 +330,7 @@ gtag('config','G-RD9K77EWVP');</script><script data-ad-client=ca-pub-91165425490
 
         <span class=nv>$temp</span> <span class=o>=</span> <span class=p>[];</span>
         <span class=k>for</span><span class=p>(</span><span class=nv>$j</span> <span class=o>=</span> <span class=nv>$responseCount</span><span class=p>;</span> <span class=mi>0</span> <span class=o>&lt;</span> <span class=nv>$j</span><span class=p>;</span> <span class=nv>$j</span><span class=o>--</span><span class=p>){</span>
+            <span class=nv>$key</span> <span class=o>=</span> <span class=nv>$j</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span>
             <span class=nv>$temp</span><span class=p>[</span><span class=nv>$response</span><span class=p>[</span><span class=nv>$j</span><span class=p>][</span><span class=s1>&#39;responseStatus&#39;</span><span class=p>]]</span> <span class=o>=</span> <span class=nv>$response</span><span class=p>[</span><span class=nv>$j</span><span class=p>];</span>
         <span class=p>}</span>
 

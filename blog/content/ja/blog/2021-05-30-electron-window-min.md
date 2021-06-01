@@ -1,6 +1,6 @@
 ---
 title: "【Electron】ウィンドウの大きさを設定、制限する"
-date: 2021-05-22T15:30:00+09:00
+date: 2021-05-30T15:30:00+09:00
 description: "Electronでウィンドウの大きさを設定、制限する方法"
 draft: false
 enableToc: true

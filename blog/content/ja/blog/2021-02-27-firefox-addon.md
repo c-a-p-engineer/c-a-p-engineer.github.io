@@ -1,7 +1,7 @@
 ---
 title: "【Firefox】アドオンまとめ"
 date: 2021-02-27T09:00:00+09:00
-description: "Firefoxで自分が使用しているアドオンまとめ"
+description: "今現在Firefoxで自分が使用しているアドオンまとめ"
 draft: false
 enableToc: true
 enableTocContent: true

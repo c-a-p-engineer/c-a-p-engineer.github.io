@@ -45,9 +45,9 @@ rm -rf ../docs;hugo --minify && mv -fv ./public/ ../docs/
 
 http://localhost:1313
 
-
 # Note
 * [HUGO](https://gohugo.io/) 
+* [Syntax Highlighting | Hugo](https://gohugo.io/content-management/syntax-highlighting/)
 
 ## Hugo Themes
 * [Github Style](https://themes.gohugo.io/github-style/)

@@ -15,7 +15,7 @@ image: images/thumbnail/docker.png
 
 # Dockerでリモートデスクトップが出来るUbuntuを作る
 色々作るのが面倒なので以下のDockerリポジトリを発見しました。
-[dorowu/ubuntu-desktop-lxde-vnc | Docker Hub](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)
+* <a href="https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/" target="_blank" rel="noopener">dorowu/ubuntu-desktop-lxde-vnc | Docker Hub</a>
 
 以下を使用しています。
 * デスクトップ - lxde
@@ -24,7 +24,7 @@ image: images/thumbnail/docker.png
 ## Quick Start
 クイックスタートをやってみると簡単にリモートデスクトップが成功！
 しかもブラウザで接続できるように設定されていてありがたいです。
-[http://127.0.0.1:6080/](http://127.0.0.1:6080/)
+* <a href="http://127.0.0.1:6080/" target="_blank" rel="noopener">http://127.0.0.1:6080/</a>
 
 ![desktop.png](/images/blog/2021-04-11-docker-ubuntu-remote-desktop/desktop.png "desktop.png") 
 

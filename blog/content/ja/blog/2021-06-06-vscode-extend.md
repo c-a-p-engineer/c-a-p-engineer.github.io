@@ -6,9 +6,9 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- エディタ
-categories: 
 - Visual Studio Code
+categories: 
+- エディタ
 image: images/thumbnail/Visual_Studio_Code_1.35_icon.svg
 image_description: 'Visual Studio Codeは、米国およびその他の国におけるMozillaFoundationの商標です。'
 ---

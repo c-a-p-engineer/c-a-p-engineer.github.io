@@ -57,5 +57,13 @@ jobs:
           commit_message: Update Build Files
 ```
 
+最初は戸惑いましたが使用感としてはとても楽。
+Github Actions の実行やログもGithub上で確認できます。
+
 ## 参考
+### Github Actions
+* <a href="https://github.co.jp/features/actions" target="_blank" rel="noopener">Actions | Github</a>
+* <a href="https://docs.github.com/ja/actions" target="_blank" rel="noopener">GitHub Actionsのドキュメント - GitHub Docs</a>
+
+### Hugo Github Actions
 * <a href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener">peaceiris/actions-hugo: GitHub Actions for Hugo ⚡️ Setup Hugo quickly and build your site fast. Hugo extended, Hugo Modules, Linux (Ubuntu), macOS, and Windows are supported.</a>

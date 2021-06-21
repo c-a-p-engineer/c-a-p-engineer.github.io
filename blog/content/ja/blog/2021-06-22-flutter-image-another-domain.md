@@ -16,6 +16,8 @@ image: images/thumbnail/Flutter-logo-animation-v1-2.gif
 Flutter で以下のようにして画像を取得しようとした際に別ドメインのためにエラーが発生したので対処しました。
 
 ## 失敗コード
+`Image.network` を使用するとエラーが発生します。
+
 ``` java:main.dart
 class MyImage extends StatelessWidget {
 

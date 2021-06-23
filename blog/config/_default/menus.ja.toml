@@ -11,6 +11,12 @@
   weight = 2
 
 [[main]]
+  identifier = "showcase"
+  name = "Showcase"
+  url = "showcase"
+  weight = 3
+
+[[main]]
   identifier = "blog"
   name = "Blog"
   url = "blog"

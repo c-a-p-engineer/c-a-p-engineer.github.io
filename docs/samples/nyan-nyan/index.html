@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -14,24 +14,35 @@
   <!-- <base href="/"> -->
 
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.jpg">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Cat Image Infinity Loop">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="src">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="Nyan Nyan">
+  <link rel="apple-touch-icon" href="https://c-a-p-engineer.github.io/samples/nyan-nyan/icons/Icon-144.png">
 
-  <title>src</title>
+  <title>Nyan Nyan</title>
   <link rel="manifest" href="manifest.json">
+
+  <meta property="og:url" content="https://c-a-p-engineer.github.io/samples/nyan-nyan/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nyan Nyan" />
+  <meta property="og:description" content="Cat Image Infinity Loop" />
+  <meta property="og:site_name" content="Nyan Nyan" />
+  <meta property="og:image" content="https://c-a-p-engineer.github.io/samples/nyan-nyan/thumbnail.jpg" />
+
+  <!-- ※Twitter共通設定 -->
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '888172990';
+    var serviceWorkerVersion = '435131722';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {

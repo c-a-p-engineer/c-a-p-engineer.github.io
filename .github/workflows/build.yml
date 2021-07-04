@@ -14,6 +14,24 @@ jobs:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           text: Start Github Actions
+          attachments: |
+          [
+            {
+              "color": "good",
+              "author_name": "${{ github.actor }}",
+              "author_icon": "${{ github.event.sender.avatar_url }}",
+              "fields": [
+                {
+                  "title": "Commit Message",
+                  "value": "${{ env.COMMIT_MESSAGE }}"
+                },
+                {
+                  "title": "Push Repository",
+                  "value": "${{ github.event.repository.url }}"
+                },
+              ]
+            }
+          ]
 
       # Checkout
       - name: Checkout

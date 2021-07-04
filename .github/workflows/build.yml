@@ -24,7 +24,7 @@ jobs:
                   {
                     "title": "Push Repository",
                     "value": "${{ github.event.repository.url }}"
-                  },
+                  }
                 ]
               }
             ]

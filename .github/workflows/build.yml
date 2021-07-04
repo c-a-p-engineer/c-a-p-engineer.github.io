@@ -7,6 +7,14 @@ jobs:
     # Ubuntu
     runs-on: ubuntu-latest
     steps:
+      # Slack
+      - name: Start Slack Notification
+        uses: tokorom/action-slack-incoming-webhook@main
+        env:
+          INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          text: Start Github Actions
+
       # Checkout
       - name: Checkout
         uses: actions/checkout@v2

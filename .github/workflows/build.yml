@@ -6,28 +6,6 @@ jobs:
   deploy:
     # Ubuntu
     runs-on: ubuntu-latest
-    steps:
-      # Slack
-      - name: Start Slack Notification
-        uses: tokorom/action-slack-incoming-webhook@main
-        env:
-          INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        with:
-          text: Start Github Actions
-          attachments: |
-            [
-              {
-                "color": "good",
-                "author_name": "${{ github.actor }}",
-                "author_icon": "${{ github.event.sender.avatar_url }}",
-                "fields": [
-                  {
-                    "title": "Push Repository",
-                    "value": "${{ github.event.repository.url }}"
-                  }
-                ]
-              }
-            ]
 
       # Checkout
       - name: Checkout
@@ -57,14 +35,14 @@ jobs:
         with:
           commit_message: Update Build Files
 
-          # Slack
-      - name: Start Slack Notification
+      # Slack
+      - name: Slack Notification
         if: success()
         uses: tokorom/action-slack-incoming-webhook@main
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          text: End Github Actions
+          text: Blog Deploy End
           attachments: |
             [
               {

@@ -54,6 +54,7 @@ jobs:
 
 ## 通知のカスタマイズ
 通知をカスタマイズすることが出来ます。
+`attachments` を追加することによって通知をカスタマイズ出来ます。
 
 ``` yml:.github/workflows/slack.yml
 name: Slack
@@ -73,21 +74,29 @@ jobs:
         with:
           text: Start Github Actions
           attachments: |
-          [
-            {
-              "color": "good",
-              "author_name": "${{ github.actor }}",
-              "author_icon": "${{ github.event.sender.avatar_url }}",
-              "fields": [
-                {
-                  "title": "Commit Message",
-                  "value": "${{ env.COMMIT_MESSAGE }}"
-                },
-                {
-                  "title": "Push Repository",
-                  "value": "${{ github.event.repository.url }}"
-                },
-              ]
-            }
-          ]
+            [
+              {
+                "color": "good",
+                "author_name": "${{ github.actor }}",
+                "author_icon": "${{ github.event.sender.avatar_url }}",
+                "fields": [
+                  {
+                    "title": "Push Repository",
+                    "value": "${{ github.event.repository.url }}"
+                  }
+                ]
+              }
+            ]
 ```
+
+以下のようにプッシュした人の名前とアバター画像、Repository の URL が通知されます。
+![slack-notification-customize.png](/images/blog/2021-07-05-github-actions-slack-notification/slack-notification-customize.png "slack-notification-customize.png") 
+
+## 参考
+Github Actions の Slack 通知
+* <a href="https://github.com/tokorom/action-slack-incoming-webhook" target="_blank" rel="noopener">tokorom/action-slack-incoming-webhook: GitHub Action for Slack Incoming Webhook</a>
+* <a href="https://github.com/marketplace/actions/slack-incoming-webhook" target="_blank" rel="noopener">Slack Incoming Webhook · Actions · GitHub Marketplace</a>
+
+Github Actions の コンテキスト
+* <a href="https://docs.github.com/ja/actions/reference/context-and-expression-syntax-for-github-actions" target="_blank" rel="noopener">GitHub Actions のコンテキストおよび式の構文 - GitHub Docs</a>
+

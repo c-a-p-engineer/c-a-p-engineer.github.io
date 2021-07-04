@@ -45,7 +45,7 @@ RUN curl -sSLO https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mh
 
 ### メール送信
 実際にメールを送信してみます。
-``` bash
+``` php
 php -r "mail('test@example.com', 'テストタイトル', 'テスト本文', 'From: from@example.com');";
 ```
 

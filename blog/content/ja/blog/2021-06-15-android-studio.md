@@ -12,8 +12,8 @@ categories:
 image: images/thumbnail/androidstudio-logo.png
 ---
 
-# 【Ubuntu】Android Studio を入れる
-Android Studio を Ubuntuに入れたのでメモ。
+# Android Studio を入れる
+Android Studio を Ubuntu に入れたのでメモ。
 
 ## インストール手順
 

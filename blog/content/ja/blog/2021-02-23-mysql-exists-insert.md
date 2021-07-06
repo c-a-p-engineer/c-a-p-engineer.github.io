@@ -14,7 +14,7 @@ image: images/thumbnail/powered-by-mysql-167x86.png
 image_description: 'MySQLは、Oracleの米国およびその他の国における商標または登録商標です。'
 ---
 
-# 【Mysql】存在チェックINSERT文 重複行を挿入しない方法
+# 存在チェックINSERT文 重複行を挿入しない方法
 データ登録時に同一データがある場合は一意制約違反でエラーが発生したり、重複を挿入したくない時のためのメモ。
 挿入済みデータの存在チェックを行い、同一データの挿入を防ぎます。
 

@@ -1,6 +1,6 @@
 ---
 title: "【Github】Github Actions Discord に通知してみる"
-date: 2021-07-07T06:00:00+09:00
+date: 2021-07-07T06:30:00+09:00
 description: "Github Actions を利用して Discord に通知してみました。"
 draft: false
 enableToc: true
@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/GitHub_Logo_White.png
 ---
 
-# 【Github】Github Actions Discordに通知してみる
+# Github Actions Discordに通知してみる
 `push` された通知など `Discord` に通知してみます。
 
 ## Discord の用意

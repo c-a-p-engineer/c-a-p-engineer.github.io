@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/GitHub_Logo_White.png
 ---
 
-# 【Github】Github Actions Slackに通知してみる
+# Github Actions Slackに通知してみる
 `push` された通知など `Slack` に通知してみます。
 
 ## Slack の用意

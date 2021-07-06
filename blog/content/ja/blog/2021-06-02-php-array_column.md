@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/php.png
 ---
 
-# 【PHP】配列を扱う時にとても有用な array_column
+# 配列を扱う時にとても有用な array_column
 `PHP` で配列を扱う時にとても有用な関数 <a href="https://www.php.net/manual/ja/function.array-column.php" target="_blank" rel="noopener">array_column</a> をご紹介します。
 PHPマニュアル上でとても有用な例まで載っているのですがあまりこのような使われ方をせずに `for` や `foreach` を使用しているのを多々見るので今回記事化しました。
 `array_column` を使用すれば例えばセレクトボックスに入れるデータなど一括で簡単に作れますので作れます。

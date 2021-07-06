@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/GitHub_Logo_White.png
 ---
 
-# 【Github】Github Actions を利用して自動コミット
+# Github Actions を利用して自動コミット
 Github Actions を利用して Hugo を利用している当ブログを自動ビルド & 自動コミットしてみた。
 
 ## サンプルコード

@@ -13,7 +13,7 @@ categories:
 image: images/thumbnail/Electron_Software_Framework_Logo.svg
 ---
 
-# 【Electron】Ubuntu で Windows インストーラー作成時に出る wine is required エラー対処方法
+# Ubuntu で Windows インストーラー作成時に出る wine is required エラー対処方法
 Electron で Ubuntu Windows インストーラー作成時に出る wine is required エラー対処方法。
 
 ## 環境

@@ -13,7 +13,7 @@ categories:
 image: images/thumbnail/docker.png
 ---
 
-# 【Docker】Mysql が立ち上がらない（パスワード設定エラー）
+# Mysql が立ち上がらない（パスワード設定エラー）
 Docker で Mysql が立ち上がらなかったのでメモ。
 
 ## 現象

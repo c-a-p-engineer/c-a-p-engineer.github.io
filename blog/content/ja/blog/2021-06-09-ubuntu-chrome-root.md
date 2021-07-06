@@ -13,7 +13,7 @@ categories:
 image: images/thumbnail/delivered-by_orange_hex.png
 ---
 
-# 【Ubuntu】root ユーザでは Google Chrome が起動しない
+# root ユーザでは Google Chrome が起動しない
 `Ubuntu` を使用していて何故か `Google Chrome` が起動しない現象を確認しました。
 
 ## 原因

@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/php.png
 ---
 
-# 【PHP】TCPDF で HTML 上で改ページを行う
+# TCPDF で HTML 上で改ページを行う
 PHP の PDF 出力用ライブラリ TCPDF で HTML 上で改ページを行う方法。
 
 ## サンプルコード

@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/git.png
 ---
 
-# 【Git】error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+# error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
 `Git` を利用していて以下のエラーが発生しました。
 ```
 error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)

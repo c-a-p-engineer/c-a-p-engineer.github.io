@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/php.png
 ---
 
-# 【PHP】PHPでAPIドキュメント（API Blueprint & aglio）をスクレイピングする。
+# PHPでAPIドキュメント（API Blueprint & aglio）をスクレイピングする。
 `API Blueprint` & `aglio` で出力されたAPIドキュメントをPHPを利用してスクレイピングしてみます。
 APIドキュメントを解析 → 自動テスト出来たら良いなと思いやってみました。
 

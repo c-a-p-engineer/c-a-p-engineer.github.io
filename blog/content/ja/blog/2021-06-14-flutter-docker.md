@@ -13,7 +13,7 @@ categories:
 image: images/thumbnail/Flutter-logo-animation-v1-2.gif
 ---
 
-# 【Flutter】Flutter の開発環境を Docker で作ってみた
+# Flutter の開発環境を Docker で作ってみた
 Flutter を触ってみたくて Flutter の開発環境を Docker で作ってみました。
 
 ## Docker

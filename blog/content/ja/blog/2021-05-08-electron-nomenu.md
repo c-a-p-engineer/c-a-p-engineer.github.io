@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/Electron_Software_Framework_Logo.svg
 ---
 
-# 【Electron】メニューバーを非表示にする方法
+# メニューバーを非表示にする方法
 Electron でメニューバーがデフォルトで表示されるため非表示にする方法
 
 ## 環境

@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/GitHub_Logo_White.png
 ---
 
-# 【Github】private リポジトリを clone する
+# private リポジトリを clone する
 ちょいちょい忘れるのでメモ。
 
 ```

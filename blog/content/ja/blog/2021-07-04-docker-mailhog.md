@@ -13,7 +13,7 @@ categories:
 image: images/thumbnail/docker.png
 ---
 
-# 【Docker】MailHog を利用してメールテスト環境を作る
+# MailHog を利用してメールテスト環境を作る
 メールの送信テストを行う際にメールアドレスなどの用意が面倒だったため、MailHog を利用してメールテスト環境を作りました。
 
 ## MailHog

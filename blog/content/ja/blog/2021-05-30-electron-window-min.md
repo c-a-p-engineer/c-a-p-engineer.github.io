@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/Electron_Software_Framework_Logo.svg
 ---
 
-# 【Electron】ウィンドウの大きさを設定、制限する
+# ウィンドウの大きさを設定、制限する
 Electronのウィンドウの大きさを設定、制限する。
 ウィンドウの最小の大きさ、最大の大きさを設定します。
 

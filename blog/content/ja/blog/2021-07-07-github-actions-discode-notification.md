@@ -57,6 +57,7 @@ jobs:
 ```
 
 ## 参考
+* <a href="https://github.com/appleboy/discord-action" target="_blank" rel="noopener">appleboy/discord-action: GitHub Action that sends a Discord message.</a>
 * <a href="https://qiita.com/toshipon/items/2a1513b584650dcd81c1" target="_blank" rel="noopener">githubからdiscordに通知をする方法 - Qiita</a>
 * <a href="https://docs.github.com/ja/actions/reference/context-and-expression-syntax-for-github-actions" target="_blank" rel="noopener">GitHub Actions のコンテキストおよび式の構文 - GitHub Docs</a>
 

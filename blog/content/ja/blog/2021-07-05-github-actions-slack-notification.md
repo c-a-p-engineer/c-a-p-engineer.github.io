@@ -93,10 +93,6 @@ jobs:
 ![slack-notification-customize.png](/images/blog/2021-07-05-github-actions-slack-notification/slack-notification-customize.png "slack-notification-customize.png") 
 
 ## 参考
-Github Actions の Slack 通知
 * <a href="https://github.com/tokorom/action-slack-incoming-webhook" target="_blank" rel="noopener">tokorom/action-slack-incoming-webhook: GitHub Action for Slack Incoming Webhook</a>
-* <a href="https://github.com/marketplace/actions/slack-incoming-webhook" target="_blank" rel="noopener">Slack Incoming Webhook · Actions · GitHub Marketplace</a>
-
-Github Actions の コンテキスト
 * <a href="https://docs.github.com/ja/actions/reference/context-and-expression-syntax-for-github-actions" target="_blank" rel="noopener">GitHub Actions のコンテキストおよび式の構文 - GitHub Docs</a>
 

@@ -1,7 +1,7 @@
 ---
-title: "【Github】Github Actions Slackに通知してみる"
+title: "【Github】Github Actions Slack に通知してみる"
 date: 2021-07-05T05:00:00+09:00
-description: "Github Actions を利用して Slackに通知してみました。"
+description: "Github Actions を利用して Slack に通知してみました。"
 draft: false
 enableToc: true
 enableTocContent: true

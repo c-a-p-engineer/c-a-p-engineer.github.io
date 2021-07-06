@@ -61,8 +61,8 @@ jobs:
       - name: Discord Notify
         uses: appleboy/discord-action@0.0.3
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
           color: "#48f442"
           username: "GitHub Bot"
-          args: The ${{ github.event_name }} event triggered.
+          args: Github Actions Discord Notification ${{ github.event.repository.url }}

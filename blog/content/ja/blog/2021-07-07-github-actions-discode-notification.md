@@ -1,7 +1,7 @@
 ---
-title: "【Github】Github Actions Discode に通知してみる"
+title: "【Github】Github Actions Discord に通知してみる"
 date: 2021-07-07T06:00:00+09:00
-description: "Github Actions を利用して Discode に通知してみました。"
+description: "Github Actions を利用して Discord に通知してみました。"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -12,31 +12,31 @@ categories:
 image: images/thumbnail/GitHub_Logo_White.png
 ---
 
-# 【Github】Github Actions Discodeに通知してみる
-`push` された通知など `Discode` に通知してみます。
+# 【Github】Github Actions Discordに通知してみる
+`push` された通知など `Discord` に通知してみます。
 
-## Discode の用意
+## Discord の用意
 サーバー選択->連携サービス->ウェブフック->新しいウェブフック
 ウェブフックを作成後、URLを取得。
 
 ## Github の用意
-取得した URL から `DISCODE_WEBHOOK_ID` と `DISCODE_WEBHOOK_ID` を取得します。
+取得した URL から `DISCORD_WEBHOOK_ID` と `DISCORD_WEBHOOK_ID` を取得します。
 
 ```
-https://discordapp.com/api/webhooks/{DISCODE_WEBHOOK_ID}/{DISCODE_WEBHOOK_TOKEN}
+https://discordapp.com/api/webhooks/{DISCORD_WEBHOOK_ID}/{DISCORD_WEBHOOK_TOKEN}
 ````
 
 1.導入したい `Repository` の `Settings`を選択。
 2.左のメニューの `Secrets` を指定
 3.右上の `New repository secret` を選択。
-4.`Name` に `DISCODE_WEBHOOK_ID` を設定。
-5.`Value` に取得した `DISCODE_WEBHOOK_ID` を設定。
-※ `DISCODE_WEBHOOK_TOKEN` も同様
+4.`Name` に `DISCORD_WEBHOOK_ID` を設定。
+5.`Value` に取得した `DISCORD_WEBHOOK_ID` を設定。
+※ `DISCORD_WEBHOOK_TOKEN` も同様
 
 ## Github Actionsの設定
 Github Actions を作成します。
 ``` yml:.github/workflows/discode.yml
-name: Discode
+name: Discord
 
 on: push
 
@@ -49,11 +49,11 @@ jobs:
       - name: Discord Notify
         uses: appleboy/discord-action@0.0.3
         with:
-          webhook_id: ${{ secrets.DISCODE_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCODE_WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
           color: "#48f442"
           username: "GitHub Bot"
-          args: Github Actions Discord Notification
+          args: Github Actions Discord Notification ${{ github.event.repository.url }}
 ```
 
 ## 参考

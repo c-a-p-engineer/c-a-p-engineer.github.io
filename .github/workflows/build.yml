@@ -61,7 +61,7 @@ jobs:
                   {
                     "title": "Commit Message",
                     "value": "${{ github.event.head_commit.message }}"
-                  } 
+                  }
                 ]
               }
             ]

@@ -65,4 +65,4 @@ jobs:
           webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
           color: "#48f442"
           username: "GitHub Bot"
-          args: Github Actions Discord Notification ${{ github.event.repository.url }}
+          args: Github Actions Discord Notification \n ${{ github.event.repository.url }}

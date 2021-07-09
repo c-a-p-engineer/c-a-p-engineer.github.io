@@ -21,3 +21,9 @@
   name = "Blog"
   url = "blog"
   weight = 10
+
+[[main]]
+  identifier = "topic"
+  name = "Topic"
+  url = "topic"
+  weight = 20

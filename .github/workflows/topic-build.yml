@@ -21,7 +21,7 @@ jobs:
       # Topic Create
       - name: Topic Create
         run: |
-        cd ./blog
+        cd ./php
         php topic.php
 
       # Hugo Build

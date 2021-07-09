@@ -20,7 +20,7 @@ jobs:
 
       # Topic Create
       - name: Topic Create
-      run: |
+        run: |
         cd ./blog
         php topic.php
 

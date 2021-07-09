@@ -1,4 +1,4 @@
-name: update-sitemap
+name: Create Topic
 
 on: push
 
@@ -21,8 +21,8 @@ jobs:
       # Topic Create
       - name: Topic Create
         run: |
-        cd ./php
-        php topic.php
+          cd ./php
+          php topic.php
 
       # Hugo Build
       - name: Build
@@ -45,7 +45,7 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          text: Blog Build
+          text: Create Topic
           attachments: |
             [
               {

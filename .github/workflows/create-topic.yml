@@ -3,7 +3,7 @@ name: Create Topic
 on: push
 
 jobs:
-  update-sitemap:
+  create-topic:
     runs-on: ubuntu-latest
 
     steps:

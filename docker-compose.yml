@@ -5,7 +5,17 @@ services:
         container_name: hugo
         volumes:
             - ".:/src"
-        entrypoint: /bin/bash -c "hugo server"
+        entrypoint: bash
         ports:
             - "1313:1313"
-        working_dir: /src/blog
+        tty: true
+        working_dir: /src
+
+    php:
+        image: php:8.0.1-fpm-alpine3.12
+        container_name: php
+        volumes:
+            - ./php:/php
+            - ./blog:/blog
+        tty: true
+        working_dir: /php

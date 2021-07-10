@@ -1,6 +1,9 @@
-name: github pages
+name: Github Pages Build
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   deploy:

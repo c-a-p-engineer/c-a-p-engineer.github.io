@@ -54,6 +54,8 @@ $tags = [
     'IT',
     'プログラミング',
     'エンジニア',
+    '開発',
+    'SE',
     'Qiita',
     'Zenn',
     'Github',
@@ -69,6 +71,7 @@ $tags = [
     'PHP',
     'Javascript',
     'Java',
+    'Rails',
     'Python',
     'Flutter',
     'HTML',
@@ -111,8 +114,14 @@ foreach($result as $ikey => $ivalue){
         if($jkey == 3){
             continue 2;
         }
-        $html .= '* ' . $jvalue['title'] . PHP_EOL;
-        $html .= '> ' . $jvalue['description'] . PHP_EOL;
+        if(is_array($jvalue['title'])){
+            $jvalue['title'] = '';
+        }
+        if(is_array($jvalue['description'])){
+            $jvalue['description'] = '';
+        }
+        $html .= '* ' . mb_convert_encoding($jvalue['title'], 'utf-8') . PHP_EOL;
+        $html .= '> ' . mb_convert_encoding($jvalue['description'], 'utf-8') . PHP_EOL;
         $html .= hatenaCard($jvalue['title'], $jvalue['link']) . PHP_EOL. PHP_EOL;
     }
 }
@@ -137,6 +146,7 @@ image: images/thumbnail/{$thumbnail}
 
 # {$targetDate} の話題
 データは、<a href="https://b.hatena.ne.jp/" target="_blank" rel="noopener">はてなブックマーク</a>から収集しています。
+※タグが複数設定されていると複数のカテゴリで同一のものが出てきます。
 
 {$html}
 

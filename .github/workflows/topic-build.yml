@@ -1,6 +1,8 @@
 name: Create Topic
 
-on: push
+on:
+  schedule:
+    - cron: '*/10 * * * *'
 
 jobs:
   update-sitemap:
@@ -21,8 +23,7 @@ jobs:
       # Topic Create
       - name: Topic Create
         run: |
-          cd ./php
-          php topic.php
+          php ./php/topic.php
 
       # Hugo Build
       - name: Build
@@ -36,7 +37,7 @@ jobs:
       - name: Update Hugo
         uses: stefanzweifel/git-auto-commit-action@v4.2.0
         with:
-          commit_message: Update Build Files
+          commit_message: Create Topic
 
       # Slack
       - name: Slack Notification

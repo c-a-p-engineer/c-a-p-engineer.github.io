@@ -2,7 +2,7 @@ name: Create Topic
 
 on:
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   create-topic:

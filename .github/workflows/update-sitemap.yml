@@ -1,5 +1,4 @@
-name: update-sitemap
-
+name: Update Sitemap
 on:
   schedule:
     - cron: '0 0,12 * * *'

@@ -56,7 +56,26 @@ jobs:
                   {
                     "title": "Push Repository",
                     "value": "${{ github.event.repository.url }}"
+                  }, 
+                  {
+                    "title": "Pusb Branch",
+                    "value": "${{ github.ref }}"
+                  }, 
+                  {
+                    "title": "Commit Message",
+                    "value": "${{ github.event.head_commit.message }}"
                   }
                 ]
               }
             ]
+
+      # Discord
+      - name: Discord Notify
+        if: success()
+        uses: appleboy/discord-action@0.0.3
+        with:
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+          color: "#48f442"
+          username: "GitHub Bot"
+          args: Blog Build ${{ github.event.repository.url }} ${{ github.ref }} ${{ github.event.head_commit.message }}

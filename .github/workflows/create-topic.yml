@@ -2,7 +2,7 @@ name: Create Topic
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 15 * * *'
 
 jobs:
   create-topic:
@@ -55,16 +55,8 @@ jobs:
                 "author_icon": "${{ github.event.sender.avatar_url }}",
                 "fields": [
                   {
-                    "title": "Push Repository",
-                    "value": "${{ github.event.repository.url }}"
-                  }, 
-                  {
                     "title": "Pusb Branch",
                     "value": "${{ github.ref }}"
-                  }, 
-                  {
-                    "title": "Commit Message",
-                    "value": "${{ github.event.head_commit.message }}"
                   }
                 ]
               }

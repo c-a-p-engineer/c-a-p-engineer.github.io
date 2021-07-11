@@ -4,7 +4,6 @@ set_time_limit(0);
 ini_set('memory_limit', -1);
 
 function hatena($tag, $dateBegin, $dateEnd): array{
-    // https://qiita.com/suesan/items/a02c893b5d391cee1a86
     $dateBegin = date('Y-m-d', strtotime($dateBegin));
     $dateEnd = date('Y-m-d', strtotime($dateEnd));
     $url = "http://b.hatena.ne.jp/search/tag?q={$tag}&sort=popular&users=10&date_begin={$dateBegin}=&date_end={$dateEnd}&mode=rss";
@@ -33,6 +32,16 @@ HTML;
 }
 
 $datetime = date('Y-m-d', strtotime('+9 hour'));
+
+// 日付指定
+if(!is_null($_SERVER['argv'][1] ?? null)){
+    if(date('Y-m-d', strtotime($_SERVER['argv'][1])) != $_SERVER['argv'][1]){
+        echo '日付は Y-m-d 形式で指定してください。' . PHP_EOL;
+        exit;
+    }
+    $datetime = $_SERVER['argv'][1];
+}
+
 $thumbnails = [
     0 => 'weekmark7_sun.png',
     1 => 'weekmark1_mon.png',
@@ -115,12 +124,15 @@ foreach($result as $ikey => $ivalue){
             continue 2;
         }
         if(is_array($jvalue['title'])){
-            $jvalue['title'] = '';
+            continue;
         }
         if(is_array($jvalue['description'])){
             $jvalue['description'] = '';
         }
-        $html .= '* ' . mb_convert_encoding($jvalue['title'], 'utf-8') . PHP_EOL;
+
+        $title = mb_convert_encoding($jvalue['title'], 'utf-8');
+        $html .= '### ' . $title . PHP_EOL;
+        $html .= '<a href="' . $jvalue['link'] . '" target="_blank" rel="noopener">' . $title . '</a>' . PHP_EOL;
         $html .= '> ' . mb_convert_encoding($jvalue['description'], 'utf-8') . PHP_EOL;
         $html .= hatenaCard($jvalue['title'], $jvalue['link']) . PHP_EOL. PHP_EOL;
     }

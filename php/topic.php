@@ -80,7 +80,7 @@ $tags = [
     'PHP',
     'Javascript',
     'Java',
-    'Rails',
+    'Ruby',
     'Python',
     'Flutter',
     'HTML',

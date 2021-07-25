@@ -130,11 +130,11 @@ foreach($result as $ikey => $ivalue){
             $jvalue['description'] = '';
         }
 
-        $title = mb_convert_encoding($jvalue['title'], 'utf-8');
+        $title = htmlspecialchars(mb_convert_encoding($jvalue['title'], 'utf-8'));
         $html .= '### ' . $title . PHP_EOL;
         $html .= '<a href="' . $jvalue['link'] . '" target="_blank" rel="noopener">' . $title . '</a>' . PHP_EOL;
-        $html .= '> ' . mb_convert_encoding($jvalue['description'], 'utf-8') . PHP_EOL;
-        $html .= hatenaCard($jvalue['title'], $jvalue['link']) . PHP_EOL. PHP_EOL;
+        $html .= '> ' . htmlspecialchars(mb_convert_encoding($jvalue['description'], 'utf-8')) . PHP_EOL;
+        $html .= hatenaCard($title, $jvalue['link']) . PHP_EOL. PHP_EOL;
     }
 }
 

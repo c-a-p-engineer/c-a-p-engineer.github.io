@@ -12,7 +12,7 @@ buildFuture = true
 copyright = "&copy;{year}, All Rights Reserved"
 timeout = 10000
 enableEmoji = true
-paginate = 13
+paginate = 15
 rssLimit = 100
 
 enableGitInfo = false

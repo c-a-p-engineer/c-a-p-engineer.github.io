@@ -156,8 +156,14 @@ image: images/thumbnail/{$thumbnail}
 {$html}
 
 TOPIC;
-    
-    $output = realpath(__DIR__ . '/../blog/content/ja/topic/') . '/' . $targetDate . '.md';
+
+    $year = date('Y', strtotime($targetDate));
+    $month = date('m', strtotime($targetDate));
+    $day = date('d', strtotime($targetDate));
+    $path = realpath(__DIR__ . '/../blog/content/ja/topic/' . $year . '/' . $month);
+    @mkdir($path, '0777', TRUE);
+
+    $output = $path . '/' .$day . '.md';
     file_put_contents($output, $data);
     echo 'Created Topic ' . $output . PHP_EOL;
 }

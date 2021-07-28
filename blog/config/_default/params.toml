@@ -8,10 +8,10 @@ meta_image = "https://c-a-p-engineer.github.io/images/whoami/avatar.jpg"
 themecolor = ""
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
-notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
-notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume", "topic"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume", "topic"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume", "topic"]
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery", "topic"]
 
 viewportSize = "wide" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
@@ -40,7 +40,7 @@ enableWhoami = true
 summaryShape = "classic" # card, classic, compact
 searchResultPosition = "main" # side, main
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
-archivePaginate = 13
+archivePaginate = 100
 paginateWindow = 1
 talksPaginate = 5
 talksGroupByDate = "2006"

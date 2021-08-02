@@ -160,8 +160,9 @@ TOPIC;
     $year = date('Y', strtotime($targetDate));
     $month = date('m', strtotime($targetDate));
     $day = date('d', strtotime($targetDate));
-    $path = realpath(__DIR__ . '/../blog/content/ja/topic/' . $year . '/' . $month);
-    @mkdir($path, '0777', TRUE);
+    $path = __DIR__ . '/../blog/content/ja/topic/' . $year . '/' . $month;
+    @mkdir($path, 0777, true);
+    $path = realpath($path);
 
     $output = $path . '/' .$day . '.md';
     file_put_contents($output, $data);

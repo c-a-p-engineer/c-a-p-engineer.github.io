@@ -17,12 +17,12 @@ Web上でカメラ・マイクを取得、表示・停止するだけ。
 
 ## サンプル
 <button type="button" onclick="startVideo();">Start video</button> <button type="button" onclick="stopVideo();">Stop video</button>
-<video id="local-video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
+<video id="video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
 <script>
-  var video = document.getElementById('local-video');
+  var video = document.getElementById('video');
   var constraints = { audio: true, video: true };
 
-  // カメラ開始
+  // カメラ・マイク開始
   function startVideo() {
     navigator.mediaDevices.getUserMedia(constraints)
     .then(function(mediaStream) {
@@ -34,7 +34,7 @@ Web上でカメラ・マイクを取得、表示・停止するだけ。
     .catch(function(err) { console.log(err.name + ": " + err.message); });
   }
 
-  // カメラ開始
+  // カメラ・マイク停止
   function stopVideo() {
     let stream = video.srcObject;
     let tracks = stream.getTracks();
@@ -50,9 +50,7 @@ Web上でカメラ・マイクを取得、表示・停止するだけ。
 <button type="button" onclick="startVideo();">Start video</button> <button type="button" onclick="stopVideo();">Stop video</button>
 <video id="video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
 <script>
-  // カメラ表示先取得
   var video = document.getElementById('video');
-  // カメラとマイクを取得
   var constraints = { audio: true, video: true };
 
   // カメラ・マイク開始
@@ -67,7 +65,7 @@ Web上でカメラ・マイクを取得、表示・停止するだけ。
     .catch(function(err) { console.log(err.name + ": " + err.message); });
   }
 
-  // カメラ停止
+  // カメラ・マイク停止
   function stopVideo() {
     let stream = video.srcObject;
     let tracks = stream.getTracks();

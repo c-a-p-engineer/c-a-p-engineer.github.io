@@ -17,9 +17,9 @@
   weight = 3
 
 [[main]]
-  identifier = "blog"
-  name = "Blog"
-  url = "blog"
+  identifier = "Tech"
+  name = "Tech"
+  url = "tech"
   weight = 10
 
 [[main]]

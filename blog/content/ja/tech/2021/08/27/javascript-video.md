@@ -17,7 +17,7 @@ Web上でカメラ・マイクを取得、表示・停止するだけ。
 
 ## サンプル
 <button type="button" onclick="startVideo();">Start video</button> <button type="button" onclick="stopVideo();">Stop video</button>
-<video id="video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
+<video id="video" autoplay></video>
 <script>
   var video = document.getElementById('video');
   var constraints = { audio: true, video: true };

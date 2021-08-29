@@ -1,7 +1,7 @@
 ---
-title: "【JavaScript】スクリーンキャプチャを取得する"
+title: "【JavaScript】PCのスクリーンキャプチャを取得する"
 date: 2021-08-29T09:00:00+09:00
-description: "スクリーンキャプチャを取得する"
+description: "PCのスクリーンキャプチャを取得する"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -13,7 +13,7 @@ image: images/thumbnail/javascript.png
 ---
 
 # 【JavaScript】スクリーンキャプチャを取得する
-スクリーンキャプチャを取得するためのメモ
+PCのスクリーンキャプチャを取得するためのメモ
 
 ## サンプル
 <p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>

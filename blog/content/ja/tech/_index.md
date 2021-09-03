@@ -1,6 +1,6 @@
 +++
 aliases = ["posts","articles","blog","showcase","docs","topic"]
-title = "Blog"
-description = "Blog page"
+title = "Tech"
+description = "Tech page"
 date = "2021-02-01"
 +++

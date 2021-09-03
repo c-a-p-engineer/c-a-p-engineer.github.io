@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/javascript.png
 ---
 
-# 【JavaScript】スクリーンキャプチャを取得する
+# 無料で使える WebSocket サーバー「Achex」
 無料で使える WebSocket サーバー「Achex」を使用してみました。
 <a href="https://achex.ca/" target="_blank" rel="noopener">Achex</a>
 

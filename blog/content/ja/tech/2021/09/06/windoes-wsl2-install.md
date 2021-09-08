@@ -1,6 +1,6 @@
 ---
 title: "WSL2 を入れてみる"
-date: 2021-09-02T10:00:00+09:00
+date: 2021-09-06T10:00:00+09:00
 description: "通称 WSL と呼ばれる Windows Subsystem for Linux を導入してみました。"
 draft: false
 enableToc: true

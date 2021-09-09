@@ -24,6 +24,13 @@ image: images/thumbnail/linux.png
 > ・ARM64 システムの場合:バージョン 2004 以降、ビルド 19041 以上。
 > ・18362 より前のビルドは WSL 2 をサポートしていません。 Windows 更新アシスタントを使用して、お使いのバージョンの Windows を更新します。
 
+## 簡易的な手順
+コマンド一発で簡単にインストールも可能です。
+<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#simplified-installation-for-windows-insiders" target="_blank" rel="noopener">Windows Insider 用の簡略化されたインストール</a>
+``` PowerShell
+wsl --install
+```
+
 ## 手順
 
 1.管理者権限で `PowerShell` を実行

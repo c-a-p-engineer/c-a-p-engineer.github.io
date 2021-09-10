@@ -28,7 +28,7 @@ float(2147483648)
 	[2147483647]=&gt; string(3) &quot;MAX&quot;
 	[-2147483648]=&gt; string(9) &quot;OVER FLOW&quot;
 }
-</code></pre><p>結果は上記の通りになってしまいます。<br>なので配列の数値キーを使う場合はお気をつけ下さい。</p><h3 id=intval関数>intval関数</h3><p>intval関数を使用した際に、int型の最大値を超えた float型の値を、強制的に int型にするため発生します。<br><a href=https://www.php.net/manual/ja/function.uniqid.php target=_blank rel=noopener>PHP: intval - Manual</a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</code></pre><p>結果は上記の通りになってしまいます。<br>なので配列の数値キーを使う場合はお気をつけ下さい。</p><h3 id=intval関数>intval関数</h3><p>intval関数を使用した際に、int型の最大値を超えた float型の値を、強制的に int型にするため発生します。<br><a href=https://www.php.net/manual/ja/function.uniqid.php target=_blank rel="nofollow noopener">PHP: intval - Manual</a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-php data-lang=php><span class=o>&lt;?</span><span class=nx>php</span>

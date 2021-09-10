@@ -98,4 +98,4 @@ function stopCapture(evt) {
 ```
 
 ## 参考
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture" target="_blank" rel="noopener">Using the Screen Capture API - Web APIs | MDN</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture" target="_blank" rel="nofollow noopener">Using the Screen Capture API - Web APIs | MDN</a>

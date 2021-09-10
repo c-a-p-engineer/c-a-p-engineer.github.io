@@ -18,7 +18,7 @@ image: images/thumbnail/computer_programming_man.png
 
 ## アジャイルソフトウェア開発宣言
 まずはアジャイルソフトウェア開発宣言を見てみましょう。
-<a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="noopener">アジャイルソフトウェア開発宣言</a>
+<a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言</a>
 
 > 私たちは、ソフトウェア開発の実践
 > あるいは実践を手助けをする活動を通じて、
@@ -82,7 +82,7 @@ image: images/thumbnail/computer_programming_man.png
 > 
 > チームがもっと効率を高めることができるかを定期的に振り返り、それに基づいて自分たちのやり方を最適に調整します。
 
-<a href="https://agilemanifesto.org/iso/ja/principles.html" target="_blank" rel="noopener">アジャイル宣言の背後にある原則</a>
+<a href="https://agilemanifesto.org/iso/ja/principles.html" target="_blank" rel="nofollow noopener">アジャイル宣言の背後にある原則</a>
 
 アジャイル宣言の背後にはこれだけの原則があります。
 
@@ -135,10 +135,10 @@ image: images/thumbnail/computer_programming_man.png
 チームに経験が浅い人が入ると問題が発生するような気がします。
 
 またIPAもアジャイル開発宣言について資料を出していますのでよく読んでください。
-<a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
+<a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
 
 ## 参考
-<a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="noopener">アジャイルソフトウェア開発宣言</a>
-<a href="https://agilemanifesto.org/iso/ja/principles.html" target="_blank" rel="noopener">アジャイル宣言の背後にある原則</a>
-<a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
-<a href="https://www.ipa.go.jp/ikc/reports/20200331_1.html" target="_blank" rel="noopener">アジャイル開発版「情報システム・モデル取引・契約書」～ユーザ／ベンダ間の緊密な協働によるシステム開発で、DXを推進～：IPA 独立行政法人 情報処理推進機構</a>
+<a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言</a>
+<a href="https://agilemanifesto.org/iso/ja/principles.html" target="_blank" rel="nofollow noopener">アジャイル宣言の背後にある原則</a>
+<a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
+<a href="https://www.ipa.go.jp/ikc/reports/20200331_1.html" target="_blank" rel="nofollow noopener">アジャイル開発版「情報システム・モデル取引・契約書」～ユーザ／ベンダ間の緊密な協働によるシステム開発で、DXを推進～：IPA 独立行政法人 情報処理推進機構</a>

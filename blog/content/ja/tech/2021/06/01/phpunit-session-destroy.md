@@ -110,4 +110,4 @@ class SampleTest extends TestCase
 こうすることによってテストの初期化が走ってどこかに残ったセッションのデータを破棄します。
 
 ## 参考
-* <a href="https://phpunit.readthedocs.io/ja/latest/fixtures.html#teardown-setup" target="_blank" rel="noopener">4. フィクスチャ &mdash; PHPUnit latest Manual</a>
+* <a href="https://phpunit.readthedocs.io/ja/latest/fixtures.html#teardown-setup" target="_blank" rel="nofollow noopener">4. フィクスチャ &mdash; PHPUnit latest Manual</a>

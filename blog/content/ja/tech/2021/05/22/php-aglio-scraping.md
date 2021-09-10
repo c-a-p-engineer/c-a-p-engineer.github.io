@@ -18,10 +18,10 @@ APIドキュメントを解析 → 自動テスト出来たら良いなと思い
 
 ## サンプル
 サンプルに使用している `default.html` はこちらの `aglio` の `Github` のものを使用しています。
-* <a href="https://github.com/danielgtaylor/aglio/blob/master/examples/default.html" target="_blank" rel="noopener">aglio/default.html at master · danielgtaylor/aglio</a>
+* <a href="https://github.com/danielgtaylor/aglio/blob/master/examples/default.html" target="_blank" rel="nofollow noopener">aglio/default.html at master · danielgtaylor/aglio</a>
 
 解析に使用したHTMLはこちらです。
-* <a href="https://htmlpreview.github.io/?https://github.com/danielgtaylor/aglio/blob/master/examples/default.html" target="_blank" rel="noopener">default.html</a>
+* <a href="https://htmlpreview.github.io/?https://github.com/danielgtaylor/aglio/blob/master/examples/default.html" target="_blank" rel="nofollow noopener">default.html</a>
 `default.html` 以外では確認しておりませんので必要な場合は改修をして使用してください。
 
 ``` php:scraping.php

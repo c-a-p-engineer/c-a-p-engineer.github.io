@@ -53,4 +53,4 @@ class MyImage extends StatelessWidget {
 ```
 
 ## 参考
-* <a href="https://stackoverflow.com/questions/65653801/flutter-web-cant-load-network-image-from-another-domain" target="_blank" rel="noopener">Flutter web can't load network image from another domain - Stack Overflow</a>
+* <a href="https://stackoverflow.com/questions/65653801/flutter-web-cant-load-network-image-from-another-domain" target="_blank" rel="nofollow noopener">Flutter web can't load network image from another domain - Stack Overflow</a>

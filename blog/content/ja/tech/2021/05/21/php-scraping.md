@@ -69,8 +69,8 @@ HTMLが取得できました。
 
 ## 参考
 
-* <a href="https://www.php.net/manual/ja/domxpath.query.php" target="_blank" rel="noopener">PHP: DOMDocument - Manual</a>
-* <a href="https://www.php.net/manual/ja/class.domdocument.php" target="_blank" rel="noopener">PHP: DOMXPath::query - Manual</a>
-* <a href="https://www.php.net/manual/ja/class.domnodelist" target="_blank" rel="noopener">PHP: DOMNodeList - Manual</a>
-* <a href="https://www.php.net/manual/ja/class.domelement.php" target="_blank" rel="noopener">PHP: DOMElement - Manual</a>
-* <a href="https://qiita.com/yuki2006/items/1f96450fc744769872c5" target="_blank" rel="noopener">XPathで指定したテキストがある次の要素を取得する方法 - Qiita</a>
+* <a href="https://www.php.net/manual/ja/domxpath.query.php" target="_blank" rel="nofollow noopener">PHP: DOMDocument - Manual</a>
+* <a href="https://www.php.net/manual/ja/class.domdocument.php" target="_blank" rel="nofollow noopener">PHP: DOMXPath::query - Manual</a>
+* <a href="https://www.php.net/manual/ja/class.domnodelist" target="_blank" rel="nofollow noopener">PHP: DOMNodeList - Manual</a>
+* <a href="https://www.php.net/manual/ja/class.domelement.php" target="_blank" rel="nofollow noopener">PHP: DOMElement - Manual</a>
+* <a href="https://qiita.com/yuki2006/items/1f96450fc744769872c5" target="_blank" rel="nofollow noopener">XPathで指定したテキストがある次の要素を取得する方法 - Qiita</a>

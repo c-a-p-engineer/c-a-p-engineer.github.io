@@ -96,4 +96,4 @@ echo '減算:' . $date;
 ```
 
 ## 参考
-* <a href="https://www.php.net/manual/ja/function.strtotime" target="_blank" rel="noopener">PHP: strtotime - Manual</a>
+* <a href="https://www.php.net/manual/ja/function.strtotime" target="_blank" rel="nofollow noopener">PHP: strtotime - Manual</a>

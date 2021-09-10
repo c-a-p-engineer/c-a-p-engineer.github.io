@@ -16,7 +16,7 @@ image: images/thumbnail/php.png
 composer の package を自作してみました。
 
 package を作りのテンプレートに以下のようなものがありますが、今回は最小構成で簡単に作ってみました。
-<a href="https://github.com/php-pds/skeleton" target="_blank" rel="noopener">php-pds/skeleton: Standard PHP package skeleton.</a>
+<a href="https://github.com/php-pds/skeleton" target="_blank" rel="nofollow noopener">php-pds/skeleton: Standard PHP package skeleton.</a>
 
 ## composer.json作成
 
@@ -82,11 +82,11 @@ class HelloWorld
 ```
 
 ## Github に push
-作成したファイル群を <a href="https://github.com" target="_blank" rel="noopener">Github</a> に `push` してください。
+作成したファイル群を <a href="https://github.com" target="_blank" rel="nofollow noopener">Github</a> に `push` してください。
 この時、`README.md` などパッケージに不要なファイルは削除しましょう。
 
 ## Packagist に登録
-1. <a href="https://packagist.org/" target="_blank" rel="noopener">Packagist</a> にアクセス。
+1. <a href="https://packagist.org/" target="_blank" rel="nofollow noopener">Packagist</a> にアクセス。
 2. ユーザ登録をしてください。
 3. 上部のナビゲーションの **Submit** を選択。
 4. Gitub の `Repository URL` を登録。<br> ※同一名称が多いと注意が出てきますが気にせず進めます。
@@ -94,7 +94,7 @@ class HelloWorld
 <br>
 
 実際に作った composer は こちらになります。
-<a href="https://github.com/c-a-p-engineer/hello-world-composer" target="_blank" rel="noopener">c-a-p-engineer/hello-world-composer: Hello,World in Composer</a>
+<a href="https://github.com/c-a-p-engineer/hello-world-composer" target="_blank" rel="nofollow noopener">c-a-p-engineer/hello-world-composer: Hello,World in Composer</a>
 
 
 ## 実際に使ってみる
@@ -117,4 +117,4 @@ echo $helloWorld->say();
 これで `Hello,World` が表示されたら成功になります。
 
 ## 参考
-* <a href="https://www.messiahworks.com/archives/18541" target="_blank" rel="noopener">自作のcomposerパッケージ(hello,world)を、githubに登録して、laravelから利用できる方法 | メサイア・ワークス</a>
+* <a href="https://www.messiahworks.com/archives/18541" target="_blank" rel="nofollow noopener">自作のcomposerパッケージ(hello,world)を、githubに登録して、laravelから利用できる方法 | メサイア・ワークス</a>

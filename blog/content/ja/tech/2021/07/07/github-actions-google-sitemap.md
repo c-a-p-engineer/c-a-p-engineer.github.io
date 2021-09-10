@@ -36,6 +36,6 @@ jobs:
 ※`cron` の時間は `UTC` なので 日本時間で考えると `-9` 時間されますので注意してください。
 
 ## 参考
-* <a href="https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap?hl=ja" target="_blank" rel="noopener">サイトマップの作成と送信 | Google 検索セントラル  |  Google Developers</a>
-* <a href="https://fwywd.com/tech/ping-sitemap-to-google" target="_blank" rel="noopener">Google Search Console へのサイトマップの更新通知を GitHub Actions で定期実行しよう | fwywd（フュード）</a>
-* <a href="https://docs.github.com/ja/actions/reference/events-that-trigger-workflows#schedule" target="_blank" rel="noopener">ワークフローをトリガーするイベント - GitHub Docs</a>
+* <a href="https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap?hl=ja" target="_blank" rel="nofollow noopener">サイトマップの作成と送信 | Google 検索セントラル  |  Google Developers</a>
+* <a href="https://fwywd.com/tech/ping-sitemap-to-google" target="_blank" rel="nofollow noopener">Google Search Console へのサイトマップの更新通知を GitHub Actions で定期実行しよう | fwywd（フュード）</a>
+* <a href="https://docs.github.com/ja/actions/reference/events-that-trigger-workflows#schedule" target="_blank" rel="nofollow noopener">ワークフローをトリガーするイベント - GitHub Docs</a>

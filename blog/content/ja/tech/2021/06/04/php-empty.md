@@ -16,7 +16,7 @@ image: images/thumbnail/php.png
 
 # 関数 empty は罠
 PHPの関数 `empty` はとても使いやすく入力値の検査などに使いやすいですがこれが罠なんです。
-・<a href="https://www.php.net/manual/ja/function.empty.php" target="_blank" rel="noopener">PHP: empty - Manual</a>
+・<a href="https://www.php.net/manual/ja/function.empty.php" target="_blank" rel="nofollow noopener">PHP: empty - Manual</a>
 
 ## empty の使いやすさ
 PHPマニュアルにある `empty` の説明はこれだけです。
@@ -128,7 +128,7 @@ bool(false)
 |$x = "false";|false|
 
 
-<a href="https://www.php.net/manual/ja/types.comparisons.php" target="_blank" rel="noopener">PHP: PHP 型の比較表 - Manual</a>
+<a href="https://www.php.net/manual/ja/types.comparisons.php" target="_blank" rel="nofollow noopener">PHP: PHP 型の比較表 - Manual</a>
 
 ## 対策
 対策としては `empty` の表を理解して使用する。

@@ -17,7 +17,7 @@ image: images/thumbnail/GitHub_Logo_White.png
 
 ## Slack の用意
 以下の `Slack` アプリの `Incoming Webhook` を利用します。
-* <a href="https://w1625424953-rox450381.slack.com/apps/A0F7XDUAZ--incoming-webhook-?tab=more_info" target="_blank" rel="noopener">Incoming Webhook </a>
+* <a href="https://w1625424953-rox450381.slack.com/apps/A0F7XDUAZ--incoming-webhook-?tab=more_info" target="_blank" rel="nofollow noopener">Incoming Webhook </a>
 
 `Webhook URL` を取得します。
 
@@ -93,6 +93,6 @@ jobs:
 ![slack-notification-customize.png](/images/blog/2021-07-05-github-actions-slack-notification/slack-notification-customize.png "slack-notification-customize.png") 
 
 ## 参考
-* <a href="https://github.com/tokorom/action-slack-incoming-webhook" target="_blank" rel="noopener">tokorom/action-slack-incoming-webhook: GitHub Action for Slack Incoming Webhook</a>
-* <a href="https://docs.github.com/ja/actions/reference/context-and-expression-syntax-for-github-actions" target="_blank" rel="noopener">GitHub Actions のコンテキストおよび式の構文 - GitHub Docs</a>
+* <a href="https://github.com/tokorom/action-slack-incoming-webhook" target="_blank" rel="nofollow noopener">tokorom/action-slack-incoming-webhook: GitHub Action for Slack Incoming Webhook</a>
+* <a href="https://docs.github.com/ja/actions/reference/context-and-expression-syntax-for-github-actions" target="_blank" rel="nofollow noopener">GitHub Actions のコンテキストおよび式の構文 - GitHub Docs</a>
 

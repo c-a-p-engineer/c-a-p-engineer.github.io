@@ -36,4 +36,4 @@ maxHeight : 800,
 ```
 
 ## 参考
-* <a href="https://stackoverflow.com/questions/37330332/electron-browserwindow-min-height-and-width-not-working-after-hide-show-meth" target="_blank" rel="noopener">javascript - electron BrowserWindow min height and width not working after hide() show() methods - Stack Overflow</a>
+* <a href="https://stackoverflow.com/questions/37330332/electron-browserwindow-min-height-and-width-not-working-after-hide-show-meth" target="_blank" rel="nofollow noopener">javascript - electron BrowserWindow min height and width not working after hide() show() methods - Stack Overflow</a>

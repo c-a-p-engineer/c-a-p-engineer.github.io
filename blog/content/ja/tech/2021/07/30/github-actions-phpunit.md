@@ -56,5 +56,5 @@ jobs:
 また、複数バージョンを指定することによりPHPのバージョンアップのテストを行うことが可能です。
 
 ## 参考
-* <a href="https://qiita.com/blue32a/items/0661d70216051ad6552d" target="_blank" rel="noopener">GitHub ActionsでPHPUnitを実行する - Qiita</a>
-* <a href="https://techblog.istyle.co.jp/archives/4143" target="_blank" rel="noopener">GitHubActionsでPHP7.4環境のPHPUnitを実行する - istyle Tech Blog</a>
+* <a href="https://qiita.com/blue32a/items/0661d70216051ad6552d" target="_blank" rel="nofollow noopener">GitHub ActionsでPHPUnitを実行する - Qiita</a>
+* <a href="https://techblog.istyle.co.jp/archives/4143" target="_blank" rel="nofollow noopener">GitHubActionsでPHP7.4環境のPHPUnitを実行する - istyle Tech Blog</a>

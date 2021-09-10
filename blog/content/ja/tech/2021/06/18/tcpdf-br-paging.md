@@ -39,5 +39,5 @@ $tcpdf->Output('test.pdf', 'I');
 
 
 ## 参考
-* <a href="https://tcpdf.org/examples/example_006/" target="_blank" rel="noopener">Example 006 : WriteHTML() · TCPDF</a>
-* <a href="https://stackoverflow.com/questions/1605860/manual-page-break-in-tcpdf" target="_blank" rel="noopener">pdf - Manual Page Break in TCPDF - Stack Overflow</a>
+* <a href="https://tcpdf.org/examples/example_006/" target="_blank" rel="nofollow noopener">Example 006 : WriteHTML() · TCPDF</a>
+* <a href="https://stackoverflow.com/questions/1605860/manual-page-break-in-tcpdf" target="_blank" rel="nofollow noopener">pdf - Manual Page Break in TCPDF - Stack Overflow</a>

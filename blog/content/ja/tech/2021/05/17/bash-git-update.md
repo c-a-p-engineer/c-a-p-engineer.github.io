@@ -40,4 +40,4 @@ fi
 これを `cron` に設定することで自動的に最新にすることが出来ます。
 
 ## 参考
-* <a href="https://stackoverflow.com/questions/3258243/check-if-pull-needed-in-git" target="_blank" rel="noopener">bash - Check if pull needed in Git - Stack Overflow</a>
+* <a href="https://stackoverflow.com/questions/3258243/check-if-pull-needed-in-git" target="_blank" rel="nofollow noopener">bash - Check if pull needed in Git - Stack Overflow</a>

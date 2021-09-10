@@ -48,5 +48,5 @@ Flutter の `FloatingActionButton` の位置を調整します。
 * bottom
 
 ## 参考
-<a href="https://stackoverflow.com/questions/54172437/flutter-move-floatingactionbutton-up-50-pixels" target="_blank" rel="noopener">flutter move floatingActionButton up 50 pixels - Stack Overflow</a>
-<a href="https://ttydev.com/2020/11/11/flutter-edgeinsets/" target="_blank" rel="noopener">【Flutter】Containerのmarginの設定方法 – EdgeInsetsをざっくりまとめる | tty×Dev</a>
+<a href="https://stackoverflow.com/questions/54172437/flutter-move-floatingactionbutton-up-50-pixels" target="_blank" rel="nofollow noopener">flutter move floatingActionButton up 50 pixels - Stack Overflow</a>
+<a href="https://ttydev.com/2020/11/11/flutter-edgeinsets/" target="_blank" rel="nofollow noopener">【Flutter】Containerのmarginの設定方法 – EdgeInsetsをざっくりまとめる | tty×Dev</a>

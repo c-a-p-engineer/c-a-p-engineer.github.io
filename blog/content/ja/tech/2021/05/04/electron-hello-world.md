@@ -16,7 +16,7 @@ image: images/thumbnail/Electron_Software_Framework_Logo.svg
 # Hello,World!
 `Electron` で `Hello,World!` を出力するまでを行っていきます。
 `Electron` 公式のチュートリアルを見て進めていきます。
-<a href="https://www.electronjs.org/docs/tutorial/quick-start#quick-start-guide" target="_blank" rel="noopener">Quick Start Guide | Electron</a>
+<a href="https://www.electronjs.org/docs/tutorial/quick-start#quick-start-guide" target="_blank" rel="nofollow noopener">Quick Start Guide | Electron</a>
 
 ## 環境
 * Ubuntu 20.04.2 LTS

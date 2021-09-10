@@ -78,5 +78,5 @@ Web上でカメラ・マイクを取得、表示・停止するだけ。
 ```
 
 ## 参考
-<a href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="noopener">MediaDevices.getUserMedia() - Web API | MDN</a>
-<a href="https://developer.mozilla.org/ja/docs/Web/API/MediaStreamTrack/stop" target="_blank" rel="noopener">MediaStreamTrack.stop() - Web API | MDN</a>
+<a href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="nofollow noopener">MediaDevices.getUserMedia() - Web API | MDN</a>
+<a href="https://developer.mozilla.org/ja/docs/Web/API/MediaStreamTrack/stop" target="_blank" rel="nofollow noopener">MediaStreamTrack.stop() - Web API | MDN</a>

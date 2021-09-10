@@ -14,7 +14,7 @@ image: images/thumbnail/php.png
 
 # RSSを取得、解析する
 PHPを使用して RSS を解析します。
-RSSの取得先は<a href="https://b.hatena.ne.jp/" target="_blank" rel="noopener">はてなブックマーク</a> を使用しています。
+RSSの取得先は<a href="https://b.hatena.ne.jp/" target="_blank" rel="nofollow noopener">はてなブックマーク</a> を使用しています。
 
 ## RSS取得
 RSS の XML を取得して PHP の配列にするだけの処理です。
@@ -57,4 +57,4 @@ var_dump($json);
 ```
 
 ## 参考
-* <a href="https://qiita.com/suesan/items/a02c893b5d391cee1a86" target="_blank" rel="noopener">はてブの検索結果をRSSフィードとしてslackに垂れ流す - Qiita</a>
+* <a href="https://qiita.com/suesan/items/a02c893b5d391cee1a86" target="_blank" rel="nofollow noopener">はてブの検索結果をRSSフィードとしてslackに垂れ流す - Qiita</a>

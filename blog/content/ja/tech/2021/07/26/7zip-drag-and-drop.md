@@ -18,7 +18,7 @@ image: images/thumbnail/file_icon_text_zip.png
 
 ## 前提
 * Windows<br>※Windows10以外では確認しておりません。
-* 7zip<br>インストールは <a href="https://sevenzip.osdn.jp/download.html" target="_blank" rel="noopener">ダウンロード | 7zip</a> からお願いします。
+* 7zip<br>インストールは <a href="https://sevenzip.osdn.jp/download.html" target="_blank" rel="nofollow noopener">ダウンロード | 7zip</a> からお願いします。
 
 ## ソースコード
 メモ帳やエディタを開いてbatファイルを作成します。
@@ -37,4 +37,4 @@ for %%f in (%*) do (
 ZIP化したいフォルダやファイルを選択して作成した `zip.bat` に落とすと元ファイルと同一場所に `***.zip` というファイルを順次作成してくれます。
 
 ## 参考
-* <a href="https://mseeeen.msen.jp/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop/" target="_blank" rel="noopener">ドラッグ＆ドロップで7zに圧縮できるバッチファイル</a>
+* <a href="https://mseeeen.msen.jp/batch-file-that-can-be-compressed-to-7z-by-drag-and-drop/" target="_blank" rel="nofollow noopener">ドラッグ＆ドロップで7zに圧縮できるバッチファイル</a>

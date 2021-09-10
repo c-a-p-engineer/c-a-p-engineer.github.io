@@ -18,7 +18,7 @@ image: images/thumbnail/docker.png
 
 ## MailHog
 MailHog 
-* <a href="https://github.com/mailhog/MailHog" target="_blank" rel="noopener">mailhog/MailHog: Web and API based SMTP testing</a>
+* <a href="https://github.com/mailhog/MailHog" target="_blank" rel="nofollow noopener">mailhog/MailHog: Web and API based SMTP testing</a>
 
 ## Docker に MailHog 導入
 `docker-compose.yml` に以下を追加
@@ -51,7 +51,7 @@ php -r "mail('test@example.com', 'テストタイトル', 'テスト本文', 'Fr
 
 ### メール確認
 MailHog の確認画面で送信の確認が出来ます。
-<a href="http://localhost:8025/" target="_blank" rel="noopener">http://localhost:8025/</a>
+<a href="http://localhost:8025/" target="_blank" rel="nofollow noopener">http://localhost:8025/</a>
 
 一覧画面でメールが届いている事を確認
 ![mailhog-list.png](/images/blog/2021-07-04-docker-mailhog/mailhog-list.png "mailhog-list.png") 

@@ -16,7 +16,7 @@ image: images/thumbnail/linux.png
 通称 `WSL` と呼ばれる `Windows Subsystem for Linux` を導入してみました。
 
 公式のインストールガイドはこちらになります。
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" target="_blank" rel="noopener">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</a>
+<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" target="_blank" rel="nofollow noopener">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</a>
 
 ## 動作要件
 > WSL 2 に更新するには、Windows 10 を実行している必要があります。
@@ -26,7 +26,7 @@ image: images/thumbnail/linux.png
 
 ## 簡易的な手順
 コマンド一発で簡単にインストールも可能です。
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#simplified-installation-for-windows-insiders" target="_blank" rel="noopener">Windows Insider 用の簡略化されたインストール</a>
+<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#simplified-installation-for-windows-insiders" target="_blank" rel="nofollow noopener">Windows Insider 用の簡略化されたインストール</a>
 ``` PowerShell
 wsl --install
 ```
@@ -43,13 +43,13 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 4. Linuxカーネル更新プログラムをダウンロード
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package" target="_blank" rel="noopener">Linux カーネル更新プログラム パッケージをダウンロードする</a>
+<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package" target="_blank" rel="nofollow noopener">Linux カーネル更新プログラム パッケージをダウンロードする</a>
 5.WSL 2 を既定のバージョンとして設定する
 ``` PowerShell
 wsl --set-default-version 2
 ``` PowerShell
 6.Windows Store から Linux ディストリビューションを選択
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice" target="_blank" rel="noopener">選択した Linux ディストリビューションをインストールする</a>
+<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice" target="_blank" rel="nofollow noopener">選択した Linux ディストリビューションをインストールする</a>
 7.インストール完了後に起動
 8.起動後にアカウント名/パスワードを設定
 
@@ -97,5 +97,5 @@ wsl --unregister {ディストリビューション名}
 ```
 
 ## 参考
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" target="_blank" rel="noopener">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</a>
-<a href="https://qiita.com/rubytomato@github/items/a290ecef2ea86ea8350f#%E6%96%B0%E3%81%97%E3%81%84%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" target="_blank" rel="noopener">WSL2の初歩メモ - Qiita</a>
+<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" target="_blank" rel="nofollow noopener">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</a>
+<a href="https://qiita.com/rubytomato@github/items/a290ecef2ea86ea8350f#%E6%96%B0%E3%81%97%E3%81%84%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" target="_blank" rel="nofollow noopener">WSL2の初歩メモ - Qiita</a>

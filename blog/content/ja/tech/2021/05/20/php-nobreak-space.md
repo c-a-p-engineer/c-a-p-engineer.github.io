@@ -34,7 +34,7 @@ string(14) "hoge\u00a0piyo"
 
 ### \\u00a0
 このスペースは `ノーブレークスペース` というもので `HTML` の `&nbsp` の事。
-* <a href="https://ja.wikipedia.org/wiki/%E3%83%8E%E3%83%BC%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9" target="_blank" rel="noopener">ノーブレークスペース - Wikipedia</a>
+* <a href="https://ja.wikipedia.org/wiki/%E3%83%8E%E3%83%BC%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9" target="_blank" rel="nofollow noopener">ノーブレークスペース - Wikipedia</a>
 
 ## 対処
 

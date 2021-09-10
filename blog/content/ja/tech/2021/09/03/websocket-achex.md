@@ -14,7 +14,7 @@ image: images/thumbnail/javascript.png
 
 # 無料で使える WebSocket サーバー「Achex」
 無料で使える WebSocket サーバー「Achex」を使用してみました。
-<a href="https://achex.ca/" target="_blank" rel="noopener">Achex</a>
+<a href="https://achex.ca/" target="_blank" rel="nofollow noopener">Achex</a>
 
 こちらは簡単に使用することが可能なのでチャットシステムなど簡単に作れそうです。
 ただし、使用する際はフリーのサーバーなのでセキュリティが必要なものにはおすすめしません。
@@ -162,6 +162,6 @@ var getDateTime = function() {
 ```
 
 ## 参考
-<a href="https://achex.ca/" target="_blank" rel="noopener">Achex</a>
-<a href="https://developer.mozilla.org/ja/docs/Web/API/WebSocket" target="_blank" rel="noopener">WebSocket - Web API | MDN</a>
+<a href="https://achex.ca/" target="_blank" rel="nofollow noopener">Achex</a>
+<a href="https://developer.mozilla.org/ja/docs/Web/API/WebSocket" target="_blank" rel="nofollow noopener">WebSocket - Web API | MDN</a>
 

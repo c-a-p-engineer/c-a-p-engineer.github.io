@@ -35,4 +35,4 @@ mkdir(
 
 
 ## 参考
-* <a href="https://www.php.net/manual/ja/function.mkdir.php" target="_blank" rel="noopener">PHP: mkdir - Manual</a>
+* <a href="https://www.php.net/manual/ja/function.mkdir.php" target="_blank" rel="nofollow noopener">PHP: mkdir - Manual</a>

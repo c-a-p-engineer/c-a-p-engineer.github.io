@@ -13,13 +13,13 @@ image: images/thumbnail/php.png
 ---
 
 # 配列を扱う時にとても有用な array_column
-`PHP` で配列を扱う時にとても有用な関数 <a href="https://www.php.net/manual/ja/function.array-column.php" target="_blank" rel="noopener">array_column</a> をご紹介します。
+`PHP` で配列を扱う時にとても有用な関数 <a href="https://www.php.net/manual/ja/function.array-column.php" target="_blank" rel="nofollow noopener">array_column</a> をご紹介します。
 PHPマニュアル上でとても有用な例まで載っているのですがあまりこのような使われ方をせずに `for` や `foreach` を使用しているのを多々見るので今回記事化しました。
 `array_column` を使用すれば例えばセレクトボックスに入れるデータなど一括で簡単に作れますので作れます。
 
 ## 配列の中の連想配列から指定のキーを抜き出して配列する
 配列の中の連想配列から指定のキーを抜き出して配列にします。
-・<a href="https://www.php.net/manual/ja/function.array-column.php#example-4889" target="_blank" rel="noopener">PHP: array_column - Manual 例1</a>
+・<a href="https://www.php.net/manual/ja/function.array-column.php#example-4889" target="_blank" rel="nofollow noopener">PHP: array_column - Manual 例1</a>
 
 ``` php:array_column_1.php
 <?php
@@ -65,7 +65,7 @@ Array
 
 ## 配列の中の連想配列から指定した複数のキーを抜き出して配列する
 配列の中の連想配列から指定した複数のキーを抜き出して配列します。
-* <a href="https://www.php.net/manual/ja/function.array-column.php#example-4890" target="_blank" rel="noopener">PHP: array_column - Manual 例2</a>
+* <a href="https://www.php.net/manual/ja/function.array-column.php#example-4890" target="_blank" rel="nofollow noopener">PHP: array_column - Manual 例2</a>
 ``` php:array_column_2.php
 <?php
 // データベースから返ってきたレコードセットの例
@@ -110,7 +110,7 @@ Array
 
 ## オブジェクトの public プロパティから指定のプロパティを抜き出して配列にする
 オブジェクトの public プロパティから指定のプロパティを抜き出して配列にします。
-* <a href="https://www.php.net/manual/ja/function.array-column.php#example-4891" target="_blank" rel="noopener">PHP: array_column - Manual 例3</a>
+* <a href="https://www.php.net/manual/ja/function.array-column.php#example-4891" target="_blank" rel="nofollow noopener">PHP: array_column - Manual 例3</a>
 ``` php:array_column_3.php
 <?php
 
@@ -147,7 +147,7 @@ Array
 
 ## オブジェクトの public プロパティから指定のプロパティを抜き出して配列にする
 オブジェクトの public プロパティから指定のプロパティを抜き出して配列にします。
-* <a href="https://www.php.net/manual/ja/function.array-column.php#example-4892" target="_blank" rel="noopener">PHP: array_column - Manual 例4</a>
+* <a href="https://www.php.net/manual/ja/function.array-column.php#example-4892" target="_blank" rel="nofollow noopener">PHP: array_column - Manual 例4</a>
 ``` php:array_column_4.php
 <?php
 

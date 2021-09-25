@@ -6,9 +6,9 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Docker
+- Python
 categories: 
-- Docker
+- Python
 image: images/thumbnail/python-logo-master-v3-TM.png
 image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'
 ---

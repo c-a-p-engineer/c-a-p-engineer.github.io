@@ -54,9 +54,9 @@ MailHog の確認画面で送信の確認が出来ます。
 <a href="http://localhost:8025/" target="_blank" rel="nofollow noopener">http://localhost:8025/</a>
 
 一覧画面でメールが届いている事を確認
-![mailhog-list.png](/images/blog/2021-07-04-docker-mailhog/mailhog-list.png "mailhog-list.png") 
+![mailhog-list.png](/assets/blog/tech/2021/07/04/docker-mailhog/mailhog-list.png "mailhog-list.png") 
 
 詳細画面で本文を確認
-![mailhog-detail.png](/images/blog/2021-07-04-docker-mailhog/mailhog-list.png "mailhog-detail.png") 
+![mailhog-detail.png](/assets/blog/tech/2021/07/04/docker-mailhog/mailhog-list.png "mailhog-detail.png") 
 
 これでメールのテストが出来ます。

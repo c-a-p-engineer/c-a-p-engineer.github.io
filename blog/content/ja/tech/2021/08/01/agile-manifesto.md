@@ -33,7 +33,7 @@ image: images/thumbnail/computer_programming_man.png
 > 価値とする。すなわち、左記のことがらに価値があることを
 > 認めながらも、私たちは右記のことがらにより価値をおく。 
 
-![agile-manifesto.png](/images/blog/2021-08-01-agile-manifesto/agile-manifesto.png "agile-manifesto.png") 
+![agile-manifesto.png](/assets/blog/tech/2021/08/01/agile-manifesto/agile-manifesto.png "agile-manifesto.png") 
 
 ### 良くある誤解
 よく「アジャイルってこうでしょ？」という勘違いを多々見かけます。

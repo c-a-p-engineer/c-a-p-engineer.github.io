@@ -50,7 +50,7 @@ jobs:
 ```
 
 これを `push` すると以下のように `Slack` に通知が行きます。
-![slack-notification.png](/images/blog/2021-07-05-github-actions-slack-notification/slack-notification.png "slack-notification.png") 
+![slack-notification.png](/assets/blog/tech/2021/07/05/github-actions-slack-notification/slack-notification.png "slack-notification.png") 
 
 ## 通知のカスタマイズ
 通知をカスタマイズすることが出来ます。
@@ -90,7 +90,7 @@ jobs:
 ```
 
 以下のようにプッシュした人の名前とアバター画像、Repository の URL が通知されます。
-![slack-notification-customize.png](/images/blog/2021-07-05-github-actions-slack-notification/slack-notification-customize.png "slack-notification-customize.png") 
+![slack-notification-customize.png](/assets/blog/tech/2021/07/05/github-actions-slack-notification/slack-notification-customize.png "slack-notification-customize.png") 
 
 ## 参考
 * <a href="https://github.com/tokorom/action-slack-incoming-webhook" target="_blank" rel="nofollow noopener">tokorom/action-slack-incoming-webhook: GitHub Action for Slack Incoming Webhook</a>

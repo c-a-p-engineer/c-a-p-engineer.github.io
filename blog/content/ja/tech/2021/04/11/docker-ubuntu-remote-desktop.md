@@ -26,7 +26,7 @@ image: images/thumbnail/docker.png
 しかもブラウザで接続できるように設定されていてありがたいです。
 * <a href="http://127.0.0.1:6080/" target="_blank" rel="nofollow noopener">http://127.0.0.1:6080/</a>
 
-![desktop.png](/images/blog/2021-04-11-docker-ubuntu-remote-desktop/desktop.png "desktop.png") 
+![desktop.png](/assets/blog/tech/2021/04/11/docker-ubuntu-remote-desktop/desktop.png "desktop.png") 
 
 ## Docker Compose
 色々と再利用しやすいようにDocker Composeを作成してGitHubリポジトリにアップロードしておきました。

@@ -106,6 +106,6 @@ flutter doctor
 ```
 
 以下の画像のようになったら Andoroid の開発環境も整います。
-![desktop.png](/images/blog/2021-06-14-flutter-docker/desktop.png "flutter-doctor-android.png") 
+![desktop.png](/assets/blog/tech/2021/06/14/flutter-docker/desktop.png "flutter-doctor-android.png") 
 
 ※ただし、Andoroid Studio のエミュレータは現在Docker上では動かないようなのでご注意してください。（Andoroid エミュレータはVM上では動かない模様）

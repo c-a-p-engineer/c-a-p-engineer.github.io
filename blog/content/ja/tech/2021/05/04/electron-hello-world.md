@@ -133,7 +133,7 @@ window.addEventListener('DOMContentLoaded', () => {
 npm start
 ```
 
-![Hello,World!](/images/blog/2021-05-04-electron-hello-world/electron-hello-world.png "Hello,World!") 
+![Hello,World!](/assets/blog/tech/2021/05/04/electron-hello-world/electron-hello-world.png "Hello,World!") 
 
 実行時に `--no-sandbox` というエラーが出たら以下のリンクの対処を行ってください。
 <a href="/blog/2021-05-01-electron-error-no-sandbox" target="_blank">【Electron】Running as root without --no-sandbox is not supported. エラーのの対処法</a>

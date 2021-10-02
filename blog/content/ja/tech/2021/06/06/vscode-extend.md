@@ -26,7 +26,7 @@ VSCodeの日本語化
 
 ## Material Icon Theme
 拡張子に合わせてアイコンを表示
-<a href="https://marketplace.visualstudio.com/items?itemName=sohamkamani.code-eol" target="_blank" rel="nofollow noopener">Material Icon Theme</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank" rel="nofollow noopener">Material Icon Theme</a>
 
 ## code-eol
 改行コードを表示

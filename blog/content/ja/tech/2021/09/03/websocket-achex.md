@@ -1,6 +1,6 @@
 ---
 title: "無料で使える WebSocket サーバー「Achex」"
-date: 2021-09-02T10:00:00+09:00
+date: 2021-09-03T10:00:00+09:00
 description: "無料で使える WebSocket サーバー「Achex」を使用してみました。"
 draft: false
 enableToc: true

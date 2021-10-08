@@ -10,7 +10,9 @@
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=nb>exit</span> <span class=m>0</span> <span class=p>|</span> <span class=nb>exit</span> <span class=m>1</span> <span class=p>|</span> <span class=nb>exit</span> <span class=m>2</span>
 </code></pre></td></tr></table></div></div><h3 id=確認方法>確認方法</h3><p>各パイプのステータスの確認</p><pre><code>echo  ${PIPESTATUS[@]}
 &gt; 0 1 2
-</code></pre><p>最後のステータスだけ確認する方法はこちら</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</code></pre><p>指定の位置のパイプのステータスを取得（0～</p><pre><code>echo  ${PIPESTATUS[1]}
+&gt; 1
+</code></pre><p>最後のステータスだけ確認する方法はこちら<br>この方法はパイプを使用してなくても可能です。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=nb>echo</span> <span class=nv>$?</span>
 &gt; <span class=m>2</span>

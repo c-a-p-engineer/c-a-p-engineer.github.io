@@ -33,25 +33,25 @@ wsl --install
 
 ## 手順
 
-1.管理者権限で `PowerShell` を実行
-2.Linux 用 Windows サブシステム" オプション機能を有効にする
+1. 管理者権限で `PowerShell` を実行
+2. Linux 用 Windows サブシステム" オプション機能を有効にする
 ``` PowerShell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
-3.仮想マシンの機能を有効にする
+3. 仮想マシンの機能を有効にする
 ``` PowerShell
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 4. Linuxカーネル更新プログラムをダウンロード
 <a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package" target="_blank" rel="nofollow noopener">Linux カーネル更新プログラム パッケージをダウンロードする</a>
-5.WSL 2 を既定のバージョンとして設定する
+
+5. WSL 2 を既定のバージョンとして設定する
 ``` PowerShell
 wsl --set-default-version 2
-``` PowerShell
-6.Windows Store から Linux ディストリビューションを選択
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice" target="_blank" rel="nofollow noopener">選択した Linux ディストリビューションをインストールする</a>
-7.インストール完了後に起動
-8.起動後にアカウント名/パスワードを設定
+``` 
+6. Windows Store から Linux ディストリビューションを選択<br>  <a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice" target="_blank" rel="nofollow noopener">選択した Linux ディストリビューションをインストールする</a>
+7. インストール完了後に起動
+8. 起動後にアカウント名/パスワードを設定
 
 これで完了です。
 詳細はインストールページ見てわかるかとは思いますがメモを残しておきました。

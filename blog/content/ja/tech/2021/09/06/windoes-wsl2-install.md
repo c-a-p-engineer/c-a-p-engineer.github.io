@@ -97,5 +97,5 @@ wsl --unregister {ディストリビューション名}
 ```
 
 ## 参考
-<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" target="_blank" rel="nofollow noopener">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</a>
-<a href="https://qiita.com/rubytomato@github/items/a290ecef2ea86ea8350f#%E6%96%B0%E3%81%97%E3%81%84%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" target="_blank" rel="nofollow noopener">WSL2の初歩メモ - Qiita</a>
+* <a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" target="_blank" rel="nofollow noopener">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</a>
+* <a href="https://qiita.com/rubytomato@github/items/a290ecef2ea86ea8350f#%E6%96%B0%E3%81%97%E3%81%84%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" target="_blank" rel="nofollow noopener">WSL2の初歩メモ - Qiita</a>

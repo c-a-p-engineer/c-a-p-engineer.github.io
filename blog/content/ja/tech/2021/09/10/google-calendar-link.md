@@ -45,5 +45,5 @@ Googleカレンダーへ予定を追加するリンクを作ってみます。
 <textarea id="link" style="width:100%:"></textarea>
 
 ## 参考
-<a href="https://qiita.com/yuta_sawamura/items/738732565e2cfd11fb23" target="_blank" rel="nofollow noopener">Googleカレンダーの予定を追加するURLリンク - Qiita</a>
-<a href="https://webasterisk.sakura.ne.jp/wp/googlecalendar_eventbuttonsgenerator/" rel="nofollow noopener" target="_blank">Googleカレンダーに追加するURLリンクを自動生成してくれるツール</a>
+* <a href="https://qiita.com/yuta_sawamura/items/738732565e2cfd11fb23" target="_blank" rel="nofollow noopener">Googleカレンダーの予定を追加するURLリンク - Qiita</a>
+* <a href="https://webasterisk.sakura.ne.jp/wp/googlecalendar_eventbuttonsgenerator/" rel="nofollow noopener" target="_blank">Googleカレンダーに追加するURLリンクを自動生成してくれるツール</a>

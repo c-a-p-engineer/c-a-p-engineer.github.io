@@ -162,6 +162,6 @@ var getDateTime = function() {
 ```
 
 ## 参考
-<a href="https://achex.ca/" target="_blank" rel="nofollow noopener">Achex</a>
-<a href="https://developer.mozilla.org/ja/docs/Web/API/WebSocket" target="_blank" rel="nofollow noopener">WebSocket - Web API | MDN</a>
+* <a href="https://achex.ca/" target="_blank" rel="nofollow noopener">Achex</a>
+* <a href="https://developer.mozilla.org/ja/docs/Web/API/WebSocket" target="_blank" rel="nofollow noopener">WebSocket - Web API | MDN</a>
 

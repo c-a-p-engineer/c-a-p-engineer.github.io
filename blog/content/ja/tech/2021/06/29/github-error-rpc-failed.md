@@ -29,4 +29,4 @@ git config --global http.version HTTP/1.1
 * HTTPSではなくSSHでプッシュする
 
 ## 参考
-<a href="https://gist.github.com/daofresh/0a95772d582cafb202142ff7871da2fc" target="_blank" rel="nofollow noopener">Fix error : RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)</a>
+* <a href="https://gist.github.com/daofresh/0a95772d582cafb202142ff7871da2fc" target="_blank" rel="nofollow noopener">Fix error : RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)</a>

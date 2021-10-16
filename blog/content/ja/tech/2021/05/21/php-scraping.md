@@ -68,7 +68,6 @@ HTMLが取得できました。
 例えば `aタグ` を検索 → `href` からリンクを辿って指定のサイトのデータを抜き出す事なども可能です。
 
 ## 参考
-
 * <a href="https://www.php.net/manual/ja/domxpath.query.php" target="_blank" rel="nofollow noopener">PHP: DOMDocument - Manual</a>
 * <a href="https://www.php.net/manual/ja/class.domdocument.php" target="_blank" rel="nofollow noopener">PHP: DOMXPath::query - Manual</a>
 * <a href="https://www.php.net/manual/ja/class.domnodelist" target="_blank" rel="nofollow noopener">PHP: DOMNodeList - Manual</a>

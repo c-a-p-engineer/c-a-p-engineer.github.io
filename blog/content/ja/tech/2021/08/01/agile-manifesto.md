@@ -138,7 +138,7 @@ image: images/thumbnail/computer_programming_man.png
 <a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
 
 ## 参考
-<a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言</a>
-<a href="https://agilemanifesto.org/iso/ja/principles.html" target="_blank" rel="nofollow noopener">アジャイル宣言の背後にある原則</a>
-<a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
-<a href="https://www.ipa.go.jp/ikc/reports/20200331_1.html" target="_blank" rel="nofollow noopener">アジャイル開発版「情報システム・モデル取引・契約書」～ユーザ／ベンダ間の緊密な協働によるシステム開発で、DXを推進～：IPA 独立行政法人 情報処理推進機構</a>
+* <a href="https://agilemanifesto.org/iso/ja/manifesto.html" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言</a>
+* <a href="https://agilemanifesto.org/iso/ja/principles.html" target="_blank" rel="nofollow noopener">アジャイル宣言の背後にある原則</a>
+* <a href="https://www.ipa.go.jp/files/000065601.pdf" target="_blank" rel="nofollow noopener">アジャイルソフトウェア開発宣言の読みとき方</a>
+* <a href="https://www.ipa.go.jp/ikc/reports/20200331_1.html" target="_blank" rel="nofollow noopener">アジャイル開発版「情報システム・モデル取引・契約書」～ユーザ／ベンダ間の緊密な協働によるシステム開発で、DXを推進～：IPA 独立行政法人 情報処理推進機構</a>

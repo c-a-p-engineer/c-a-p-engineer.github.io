@@ -88,5 +88,5 @@ bcr.bar_chart_race(
 </video>
 
 ## 参考
-<a href="https://www.dexplo.org/bar_chart_race/" target="_blank" rel="nofollow noopener">【簡単/無料】「動くグラフ」の作り方を解説 | キノコード</a>
-<a href="https://kino-code.com/bar-chart-race/" target="_blank" rel="nofollow noopener">Bar Chart Race</a>
+* <a href="https://www.dexplo.org/bar_chart_race/" target="_blank" rel="nofollow noopener">【簡単/無料】「動くグラフ」の作り方を解説 | キノコード</a>
+* <a href="https://kino-code.com/bar-chart-race/" target="_blank" rel="nofollow noopener">Bar Chart Race</a>

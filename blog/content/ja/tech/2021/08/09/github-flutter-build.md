@@ -56,4 +56,4 @@ Web以外の build 方法も下記にまとめられています。
 <a href="https://github.com/marketplace/actions/flutter-action" target="_blank" rel="nofollow noopener">Flutter action · Actions · GitHub Marketplace</a>
 
 ## 参考
-<a href="https://github.com/marketplace/actions/flutter-action" target="_blank" rel="nofollow noopener">Flutter action · Actions · GitHub Marketplace</a>
+* <a href="https://github.com/marketplace/actions/flutter-action" target="_blank" rel="nofollow noopener">Flutter action · Actions · GitHub Marketplace</a>

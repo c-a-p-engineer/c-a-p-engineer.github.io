@@ -89,5 +89,5 @@ pip install -r requirements.txt
 ```
 
 ## 参考
-<a href="https://note.nkmk.me/python-pip-install-requirements/" target="_blank" rel="nofollow noopener">Python, pipでrequirements.txtを使ってパッケージ一括インストール | note.nkmk.me</a>
-<a href="https://gammasoft.jp/python/python-library-install/" target="_blank" rel="nofollow noopener">Pythonライブラリのインストール － pipの使い方 - ガンマソフト株式会社</a>
+* <a href="https://note.nkmk.me/python-pip-install-requirements/" target="_blank" rel="nofollow noopener">Python, pipでrequirements.txtを使ってパッケージ一括インストール | note.nkmk.me</a>
+* <a href="https://gammasoft.jp/python/python-library-install/" target="_blank" rel="nofollow noopener">Pythonライブラリのインストール － pipの使い方 - ガンマソフト株式会社</a>

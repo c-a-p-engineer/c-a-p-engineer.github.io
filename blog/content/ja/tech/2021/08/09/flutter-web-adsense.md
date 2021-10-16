@@ -98,4 +98,4 @@ class _MyAppState extends State<MyApp> {
 ```
 
 ## 参考
-<a href="https://qiita.com/funeasy-soft/items/2ea0dfc24e160e201d6d" target="_blank" rel="nofollow noopener">flutter web に広告を入れたい - Qiita</a>
+* <a href="https://qiita.com/funeasy-soft/items/2ea0dfc24e160e201d6d" target="_blank" rel="nofollow noopener">flutter web に広告を入れたい - Qiita</a>

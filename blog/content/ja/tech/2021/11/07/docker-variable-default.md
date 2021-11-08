@@ -36,16 +36,19 @@ git config --global core.autocrlf
 * * `commit`: 元のまま
 
 もし設定されてなければ以下のコマンドで `false` に設定すると自動変換されません。
+
 ```
 git config --global core.autocrlf false
 ```
 
 ## 原因 犯人は.gitattributes
 `.gitattributes` の設定が犯人でした。
-``` .gitattributes
+``` yml:.gitattributes..yml
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
 ```
+
+<br>
 
 > `* text=auto` にすると変換を行うかどうかはGit任せになります。
 > この設定少し厄介で、
@@ -58,13 +61,13 @@ git config --global core.autocrlf false
 
 ### 外す
 指定を辞めます。
-```.gitattributes
+```yml:.gitattributes..yml
 # * text eol=lf
 ```
 
 ### 指定する
 ちゃんと指定すること
-```.gitattributes
+```yml:.gitattributes..yml
 * text eol=lf
 ```
 

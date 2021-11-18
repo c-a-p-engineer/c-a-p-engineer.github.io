@@ -1,5 +1,5 @@
 ---
-title: "VSCode 拡張機能メモ"
+title: "VSCode 拡張機能メモ - 2021年06月"
 date: 2021-06-06T11:00:00+09:00
 description: "VSCode 今現在使用している拡張機能のメモ"
 draft: false

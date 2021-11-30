@@ -80,7 +80,7 @@ return [
 LOG_CHANNEL=custom
 ```
 ### ログを仕込む
-面倒なので Welcomeページに仕込みました。
+ Welcomeページに仕込みました。
 ```php:/app/routes/web.php
 <?php
 
@@ -94,6 +94,7 @@ Route::get('/', function () {
 
 ```
 ### 出力結果
+ログに適用したプロセスIDなどが出力されるようになりました。
 ```php:/app/storage/logs/laravel-2021-12-01.log..php
 [2021-12-01 02:44:56] local.DEBUG: test  {"process_id":7,"memory_usage":"2 MB","memory_peak_usage":"2 MB","hostname":"d2dc8b7547c8","file":"/var/www/app/public/index.php","line":52,"class":null,"function":null}
 ```

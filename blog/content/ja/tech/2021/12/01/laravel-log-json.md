@@ -17,6 +17,11 @@ image: images/thumbnail/laravel-l-slant.png
 ログをJSON化する方法
 
 ## サンプルコード
+## 確認環境
+{{< alert theme="info" >}}
+PHP 8.0.1
+Laravel 8.73.2
+{{< /alert >}}
 
 ### JSONフォーマットクラスを作成
 ログのフォーマットを変更するクラスを作成します。

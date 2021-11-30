@@ -17,6 +17,11 @@ image: images/thumbnail/laravel-l-slant.png
 Laravelで簡単にログにログ出力元のファイル情報などを出力する方法メモ。
 
 ## サンプルコード
+## 確認環境
+{{< alert theme="info" >}}
+PHP 8.0.1
+Laravel 8.73.2
+{{< /alert >}}
 
 ### ログカスタマイズクラスを作成
 ```php:/app/Logging/CustomLog.php

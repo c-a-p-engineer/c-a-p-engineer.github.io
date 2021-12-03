@@ -1,7 +1,7 @@
 ---
-title: "【AWS Lambda】Postgresを利用する方法"
+title: "【AWS Lambda Python】Postgresを利用する方法"
 date: 2021-12-04T02:00:00+09:00
-description: "AWS Lambda上で `psycopg2` を利用することが出来ません。そのため、AWS Lambda用の `psycopg2` を入れる必要があります。"
+description: "AWS Lambda上の Python で psycopg2 を利用することが出来ません。そのため、AWS Lambda用の psycopg2 を入れる必要があります。"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -14,7 +14,7 @@ categories:
 image: images/thumbnail/Arch_AWS-Lambda_64.svg
 ---
 
-# 【AWS Lambda】Postgresを利用する方法
+# 【AWS Lambda Python】Postgresを利用する方法
 AWS Lambda上で `psycopg2` を利用することが出来ません。
 そのため、AWS Lambda用の `psycopg2` を入れる必要があります。
 

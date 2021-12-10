@@ -26,25 +26,37 @@
 </span><span class=lnt>18
 </span><span class=lnt>19
 </span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-python data-lang=python><span class=kn>from</span> <span class=nn>psycopg2.extensions</span> <span class=kn>import</span> <span class=n>adapt</span>
 
+<span class=c1># SQLエスケープ</span>
 <span class=k>def</span> <span class=nf>sql_escape</span><span class=p>(</span><span class=n>param</span><span class=p>):</span>
-    <span class=k>return</span> <span class=n>adapt</span><span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>param</span><span class=p>)</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;latin-1&#39;</span><span class=p>))</span><span class=o>.</span><span class=n>getquoted</span><span class=p>()</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+    <span class=c1># 無名関数化</span>
+    <span class=n>escape</span> <span class=o>=</span> <span class=k>lambda</span> <span class=n>param</span><span class=p>:</span> <span class=n>adapt</span><span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>param</span><span class=p>)</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;latin-1&#39;</span><span class=p>))</span>
 
-    <span class=c1># escape = lambda param: adapt(str(param).encode(&#39;utf-8&#39;).decode(&#39;latin-1&#39;))</span>
-    <span class=n>escape</span> <span class=o>=</span> <span class=k>lambda</span> <span class=n>param</span><span class=p>:</span> <span class=n>adapt</span><span class=p>(</span><span class=nb>str</span><span class=p>(</span><span class=n>param</span><span class=p>)</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;latin-1&#39;</span><span class=p>))</span><span class=o>.</span><span class=n>getquoted</span><span class=p>()</span><span class=o>.</span><span class=n>decode</span><span class=p>(</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
-
+    <span class=c1># リスト対応</span>
     <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>param</span><span class=p>,</span> <span class=nb>list</span><span class=p>):</span>
         <span class=n>param</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=n>escape</span><span class=p>,</span> <span class=n>param</span><span class=p>)</span>
         <span class=k>return</span> <span class=s2>&#34;,&#34;</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=nb>map</span><span class=p>(</span><span class=nb>str</span><span class=p>,</span> <span class=n>param</span><span class=p>))</span>
+
+    <span class=c1># 辞書型対応</span>
     <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>param</span><span class=p>,</span> <span class=nb>dict</span><span class=p>):</span>
         <span class=n>param</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=n>escape</span><span class=p>,</span> <span class=n>param</span><span class=p>)</span>
         <span class=k>return</span> <span class=p>(</span><span class=s2>&#34; , &#34;</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=n>param</span><span class=o>.</span><span class=n>values</span><span class=p>()))</span>
 
+    <span class=c1># その他</span>
     <span class=k>return</span> <span class=n>escape</span><span class=p>(</span><span class=n>param</span><span class=p>)</span>
 
+<span class=c1># エスケープ対象文字列</span>
 <span class=n>param</span> <span class=o>=</span> <span class=s2>&#34; &#39; \ &#34;</span>
+<span class=c1># エスケープ</span>
 <span class=n>string</span> <span class=o>=</span> <span class=nb>str</span><span class=p>(</span><span class=n>sql_escape</span><span class=p>(</span><span class=n>param</span><span class=p>))</span>
+<span class=c1># 表示</span>
 <span class=k>print</span><span class=p>(</span><span class=n>string</span><span class=p>)</span>
 </code></pre></td></tr></table></div></div><p>出力結果</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2

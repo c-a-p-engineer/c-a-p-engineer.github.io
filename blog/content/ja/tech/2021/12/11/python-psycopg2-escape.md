@@ -26,23 +26,29 @@ PythonでPostgreSQL使用時に文字列をエスケープする方法メモ
 ```python
 from psycopg2.extensions import adapt
 
+# SQLエスケープ
 def sql_escape(param):
-    return adapt(str(param).encode('utf-8').decode('latin-1')).getquoted().decode('utf-8')
+    # 無名関数化
+    escape = lambda param: adapt(str(param).encode('utf-8').decode('latin-1'))
 
-    # escape = lambda param: adapt(str(param).encode('utf-8').decode('latin-1'))
-    escape = lambda param: adapt(str(param).encode('utf-8').decode('latin-1')).getquoted().decode('utf-8')
-
+    # リスト対応
     if isinstance(param, list):
         param = map(escape, param)
         return ",".join(map(str, param))
+
+    # 辞書型対応
     if isinstance(param, dict):
         param = map(escape, param)
         return (" , ".join(param.values()))
 
+    # その他
     return escape(param)
 
+# エスケープ対象文字列
 param = " ' \ "
+# エスケープ
 string = str(sql_escape(param))
+# 表示
 print(string)
 ```
 

@@ -15,7 +15,9 @@ jobs:
 
       # Composer Install
       - name: Composer Install
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: |
+          cd ./php
+          composer install --prefer-dist --no-progress --no-suggest
 
       # Tweet
       - name: Post Tweet

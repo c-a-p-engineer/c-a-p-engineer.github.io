@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  bulid:
     # Ubuntu
     runs-on: ubuntu-latest
     steps:
@@ -38,9 +38,30 @@ jobs:
         with:
           commit_message: Update Build Files
 
+      # Github Pages Deploy
+      - name: Github Pages Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+
+  Notification:
+    # Ubuntu
+    runs-on: ubuntu-latest
+    needs: bulid
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
       # Composer Install
       - name: Composer Install
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: |
+          cd ./php
+          composer install --prefer-dist --no-progress --no-suggest
 
       # Tweet
       - name: Post Tweet

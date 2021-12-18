@@ -65,4 +65,3 @@ $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSe
 $result = $connection->post("statuses/update", [
     "status" => $text,
 ]);
-var_dump($result);

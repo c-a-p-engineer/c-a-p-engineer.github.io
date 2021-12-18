@@ -95,4 +95,4 @@ func HogePiyo(filename string) (string, error) {}
   * Reader（Read メソッドだけを持つインタフェース）
 
 ## 参考情報
-* [Effective GO - The Go Programming Language](https://golang.org/doc/effective_go)
+* <a href="https://golang.org/doc/effective_go" target="_blank" rel="nofollow noopener">Effective GO - The Go Programming Language</a>

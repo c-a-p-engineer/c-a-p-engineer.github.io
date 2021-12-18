@@ -96,4 +96,4 @@ exit;
 ```
 
 ## 参考情報
-* [Goutte - Github](https://github.com/FriendsOfPHP/Goutte)
+* <a href="https://github.com/FriendsOfPHP/Goutte" target="_blank" rel="nofollow noopener">Goutte - Github</a>

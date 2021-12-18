@@ -82,4 +82,5 @@ $crawler = $client->submit($form);
 ```
 
 ## 参考情報
-* [submitting forms without submit button · Issue #44 · FriendsOfPHP/Goutte](https://github.com/FriendsOfPHP/Goutte/issues/44#issuecomment-70666980)
+* <a href="https://github.com/FriendsOfPHP/Goutte/issues/44#issuecomment-70666980" target="_blank" rel="nofollow noopener">submitting forms without submit button · Issue #44 · FriendsOfPHP/Goutte</a>
+

@@ -60,9 +60,6 @@ $apiSecret = getenv('TWITTER_API_SECRET', true);
 $accessToken = getenv('TWITTER_ACCESS_TOKEN', true);
 $accessTokenSecret = getenv('TWITTER_ACCESS_TOKEN_SECRET', true);
 
-var_dump($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
-exit;
-
 $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
 
 $result = $connection->post("statuses/update", [

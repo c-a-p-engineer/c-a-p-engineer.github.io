@@ -2,7 +2,7 @@ version: '3'
 services: 
     hugo:
         image: klakegg/hugo:0.83.1-ubuntu
-        container_name: hugo
+        container_name: blog-hugo
         volumes:
             - ".:/src"
         entrypoint: bash
@@ -12,10 +12,13 @@ services:
         working_dir: /src/blog
 
     php:
-        image: php:8.0.1-fpm-alpine3.12
-        container_name: php
+        container_name: blog-php
+        build:
+            context: .
+            dockerfile: ./docker/php/Dockerfile
         volumes:
             - ./php:/php
             - ./blog:/blog
-        tty: true
+            - ./docker/php/php.ini:/usr/local/etc/php/php.ini
         working_dir: /php
+        tty: true

@@ -3,7 +3,8 @@
 set_time_limit(0);
 ini_set('memory_limit', -1);
 
-function hatena($tag, $dateBegin, $dateEnd): array{
+function hatena($tag, $dateBegin, $dateEnd): array
+{
     $dateBegin = date('Y-m-d', strtotime($dateBegin));
     $dateEnd = date('Y-m-d', strtotime($dateEnd));
     $url = "http://b.hatena.ne.jp/search/tag?q={$tag}&sort=popular&users=10&date_begin={$dateBegin}=&date_end={$dateEnd}&mode=rss";
@@ -11,7 +12,7 @@ function hatena($tag, $dateBegin, $dateEnd): array{
     $rss = simplexml_load_file($url);
     $json = json_decode(json_encode($rss), true);
 
-    if(!is_null($json['item']['title'] ?? null)){
+    if (!is_null($json['item']['title'] ?? null)) {
         // 1件のみの場合は配列化
         $json['item'] = [0 => $json['item']];
     }
@@ -19,7 +20,8 @@ function hatena($tag, $dateBegin, $dateEnd): array{
     return ($json['item'] ?? []);
 }
 
-function hatenaCard($title, $url){
+function hatenaCard($title, $url)
+{
     return <<<HTML
 <iframe 
   class="hatenablogcard" 
@@ -31,7 +33,8 @@ function hatenaCard($title, $url){
 HTML;
 }
 
-function createTopic($datetime){
+function createTopic($datetime)
+{
     $thumbnails = [
         0 => 'weekmark7_sun.png',
         1 => 'weekmark1_mon.png',
@@ -41,15 +44,15 @@ function createTopic($datetime){
         5 => 'weekmark5_fri.png',
         6 => 'weekmark6_sat.png',
     ];
-    
+
     // 記事作成日
-    $create = date('Y-m-d\TH:i:s', strtotime($datetime)). '+09:00';
+    $create = date('Y-m-d\TH:i:s', strtotime($datetime)) . '+09:00';
     // 最終更新日
-    $lastmod = date('Y-m-d\TH:i:s', strtotime(date('Y-m-d', strtotime('+9 hour')))). '+09:00';
-    
+    $lastmod = date('Y-m-d\TH:i:s', strtotime(date('Y-m-d', strtotime('+9 hour')))) . '+09:00';
+
     // 検索対象日時
     $targetDate = date('Y-m-d', strtotime(date('Y-m-d', strtotime($datetime)) . ' -1 day'));
-    
+
     $tags = [
         // 全般
         'IT',
@@ -60,14 +63,14 @@ function createTopic($datetime){
         'Qiita',
         'Zenn',
         'Github',
-    
+
         // セキュリティ
         'セキュリティ',
         '脆弱性',
         'XSS',
         'SQLインジェクション',
         'CSRF',
-    
+
         // 言語
         'PHP',
         'Javascript',
@@ -78,55 +81,55 @@ function createTopic($datetime){
         'HTML',
         'CSS',
         'SQL',
-    
+
         // DB
         'DB',
         'Oracle',
         'Mysql',
         'Postgres',
-    
+
         // OS
         'Linux',
         'Windows',
         'Mac',
         'Android',
         'iOS',
-    
+
         // クラウド
         'AWS',
         'GCP',
         'Azure',
     ];
-    
+
     $result = [];
-    foreach($tags as $value){
-        $result[$value]= hatena($value, $targetDate, $targetDate);
+    foreach ($tags as $value) {
+        $result[$value] = hatena($value, $targetDate, $targetDate);
     }
-    
+
     $tags = '';
     $html = '';
-    foreach($result as $ikey => $ivalue){
-        if(count($ivalue) == 0){
+    foreach ($result as $ikey => $ivalue) {
+        if (count($ivalue) == 0) {
             continue;
         }
         $html .= '## ' . $ikey . PHP_EOL;
         $tags .= '- Topic-' . $ikey . PHP_EOL;
-        foreach($ivalue as $jkey => $jvalue){
-            if($jkey == 5){
+        foreach ($ivalue as $jkey => $jvalue) {
+            if ($jkey == 5) {
                 continue 2;
             }
-            if(is_array($jvalue['title'])){
+            if (is_array($jvalue['title'])) {
                 continue;
             }
-            if(is_array($jvalue['description'])){
+            if (is_array($jvalue['description'])) {
                 $jvalue['description'] = '';
             }
-    
+
             $title = htmlspecialchars(mb_convert_encoding($jvalue['title'], 'utf-8'));
             $html .= '### ' . $title . PHP_EOL;
             $html .= '<a href="' . $jvalue['link'] . '" target="_blank" rel="noopener">' . $title . '</a>' . PHP_EOL;
             $html .= '> ' . htmlspecialchars(mb_convert_encoding($jvalue['description'], 'utf-8')) . PHP_EOL;
-            $html .= hatenaCard($title, $jvalue['link']) . PHP_EOL. PHP_EOL;
+            $html .= hatenaCard($title, $jvalue['link']) . PHP_EOL . PHP_EOL;
         }
     }
 
@@ -164,7 +167,7 @@ TOPIC;
     @mkdir($path, 0777, true);
     $path = realpath($path);
 
-    $output = $path . '/' .$day . '.md';
+    $output = $path . '/' . $day . '.md';
     file_put_contents($output, $data);
     echo 'Created Topic ' . $output . PHP_EOL;
 }
@@ -172,8 +175,8 @@ TOPIC;
 $datetime = date('Y-m-d', strtotime('+9 hour'));
 
 // 日付指定
-if(!is_null($_SERVER['argv'][1] ?? null)){
-    if(date('Y-m-d', strtotime($_SERVER['argv'][1])) != $_SERVER['argv'][1]){
+if (!is_null($_SERVER['argv'][1] ?? null)) {
+    if (date('Y-m-d', strtotime($_SERVER['argv'][1])) != $_SERVER['argv'][1]) {
         echo '日付は Y-m-d 形式で指定してください。' . PHP_EOL;
         exit;
     }

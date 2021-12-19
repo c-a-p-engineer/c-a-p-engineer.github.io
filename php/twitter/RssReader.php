@@ -2,16 +2,12 @@
 
 class RssReader
 {
-    public static function load(string $url): array
+    public static function load(string $path): array
     {
         // 記事を格納
         $posts = [];
-        // URL判定
-        if (!filter_var($url, FILTER_VALIDATE_URL)) {
-            return [];
-        }
         // feed取得
-        $feed = simplexml_load_file($url);
+        $feed = simplexml_load_file($path);
         // サイト情報
         $siteTitle = (string)$feed->channel->title;
         $siteUrl = (string)$feed->channel->link;

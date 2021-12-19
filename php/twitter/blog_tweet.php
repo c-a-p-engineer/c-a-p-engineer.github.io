@@ -8,8 +8,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 set_time_limit(0);
 ini_set('memory_limit', -1);
 
-$rss = RssReader::load('https://c-a-p-engineer.github.io/index.xml');
-
+$rss = RssReader::load(__DIR__ . '/../../docs/index.xml');
 if (count($rss) == 0) {
     return;
 }

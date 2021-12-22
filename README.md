@@ -43,16 +43,15 @@ rm -rf ../docs;hugo --minify && mv -fv ./public/ ../docs/
 
 ブログ確認
 ```
-docker exec -it hugo hugo server
+docker exec -it blog-hugo hugo server
 ```
 
 トピック生成
 ```
-docker exec -it php php topic.php
+docker exec -it blog-php php topic.php
 ```
 
 # Usage
-
 http://localhost:1313
 
 # Note

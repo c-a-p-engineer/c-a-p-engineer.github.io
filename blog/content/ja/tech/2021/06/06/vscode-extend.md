@@ -1,5 +1,5 @@
 ---
-title: "VSCode 拡張機能メモ - 2021年06月"
+title: "【VSCode】拡張機能メモ - 2021年06月"
 date: 2021-06-06T11:00:00+09:00
 description: "VSCode 今現在使用している拡張機能のメモ"
 draft: false
@@ -13,7 +13,7 @@ image: images/thumbnail/Visual_Studio_Code_1.35_icon.svg
 image_description: 'Visual Studio Codeは、米国およびその他の国におけるMozillaFoundationの商標です。'
 ---
 
-# VSCode 拡張機能メモ
+# 【VSCode】拡張機能メモ
 マーケットプレイスから拡張機能を探すことができます。
 また `VSCode` から探すことも可能です。
 

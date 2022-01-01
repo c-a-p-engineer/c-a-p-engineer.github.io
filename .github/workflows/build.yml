@@ -38,6 +38,22 @@ jobs:
         with:
           commit_message: Update Build Files
 
+  Lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: mkdir ${{ github.workspace }}/tmp/artifacts
+    - name: Lighthouse
+      uses: foo-software/lighthouse-check-action@master
+      with:
+        outputDirectory: ${{ github.workspace }}/tmp/artifacts
+        urls: 'https://c-a-p-engineer.github.io/'
+    - name: Upload artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: Lighthouse reports
+        path: ${{ github.workspace }}/tmp/artifacts
+
   Notification:
     # Ubuntu
     runs-on: ubuntu-latest

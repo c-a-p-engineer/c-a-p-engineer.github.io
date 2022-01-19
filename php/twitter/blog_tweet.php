@@ -25,7 +25,7 @@ $type = null;
 switch ($mode) {
     case 'post';
         $index = 0;
-        $type = '最新の投稿';
+        $type = '最近の投稿';
         break;
     case 'history';
         $index = rand(0, (count($rss) - 1));
@@ -36,13 +36,13 @@ $post = $rss[$index];
 
 switch ($mode) {
     case 'post';
-        $type = '最新の投稿';
+        $type = '最近の投稿';
         break;
     case 'history';
         $date = date('Y/m/d', strtotime($post['date']));
         $type = <<<text
 過去投稿
-投稿日：{$post['date']}
+投稿日：{$date}
 text;
         break;
 }
@@ -52,6 +52,8 @@ $text = <<<text
 {$post['siteTitle']}
 {$post['title']}
 {$post['link']}
+
+#駆け出しエンジニアと繋がりたい
 text;
 
 $apiKey = getenv('TWITTER_API_KEY', true);

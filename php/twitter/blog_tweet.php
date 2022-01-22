@@ -51,9 +51,9 @@ $text = <<<text
 {$type}
 {$post['siteTitle']}
 {$post['title']}
-{$post['link']}
 
 #駆け出しエンジニアと繋がりたい
+{$post['link']}
 text;
 
 $apiKey = getenv('TWITTER_API_KEY', true);

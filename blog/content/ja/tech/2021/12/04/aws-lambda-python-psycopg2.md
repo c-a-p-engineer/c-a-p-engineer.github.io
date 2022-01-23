@@ -11,7 +11,7 @@ tags:
 - Python
 categories: 
 - AWS Lambda
-image: images/thumbnail/Arch_AWS-Lambda_64.svg
+image: images/thumbnail/Amazon_Web_Services_Logo.svg
 ---
 
 # 【AWS Lambda Python】Postgresを利用する方法

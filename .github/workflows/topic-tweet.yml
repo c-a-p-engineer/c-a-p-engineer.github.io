@@ -1,0 +1,30 @@
+name: Topic Tweet
+
+on:
+  schedule:
+    - cron: '8 0 * * *'
+
+jobs:
+  create-topic:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Composer Install
+      - name: Composer Install
+        run: |
+          cd ./php
+          composer install --prefer-dist --no-progress --no-suggest
+
+      # Tweet
+      - name: Topic Tweet
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: |
+          php ./php/twitter/topic_tweet.php

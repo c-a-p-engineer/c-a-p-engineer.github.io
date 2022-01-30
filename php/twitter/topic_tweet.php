@@ -16,5 +16,8 @@ $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSe
 
 $date = date('Y/m/d');
 $result = $connection->post("statuses/update", [
-    "status" => "{$date}の話題" . PHP_EOL . 'https://c-a-p-engineer.github.io/topic/' . $date,
+    "status" => "{$date}の話題" . PHP_EOL .
+    PHP_EOL.
+    "#駆け出しエンジニアと繋がりたい" . PHP_EOL .
+    'https://c-a-p-engineer.github.io/topic/' . $date,
 ]);

@@ -1,7 +1,7 @@
 ---
 title: "【Github】Github Actions で Docker を使う"
 date: 2021-10-09T18:00:00+09:00
-description: "Github Actions で Docker を使って見ます"
+description: "Github Actions で Docker を使ってみます"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -14,7 +14,7 @@ image: images/thumbnail/GitHub_Logo_White.png
 ---
 
 # Github Actions Dockerを使う
-Github Actions で自分が構築したDockerを使ってテストなどをする方法。
+`Github Actions` で自分が構築したDockerを使ってテストなどをする方法。
 
 ## Dokcer を使う
 CentOS の Image を `pull` してバージョンを出力するだけ
@@ -64,7 +64,7 @@ services:
 別途Dockerとソースファイルが別れている場合があると思いますが今回はそのパターンを割愛しています。
 
 ``` yml:.github/workflows/docker.yml
-name: Docker　Compose
+name: Docker Compose
 
 on:
   push:

@@ -14,7 +14,7 @@ $accessTokenSecret = getenv('TWITTER_ACCESS_TOKEN_SECRET', true);
 
 $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
 
-$date = date('Y/m/d');
+$date = date('Y/m/d', strtotime(date('Y/m/d') . ' -1 day'));
 $result = $connection->post("statuses/update", [
     "status" => "{$date}の話題" . PHP_EOL .
     PHP_EOL.

@@ -1,6 +1,6 @@
 ---
 title: "【AWS】MFA デバイスの削除する"
-date: 2022-02-19T13:40:00+09:00
+date: 2022-02-20T13:40:00+09:00
 description: "MFA設定途中に中断してしまってMFAデバイスを認証せずに残ってしまった際の対処メモ"
 draft: false
 enableToc: true

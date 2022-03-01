@@ -12,7 +12,7 @@ docker-compose up -d --build
 
 コンテナに入る
 ```
-docker exec -it hugo bash
+docker exec -it blog-hugo bash
 ```
 
 ブログを作る

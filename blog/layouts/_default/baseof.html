@@ -26,10 +26,7 @@
         <div class="wrapper" data-type="{{ .Type }}" data-kind="{{ .Kind }}">
             {{ partial "navbar/site-nav" . }}
             {{ partial "header/site-header" . }}
-            {{ partial "service/google-adsense-unit" . }}
-            {{ partial "service/google-adsense-unit" . }}
             {{ block "main" . }}{{ end }}
-            {{ partial "service/google-adsense-unit" . }}
             {{ partial "body/custom-body" . }}
             {{ partial "footer/site-footer" . }}
         </div>

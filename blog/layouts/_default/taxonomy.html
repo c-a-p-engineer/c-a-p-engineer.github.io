@@ -20,8 +20,9 @@
       {{ partial "pagination/pagination" . }}
     </div>
     {{ partial "search/search-result-desktop" . }}
+    {{ partial "service/google-adsense-unit" . }}
+    {{ partial "service/google-adsense-unit" . }}
   </div>
-  {{ partial "service/google-adsense-unit" . }}
 
   {{ if $.Param "enableSidebar" }}
     <aside class="list__sidebar {{ if eq ($.Param "sidebarPosition") "left" }}l{{ else }}r{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">

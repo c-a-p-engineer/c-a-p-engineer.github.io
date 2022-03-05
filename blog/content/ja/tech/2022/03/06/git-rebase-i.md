@@ -24,13 +24,13 @@ image: images/thumbnail/git.png
 ```
 git rebase -i HEAD~~~~
 ```
-
+<br>
 * 数値を指定
 数値を指定してまとめるコミット数を指定します。
 ```
 git rebase -i HEAD~4
 ```
-
+<br>
 * ハッシュ値を指定
 どこまでもコミットをまとめるかをハッシュ値を指定します。
 ```
@@ -71,12 +71,12 @@ f a5264f4 コミット4
 
 # This is the 2nd commit message:
 
-コミット1とコミット2統合
+コミット3とコミット統合
 ```
 
 完了したら修正されているか確認しましょう。
 ```
-git log
+git log --graph --all --format="%x09%an%x09%h %d %s"
 ```
 
 ### 3. プッシュ
@@ -114,4 +114,4 @@ git rebase --skip
 ```
 
 ## 参考
-* <a href="https://www.atlassian.com/ja/git/tutorials/rewriting-history#git-rebase-i">git rebase -i | Atlassian Git Tutorial</a>
+* <a href="https://www.atlassian.com/ja/git/tutorials/rewriting-history#git-rebase-i" target="_blank" rel="nofollow noopener">git rebase -i | Atlassian Git Tutorial</a>

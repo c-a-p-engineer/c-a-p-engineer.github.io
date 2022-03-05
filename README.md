@@ -56,7 +56,8 @@ http://localhost:1313
 
 # Note
 * [HUGO](https://gohugo.io/) 
-* [Syntax Highlighting | Hugo](https://gohugo.io/content-management/syntax-highlighting/)
+* [Zzo – Z Themes Documentation](https://gohugo.io/content-management/syntax-highlighting/)
+* [Syntax Highlighting | Hugo](https://zzo-docs.vercel.app/zzo)
 
 ## Hugo Themes
 * [Github Style](https://themes.gohugo.io/github-style/)

@@ -28,4 +28,4 @@ git fetch –tags -f
 ```
 
 ## 参考
-* <a href="https://stackoverflow.com/questions/58031165/how-to-get-rid-of-would-clobber-existing-tag">>git - How to get rid of "would clobber existing tag" - Stack Overflow</a>
+* <a href="https://stackoverflow.com/questions/58031165/how-to-get-rid-of-would-clobber-existing-tag" target="_blank" rel="nofollow noopener">git - How to get rid of "would clobber existing tag" - Stack Overflow</a>

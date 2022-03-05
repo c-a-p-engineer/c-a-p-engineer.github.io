@@ -42,4 +42,4 @@ git commit --amend --no-edit
 ```
 
 ## 参考
-* <a href="https://www.atlassian.com/ja/git/tutorials/rewriting-history#git-commit--amend">git amend | Atlassian Git Tutorial</a>
+* <a href="https://www.atlassian.com/ja/git/tutorials/rewriting-history#git-commit--amend" target="_blank" rel="nofollow noopener">git amend | Atlassian Git Tutorial</a>

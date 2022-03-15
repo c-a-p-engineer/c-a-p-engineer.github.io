@@ -24,7 +24,7 @@ image: images/thumbnail/git.png
 ## 対処
 以下のコマンドを使用するとリモートリポジトリのタグでローカルリポジトリを更新します。
 ```
-git fetch –tags -f
+git fetch --tags -f
 ```
 
 ## 参考

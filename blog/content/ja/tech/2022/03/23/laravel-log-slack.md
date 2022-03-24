@@ -98,6 +98,31 @@ return [
 LOG_CHANNEL=stack
 ```
 
+## 5. ログを短くする
+Slackへ通知するログが大きいと視認性が減るので短くしたい場合があります。
+その場合は `short` と `context` の設定を追加します。
+`'short' => true` で短いフォーマット。
+`''context' => false ` でログのcontext部分を表示しないようになります。
+
+```php:config/logging.php
+<?php
+return [
+        // 途中省略～～～
+        'slack' => [
+            'driver' => 'slack',
+            'url' => env('LOG_SLACK_WEBHOOK_URL'),
+            'username' => 'Laravel Log',
+            'emoji' => '\:boom\:',
+            'level' => env('LOG_LEVEL', 'critical'),
+            'short' => true, // 短いフォーマット
+            'context' => false // context部分を表示しない
+        ],
+        // 途中省略～～～
+];
+```
+
 ## 参考
 * <a href="https://readouble.com/laravel/9.x/ja/logging.html#configuration" target="_blank" rel="nofollow noopener">ログ 9.x Laravel #設定</a>
 * <a href="https://readouble.com/laravel/9.x/ja/logging.html#configuring-the-slack-channel" target="_blank" rel="nofollow noopener">ログ 9.x Laravel #Slackチャンネルの設定</a>
+* <a href="https://stackoverflow.com/questions/52272841/message-customization-of-laravel-log-using-slack-chanel" target="_blank" rel="nofollow noopener">logging - Message Customization of Laravel Log using Slack Chanel - Stack Overflow</a>
+* <a href="https://github.com/laravel/framework/blob/v5.6.3/src/Illuminate/Log/LogManager.php#L270" target="_blank" rel="nofollow noopener">framework/LogManager.php at v5.6.3 · laravel/framework</a>

@@ -9,7 +9,7 @@ tags:
 - Docker
 categories: 
 - Docker
-image: images/thumbnail/php.png
+image: images/thumbnail/docker.png
 ---
 
 # 【Docker】volume をマウントする時に一部ディレクトリを除外する

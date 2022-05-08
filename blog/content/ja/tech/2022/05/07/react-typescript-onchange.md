@@ -92,4 +92,4 @@ export default App;
 
 ## 参考
 * <a href="https://mui.com/material-ui/react-select/" target="_blank" rel="nofollow noopener">React Select component - Material UI</a>
-* <a href="https://mui.com/material-ui/react-select/" target="_blank" rel="nofollow noopener">[Select] `onChange` parameter has `unknown` type in `Select` component · Issue #16065 · mui/material-ui</a>
+* <a href="https://github.com/mui/material-ui/issues/16065" target="_blank" rel="nofollow noopener">[Select] `onChange` parameter has `unknown` type in `Select` component · Issue #16065 · mui/material-ui</a>

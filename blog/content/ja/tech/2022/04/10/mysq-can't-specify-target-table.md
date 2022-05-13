@@ -1,7 +1,7 @@
 ---
-title: "【Mysql】#hy000you can't specify target table 'orderbot' for update in from clause の解決方法"
+title: "【Mysql】#hy000you can't specify target table 'hoge' for update in from clause の解決方法"
 date: 2022-04-10T02:30:00+09:00
-description: "Mysql の #hy000you can't specify target table 'orderbot' for update in from clause の解決方法"
+description: "Mysql の #hy000you can't specify target table 'hoge' for update in from clause の解決方法"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -14,11 +14,11 @@ image: images/thumbnail/powered-by-mysql-167x86.png
 image_description: 'MySQLは、Oracleの米国およびその他の国における商標または登録商標です。'
 ---
 
-# 【Mysql】#hy000you can't specify target table 'orderbot' for update in from clause の解決方法
-MysqlでSQLを実行したら`#hy000you can't specify target table 'orderbot' for update in from clause` というエラーが出たので解決方法メモ。
+# 【Mysql】#hy000you can't specify target table 'hoge' for update in from clause の解決方法
+MysqlでSQLを実行したら`#hy000you can't specify target table 'hoge' for update in from clause` というエラーが出たので解決方法メモ。
 
 ## エラー
-以下のようなSQLを実行すると `#hy000you can't specify target table 'orderbot' for update in from clause` というエラーが出てきます。
+以下のようなSQLを実行すると `#hy000you can't specify target table 'hoge' for update in from clause` というエラーが出てきます。
 ```sql
 UPDATE
     SET name = 'hoge'

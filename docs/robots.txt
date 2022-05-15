@@ -1,2 +1,2 @@
-user-agent: *
-sitemap: https://c-a-p-engineer.github.io/sitemap.xml
+User-agent: *
+Sitemap: https://c-a-p-engineer.github.io/sitemap.xml

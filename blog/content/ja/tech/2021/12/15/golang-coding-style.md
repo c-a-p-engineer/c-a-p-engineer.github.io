@@ -1,19 +1,19 @@
 ---
-title: "【Go】Goのコーディング規約"
+title: "【GoLang】コーディング規約"
 date: 2021-12-15T03:30:00+09:00
-description: "Goのコーディング規約まとめ"
+description: "GoLang のコーディング規約まとめ"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Go
+- GoLang
 - コーディング規約
 categories: 
-- Go
+- GoLang
 image: images/thumbnail/Go_Logo_Aqua.svg
 ---
 
-# 【Go】Goのコーディング規約
+# 【GoLang】コーディング規約
 Goのコーディング規約まとめ
 
 ## コーディング規約

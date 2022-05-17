@@ -77,6 +77,7 @@ function createTopic($datetime)
         'Java',
         'Ruby',
         'Python',
+        'Golang',
         'Flutter',
         'HTML',
         'CSS',

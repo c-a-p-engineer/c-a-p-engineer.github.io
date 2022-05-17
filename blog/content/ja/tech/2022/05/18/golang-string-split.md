@@ -31,8 +31,8 @@ func main() {
 	fmt.Printf("%s\n", numbers[4:])
   // 3文字目以前（123
 	fmt.Printf("%s\n", numbers[:3])
-  // 2文字目 - 3文字目
-	fmt.Printf("%s\n", numbers[1:3])
+  // 6文字目 - 7文字目（67
+	fmt.Printf("%s\n", numbers[5:7])
 }
 ```
 

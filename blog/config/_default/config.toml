@@ -19,7 +19,6 @@ enableGitInfo = false
 googleAnalytics = "G-RD9K77EWVP"
 
 enableRobotsTXT = true
-disableKinds = ["taxonomy","taxonomyTerm"]
 
 [markup]
   [markup.goldmark]

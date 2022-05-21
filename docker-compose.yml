@@ -1,15 +1,16 @@
 version: '3'
 services: 
     hugo:
-        image: klakegg/hugo:0.83.1-ubuntu
-        container_name: blog-hugo
+        build:
+            context: .
+            dockerfile: ./docker/hugo/Dockerfile
         volumes:
             - ".:/src"
-        entrypoint: bash
         ports:
             - "1313:1313"
         tty: true
         working_dir: /src/blog
+        command: hugo server --bind=0.0.0.0 -v
 
     php:
         container_name: blog-php

@@ -1,6 +1,15 @@
 # Dockerfile
+FROM node:lts-bullseye
 
-FROM node:18
+# setting
+RUN apt update && apt upgrade -y
+
+# instal golang
+# RUN wget https://dl.google.com/go/go1.17.linux-amd64.tar.gz && \
+#     tar -C /usr/local -xzf go1.17.linux-amd64.tar.gz
+# ENV PATH $PATH:/usr/local/go/bin
+# ENV GOPATH /usr/local/go
+# RUN go install github.com/Ladicle/tcardgen@v0.0.0-20220108063857-a426c849a470
 
 # Download and install hugo
 ENV HUGO_VERSION 0.83.1

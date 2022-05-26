@@ -69,7 +69,7 @@ foreach ($files as $file) {
 
         // タイトルの生成
         $dir = dirname(str_replace($contentDir, '', $file));
-        $output = $blogDir . '/static/ogp/' . $dir . '/' . basename($file, '.md') . '.png';
+        $output = $blogDir . '/static/ogp' . $dir . '/' . basename($file, '.md') . '.png';
         Image::create($output, $mathes[1]);
     }
 }

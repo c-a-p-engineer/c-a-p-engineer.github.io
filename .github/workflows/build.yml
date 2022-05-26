@@ -26,6 +26,18 @@ jobs:
           hugo-version: '0.83.1'
           extended: true
 
+      # PHP extension
+      - name: Setup PHP with pecl extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: gd
+
+      # Crete Ogp
+      - name: Create Ogp
+        run: |
+          php ./php/ogp/exec.php
+
       # Hugo Build
       - name: Build
         run: |

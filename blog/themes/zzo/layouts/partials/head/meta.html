@@ -17,6 +17,9 @@
 {{ else if .Site.Params.myname }}
 <meta name="author" content="{{ .Site.Params.myname }}">
 {{ end }}
+
+{{ $ogpImagePath := path.Join "ogp" (print .File.Dir) (print .File.BaseFileName ".png") }}
+
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ .Title }}">
@@ -25,6 +28,15 @@
 <meta property="og:description" content="{{ $.Param "description" }}">
 {{ if .Params.meta_image }}
   {{ with .Params.meta_image }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    <meta property="og:image:url" content="{{ . | absURL }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:app:name:iphone" content="{{ $.Site.Title }}">
+    <meta property="twitter:title" content="{{ $.Param "title" }}">
+    <meta property="twitter:description" content="{{ $.Param "description" }}">
+  {{ end }}
+{{ else if os.FileExists (path.Join "static" $ogpImagePath) }}
+  {{ with $ogpImagePath }}
     <meta property="og:image" content="{{ . | absURL }}">
     <meta property="og:image:url" content="{{ . | absURL }}">
     <meta name="twitter:card" content="summary_large_image">

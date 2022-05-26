@@ -1,16 +1,29 @@
-ARG PHP_VERSION=8.0.1-fpm-alpine3.12
+ARG PHP_VERSION=8.1.6-fpm-bullseye
 
 FROM php:${PHP_VERSION}
 
-RUN apk update && \
-    apk add --update --no-cache \
-     shadow \
-     bash && \
-    docker-php-ext-install pdo_mysql
+RUN apt-get update
+
+RUN apt-get install -y wget git libjpeg-dev libfreetype6-dev
+RUN apt-get install -y  libmagick++-dev \
+libmagickwand-dev \
+libpq-dev \
+libfreetype6-dev \
+libjpeg62-turbo-dev \
+libpng-dev \
+libwebp-dev \
+libxpm-dev
+
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp && \
+docker-php-ext-install -j$(nproc) gd
+
+# xdebug install
+# RUN pecl install xdebug \
+#     && docker-php-ext-enable xdebug
+
+# Timezone setting
+ENV TZ Asia/Tokyo
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# node のインストール npm のため
-RUN apk add --update nodejs nodejs-npm
 
 WORKDIR /php

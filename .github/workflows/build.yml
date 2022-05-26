@@ -4,11 +4,8 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - 'blog/**'
-
-permissions:
-  actions: write
+    paths:
+      - 'blog/**'
 
 jobs:
   Bulid:

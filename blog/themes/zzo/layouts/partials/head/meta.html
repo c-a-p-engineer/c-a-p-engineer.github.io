@@ -35,7 +35,7 @@
     <meta property="twitter:title" content="{{ $.Param "title" }}">
     <meta property="twitter:description" content="{{ $.Param "description" }}">
   {{ end }}
-{{ else if os.FileExists (path.Join "static" $ogpImagePath) }}
+{{ else if fileExists (path.Join "static" $ogpImagePath) }}
   {{ with $ogpImagePath }}
     <meta property="og:image" content="{{ . | absURL }}">
     <meta property="og:image:url" content="{{ . | absURL }}">

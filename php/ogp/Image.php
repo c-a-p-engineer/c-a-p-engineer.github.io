@@ -38,7 +38,8 @@ class Image
             implode(PHP_EOL, mb_str_split($text, 25))
         );
         // ファイル名を指定して画像出力
-        @mkdir(dirname($output), '0777', TRUE);
+        echo dirname($output) . PHP_EOL;
+        @mkdir(dirname($output), '0777', true);
         imagepng($image, $output);
     }
 }

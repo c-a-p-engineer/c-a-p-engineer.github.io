@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'blog/**'
+    # paths:
+    #   - 'blog/**'
 
 permissions:
   actions: write

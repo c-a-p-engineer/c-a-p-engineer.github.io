@@ -43,7 +43,7 @@ jobs:
         run: |
           cd ./blog
           sudo rm -rf ../docs
-          sudo hugo --minify
+          hugo --minify
           mv -fv ./public/ ../docs/
 
       # Commit

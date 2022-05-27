@@ -5,7 +5,7 @@ class Image
     // 文字列を挿入する先の画像
     const TEMPLATE = __DIR__ . '/template.png';
 
-    // 挿入する文字列
+    // フォント
     const FONT = __DIR__ . '/KintoSans-Medium.ttf';
 
     static function create(string $output, string $text)

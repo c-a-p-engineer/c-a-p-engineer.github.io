@@ -42,8 +42,8 @@ jobs:
       - name: Build
         run: |
           cd ./blog
-          rm -rf ../docs
-          hugo --minify
+          sudo rm -rf ../docs
+          sudo hugo --minify
           mv -fv ./public/ ../docs/
 
       # Commit

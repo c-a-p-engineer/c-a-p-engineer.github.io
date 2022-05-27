@@ -38,8 +38,10 @@ class Image
             implode(PHP_EOL, mb_str_split($text, 25))
         );
         // ファイル名を指定して画像出力
-        var_dump(dirname($output), $output);
-        mkdir(dirname($output), '0777', true);
+        $dirName = dirname($output);
+        if(!file_exists($dirName)){
+            mkdir(dirname($output), '0777', true);
+        }
         imagepng($image, $output);
     }
 }

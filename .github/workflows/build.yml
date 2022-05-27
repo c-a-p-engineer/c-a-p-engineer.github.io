@@ -41,7 +41,7 @@ jobs:
       # Hugo Build
       - name: Build
         run: |
-          chmod -R 777 ./blog
+          sudo chmod -R 777 ./blog
           cd ./blog
           sudo rm -rf ../docs
           hugo --minify

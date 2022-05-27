@@ -36,7 +36,7 @@ jobs:
       # Crete Ogp
       - name: Create Ogp
         run: |
-          php ./php/ogp/exec.php
+          sudo php ./php/ogp/exec.php
 
       # Hugo Build
       - name: Build

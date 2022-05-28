@@ -62,6 +62,8 @@ foreach ($files as $file) {
             // タイトル行ではない
             continue;
         }
+
+        $title = $mathes[1] ?? null;
         if (is_null($mathes[1] ?? null)) {
             // 正規表現でタイトルが取得できない
             break;
@@ -70,6 +72,6 @@ foreach ($files as $file) {
         // タイトルの生成
         $dir = dirname(str_replace($contentDir, '', $file));
         $output = $blogDir . '/static/ogp' . $dir . '/' . basename($file, '.md') . '.png';
-        Image::create($output, $mathes[1]);
+        Image::create($output, $title);
     }
 }

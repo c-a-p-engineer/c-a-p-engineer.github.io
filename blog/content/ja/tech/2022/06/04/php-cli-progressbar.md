@@ -61,7 +61,7 @@ echo PHP_EOL;
 
 以下を実行すると `Processing...  | [####################]100%` というプログレスバーが出力されます。
 これでCLI上でのPHPの実行の進捗具合がわかりやすくなります。
-```php:ProgressBar.php {linenos=table,hl_lines=[19]}
+```php:ProgressBar.php
 <?php
 /**
  * ProgressBar Display Class

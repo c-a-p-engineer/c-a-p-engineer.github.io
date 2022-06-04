@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/Image.php';
+require __DIR__ . '/ProgressBar.php';
 
 // ファイル取得
 function getFileList(string $dir): array
@@ -45,11 +46,15 @@ $exclude = ['_index.md'];
 // 実行前にファイルを削除
 rmrf($ogpDir);
 
+
+$total = count($files);
+$i = 0;
 // OGP用ファイル全生成
 foreach ($files as $file) {
     // 除外ファイル判定
     $basename  = basename($file);
     if (in_array($basename, $exclude, true)) {
+        ProgressBar::progress(round(++$i / $total  * 100, 0));
         continue;
     }
 
@@ -74,4 +79,5 @@ foreach ($files as $file) {
         $output = $blogDir . '/static/ogp' . $dir . '/' . basename($file, '.md') . '.png';
         Image::create($output, $title);
     }
+    ProgressBar::progress(round(++$i / $total * 100, 0));
 }

@@ -119,10 +119,10 @@ WHERE
 
 |TABLE_SCHEMA|PARTITION_NAME|PARTITION_ORDINAL_POSITION|TABLE_ROWS|
 |:---|:---|:---|:---|
-|bsize_dev|p0|1|1|
-|bsize_dev|p1|2|2|
-|bsize_dev|p2|3|2|
-|bsize_dev|p3|4|3|
+|sample|p0|1|1|
+|sample|p1|2|2|
+|sample|p2|3|2|
+|sample|p3|4|3|
 
 ### 問題点 実行計画を確認
 実行計画を確認してみましょう。

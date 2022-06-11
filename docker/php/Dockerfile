@@ -4,7 +4,7 @@ FROM php:${PHP_VERSION}
 
 RUN apt-get update
 
-RUN apt-get install -y wget git libjpeg-dev libfreetype6-dev
+RUN apt-get install -y wget git procps libjpeg-dev libfreetype6-dev
 RUN apt-get install -y  libmagick++-dev \
 libmagickwand-dev \
 libpq-dev \

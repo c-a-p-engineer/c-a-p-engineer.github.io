@@ -50,4 +50,4 @@ Mysql `ERROR 1659 (HY000): Field 'num' is of a not allowed type for this type of
 パーティショニングする際に関数を使用してパーティショニング可能な型に変換することで指定することが可能です。
 
 ## 参考
-* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_field_type_not_allowed_as_partition_field" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1659 SQLSTATE: HY000</a>
+* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_field_type_not_allowed_as_partition_field" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1659 SQLSTATE: HY000 (ER_FIELD_TYPE_NOT_ALLOWED_AS_PARTITION_FIELD) </a>

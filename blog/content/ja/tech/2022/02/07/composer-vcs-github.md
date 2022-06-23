@@ -7,9 +7,10 @@ enableToc: true
 enableTocContent: true
 tags: 
 - php
+- composer
 categories: 
 - php
-image: images/thumbnail/Windows_logo_and_wordmark_-_2021.svg
+image: images/thumbnail/php.png
 ---
 
 # 【PHP】github のリポジトリから直接 composer require でインストール

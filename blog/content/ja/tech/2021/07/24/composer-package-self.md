@@ -7,6 +7,7 @@ enableToc: true
 enableTocContent: true
 tags: 
 - PHP
+- composer
 categories: 
 - PHP
 image: images/thumbnail/php.png

@@ -22,11 +22,11 @@ image: images/thumbnail/GitHub_Logo_White.png
 `Webhook URL` を取得します。
 
 ## Github の用意
-1.導入したい `Repository` の `Settings`を選択。
-2.左のメニューの `Secrets` を指定
-3.右上の `New repository secret` を選択。
-4.`Name` に `SLACK_WEBHOOK_URL` を設定。
-5.`Value` に取得した `Webhook URL` を設定。
+1. 導入したい `Repository` の `Settings`を選択。
+2. 左のメニューの `Secrets` を指定
+3. 右上の `New repository secret` を選択。
+4. `Name` に `SLACK_WEBHOOK_URL` を設定。
+5. `Value` に取得した `Webhook URL` を設定。
 
 ## Github Actionsの設定
 Github Actions を作成します。

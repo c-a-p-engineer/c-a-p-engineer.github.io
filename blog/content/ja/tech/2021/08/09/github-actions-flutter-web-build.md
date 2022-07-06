@@ -1,7 +1,7 @@
 ---
-title: "【Github Actions】Flutter Build を自動化"
+title: "【Github Actions】Flutter Web Build を自動化"
 date: 2021-08-09T09:00:00+09:00
-description: "Github Actions で Flutter Build を自動化してみました。"
+description: "Github Actions で Flutter Web Build を自動化してみました。"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -13,8 +13,8 @@ categories:
 image: images/thumbnail/Flutter-logo-animation-v1-2.gif
 ---
 
-# 【Github Actions】Flutter Build を自動化
-Flutter の Build を自動化してみました。
+# 【Github Actions】Flutter Web Build を自動化
+Github Actions で Flutter Web Build を自動化してみました。
 
 ## サンプル
 サンプルでは `Flutter Web` の build を行っております。

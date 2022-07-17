@@ -2,7 +2,9 @@
 FROM node:lts-bullseye
 
 # setting
-RUN apt update && apt upgrade -y
+RUN apt update && apt upgrade -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # instal golang
 # RUN wget https://dl.google.com/go/go1.17.linux-amd64.tar.gz && \

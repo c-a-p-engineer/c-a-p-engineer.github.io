@@ -10,7 +10,7 @@ tags:
 - Flutter
 categories: 
 - Github
-image: images/thumbnail/Flutter-logo-animation-v1-2.gif
+image: images/thumbnail/GitHub_Logo_White.png
 ---
 
 # 【Github Actions】Flutter 各種 Build を自動化

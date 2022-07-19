@@ -9,7 +9,7 @@ tags:
 - Github
 categories: 
 - Github
-image: images/thumbnail/Flutter-logo-animation-v1-2.gif
+image: images/thumbnail/GitHub_Logo_White.png
 ---
 
 # 【Github】Pull Request テンプレートを使用する

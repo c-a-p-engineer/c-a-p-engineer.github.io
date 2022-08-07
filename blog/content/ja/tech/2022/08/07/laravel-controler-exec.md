@@ -18,7 +18,7 @@ Laravel で Controller を直接実行する方法メモ。
 諸事情で別 Controller や Command から実行するためのメモです。
 
 ### 実行対象のController
-
+実際に実行するControllerを作成します。
 ```php
 <?php
 
@@ -39,7 +39,7 @@ class UserController extends Controller
 ### 実際に実行してみる
 試しに Controller から Controller を実行してみます。
 
-``` php {linenos=table,hl_lines=["9-12"]}
+``` php {linenos=table,hl_lines=["12-15"]}
 <?php
 
 namespace App\Http\Controllers;
@@ -48,9 +48,13 @@ use Illuminate\Http\Request;
 
 class SampleController extends Controller
 {
-    $userController = app()->make('App\Http\Controllers\UserController');
-    $userController->store(new Request([
-        'name' => 'test'
-    ]));
+    public function store(Request $request)
+    {
+        // UserContorlller を実行
+        $userController = app()->make('App\Http\Controllers\UserController');
+        $userController->store(new Request([
+            'name' => 'test'
+        ]));
+    }
 }
 ```

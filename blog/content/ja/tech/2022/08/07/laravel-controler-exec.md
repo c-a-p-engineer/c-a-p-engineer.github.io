@@ -1,7 +1,7 @@
 ---
-title: "【Laravel】Controller を直接実行する方法"
+title: "【Laravel】Controller を Controller や Command から実行する方法"
 date: 2022-08-07T10:00:00+09:00
-description: "Laravel で Controller を直接実行する方法メモ"
+description: "Laravel で Controller を Controller や Command から実行する方法メモ"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -13,11 +13,11 @@ categories:
 image: images/thumbnail/laravel-l-slant.png
 ---
 
-# 【Laravel】Controller を直接実行する方法
-Laravel で Controller を直接実行する方法メモ。
+# 【Laravel】Controller を Controller や Command から実行する方法
+Laravel で Controller を Controller や Command から実行する方法メモ。
 諸事情で別 Controller や Command から実行するためのメモです。
 
-### 実行対象のController
+## 実行対象のController
 実際に実行するControllerを作成します。
 ```php
 <?php
@@ -36,7 +36,7 @@ class UserController extends Controller
 }
 ```
 
-### 実際に実行してみる
+## 実際に実行してみる
 試しに Controller から Controller を実行してみます。
 
 ``` php {linenos=table,hl_lines=["12-15"]}

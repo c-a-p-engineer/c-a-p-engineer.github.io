@@ -1,5 +1,5 @@
 ---
-title: "【Git】複数のコミットを🍒cherry-pickする方法"
+title: "【Git】複数のコミットをcherry-pickする方法"
 date: 2022-08-11T11:00:00+09:00
 description: "Gitで複数のコミットをcherry-pickする方法メモ"
 draft: false

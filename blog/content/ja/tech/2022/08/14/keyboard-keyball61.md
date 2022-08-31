@@ -9,7 +9,7 @@ tags:
 - キーボード
 categories: 
 - キーボード
-image: images/thumbnail/keyboard.jpg
+image: tech/2022/08/14/keyboard-keyball61/keyball61.jpg
 ---
 
 # 【キーボード】Keyball61 を使ってみた

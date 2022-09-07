@@ -1,7 +1,7 @@
 ---
 title: "【Linux】接続を切っても処理を継続させる「nohup」"
 date: 2022-06-11T10:00:00+09:00
-description: "Linuxに接続している状態でコマンド実行した際にネットワークなど何らかの理由で切られる危険性があり、対策として `nohup` を使用して接続が切られても処理を継続させる方法を取りました。"
+description: "Linuxに接続している状態でコマンド実行した際にネットワークなど何らかの理由で切られる危険性があり、対策として nohup を使用して接続が切られても処理を継続させる方法を取りました。"
 draft: false
 enableToc: true
 enableTocContent: true

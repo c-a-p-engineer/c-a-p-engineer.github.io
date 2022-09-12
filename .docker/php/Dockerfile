@@ -3,7 +3,10 @@ ARG PHP_VERSION=8.1.6-fpm-bullseye
 FROM php:${PHP_VERSION}
 
 RUN apt-get update \
-    && apt-get install -y wget git procps libjpeg-dev libfreetype6-dev \
+    # 基本
+    && apt-get install -y wget git procps \
+    # 画像関連
+    libjpeg-dev libfreetype6-dev \
     libmagick++-dev \
     libmagickwand-dev \
     libpq-dev \
@@ -12,6 +15,10 @@ RUN apt-get update \
     libpng-dev \
     libwebp-dev \
     libxpm-dev \
+    # ZIP関連
+    libzip-dev unzip \
+    && docker-php-ext-install zip \
+    # 掃除
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

@@ -6,10 +6,10 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Github
+- Linux
 categories: 
-- Github
-image: images/thumbnail/GitHub_Logo_White.png
+- Linux
+image: images/thumbnail/linux.png
 ---
 
 # 【Linux】ShellでログインしたらSlack通知を行うようにする

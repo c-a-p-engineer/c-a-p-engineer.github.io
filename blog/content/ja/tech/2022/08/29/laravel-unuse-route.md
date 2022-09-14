@@ -1,7 +1,7 @@
 ---
 title: "【Laravel】使用していないController, Methodを特定するコマンドを自作"
 date: 2022-08-29T18:00:00+09:00
-description: "Laravelで使用していないController, Methodを特定するコマンドを自作しました。"
+description: "Laravelで使用していないController, Methodを特定するコマンドを自作しました。リファクタの時に役立ちます！"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -15,6 +15,7 @@ image: images/thumbnail/laravel-l-slant.png
 
 # 【Laravel】使用していないController, Methodを特定するコマンドを自作
 Laravelで使用していないController, Methodを特定するコマンドを自作しました。
+リファクタの時に役立ちます！
 
 ## 確認環境
 Laravel 5-8 の環境で確認をしております。
@@ -33,7 +34,7 @@ Route::get('test', 'App\Http\Controllers\TestController@index');
 ```
 
 ## コマンド作成
-```php
+```php:app/Console/Commands/UnuseRoute.php
 <?php
 
 namespace App\Console\Commands;

@@ -86,7 +86,7 @@ volumes:
 そちらを使えばSSH出来る模様です。
 
 エラーが出た際は `ssh-keygen` を行えば入れるとのこと。
-* <a href="https://github.com/play-with-docker/play-with-docker/issues/285" target="_blank" rel="nofollow noopener"> Unable to SSH into PWD Instance #285 </a>
+* <a href="https://github.com/play-with-docker/play-with-docker/issues/285" target="_blank" rel="nofollow noopener"> Unable to SSH into PWD Instance #285</a>
 
 なお私は何故か入れたり、入れなかったりしました…
 

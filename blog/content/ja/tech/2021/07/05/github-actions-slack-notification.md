@@ -17,7 +17,7 @@ image: images/thumbnail/GitHub_Logo_White.png
 
 ## Slack の用意
 以下の `Slack` アプリの `Incoming Webhook` を利用します。
-* <a href="https://w1625424953-rox450381.slack.com/apps/A0F7XDUAZ--incoming-webhook-?tab=more_info" target="_blank" rel="nofollow noopener">Incoming Webhook </a>
+* <a href="https://w1625424953-rox450381.slack.com/apps/A0F7XDUAZ--incoming-webhook-?tab=more_info" target="_blank" rel="nofollow noopener">Incoming Webhook</a>
 
 `Webhook URL` を取得します。
 

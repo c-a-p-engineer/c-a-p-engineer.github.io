@@ -25,4 +25,4 @@ Mysql `ERROR 1503 (HY000): A PRIMARY KEY must include all columns in the table's
 もしくはパーティショニングを行う列をプライマリキーに含めることで対応可能です。
 
 ## 参考
-* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_unique_key_need_all_fields_in_pf" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1503 SQLSTATE: HY000 (ER_UNIQUE_KEY_NEED_ALL_FIELDS_IN_PF) </a>
+* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_unique_key_need_all_fields_in_pf" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1503 SQLSTATE: HY000 (ER_UNIQUE_KEY_NEED_ALL_FIELDS_IN_PF)</a>

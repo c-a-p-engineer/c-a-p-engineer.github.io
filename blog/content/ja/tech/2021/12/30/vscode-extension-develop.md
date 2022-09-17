@@ -21,7 +21,7 @@ VSCodeのプラグイン開発を始めるためのメモ
 
 `.devcontainer` はこちらのものを使用しました。
 * <a href="https://github.com/masoncusack/nodejs-typescript-dev-container" target="_blank" rel="nofollow noopener">masoncusack /
-nodejs-typescript-dev-container </a>
+nodejs-typescript-dev-container</a>
 
 ## 2. ジェネレーターインストール
 最初に VSCode の拡張機能のジェネレーターをインストールします。

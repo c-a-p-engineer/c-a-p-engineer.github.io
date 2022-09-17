@@ -27,7 +27,7 @@ image_description: 'Visual Studio Codeは、米国およびその他の国にお
 
 ## 導入方法
 試しにサンプルリポジトリを使用してみます。
-1. <a href="https://github.com/microsoft/vscode-remote-try-python" target="_blank" rel="nofollow noopener"> microsoft / vscode-remote-try-python </a> を試しにダウンロードしてください。
+1. <a href="https://github.com/microsoft/vscode-remote-try-python" target="_blank" rel="nofollow noopener"> microsoft / vscode-remote-try-python</a> を試しにダウンロードしてください。
 2. VSCode 内でコマンド `> Remote-Containers: Open Folder in Container` を実行するとフォルダダイアログが開かれます。
 3. フォルダダイアログから `.devcontainer` があるフォルダを開きます。
 4. VSCodeが新たに開き直されてDockerが実行されます。

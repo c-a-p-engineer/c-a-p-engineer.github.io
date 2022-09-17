@@ -62,4 +62,4 @@ ALTER TABLE `sample` ADD PARTITION (PARTITION pmax VALUES LESS THAN (MAXVALUE));
 ※ `MAXVALUE` を指定すると列の最大値以下の値を指定ができます。
 
 ## 参考
-* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_no_partition_for_given_value" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1526 SQLSTATE: HY000 (ER_NO_PARTITION_FOR_GIVEN_VALUE) </a>
+* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_no_partition_for_given_value" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1526 SQLSTATE: HY000 (ER_NO_PARTITION_FOR_GIVEN_VALUE)</a>

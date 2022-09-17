@@ -10,7 +10,8 @@ tags:
 - DB
 categories: 
 - Mysql
-image: images/thumbnail/linux.png
+image: images/thumbnail/powered-by-mysql-167x86.png
+image_description: 'MySQLは、Oracleの米国およびその他の国における商標または登録商標です。'
 ---
 
 # 【Mysql】指定したパーティションのみを検索する

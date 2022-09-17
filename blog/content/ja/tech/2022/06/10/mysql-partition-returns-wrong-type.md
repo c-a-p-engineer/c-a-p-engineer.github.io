@@ -43,4 +43,4 @@ Mysql `ERROR 1564 (HY000): The PARTITION function returns the wrong type` エラ
     * VARBINARY
 
 ## 参考
-* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_field_type_not_allowed_as_partition_field" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1659 SQLSTATE: HY000 (ER_FIELD_TYPE_NOT_ALLOWED_AS_PARTITION_FIELD) </a>
+* <a href="https://dev.mysql.com/doc/refman/5.6/ja/error-messages-server.html#error_er_field_type_not_allowed_as_partition_field" target="_blank" rel="nofollow noopener">MySQL :: MySQL 5.6 リファレンスマニュアル :: B.3 サーバーのエラーコードおよびメッセージ #エラー: 1659 SQLSTATE: HY000 (ER_FIELD_TYPE_NOT_ALLOWED_AS_PARTITION_FIELD)</a>

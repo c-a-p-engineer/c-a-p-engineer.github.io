@@ -30,7 +30,7 @@ RUN export GO111MODULE=on
 ## 成功例
 `RUN export` → `ENV` に変更することで環境変数の設定ができました。
 
-```yml:Dockerfile
+```Dockerfile
 FROM golang:latest
 
 ENV GO111MODULE on
@@ -40,7 +40,7 @@ ENV GO111MODULE on
 
 ### 補足
 補足としては `$PATH` を値に入れて既存の環境変数を入れることができます。
-```yml:Dockerfile
+```Dockerfile
 FROM golang:latest
 
 ENV GOPATH $HOME/go

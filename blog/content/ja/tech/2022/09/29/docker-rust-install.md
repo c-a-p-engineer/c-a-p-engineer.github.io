@@ -1,6 +1,6 @@
 ---
 title: "【Docker】Rustをインストール"
-date: 2022-9-29T07:20:00+09:00
+date: 2022-09-29T07:20:00+09:00
 description: "DockerにRustをインストールするメモ。Tauriを使用しようとしてRustのインストールに罠があったためメモを残しておきます。"
 draft: false
 enableToc: true

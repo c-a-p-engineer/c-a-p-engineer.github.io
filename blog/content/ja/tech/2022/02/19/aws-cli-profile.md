@@ -20,7 +20,7 @@ image: images/thumbnail/Amazon_Web_Services_Logo.svg
 * Windows: `%USERPROFILE%\.aws\credentials`
 * Linux or Mac: `~/.aws/credentials`
 
-```conf:.aws/credentials
+```yml:.aws/credentials..yml
 [default]
 aws_access_key_id=XXXXXXXXXXXXXXXXXXX
 aws_secret_access_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -43,7 +43,7 @@ aws configure list --profile user1
 
 ### 環境変数で切り替え
 * Linux or Mac
-```bash
+```shell
 export AWS_PROFILE=user1
 ```
 

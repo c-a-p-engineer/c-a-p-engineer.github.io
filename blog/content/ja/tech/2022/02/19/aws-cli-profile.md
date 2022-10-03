@@ -20,14 +20,14 @@ image: images/thumbnail/Amazon_Web_Services_Logo.svg
 * Windows: `%USERPROFILE%\.aws\credentials`
 * Linux or Mac: `~/.aws/credentials`
 
-```.aws/credentials
+```conf:.aws/credentials
 [default]
-aws_access_key_id=AKIAIOSFODNN7EXAMPLE
-aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+aws_access_key_id=XXXXXXXXXXXXXXXXXXX
+aws_secret_access_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 [user1]
-aws_access_key_id=AKIAI44QH8DHBEXAMPLE
-aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
+aws_access_key_id=XXXXXXXXXXXXXXXXXXX
+aws_secret_access_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ちなみに僕の場合はプロファイルの設定をし忘れないようにあえて `default` は設定していません。
@@ -43,13 +43,13 @@ aws configure list --profile user1
 
 ### 環境変数で切り替え
 * Linux or Mac
-```
+```bash
 export AWS_PROFILE=user1
 ```
 
 * Windows
-```
-setx AWS_PROFILE user1
+```bat
+set AWS_PROFILE user1
 ```
 
 ## 参考

@@ -1,6 +1,7 @@
 ---
 title: "【Docker】SchemaSpy を使って自動的にER図を生成する"
 date: 2022-03-31T02:30:00+09:00
+LastMod: 2022-10-10T16:30:00+09:00
 description: "Docker で SchemaSpy を使って自動的にER図を生成する"
 draft: false
 enableToc: true
@@ -15,6 +16,13 @@ image: images/thumbnail/docker.png
 
 # 【Docker】SchemaSpy を使って自動的にER図を生成する
 Docker で SchemaSpy を使って自動的にER図を生成する。
+
+{{< notice warning >}}
+**注意**
+※2022/10/10追記
+この記事の内容が動作しなくなっています。
+<a href="/tech/2022/10/10/docker-schemaspy/" target="_blank" rel="nofollow noopener">【Docker】SchemaSpy を使って自動的にER図を生成する（2022/10/10 改良版</a> を見てください。
+{{< /notice >}}
 
 ## docker-compose
 ```yml:docker-compose.yml

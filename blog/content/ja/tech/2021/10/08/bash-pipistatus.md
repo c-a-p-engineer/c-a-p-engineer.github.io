@@ -1,7 +1,7 @@
 ---
 title: "【bash】パイプした時の各終了ステータスを確認する"
 date: 2021-10-08T18:00:00+09:00
-description: "BASH 利用児の"
+description: "bash 利用時に | を利用してパイプする時がありますが、これがエラーになるとどこで落ちているかわからない時があります。"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -12,7 +12,7 @@ categories:
 image: images/thumbnail/Gnu-bash-logo.svg
 ---
 
-# パイプした時の各終了をステータスを確認するパイプステータス
+# 【bash】パイプした時の各終了ステータスを確認する
 `bash` 利用時に `|` を利用してパイプする時がありますが、これがエラーになるとどこで落ちているかわからない時があります。
 `PIPESTATUS` を利用して確認します。
 

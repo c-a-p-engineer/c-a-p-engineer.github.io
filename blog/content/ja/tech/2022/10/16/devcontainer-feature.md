@@ -6,10 +6,9 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Mysql
-- DB
+- Visual Studio Code
 categories: 
-- Mysql
+- エディタ
 image: images/thumbnail/docker.png
 ---
 

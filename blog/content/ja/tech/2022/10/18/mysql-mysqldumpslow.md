@@ -1,7 +1,7 @@
 ---
-title: "【Mysql】大量のスロークエリログを簡単に解析できる mysqlslowdump"
+title: "【Mysql】大量のスロークエリログを簡単に解析できる mysqldumpslow"
 date: 2022-10-18T18:00:00+09:00
-description: "Mysql の大量のスロークエリログを簡単に解析できる mysqlslowdump を使ってみる。"
+description: "Mysql の大量のスロークエリログを簡単に解析できる mysqldumpslow を使ってみる。"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -14,8 +14,8 @@ image: images/thumbnail/powered-by-mysql-167x86.png
 image_description: 'MySQLは、Oracleの米国およびその他の国における商標または登録商標です。'
 ---
 
-# 【Mysql】スロークエリを簡単に解析できる mysqlslowdump
-Mysql のスロークエリログを簡単に解析できる mysqlslowdump を使ってみる。
+# 【Mysql】スロークエリを簡単に解析できる mysqldumpslow
+Mysql のスロークエリログを簡単に解析できる mysqldumpslow を使ってみる。
 
 ## mysqldumpslow
 `mysqldumpslow` コマンドを使用することで大量のスロークエリログを簡単に解析できます。

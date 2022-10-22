@@ -59,7 +59,7 @@ EOS
 echo ${STR}
 ```
 
-### アクセント
+### バッククォート
 ```bash
 STR=`cat << EOS
 1

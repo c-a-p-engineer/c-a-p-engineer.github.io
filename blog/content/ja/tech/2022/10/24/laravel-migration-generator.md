@@ -18,7 +18,7 @@ DBとマイグレーションファイルを修正するのも面倒なのでLar
 
 ## 手順
 以下のパッケージを使用してマイグレーションを逆生成します。
-<a href="https://github.com/kitloong/laravel-migrations-generator" target="_blank" rel="nofollow noopener">kitloong / laravel-migrations-generator</a>
+<a href="https://github.com/kitloong/laravel-migrations-generator" target="_blank" rel="nofollow noopener">kitloong/laravel-migrations-generator</a>
 
 ### インストール
 インストール方法
@@ -61,5 +61,4 @@ php artisan migrate:generate --ignore="table3,table4,table5"
 * `--squash` 1つのファイルに生成する
 
 ## 参考
-* <a href="https://github.com/kitloong/laravel-migrations-generator" target="_blank" rel="nofollow noopener">kitloong /
-laravel-migrations-generator</a>
+* <a href="https://github.com/kitloong/laravel-migrations-generator" target="_blank" rel="nofollow noopener">kitloong/laravel-migrations-generator</a>

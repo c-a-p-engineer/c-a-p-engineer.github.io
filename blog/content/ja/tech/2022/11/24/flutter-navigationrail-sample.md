@@ -6,10 +6,10 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- PHP
+- Flutter
 categories: 
-- PHP
-image: images/thumbnail/php.png
+- Flutter
+image: images/thumbnail/Flutter-logo-animation-v1-2.gif
 ---
 
 # 【Flutter】NavigationRail を使ってサイドメニューを実装する

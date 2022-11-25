@@ -54,7 +54,7 @@ vendor/bin/phpstan analyse [options] [<paths>...]
 * `--memory-limit`
   * メモリの指定 例：`--memory-limit 1G`
 * `--xdebug`
-  * パフォーマンスが落ちるため `xdebug` が有効の場合はをオフにする
+  * `xdebug` が有効にする場合に使用（パフォーマンスが落ちる
 
 ## PHPStanとの戦い
 PHPStan は 0-9 までの10のレベルが存在します。

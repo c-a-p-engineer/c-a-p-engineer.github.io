@@ -1,7 +1,7 @@
 ---
 title: "【Laravel】バリデーションに無名関数を使用してバリデーションを行う"
 date: 2022-12-08T01:20:00+09:00
-description: "Laravel で バリデーションに無名関数を使用してバリデーションを行う方法メモ"
+description: "Laravel でバリデーションに無名関数を使用してバリデーションを行う方法メモ"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -14,7 +14,7 @@ image: images/thumbnail/laravel-l-slant.png
 ---
 
 # 【Laravel】バリデーションに無名関数を使用してバリデーションを行う
-Laravel で バリデーションに無名関数を使用してバリデーションを行う方法メモ
+Laravel でバリデーションに無名関数を使用してバリデーションを行う方法メモ
 特殊なバリデーションでそこでしか使用しない、わざわざ独自ルールを作るのも手間などの時に使用する方法です。
 
 ## サンプル

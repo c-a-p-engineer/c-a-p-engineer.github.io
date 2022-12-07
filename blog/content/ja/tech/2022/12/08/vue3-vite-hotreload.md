@@ -1,6 +1,6 @@
 ---
 title: "【Vue】Viteのホットリロードが動かない時の対応方法"
-date: 2022-12-08T12:30:00+09:00
+date: 2022-12-08T00:30:00+09:00
 description: "Dokcerで Vite + Vue3 + Typescript で構成したフロントエンドがホットリロードが動かない時の対処法メモ"
 draft: false
 enableToc: true

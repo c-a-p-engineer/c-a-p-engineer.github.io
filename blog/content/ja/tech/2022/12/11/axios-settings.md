@@ -1,18 +1,18 @@
 ---
-title: "【Typescript】axios の接続先のbaseurlなどの設定を行う"
+title: "【TypeScript】axios の接続先のbaseurlなどの設定を行う"
 date: 2022-12-11T02:00:00+09:00
 description: "axios を使用する際に接続先のbaseurlなどの設定を行う方法"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Typescript
+- TypeScript
 categories: 
-- Typescript
+- TypeScript
 image: images/thumbnail/Typescript_logo_2020.svg
 ---
 
-# 【Typescript】axios の接続先のbaseurlなどの設定を行う
+# 【TypeScript】axios の接続先のbaseurlなどの設定を行う
 `axios` を使用する際に接続先のbaseurlなどの設定を行う方法。
 
 ## サンプル

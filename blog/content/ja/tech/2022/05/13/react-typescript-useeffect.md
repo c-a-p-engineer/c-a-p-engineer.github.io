@@ -7,7 +7,7 @@ enableToc: true
 enableTocContent: true
 tags: 
 - React
-- Typescript
+- TypeScript
 categories: 
 - React
 image: images/thumbnail/React_Logo.svg

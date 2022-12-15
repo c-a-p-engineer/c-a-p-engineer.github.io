@@ -1,7 +1,7 @@
 ---
 title: "【Vue】Viteのホットリロードが動かない時の対応方法"
 date: 2022-12-08T00:30:00+09:00
-description: "Dokcerで Vite + Vue3 + Typescript で構成したフロントエンドがホットリロードが動かない時の対処法メモ"
+description: "Dokcerで Vite + Vue3 + TypeScript で構成したフロントエンドがホットリロードが動かない時の対処法メモ"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -13,7 +13,7 @@ image: images/thumbnail/vue.svg
 ---
 
 # 【Vue】Viteのホットリロードが動かない時の対応方法
-Dokcerで Vite + Vue3 + Typescript で構成したフロントエンドがホットリロードが動かない時の対処法メモ
+Dokcerで Vite + Vue3 + TypeScript で構成したフロントエンドがホットリロードが動かない時の対処法メモ
 
 ## 環境情報
 * Docker

@@ -15,8 +15,6 @@ image: images/thumbnail/Flutter-logo-animation-v1-2.gif
 # 【Flutter】画像を表示する
 Flutter で画像を表示する方法
 
-## Flutterアイコンを探す
-
 ### 画像を配置する
 
 `images` フォルダをプロジェクト直下に作成します。

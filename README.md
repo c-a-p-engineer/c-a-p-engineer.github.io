@@ -1,4 +1,4 @@
-# Gatsby Docker環境
+# Hugo Docker環境
 
 # Requirement
 * [docker](https://www.docker.com/)

@@ -37,7 +37,7 @@
             {{ .Summary | safeHTML }}
           {{ end }}
         </div>
-        {{ with .Params.image_description }}
+        {{ with .Params.image_description | safeHTML }}
         <div class="caption">
           {{ . }}
         </div>

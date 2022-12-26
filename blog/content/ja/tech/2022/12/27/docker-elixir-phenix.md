@@ -13,10 +13,10 @@ categories:
 image: images/thumbnail/docker.png
 ---
 
-# 【Docker】Elixir Phenix の環境を作る"
+# 【Docker】Elixir Phenix の環境を作る
 Docker で Elixir Phenix の環境を作る
 
-## 環境する環境
+## 作成する環境
 * Elixir 1.14.2
 * Phenix 1.6.3
 

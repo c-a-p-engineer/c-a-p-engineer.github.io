@@ -97,7 +97,12 @@ end
 ```
 
 ### 確認
-<a href="http://localhost:4000/light" target="_blank" rel="nofollow noopener">http://localhost:4000/light</a> に接続して画面が出てきます。
+Phenixサーバーを起動します。
+```
+mix phx.server
+```
+
+起動後に <a href="http://localhost:4000/light" target="_blank" rel="nofollow noopener">http://localhost:4000/light</a> に接続すると画面が出てきます。
 
 ![liveview](/tech/2022/12/27/elixir-phenix-liveview/elixir-phenix-liveview-light.gif "liveview") 
 

@@ -54,6 +54,12 @@ docker exec -it blog-php php topic.php
 # Usage
 http://localhost:1313
 
+## Use Sample Mermaid
+blog\content\ja\tech\2022\03\06\git-rebase-brunch.md
+
+## Shortcodes Sample
+blog\themes\zzo\exampleSite\content\en\posts\shortcodes.md
+
 # Note
 * [HUGO](https://gohugo.io/) 
 * [Zzo – Z Themes Documentation](https://gohugo.io/content-management/syntax-highlighting/)

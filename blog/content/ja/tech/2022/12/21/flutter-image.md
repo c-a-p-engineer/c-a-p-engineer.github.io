@@ -15,12 +15,12 @@ image: images/thumbnail/Flutter-logo-animation-v1-2.gif
 # 【Flutter】画像を表示する
 Flutter で画像を表示する方法
 
-### 画像を配置する
+## 画像を配置する
 
 `images` フォルダをプロジェクト直下に作成します。
 表示したい画像をその中に入れます。
 
-### 設定ファイルを編集
+## 設定ファイルを編集
 `pubspec.yaml` ファイルを編集します。
 ```yaml:pubspec.yaml {linenos=table,hl_lines=[5,7]}
 flutter:
@@ -32,7 +32,7 @@ flutter:
     - images/
 ```
 
-### 実行コード
+## 実行コード
 `Image.asset('images/sample.jpg')` を使用して画像を読み込みます。
 
 ```dart:/lib/main.dart {linenos=table,hl_lines=[29]}

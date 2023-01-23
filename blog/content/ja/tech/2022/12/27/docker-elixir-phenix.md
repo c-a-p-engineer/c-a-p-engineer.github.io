@@ -11,6 +11,7 @@ tags:
 categories: 
 - Docker
 image: images/thumbnail/docker.png
+image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
 # 【Docker】Elixir Phenix の環境を作る

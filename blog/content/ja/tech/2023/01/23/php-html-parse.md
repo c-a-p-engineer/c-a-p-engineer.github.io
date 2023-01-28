@@ -44,7 +44,7 @@ HTML;
 
 $domDocument = new DOMDocument();
 // HTML読み込み
-$domDocument->loadHTML($html);
+$domDocument->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
 // ID で取得
 $id = $domDocument->getElementById('row1');
@@ -79,7 +79,7 @@ HTML;
 
 $domDocument = new DOMDocument();
 // HTML読み込み
-$domDocument->loadHTML($html);
+$domDocument->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
 
 // XML オブジェクトに変換
 $xmlString = $domDocument->saveXML();

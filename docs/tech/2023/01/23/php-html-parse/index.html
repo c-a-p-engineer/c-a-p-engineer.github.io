@@ -57,7 +57,7 @@
 
 <span class=nv>$domDocument</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DOMDocument</span><span class=p>();</span>
 <span class=c1>// HTML読み込み
-</span><span class=c1></span><span class=nv>$domDocument</span><span class=o>-&gt;</span><span class=na>loadHTML</span><span class=p>(</span><span class=nv>$html</span><span class=p>);</span>
+</span><span class=c1></span><span class=nv>$domDocument</span><span class=o>-&gt;</span><span class=na>loadHTML</span><span class=p>(</span><span class=nx>mb_convert_encoding</span><span class=p>(</span><span class=nv>$html</span><span class=p>,</span> <span class=s1>&#39;HTML-ENTITIES&#39;</span><span class=p>,</span> <span class=s1>&#39;UTF-8&#39;</span><span class=p>));</span>
 
 <span class=c1>// ID で取得
 </span><span class=c1></span><span class=nv>$id</span> <span class=o>=</span> <span class=nv>$domDocument</span><span class=o>-&gt;</span><span class=na>getElementById</span><span class=p>(</span><span class=s1>&#39;row1&#39;</span><span class=p>);</span>
@@ -118,7 +118,7 @@
 
 <span class=nv>$domDocument</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DOMDocument</span><span class=p>();</span>
 <span class=c1>// HTML読み込み
-</span><span class=c1></span><span class=nv>$domDocument</span><span class=o>-&gt;</span><span class=na>loadHTML</span><span class=p>(</span><span class=nv>$html</span><span class=p>);</span>
+</span><span class=c1></span><span class=nv>$domDocument</span><span class=o>-&gt;</span><span class=na>loadHTML</span><span class=p>(</span><span class=nx>mb_convert_encoding</span><span class=p>(</span><span class=nv>$html</span><span class=p>,</span> <span class=s1>&#39;HTML-ENTITIES&#39;</span><span class=p>,</span> <span class=s1>&#39;UTF-8&#39;</span><span class=p>));</span>
 
 <span class=c1>// XML オブジェクトに変換
 </span><span class=c1></span><span class=nv>$xmlString</span> <span class=o>=</span> <span class=nv>$domDocument</span><span class=o>-&gt;</span><span class=na>saveXML</span><span class=p>();</span>

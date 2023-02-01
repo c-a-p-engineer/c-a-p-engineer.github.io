@@ -1,5 +1,5 @@
 ---
-title: "【Elixir】 Phenix で LiveView を使ってみる"
+title: "【Elixir】 Phoenix で LiveView を使ってみる"
 date: 2022-12-27T02:40:00+09:00
 description: "LiveViewを使ってバックエンドだけでリッチなフロントエンドを作成してみます。"
 draft: false
@@ -7,20 +7,20 @@ enableToc: true
 enableTocContent: true
 tags: 
 - Elixir
-- Phenix
+- Phoenix
 categories: 
 - Elixir
 image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# 【Elixir】 Phenix で LiveView を使ってみる
+# 【Elixir】 Phoenix で LiveView を使ってみる
 今回はLiveViewを使ってバックエンドだけでリッチなフロントエンドを作成してみます。
 <a href="https://hexdocs.pm/phoenix_live_view/0.17.5/Phoenix.LiveView.html">Phoenix.LiveView — Phoenix LiveView v0.17.5</a>
 
 ## 環境
 * Elixir 1.14.2
-* Phenix 1.6.3
+* Phoenix 1.6.3
 * LiveView 0.17.5
 
 ## サンプル
@@ -29,7 +29,7 @@ image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons
 
 ON/OFFボタンを作成します。
 
-### phenixプロジェクト作成
+### phoenixプロジェクト作成
 DB不要のため `--no-ecto` を付けます。
 ```
 mix phx.new demo --no-ecto
@@ -97,14 +97,14 @@ end
 ```
 
 ### 確認
-Phenixサーバーを起動します。
+Phoenixサーバーを起動します。
 ```
 mix phx.server
 ```
 
 起動後に <a href="http://localhost:4000/light" target="_blank" rel="nofollow noopener">http://localhost:4000/light</a> に接続すると画面が出てきます。
 
-![liveview](/tech/2022/12/27/elixir-phenix-liveview/elixir-phenix-liveview-light.gif "liveview") 
+![liveview](/tech/2022/12/27/elixir-phoenix-liveview/elixir-phoenix-liveview-light.gif "liveview") 
 
 ## 参考
 * <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/phoenix-liveview-basics.html" target="_blank" rel="nofollow noopener">Phoenix LiveView Basics :: Phoenix Beginner's Guide</a>

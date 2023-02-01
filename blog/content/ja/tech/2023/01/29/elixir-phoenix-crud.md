@@ -1,27 +1,27 @@
 ---
-title: "【Elixir】Phenix 5分でCRUDを作ってみます！"
+title: "【Elixir】Phoenix 5分でCRUDを作ってみます！"
 date: 2023-01-29T15:20:00+09:00
-description: "Elixir Phenix で5分でCRUDをやってみます！"
+description: "Elixir Phoenix で5分でCRUDをやってみます！"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
 - Elixir
-- Phenix
+- Phoenix
 categories: 
 - Elixir
 image: images/thumbnail/Official_Elixir_logo.png
 ---
 
-# 【Elixir】Phenix 5分でCRUDを作ってみます！
-Elixir Phenix で5分でCRUDをやってみます！
+# 【Elixir】Phoenix 5分でCRUDを作ってみます！
+Elixir Phoenix で5分でCRUDをやってみます！
 
 インストール関係は省きます。
 今回 `demo` という名前でプロジェクトを作っています。
 
 ## 環境
 * Elixir 1.14.2
-* Phenix 1.6.3
+* Phoenix 1.6.3
 
 ## mix phx.gen.html
 `mix phx.gen.html` コマンドを使用します。

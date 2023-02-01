@@ -1,35 +1,36 @@
 ---
-title: "【Docker】Elixir Phenix の環境を作る"
+title: "【Docker】Elixir Phoenix の環境を作る"
 date: 2022-12-27T01:40:00+09:00
-description: "Docker で Elixir Phenix の環境を作る"
+description: "Docker で Elixir Phoenix の環境を作る"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
 - Docker
 - Elixir
+- Phoenix
 categories: 
 - Docker
 image: images/thumbnail/docker.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# 【Docker】Elixir Phenix の環境を作る
-Docker で Elixir Phenix の環境を作る
+# 【Docker】Elixir Phoenix の環境を作る
+Docker で Elixir Phoenix の環境を作る
 
 ## 作成する環境
 * Elixir 1.14.2
-* Phenix 1.6.3
+* Phoenix 1.6.3
 
 ## Docker Compose ファイル作成
 `docker-compose.yml` を用意します。
-作るのは Elixir Phenix の環境です。
+作るのは Elixir Phoenix の環境です。
 Postgresも入っています。
 
 ```yaml:docker-compose.yml
 version: '3.2'
 services:
-  elixir-phenix:
+  elixir-phoenix:
     build:
         context: .
         dockerfile: ./Dockerfile
@@ -68,15 +69,15 @@ RUN mix local.hex --force && \
 WORKDIR /app/src
 ```
 
-## Phenix 環境を構築する
+## Phoenix 環境を構築する
 
 * Elixir Dockerコンテナに入る
 ```
 docker-compose up -d
-docker-compose run elixir-phenix bash
+docker-compose run elixir-phoenix bash
 ```
 
-* Phenixプロジェクトを作成
+* Phoenixプロジェクトを作成
 ```
 mix phx.new . --app my_app
 ```
@@ -109,7 +110,7 @@ mix phx.server
 ```
 
 <a href="http://localhost:4000" target="_blank" rel="nofollow noopener">http://localhost:4000</a> に接続してWelcomeページが出たら成功です。
-![phenix](/tech/2022/12/27/docker-elixir-phenix/phenix.png "phenix") 
+![phoenix](/tech/2022/12/27/docker-elixir-phoenix/phoenix.png "phoenix") 
 
 * プロジェクト作成後に `docker-compose.yml` のコメントアウトを外すと起動時に自動的にサーバーが起動する設定にできます。
 ```yml:docker-compose.yml

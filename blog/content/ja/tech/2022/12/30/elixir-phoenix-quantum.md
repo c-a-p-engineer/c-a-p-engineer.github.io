@@ -1,21 +1,21 @@
 ---
-title: "【Elixir】Phenix で Quantum を使用してプログラム定期実行する方法"
+title: "【Elixir】Phoenix で Quantum を使用してプログラム定期実行する方法"
 date: 2022-12-30T16:00:00+09:00
-description: "Elixir Phenix 環境で Quantum を使用してプログラム定期実行する方法"
+description: "Elixir Phoenix 環境で Quantum を使用してプログラム定期実行する方法"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
 - Elixir
-- Phenix
+- Phoenix
 categories: 
 - Elixir
 image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# 【Elixir】Phenix で Quantum を使用してプログラム定期実行する方法
-Elixir Phenix 環境で Quantum を使用してプログラム定期実行する方法
+# 【Elixir】Phoenix で Quantum を使用してプログラム定期実行する方法
+Elixir Phoenix 環境で Quantum を使用してプログラム定期実行する方法
 
 Quantum のドキュメントはこちら
 * <a href="https://github.com/quantum-elixir/quantum-core" target="_blank" rel="nofollow noopener">quantum-elixir/quantum-core: Cron-like job scheduler for Elixir</a>
@@ -23,13 +23,13 @@ Quantum のドキュメントはこちら
 
 ## 環境
 * Elixir 1.14.2
-* Phenix 1.6.3
+* Phoenix 1.6.3
 * Quantum 3.5.0
 
 ## サンプル
 Github を見つつ進めていきます。
 
-### phenixプロジェクト作成
+### phoenixプロジェクト作成
 DB不要のため `--no-ecto` を付けます。
 ```
 mix phx.new demo --no-ecto
@@ -89,7 +89,7 @@ config :demo, Demo.Scheduler,
 ```
 
 ### 確認
-Phenixサーバーを起動します。
+Phoenixサーバーを起動します。
 ```
 mix phx.server
 ```

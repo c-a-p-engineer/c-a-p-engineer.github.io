@@ -23,8 +23,7 @@ RUN curl -sL -o /tmp/hugo.deb \
     rm /tmp/hugo.deb && \
     mkdir /usr/share/blog
 
-RUN  npm -g config set user root && \
-     npm install -g firebase-tools
+RUN npm install -g firebase-tools
 
 # Expose default hugo port
 EXPOSE 1313

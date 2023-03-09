@@ -18,7 +18,6 @@ Elixir でRepoを使用したデータ取得時に複数のChangesetを返すよ
 
 ## 環境
 * Elixir 1.14.2
-* Phoenix 1.6.3
 
 ## 通常通りにJOINしてデータを取得する
 JOINして複数のテーブルからデータを取得します。

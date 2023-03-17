@@ -1,7 +1,7 @@
 ---
 title: "【Elixir】Phoenix LiveView でJSを書かずにアニメーションなどを実装する"
 date: 2023-03-15T18:30:00+09:00
-description: "Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法"
+description: "Elixir の Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -15,7 +15,7 @@ image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法
+# 【Elixir】Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法
 Elixir の Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法。
 折角 LiveView を使っているのに一々画面項目の表示/非表示などの簡単なJSを一々書きたくないなって考えたら実装方法がありましたのでメモ。
 

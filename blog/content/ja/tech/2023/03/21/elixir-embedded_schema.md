@@ -14,7 +14,7 @@ image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# Elixir Ecto.Schema.embedded_schema を複雑な使ってリクエストに対してのリクエストを処理する方法のメモ
+# 【Elixir】Ecto.Schema.embedded_schema を複雑な使ってリクエストに対してのリクエストを処理する方法のメモ
 Elixir で LiveView に対する認証・認可を自作する
 
 以下のドキュメントを参考にしています。

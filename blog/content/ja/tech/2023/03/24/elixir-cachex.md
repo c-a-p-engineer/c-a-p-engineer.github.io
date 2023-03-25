@@ -22,6 +22,7 @@ Elixir では、Cachex という強力なキャッシュライブラリを使用
 
 ## 環境
 * Elixir 1.14.2
+* Elixir 3.6
 
 ## Cachex のインストール方法
 
@@ -90,14 +91,24 @@ Cachex.del(:my_cache, "key")
 * <a href="https://hexdocs.pm/cachex/3.6.0/Cachex.html#fetch/4" target="_blank" rel="nofollow noopener">fetch/4</a>
 
 ```ex
-{:ok, result} =
-  Cachex.fetch(:my_cache, "key", fn key ->
+result = Cachex.fetch(:my_cache, "key", fn key ->
     # データが無い場合にデータを返す
     result = %{key => "test"}
 
     #24時間有効
     {:commit, result, ttl: :timer.hours(24)}
   end)
+
+case result do
+  {:commit, value, opt} ->
+    # キャッシュが登録
+
+  {:ok, value} ->
+    # キャッシュが存在
+
+  true ->
+    # その他
+end
 ```
 
 `:commit` でキャッシュデータを入れて返します。

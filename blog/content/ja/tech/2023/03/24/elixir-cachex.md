@@ -22,7 +22,7 @@ Elixir では、Cachex という強力なキャッシュライブラリを使用
 
 ## 環境
 * Elixir 1.14.2
-* Elixir 3.6
+* Cachex 3.6
 
 ## Cachex のインストール方法
 

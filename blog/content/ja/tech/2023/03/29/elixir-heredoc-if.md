@@ -14,7 +14,7 @@ image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons
 ---
 
 # 【Elixir】ヒアドキュメントで制御構文を使用する方法
-"Elixir のヒアドキュメントで制御構文を使用する方法。
+Elixir のヒアドキュメントで制御構文を使用する方法。
 これにより、動的な文字列を生成する際に、より簡潔で読みやすいコードを書くことができます。
 
 ## 環境

@@ -21,6 +21,7 @@ Elixir で LiveView に対する認証・認可を自作する
 
 ## 環境
 * Elixir 1.14.2
+* Phoenix 1.6.3
 
 ## LiveView 認証・認可モジュールの作成
 LiveView 用の認証・認可モジュールを作成します。

@@ -13,16 +13,13 @@ image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# 【Elixir】LiveView でパスワードが消えてしまう現象の解決方法
-Elixir で LiveView でパスワードが消えてしまう現象がありました。
-その解決方法メモ。
+# 【【Elixir】logger_file_backend を使用してログをファイルに出力する方法
+Elixir で `logger_file_backend` を使用してログをファイルに出力する方法を紹介します。
 
 ## 環境
 * Elixir 1.14.2
-* Phoenix 1.6.3
 
 ## logger_file_backend
-Elixir で `logger_file_backend` を使用してログをファイルに出力する方法を紹介します。
 Elixir では、標準で `Logger` モジュールが提供されており、これを利用して簡単にログを取得できます。
 ただし、デフォルトでは標準出力にログが出力されるため、ファイルに出力するには `logger_file_backend` というライブラリを使うことで実現できます。
 

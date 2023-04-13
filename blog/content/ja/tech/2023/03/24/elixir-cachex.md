@@ -114,6 +114,22 @@ end
 `:commit` でキャッシュデータを入れて返します。
 `:ignore` を指定すると値を入れません。
 
+
+### 複数のCacheを使う
+複数のキャッシュストアを設定する際は以下のようにしてください。
+単純にコピペすると同じIDで子プロセスを作るためエラーが出ます。
+
+```/lib/demo/application.ex
+    children = [
+
+      # キャッシュ1
+      Supervisor.child_spec({Cachex, name: :cache_1}, id: :cache_1),
+      # キャッシュ2
+      Supervisor.child_spec({Cachex, name: :cache_1}, id: :cache_2)
+    ]
+
+```
+
 ## 参考
 * <a href="https://hexdocs.pm/cachex/3.6.0/Cachex.html" target="_blank" rel="nofollow noopener">Cachex — Cachex v3.6.0</a>
 * <a href="https://github.com/whitfin/cachex" target="_blank" rel="nofollow noopener">whitfin/cachex: A powerful caching library for Elixir with support for transactions, fallbacks and expirations</a>

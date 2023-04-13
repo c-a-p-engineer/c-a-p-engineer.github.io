@@ -28,7 +28,7 @@ Elixir で `Bamboo` を使って簡単にメール送信する方法。
 * Bamboo SMTP 4.2.2
 
 ## Bamboo のインストール方法
-Cachex をプロジェクトに追加するには、`mix.exs` ファイルの `deps` 関数に Bamboo を追加します。
+Bamboo をプロジェクトに追加するには、`mix.exs` ファイルの `deps` 関数に Bamboo を追加します。
 
 ```mix.exs
 def deps do

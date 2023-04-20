@@ -13,7 +13,7 @@ image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# 【【Elixir】logger_file_backend を使用してログをファイルに出力する方法
+# 【Elixir】logger_file_backend を使用してログをファイルに出力する方法
 Elixir で `logger_file_backend` を使用してログをファイルに出力する方法を紹介します。
 
 ## 環境

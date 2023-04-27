@@ -54,7 +54,7 @@ $ docker-compose up -d
 
 ## MiniOにアクセスする
 
-ブラウザで http://localhost:9001 にアクセスし、先ほど設定した管理者アカウントとパスワードでログインしてください。
+ブラウザで <a href="http://localhost:9001" target="_blank" rel="nofollow noopener">http://localhost:9001</a> にアクセスし、先ほど設定した管理者アカウントとパスワードでログインしてください。
 これで、MiniOのダッシュボードが表示されます。
 
 ## まとめ

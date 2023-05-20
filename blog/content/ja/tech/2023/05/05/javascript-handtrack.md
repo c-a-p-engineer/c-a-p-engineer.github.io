@@ -1,18 +1,18 @@
 ---
-title: "Handtrack.jsを使った手のリアルタイム検出"
+title: "【JavaScript】Handtrack.jsを使った手のリアルタイム検出"
 date: 2023-05-05T17:30:00+09:00
 description: "Handtrack.jsを使った手のリアルタイム検出して遊ぶ"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- PHP
+- JavaScript
 categories: 
-- PHP
-image: images/thumbnail/php.png
+- JavaScript
+image: images/thumbnail/javascript.png
 ---
 
-# Handtrack.jsを使った手のリアルタイム検出
+# 【JavaScript】Handtrack.jsを使った手のリアルタイム検出
 Handtrack.jsを使った手のリアルタイム検出して遊ぶ。
 
 ## Handtrack.js

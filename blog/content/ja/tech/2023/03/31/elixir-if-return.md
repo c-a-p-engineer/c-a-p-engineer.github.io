@@ -1,7 +1,7 @@
 ---
 title: "【Elixir】if 文からの返り値をもらう方法"
 date: 2023-03-31T12:40:00+09:00
-description: "Elixir で if 文からの返り値をもらう方法メモ。Elixir　は if 文内の変更を if 文外に作用させないため if文内での処理結果をもらう時に使い方法です。"
+description: "Elixir で if 文からの返り値をもらう方法メモ。Elixir は if 文内の変更を if 文外に作用させないため if文内での処理結果をもらう時に使い方です。"
 draft: false
 enableToc: true
 enableTocContent: true
@@ -15,7 +15,7 @@ image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons
 
 # 【Elixir】if 文からの返り値をもらう方法
 Elixir で if 文からの返り値をもらう方法メモ。
-Elixir　は if 文内の変更を if 文外に作用させないため if文内での処理結果をもらう時に使い方法です。
+Elixir は if 文内の変更を if 文外に作用させないため if文内での処理結果をもらう時に使い方です。
 
 ## 環境
 * Elixir 1.14.2

@@ -50,9 +50,9 @@ $ mix deps.get
 ## Plug.Session.Storeとは
 
 `Plug.Session.Store` は `Plug.Session` が使用するストレージのインターフェイスです。以下の3つの関数を実装する必要があります。
-- `get/2`: セッションデータを取得します。([Plug.Session.Store.get/2](https://hexdocs.pm/plug/Plug.Session.Store.html#c:get/3))
-- `put/4`: 新規または既存のセッションデータを保存します。([Plug.Session.Store.put/4](https://hexdocs.pm/plug/Plug.Session.Store.html#c:put/4))
-- `delete/2`: セッションデータを削除します。([Plug.Session.Store.delete/2](https://hexdocs.pm/plug/Plug.Session.Store.html#c:delete/2))
+* `get/2`: セッションデータを取得します。（<a href="https://hexdocs.pm/plug/Plug.Session.Store.html#c:get/3" target="_blank" rel="nofollow noopener">Plug.Session.Store.get/2</a>）
+* `put/4`: 新規または既存のセッションデータを保存します。（<a href="https://hexdocs.pm/plug/Plug.Session.Store.html#c:put/4" target="_blank" rel="nofollow noopener">Plug.Session.Store.put/4</a>）
+* `delete/2`: セッションデータを削除します。（<a href="https://hexdocs.pm/plug/Plug.Session.Store.html#c:delete/2" target="_blank" rel="nofollow noopener">Plug.Session.Store.delete/2</a>）
 
 ## 自作のセッションストアを作成する
 

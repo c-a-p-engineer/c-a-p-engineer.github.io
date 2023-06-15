@@ -13,11 +13,19 @@ $accessToken = getenv('TWITTER_ACCESS_TOKEN', true);
 $accessTokenSecret = getenv('TWITTER_ACCESS_TOKEN_SECRET', true);
 
 $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
+$connection->setApiVersion('2');
 
 $date = date('Y/m/d', strtotime(date('Y/m/d') . ' -1 day'));
-$result = $connection->post("statuses/update", [
-    "status" => "{$date}の話題" . PHP_EOL .
-    PHP_EOL.
+
+$response = $connection->post('tweets', [
+    'text' => "{$date}の話題" . PHP_EOL .
+    PHP_EOL .
     "#駆け出しエンジニアと繋がりたい" . PHP_EOL .
-    'https://c-a-p-engineer.github.io/topic/' . $date,
-]);
+    'https://c-a-p-engineer.github.io/topic/' . $date
+], true);
+
+if($connection->getLastHttpCode() != 200){
+    // 200以外
+    exit(1);
+}
+exit(0);

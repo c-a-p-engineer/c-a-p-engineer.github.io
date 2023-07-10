@@ -36,7 +36,7 @@ Elixir Phoenix の環境で静的ファイルを追加する方法
 ```
 
 3. `Routes.static_path` を使用してテンプレート側で使用する。
-```html:lib/demo_web/templates/hoge/hoge.html.heex
+```html:lib/demo_web/templates/hoge/hoge.html.heex..html
     <img src={Routes.static_path(@conn, "/hoge/hoge.png")} alt="hoge"/>
 ```
 

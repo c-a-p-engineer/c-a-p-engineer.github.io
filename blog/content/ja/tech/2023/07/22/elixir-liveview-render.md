@@ -1,6 +1,6 @@
 ---
 title: "【Elixir】LiveView で使用するテンプレートファイルを変更する方法"
-date: 2023-07-10T10:00:00+09:00
+date: 2023-07-22T15:00:00+09:00
 description: "Elixir LiveView で使用するテンプレートファイルを変更する方法"
 draft: false
 enableToc: true

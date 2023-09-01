@@ -1,7 +1,7 @@
 ---
 title: 【Elixir】Phoenix のテンプレートエラー「expected closing `"` for attribute value」の解決方法
 date: 2023-09-01T01:20:00+09:00
-description: Elixir Phoenix のテンプレートエラー「expected closing `"` for attribute value」が出たしまった時の解決方法。
+description: Elixir Phoenix のテンプレートエラー「expected closing `"` for attribute value」が出てしまった時の解決方法。
 draft: false
 enableToc: true
 enableTocContent: true
@@ -14,8 +14,8 @@ image: images/thumbnail/Official_Elixir_logo.png
 image_description: 'Elixir ロゴ ©José Valim <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="nofollow noopener">CC 表示-継承 4.0</a>'
 ---
 
-# Elixir PhoenixでのHTMLエラー「expected closing " for attribute value」の解決方法
-Elixir Phoenix のテンプレートエラー「expected closing `"` for attribute value」が出たしまった時の解決方法。
+# Elixir PhoenixでのHTMLエラー「expected closing `"` for attribute value」の解決方法
+Elixir Phoenix のテンプレートエラー「expected closing `"` for attribute value」が出てしまった時の解決方法。
 
 ## 確認環境
 * Elixir 1.14.2

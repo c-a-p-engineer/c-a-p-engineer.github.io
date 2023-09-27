@@ -7,7 +7,6 @@ enableToc: true
 enableTocContent: true
 tags: 
 - Elixir
-- Phoenix
 categories: 
 - Elixir
 image: images/thumbnail/Official_Elixir_logo.png

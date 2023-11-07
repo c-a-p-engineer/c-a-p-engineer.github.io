@@ -82,6 +82,7 @@ function createTopic($datetime)
         'HTML',
         'CSS',
         'SQL',
+        'Elixir',
 
         // DB
         'DB',

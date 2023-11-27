@@ -12,7 +12,6 @@ categories:
 - AI
 image: images/thumbnail/ai_robot.jpg
 ---
-2023-11-12 12:00:00（日本時間）
 
 # 【ChatGPT】ABC記譜法を利用して音楽を作る方法
 

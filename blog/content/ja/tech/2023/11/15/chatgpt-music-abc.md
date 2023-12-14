@@ -8,6 +8,7 @@ enableTocContent: true
 tags: 
 - AI
 - ChatGPT
+- 音楽
 categories: 
 - AI
 image: images/thumbnail/ai_robot.jpg

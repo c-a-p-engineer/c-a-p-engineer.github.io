@@ -77,6 +77,24 @@ docker compose --profile [ui] up --build
 
 停止する場合は起動したターミナル上で `Ctr+C` で停止します。
 
+## NansException: A tensor with all NaNs was produced in Unet. エラーの対処
+
+僕の環境では以下のようなエラーが発生しました。
+
+```
+modules.devices.NansException: A tensor with all NaNs was produced in Unet. This could be either because there's not enough precision to represent the picture, or because your video card does not support half type. Try setting the "Upcast cross attention layer to float32" option in Settings > Stable Diffusion or using the --no-half commandline argument to fix this. Use --disable-nan-check commandline argument to disable this check.
+```
+
+調べたところ
+- 画像を表現するのに十分な精度がない
+- ビデオカードがhalf型をサポートしていない
+
+このエラーを修正するためには以下の設定を行う必要があります。
+
+`Settings` > `StableDiffsion` >「`Upcast cross attention layer to float32`」にチェック > `ApplySettings` で設定。
+
+これでエラーが解消されて生成されるかと思います。
+
 ## まとめ
 
 これでローカル環境で簡単に使用ができます。

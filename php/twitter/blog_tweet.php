@@ -65,9 +65,3 @@ $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSe
 $connection->setApiVersion('2');
 
 $response = $connection->post('tweets', ['text' => $text], true);
-
-if($connection->getLastHttpCode() != 200){
-    // 200以外
-    exit(1);
-}
-exit(0);

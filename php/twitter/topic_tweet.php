@@ -24,8 +24,3 @@ $response = $connection->post('tweets', [
     'https://c-a-p-engineer.github.io/topic/' . $date
 ], true);
 
-if($connection->getLastHttpCode() != 200){
-    // 200以外
-    exit(1);
-}
-exit(0);

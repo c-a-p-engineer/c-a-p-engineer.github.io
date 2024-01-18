@@ -9,7 +9,7 @@ tags:
 - ツール
 categories: 
 - ツール
-image: images/thumbnail/smartphone-app.png
+image: images/thumbnail/smartphone-app.jpg
 ---
 
 # スマートフォンをキーボードとマウスに変えるアプリ – Bluetooth Keyboard & Mouse

@@ -6,9 +6,10 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- プロンプト
+- Linux
+- Linuxコマンド
 categories: 
-- AI
+- Linux
 image: images/thumbnail/linux.png
 ---
 

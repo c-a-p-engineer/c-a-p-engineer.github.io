@@ -63,13 +63,15 @@ foreach ($files as $file) {
     $markdown = explode(PHP_EOL, $markdown);
     foreach ($markdown as $value) {
         // タイトル行取得
-        if (!preg_match('/^title: "(.*?)"/', $value, $mathes)) {
+        if (!preg_match('/title: (.*)$/', $value, $mathes)) {
             // タイトル行ではない
             continue;
         }
 
         $title = $mathes[1] ?? null;
-        if (is_null($mathes[1] ?? null)) {
+        $title = trim($title, '"');
+
+        if (is_null($title)) {
             // 正規表現でタイトルが取得できない
             break;
         }

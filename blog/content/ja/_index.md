@@ -30,7 +30,7 @@ header:
       - こぴぺたんの色んなメモ
     titleColor: 
     titleShadow: true
-    titleFontSize: 44
+    titleFontSize: 42
     subtitleColor: 
     subtitleCursive: true
     subtitleFontSize: 18

@@ -9,7 +9,7 @@ tags:
 - 難解プログラミング言語
 categories: 
 - 難解プログラミング言語
-image: images/thumbnail/esolang.png
+image: images/thumbnail/esolang.jpg
 ---
 
 # 難解プログラミングの Whitespace を触ってみる

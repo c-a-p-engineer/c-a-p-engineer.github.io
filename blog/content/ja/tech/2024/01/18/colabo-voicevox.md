@@ -15,11 +15,11 @@ image: images/thumbnail/python-logo-master-v3-TM.png
 image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'
 ---
 
-# Google Colabo で VOICEBOX  で音声を生成する
+# Google Colabo で VOICEBOX で音声を生成する
 
-Google Colabo 上で VOICEBOX  を使用して音声を合成してみます。
+Google Colabo 上で VOICEBOX を使用して音声を合成してみます。
 
-## VOICEBOX  で音声を生成
+## VOICEBOX で音声を生成
 
 実際のコード類です。
 
@@ -27,11 +27,11 @@ Google Colabo 上で VOICEBOX  を使用して音声を合成してみます。
 
 ```bash
 #初期設定
-!curl -sSfL https://raw.githubusercontent.com/VOICEBOX /VOICEBOX _core/8cf307df4412dc0db0b03c6957b83b032770c31a/scripts/downloads/download.sh | bash -s
-%cd VOICEBOX _core/
-!wget https://github.com/VOICEBOX /VOICEBOX _core/releases/download/0.14.1/VOICEBOX _core-0.14.1+cpu-cp38-abi3-linux_x86_64.whl
-!pip install VOICEBOX _core-0.14.1+cpu-cp38-abi3-linux_x86_64.whl
-!wget https://raw.githubusercontent.com/VOICEBOX /VOICEBOX _core/406f6c41408836840b9a38489d0f670fb960f412/example/python/run.py
+!curl -sSfL https://raw.githubusercontent.com/VOICEVOX/voicevox_core/8cf307df4412dc0db0b03c6957b83b032770c31a/scripts/downloads/download.sh | bash -s
+%cd voicevox_core/
+!wget https://github.com/VOICEVOX/voicevox_core/releases/download/0.14.1/voicevox_core-0.14.1+cpu-cp38-abi3-linux_x86_64.whl
+!pip install voicevox_core-0.14.1+cpu-cp38-abi3-linux_x86_64.whl
+!wget https://raw.githubusercontent.com/VOICEVOX/voicevox_core/406f6c41408836840b9a38489d0f670fb960f412/example/python/run.py
 ```
 
 ### 生成
@@ -59,9 +59,9 @@ Audio('../data.wav', autoplay=True)
 ```python
 from pathlib import Path
 import sys
-from VOICEBOX _core import VOICEBOX Core, METAS
+from voicevox_core import VoicevoxCore, METAS
 
-core = VOICEBOX Core(open_jtalk_dict_dir=Path("open_jtalk_dic_utf_8-1.11"))
+core = VoicevoxCore(open_jtalk_dict_dir=Path("open_jtalk_dic_utf_8-1.11"))
 
 from pprint import pprint
 pprint(METAS)

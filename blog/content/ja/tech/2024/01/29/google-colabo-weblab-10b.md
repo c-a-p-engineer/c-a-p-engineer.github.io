@@ -8,9 +8,11 @@ enableTocContent: true
 tags: 
 - AI
 - Google Colabo
+- Python
 categories: 
 - AI
-image: images/thumbnail/ai_robot.jpg
+image: images/thumbnail/python-logo-master-v3-TM.png
+image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'
 ---
 
 # Google ColabでWeblab-10Bの量子化モデルを使用する

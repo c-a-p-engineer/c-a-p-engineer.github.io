@@ -1,6 +1,6 @@
 ---
 title: Google Colabo で Google Drive と接続する方法
-date: 2024-02-06T19:00:00+09:00
+date: 2024-02-08T19:00:00+09:00
 description: Google Colab と Google Drive を連携させることで、データの保存、読み込み、整理をスムーズに行えます。
 draft: false
 enableToc: true

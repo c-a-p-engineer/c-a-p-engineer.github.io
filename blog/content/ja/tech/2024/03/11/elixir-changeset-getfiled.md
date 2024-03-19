@@ -1,6 +1,6 @@
 ---
 title: 【Elixir】EctoでChangesetからデータを取得する方法
-date: 2023-11-06T12:30:00+09:00
+date: 2024-03-11T12:30:00+09:00
 description: Ectoの`changeset`の各フィールドからデータを取得したい時の対応。
 draft: false
 enableToc: true

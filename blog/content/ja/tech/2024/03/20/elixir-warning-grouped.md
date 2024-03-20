@@ -1,7 +1,7 @@
 ---
 title: 【Elixir】clauses with the same name and arity の意味と対処方法
 date: 2024-03-20T00:30:00+09:00
-description: `warning: clauses with the same name and arity (number of arguments) should be grouped together` が出た際の対処方法。
+description: warning clauses with the same name and arity (number of arguments) should be grouped together が出た際の対処方法。
 draft: false
 enableToc: true
 enableTocContent: true

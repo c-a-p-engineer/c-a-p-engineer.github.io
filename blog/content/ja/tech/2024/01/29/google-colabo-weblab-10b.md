@@ -7,7 +7,7 @@ enableToc: true
 enableTocContent: true
 tags: 
 - AI
-- Google Colabo
+- Google Colab
 - Python
 categories: 
 - AI

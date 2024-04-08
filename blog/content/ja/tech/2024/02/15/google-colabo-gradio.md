@@ -6,7 +6,7 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Google Colabo
+- Google Colab
 - Python
 categories: 
 - Python

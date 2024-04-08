@@ -1,34 +1,34 @@
 ---
-title: Google Colabo モデルのロードがされない現象の解決方法
+title: Google Colab モデルのロードがされない現象の解決方法
 date: 2024-01-08T06:00:00+09:00
-description: Google Colabo で Hugging Face Hub からモデルダウンロードができない現象の解決方法
+description: Google Colab で Hugging Face Hub からモデルダウンロードができない現象の解決方法
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Google Colabo
+- Google Colab
 categories: 
-- Google Colabo
+- Google Colab
 image: images/thumbnail/ai_robot.jpg
 ---
 
-# Google Colabo モデルのロードがされない現象の解決方法
+# Google Colab モデルのロードがされない現象の解決方法
 
-Google Colabo で Hugging Face Hub からモデルダウンロードができない現象の解決方法
+Google Colab で Hugging Face Hub からモデルダウンロードができない現象の解決方法
 
 ## 現象
 
-Google Colabo で Hugging Face Hub からモデルをダウンロードしようとすると、 `fetching files` でストップする。
+Google Colab で Hugging Face Hub からモデルをダウンロードしようとすると、 `fetching files` でストップする。
 
 
 ## 原因
 
-原因は Google Colabo に入っている `huggingface_hub` パッケージのせいです。
+原因は Google Colab に入っている `huggingface_hub` パッケージのせいです。
 ローカル環境などでは問題は発生しないようです。
 
 ## 対応
 
-Google Colabo に入っている `huggingface_hub` パッケージを削除してください。
+Google Colab に入っている `huggingface_hub` パッケージを削除してください。
 
 ```bash
 !pip install -U huggingface_hub

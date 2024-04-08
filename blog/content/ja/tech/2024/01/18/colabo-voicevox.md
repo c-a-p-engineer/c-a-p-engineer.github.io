@@ -1,13 +1,13 @@
 ---
-title: Google Colabo で VOICEBOX  で音声を生成する
+title: Google Colab で VOICEBOX  で音声を生成する
 date: 2024-01-18T18:30:00+09:00
-description: "Google Colabo 上で VOICEBOX  を使用して音声を合成してみます。"
+description: "Google Colab 上で VOICEBOX  を使用して音声を合成してみます。"
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
 - Python
-- Google Colabo
+- Google Colab
 - 音声
 categories: 
 - Python
@@ -15,9 +15,9 @@ image: images/thumbnail/python-logo-master-v3-TM.png
 image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'
 ---
 
-# Google Colabo で VOICEBOX で音声を生成する
+# Google Colab で VOICEBOX で音声を生成する
 
-Google Colabo 上で VOICEBOX を使用して音声を合成してみます。
+Google Colab 上で VOICEBOX を使用して音声を合成してみます。
 
 ## VOICEBOX で音声を生成
 

@@ -1,12 +1,12 @@
 ---
-title: Google Colaboratoryで実装する基本的なUI
+title: Google Colabratoryで実装する基本的なUI
 date: 2024-02-15T13:00:00+09:00
 description: Google ColabノートブックにUIコンポーネントを組み込むことできます。
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Google Colabo
+- Google Colab
 - Python
 categories: 
 - Python
@@ -14,7 +14,7 @@ image: images/thumbnail/python-logo-master-v3-TM.png
 image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'
 ---
 
-# Google Colaboratoryで実装する基本的なUI
+# Google Colabratoryで実装する基本的なUI
 
 Google ColabノートブックにUIコンポーネントを組み込むことできます。これによりユーザーはよりダイナミックでインタラクティブなプロジェクトを作成できます。
 
@@ -100,4 +100,4 @@ eval_js('load_image()')
 ```
 
 ## まとめ
-Google Colaboratoryでのプロジェクトにインタラクティブな要素を追加することは、ユーザー体験を向上させる素晴らしい方法です。上記のコード例は、基本的なUIコンポーネントを組み込むための出発点として役立ちます。これらのコンポーネントを使って、よりインタラクティブでユーザーフレンドリーなノートブックを作成しましょう。
+Google Colabratoryでのプロジェクトにインタラクティブな要素を追加することは、ユーザー体験を向上させる素晴らしい方法です。上記のコード例は、基本的なUIコンポーネントを組み込むための出発点として役立ちます。これらのコンポーネントを使って、よりインタラクティブでユーザーフレンドリーなノートブックを作成しましょう。

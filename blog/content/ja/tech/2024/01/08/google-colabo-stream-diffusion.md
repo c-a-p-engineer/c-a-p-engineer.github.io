@@ -1,22 +1,22 @@
 ---
-title: StreamDiffusion を Google Colabo で動かしてみる
+title: StreamDiffusion を Google Colab で動かしてみる
 date: 2024-01-08T07:30:00+09:00
-description: 画像生成の StreamDiffusion を Google Colabo で動かして画像を生成してみます。
+description: 画像生成の StreamDiffusion を Google Colab で動かして画像を生成してみます。
 draft: false
 enableToc: true
 enableTocContent: true
 tags: 
 - AI
 - 画像
-- Google Colabo
+- Google Colab
 categories: 
-- Google Colabo
+- Google Colab
 image: images/thumbnail/ai_robot.jpg
 ---
 
-# StreamDiffusion を Google Colabo で動かしてみる
+# StreamDiffusion を Google Colab で動かしてみる
 
-画像生成の StreamDiffusion を Google Colabo で動かして画像を生成してみます。
+画像生成の StreamDiffusion を Google Colab で動かして画像を生成してみます。
 
 ## StreamDiffusionとは
 
@@ -24,9 +24,9 @@ image: images/thumbnail/ai_robot.jpg
 
 - <a href="https://github.com/cumulo-autumn/StreamDiffusion" target="_blank" rel="nofollow noopener">cumulo-autumn/StreamDiffusion</a>
 
-## Google Colaboで実践
+## Google Colabで実践
 
-実際にGoogle Colaboで試してみます。
+実際にGoogle Colabで試してみます。
 
 ### 前準備
 

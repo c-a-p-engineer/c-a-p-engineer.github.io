@@ -6,6 +6,7 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
+- Google Colab
 - PHP
 categories: 
 - PHP

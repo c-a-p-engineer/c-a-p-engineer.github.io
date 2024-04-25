@@ -85,5 +85,4 @@ Ecto の名前付きバインドは、クエリの柔軟性と可読性を高め
 
 ## 参考
 
-- <a href="https://hexdocs.pm/ecto/3.11.3/Ecto.Query.html#module-named-bindings" target="_blank" rel="nofollow noopener">
-Ecto.Query - Named bindings</a>
+- <a href="https://hexdocs.pm/ecto/3.11.2/Ecto.Query.html#module-named-bindings" target="_blank" rel="nofollow noopener">Ecto.Query - Named bindings</a>

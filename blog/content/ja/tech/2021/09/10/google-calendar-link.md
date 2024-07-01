@@ -6,7 +6,7 @@ draft: false
 enableToc: true
 enableTocContent: true
 tags: 
-- Googleカレンダー
+- Google
 categories: 
 - Google
 image: images/thumbnail/calender_schedule_half.png

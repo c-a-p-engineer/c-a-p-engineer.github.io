@@ -1,0 +1,32 @@
+name: Blog History Tweet
+
+on:
+  schedule:
+    - cron: '0 0-23/6 * * *'
+
+jobs:
+  deploy:
+    # Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1    # Fetch all history for .GitInfo and .Lastmod
+
+      # Composer Install
+      - name: Composer Install
+        run: |
+          cd ./php
+          composer install --prefer-dist --no-progress --no-suggest
+
+      # Tweet
+      - name: Post Tweet
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: |
+          php ./php/twitter/blog_tweet.php history

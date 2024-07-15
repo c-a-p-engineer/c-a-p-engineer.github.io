@@ -1,0 +1,15 @@
+{{ if not .Site.IsServer }}
+<script>
+  window.addEventListener("load", function() {
+    var ad = document.createElement('script');
+    ad.type = 'text/javascript';
+    ad.setAttribute('async', true);
+    ad.setAttribute('data-ad-client', 'ca-pub-9116542549025285');
+    ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+    setTimeout(function(){
+      document.getElementsByTagName('body')[0].appendChild(ad);
+    }, 2500);
+  });
+</script>
+<!-- <script async data-ad-client="ca-pub-9116542549025285" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+{{ end }}

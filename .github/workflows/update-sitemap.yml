@@ -1,0 +1,13 @@
+name: Update RSS & Sitemap
+on:
+  schedule:
+    - cron: '0 0,12 * * *'
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Google Ping RSS & Sitemap
+        run: |
+          curl -X GET "http://www.google.com/ping?sitemap=https://c-a-p-engineer.github.io/index.xml"
+          curl -X GET "http://www.google.com/ping?sitemap=https://c-a-p-engineer.github.io/sitemap.xml"

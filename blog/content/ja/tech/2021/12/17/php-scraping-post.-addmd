@@ -1,0 +1,86 @@
+---
+title: "【PHP】PHPのスクレイピングでPOST値を追加する"
+date: 2021-12-17T04:00:00+09:00
+description: "PHPのスクレイピングでPOST値を追加する"
+draft: false
+enableToc: true
+enableTocContent: true
+tags: 
+- PHP
+- スクレイピング
+categories: 
+- PHP
+image: images/thumbnail/php.png
+---
+
+# 【PHP】PHPのスクレイピングでPOST値を追加する
+PHPのスクレイピングでPOST値を追加する
+
+## 環境
+* PHP7.1 より上のバージョン
+* [Goutte - Github](https://github.com/FriendsOfPHP/Goutte)
+
+## POST送信
+通常のPOST
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Goutte\Client;
+
+$client = new Client();
+$crawler = $client->request('GET', 'https://example.com');
+
+// form 取得
+$form = $crawler->filter('form')->first()->form();
+// 取得したformに値を設定
+// ID
+$form['id']->setValue('memberid');
+// PASS
+$form['pass']->setValue('password');
+
+// POSTを追加
+$form['hoge']->setValue('piyo');
+
+$crawler = $client->submit($form);
+```
+
+取得した `form` にない値を設定しようとするとエラーが発生します。
+```shell
+Fatal error: Uncaught InvalidArgumentException: Unreachable field "hoge". in /php/vendor/symfony/dom-crawler/FormFieldRegistry.php:80
+```
+
+### POST値を追加
+セキュリティ対策のためなどでボタンを押されたタイミングで `form` に新たに設定するパターンがあります。
+そのため以下のように値を追加してあげないといけません。
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Goutte\Client;
+
+$client = new Client();
+$crawler = $client->request('GET', 'https://example.com');
+
+// form 取得
+$form = $crawler->filter('form')->first()->form();
+// 取得したformに値を設定
+// ID
+$form['id']->setValue('memberid');
+// PASS
+$form['pass']->setValue('password');
+
+// POSTを追加
+$domDocument = new \DOMDocument;
+$domInput = $domDocument->createElement('input');
+$domInput->setAttribute('name', 'hoge');
+$domInput->setAttribute('value', 'piyo');
+$formInput = new \Symfony\Component\DomCrawler\Field\InputFormField($domInput);
+$form->set($formInput);
+
+$crawler = $client->submit($form);
+```
+
+## 参考情報
+* <a href="https://github.com/FriendsOfPHP/Goutte/issues/44#issuecomment-70666980" target="_blank" rel="nofollow noopener">submitting forms without submit button · Issue #44 · FriendsOfPHP/Goutte</a>
+

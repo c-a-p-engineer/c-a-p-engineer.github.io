@@ -1,0 +1,49 @@
+name: Docker Check
+
+on:
+  push:
+    paths:
+      - '.docker/**/Dockerfile'
+
+jobs:
+  dockle-php:
+    name: Dockle Container Analysis PHP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run Dockle
+        uses: erzz/dockle-action@v1
+        with:
+          image: php:8.1.6-fpm-bullseye
+
+  dockle-hugo:
+    name: Dockle Container Analysis Hugo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run Dockle
+        uses: erzz/dockle-action@v1
+        with:
+          image: node:lts-bullseye
+
+  hadolint-php:
+    name: hadolint php DockerFile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: hadolint/hadolint-action@v2.0.0
+        with:
+          dockerfile: ./.docker/php/Dockerfile
+
+  hadolint-hugo:
+    name: hadolint hugo DockerFile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: hadolint/hadolint-action@v2.0.0
+        with:
+          dockerfile: ./.docker/hugo/Dockerfile

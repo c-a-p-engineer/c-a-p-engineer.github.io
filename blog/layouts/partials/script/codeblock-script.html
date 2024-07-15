@@ -1,0 +1,70 @@
+<!--
+  【Hugo】zzoのコードブロックをカスタマイズ
+  https://blog.aiandrox.com/posts/tech/2020/09/22/#%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E6%8B%A1%E5%BC%B5%E5%AD%90%E3%81%AE%E5%88%A4%E5%AE%9A
+-->
+<script>
+    "use strict";
+    // ====================== markdown code block ======================
+    function wrap(el, wrapper) {
+      el.parentNode.insertBefore(wrapper, el);
+      wrapper.appendChild(el);
+    }
+  
+    (function () {
+      var singleContentsElem = document.querySelector(".single__contents");
+      singleContentsElem
+        ? singleContentsElem
+            .querySelectorAll("pre > code")
+            .forEach(function (elem) {
+              var dataLang = elem.getAttribute("data-lang");
+  
+              // タイトルなし
+              if (!dataLang) {
+                // ```の後に何もないとき
+                elem.parentElement.setAttribute("data-lang", "none");
+                return;
+              } else if (!dataLang.includes(".")) {
+                // 言語のみ指定のとき
+                elem.className = "language-" + dataLang;
+                // elem.removeAttribute("data-lang");
+                return;
+              }
+  
+              // タイトルあり
+              elem.parentElement.parentElement.parentElement.setAttribute(
+                "data-titled",
+                true
+              );
+              var code = null;
+              var codeTitle = null;
+              if (dataLang.includes("..")) {
+                // 拡張子以外の言語を強制する場合
+                code = dataLang.split("..")[1];
+                codeTitle = dataLang.split("..")[0].split(":")[1];
+              } else if (dataLang.includes(":")) {
+                // 普通の拡張子のとき
+                code = dataLang.split(":")[0];
+                codeTitle = dataLang.split(":")[1];
+              } else {
+                // :がなくて拡張子のみのとき
+                code = dataLang.split(".")[1];
+                codeTitle = dataLang;
+              }
+              elem.className = "language-" + code;
+              elem.setAttribute("data-lang", codeTitle);
+            })
+        : null;
+    })();
+  
+    var langCodeElem = document.querySelectorAll(".language-code");
+    langCodeElem
+      ? langCodeElem.forEach(function (elem) {
+          var newElem = document.createElement("span");
+          newElem.className = "copy-to-clipboard";
+          newElem.setAttribute("title", "Copy to clipboard");
+          elem.append(newElem);
+        })
+      : null;
+    // =================================================================
+  </script>
+  

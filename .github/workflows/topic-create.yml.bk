@@ -1,0 +1,69 @@
+name: Topic Create
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+
+jobs:
+  create-topic:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Setup Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.83.1'
+          extended: true
+
+      # Topic Create
+      - name: Topic Create
+        run: |
+          php ./php/topic.php
+
+      # Hugo Build
+      - name: Build
+        run: |
+          cd ./blog
+          rm -rf ../docs
+          hugo --minify
+          mv -fv ./public/ ../docs/
+
+      # Commit
+      - name: Update Hugo
+        uses: stefanzweifel/git-auto-commit-action@v4.2.0
+        with:
+          commit_message: Create Topic
+
+      # Composer Install
+      - name: Composer Install
+        run: |
+          cd ./php
+          composer install --prefer-dist --no-progress --no-suggest
+
+      # Slack
+      - name: Slack Notification
+        if: success()
+        uses: tokorom/action-slack-incoming-webhook@main
+        env:
+          INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          text: Create Topic
+          attachments: |
+            [
+              {
+                "color": "good",
+                "author_name": "${{ github.actor }}",
+                "author_icon": "${{ github.event.sender.avatar_url }}",
+                "fields": [
+                  {
+                    "title": "Pusb Branch",
+                    "value": "${{ github.ref }}"
+                  }
+                ]
+              }
+            ]

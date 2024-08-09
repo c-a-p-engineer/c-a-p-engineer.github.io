@@ -41,14 +41,14 @@ defmodule ClusterMonitor do
   end
 
   def handle_info({:nodedown, node}, state) do
-    # ノード起動
+    # ノード停止
     IO.puts("Node #{node} has stopped.")
 
     {:noreply, state}
   end
 
   def handle_info({:nodeup, node}, state) do
-    # ノード停止
+    # ノード起動
     IO.puts("Node #{node} has started.")
 
     {:noreply, state}
@@ -75,7 +75,7 @@ defmodule Demo.Application do
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Sdm.Supervisor]
+    opts = [strategy: :one_for_one, name: Demo.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

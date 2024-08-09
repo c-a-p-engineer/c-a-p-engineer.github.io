@@ -38,7 +38,7 @@ LiveViewSessionを使用した箇所で以下のエラーが発生しました�
 `test/support/conn_case.ex` の `tags` を編集します。
 ```test/support/conn_case.ex
   setup tags do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Sdm.Repo, shared: not tags[:async])
+    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Demo.Repo, shared: not tags[:async])
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
 
     # セッション生成

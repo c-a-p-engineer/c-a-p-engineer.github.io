@@ -37,7 +37,7 @@
 </span><span class=lnt>27
 </span><span class=lnt>28
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-test/support/conn_case.ex data-lang=test/support/conn_case.ex>  <span class=n>setup</span> <span class=n>tags</span> <span class=k>do</span>
-    <span class=n>pid</span> <span class=o>=</span> <span class=nc>Ecto.Adapters.SQL.Sandbox</span><span class=o>.</span><span class=n>start_owner!</span><span class=p>(</span><span class=nc>Sdm.Repo</span><span class=p>,</span> <span class=ss>shared</span><span class=p>:</span> <span class=ow>not</span> <span class=n>tags</span><span class=p>[</span><span class=ss>:async</span><span class=p>])</span>
+    <span class=n>pid</span> <span class=o>=</span> <span class=nc>Ecto.Adapters.SQL.Sandbox</span><span class=o>.</span><span class=n>start_owner!</span><span class=p>(</span><span class=nc>Demo.Repo</span><span class=p>,</span> <span class=ss>shared</span><span class=p>:</span> <span class=ow>not</span> <span class=n>tags</span><span class=p>[</span><span class=ss>:async</span><span class=p>])</span>
     <span class=n>on_exit</span><span class=p>(</span><span class=k>fn</span> <span class=o>-&gt;</span> <span class=nc>Ecto.Adapters.SQL.Sandbox</span><span class=o>.</span><span class=n>stop_owner</span><span class=p>(</span><span class=n>pid</span><span class=p>)</span> <span class=k>end</span><span class=p>)</span>
 
     <span class=c1># セッション生成</span>

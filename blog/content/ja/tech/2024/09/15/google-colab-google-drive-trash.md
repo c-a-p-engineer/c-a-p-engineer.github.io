@@ -9,8 +9,8 @@ tags:
 - Python
 categories: 
 - Python
-image: images/thumbnail/Rust_programming_language_black_logo.svg.png
-image_description: 'Rust Foundation'
+image: images/thumbnail/python-logo-master-v3-TM.png
+image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'
 ---
 # Google ColabでGoogle Driveのゴミ箱内のファイルを削除する
 

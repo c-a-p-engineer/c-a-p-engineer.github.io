@@ -1,6 +1,6 @@
 ---
 title: "【Python】pptxファイルからノートを抽出する方法"
-date: 2023-11-12T14:30:00+09:00
+date: 2024-11-12T14:30:00+09:00
 description: プレゼンテーション資料や報告書の一部を画像として保存したいときに、PowerPointスライド（PPTXファイル）をPNG形式の画像に変換する方法はとても便利です。この記事では、Pythonを用いてPPTXファイルをPNG形式に変換する方法を、手順を追って詳しく解説します。
 draft: false
 enableToc: true

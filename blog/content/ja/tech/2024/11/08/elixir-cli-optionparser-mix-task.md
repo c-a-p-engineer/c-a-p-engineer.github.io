@@ -1,6 +1,6 @@
 ---
 title: "【Elixir】OptionParser.parse! でCLIオプションをパースする方法：Mixタスクでの実用例"
-date: 2023-11-08T13:00:00+09:00
+date: 2024-11-08T13:00:00+09:00
 description: "ElixirでCLIツールやMixタスクを作成する際、ユーザーからのコマンドライン入力に応じて処理を分岐させたり、動的な引数を渡したりすることがよくあります。"
 draft: false
 enableToc: true

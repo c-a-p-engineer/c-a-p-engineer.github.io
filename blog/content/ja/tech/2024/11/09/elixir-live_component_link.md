@@ -1,6 +1,6 @@
 ---
 title: "【Elixir】Phoenix LiveView live_redirect内にlive_componentを配置する方法：aタグでシンプルに対応する"
-date: 2023-11-08T13:00:00+09:00
+date: 2024-11-08T13:00:00+09:00
 description: Phoenix LiveViewを使って開発する際、`live_redirect`の内部に`live_component`を配置すると、コンパイルエラーが発生することがあります。
 draft: false
 enableToc: true

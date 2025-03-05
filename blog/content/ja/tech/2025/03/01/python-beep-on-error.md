@@ -1,6 +1,6 @@
 ---
 title: "【Python】エラー発生時にベル音を鳴らす方法【クロスプラットフォーム対応】"
-date: 2025-02-27T02:30:00+09:00
+date: 2025-03-01T02:30:00+09:00
 description: Pythonのエラー処理において、ユーザーに視覚だけでなく音でも通知したい場合があります。この記事では、エラー発生時にベル音を鳴らし、キー入力があればそのベル音を停止する方法を、WindowsとLinux（macOS含む）両方で動作する形で解説します。
 draft: false
 enableToc: true
@@ -84,12 +84,6 @@ except Exception as e:
 
 - **ベル音の出力**  
   `print("\a", end='', flush=True)` により、ターミナルがベル音に対応している場合は音が鳴ります。ベル音が鳴らない場合は、環境設定を見直してください。
-
-## 参考リンク
-
-- [Python公式ドキュメント - msvcrtモジュール](https://docs.python.org/ja/3/library/msvcrt.html) citeturn0search0
-- [Python公式ドキュメント - selectモジュール](https://docs.python.org/ja/3/library/select.html) citeturn0search0
-- [Python公式ドキュメント - timeモジュール](https://docs.python.org/ja/3/library/time.html) citeturn0search0
 
 ## 参考
 

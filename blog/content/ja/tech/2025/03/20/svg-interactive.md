@@ -1,6 +1,6 @@
 ---
 title: "SVGで実現するインタラクティブ処理"
-date: 2025-03-15T03:30:00+09:00
+date: 2025-03-20T18:30:00+09:00
 description: "Gemini APIを利用するためには、APIキーが必要です。Google AI StudioでGemini APIキーを取得する手順と、その後の利用方法についてメモします。"
 draft: false
 enableToc: true

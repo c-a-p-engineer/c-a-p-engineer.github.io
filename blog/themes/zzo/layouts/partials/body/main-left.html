@@ -1,7 +1,7 @@
 {{ $isPad := or (in (slice "archive" "posts" "page") .Type) }}
 {{ $isPad = or $isPad (and (eq .Kind "page") (not (in (slice "about" "contact" "publication") .Type))) }}
 {{ $isPad = or $isPad (and (eq .Kind "section") (eq .Type "publication")) }}
-{{ $isPad = or $isPad (and (eq .Type "tags") (ne .Kind "taxonomyTerm")) }}
+{{ $isPad = or $isPad (and (eq .Type "tags") (ne .Kind "taxonomy")) }}
 
 {{ if eq ($.Param "languagedir") "rtl" }}
 <div class="wrapper__left hide" data-pad="{{ $isPad }}" dir="rtl">

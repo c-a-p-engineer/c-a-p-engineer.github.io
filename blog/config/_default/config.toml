@@ -12,11 +12,18 @@ buildFuture = true
 copyright = "&copy;{year}, All Rights Reserved"
 timeout = 10000
 enableEmoji = true
-paginate = 10
-rssLimit = 100
+
+
+[pagination]
+  pagerSize = 10
+
+[rss]
+  rssLimit = 100
 
 enableGitInfo = false
-googleAnalytics = "G-RD9K77EWVP"
+
+[params]
+  GoogleAnalytics  = "G-RD9K77EWVP"
 
 enableRobotsTXT = true
 
@@ -39,7 +46,6 @@ enableRobotsTXT = true
 [outputs]
   home = ["HTML", "RSS", "SearchIndex"]
   section = ["HTML", "RSS", "SearchIndex"]
-  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
   taxonomy = ["HTML", "RSS", "SearchIndex"]
 
 [outputFormats]

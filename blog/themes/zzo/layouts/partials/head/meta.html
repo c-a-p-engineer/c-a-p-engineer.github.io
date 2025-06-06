@@ -18,7 +18,17 @@
 <meta name="author" content="{{ .Site.Params.myname }}">
 {{ end }}
 
-{{ $ogpImagePath := path.Join "ogp" (print .File.Dir) (print .File.BaseFileName ".png") }}
+{{/* ── .File が存在しないときに備えて空文字を用意 ── */}}
+{{ $fileDir  := "" }}
+{{ $fileName := "" }}
+
+{{ with .File }}
+  {{ $fileDir  = .Dir }}
+  {{ $fileName = .BaseFileName }}
+{{ end }}
+
+{{/* ── OGP用画像パスを組み立てる ── */}}
+{{ $ogpImagePath := path.Join "ogp" $fileDir (print $fileName ".png") }}
 
 {{ with $.Param "contact" }}<meta name="contact" content="{{ . }}">{{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">

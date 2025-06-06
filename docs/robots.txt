@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://c-a-p-engineer.github.io/sitemap.xml

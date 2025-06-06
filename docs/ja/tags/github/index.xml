@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>GitHub on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/ja/tags/github/</link><description>Recent content in GitHub on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Wed, 19 Feb 2025 02:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/ja/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>【Github】SSHでの複数リポジトリ対応方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2025/02/19/github-ssh-multiple-repos-setup/</link><pubDate>Wed, 19 Feb 2025 02:30:00 +0900</pubDate><atom:modified>Wed, 19 Feb 2025 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2025/02/19/github-ssh-multiple-repos-setup/</guid><description>&lt;h1 id="githubsshでの複数リポジトリ対応方法">【Github】SSHでの複数リポジトリ対応方法&lt;/h1>
+&lt;p>GitHubなどのサービスで、用途やアカウントごとに異なるSSHキーを使い分ける方法をご紹介します。&lt;br />
+既存のSSHキーと別に新たなキーを作成し、&lt;code>~/.ssh/config&lt;/code> を用いて複数リポジトリやアカウントに対応する設定手順を詳しく解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions リポジトリチェックアウトを高速化する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2024/07/14/github-actions-fast-checkout/</link><pubDate>Sun, 14 Jul 2024 12:30:00 +0900</pubDate><atom:modified>Sun, 14 Jul 2024 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2024/07/14/github-actions-fast-checkout/</guid><description>&lt;h1 id="githubgithub-actions-リポジトリチェックアウトを高速化する方法">【GitHub】GitHub Actions リポジトリチェックアウトを高速化する方法&lt;/h1>
+&lt;p>GitHub Actionsは、CI/CDパイプラインを簡単に構築できる強力なツールです。しかし、リポジトリのチェックアウトが遅いと、ワークフロー全体の速度に悪影響を与えることがあります。チェックアウトを高速化するための3つの方法のメモ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions MySQL データベースを利用する</title><link>https://c-a-p-engineer.github.io/ja/tech/2023/11/07/github-actions-mysql/</link><pubDate>Tue, 07 Nov 2023 07:30:00 +0900</pubDate><atom:modified>Tue, 07 Nov 2023 07:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2023/11/07/github-actions-mysql/</guid><description>&lt;h1 id="githubgithub-actions-mysql-データベースを利用する">【GitHub】GitHub Actions MySQL データベースを利用する&lt;/h1>
+&lt;p>GitHub Actionsを使用して MySQL データベースをセットアップし、接続テストを行う手順をご紹介します。&lt;/p>
+&lt;p>GitHub Actionsは、ソフトウェアワークフローを自動化するためのCI/CDツールです。MySQLのセットアップと接続テストを自動化する方法を学びましょう。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actionsを使用してPHP Webサーバーを起動する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2023/11/03/github-actions-php-server/</link><pubDate>Fri, 03 Nov 2023 20:30:00 +0900</pubDate><atom:modified>Fri, 03 Nov 2023 20:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2023/11/03/github-actions-php-server/</guid><description>&lt;h1 id="github-actionsを使用してphp-webサーバーを起動する方法">GitHub Actionsを使用してPHP Webサーバーを起動する方法&lt;/h1>
+&lt;p>GitHub Actionsを使用してPHP Webサーバーを起動し、その動作を確認する方法について説明します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions での作業ディレクトリの指定方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2023/11/03/github-actions-working-directory/</link><pubDate>Fri, 03 Nov 2023 19:30:00 +0900</pubDate><atom:modified>Fri, 03 Nov 2023 19:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2023/11/03/github-actions-working-directory/</guid><description>&lt;h1 id="githubgithub-actions-での作業ディレクトリの指定方法">【GitHub】GitHub Actions での作業ディレクトリの指定方法&lt;/h1>
+&lt;p>GitHub Actionsを使用する際にコマンドのなどの関係で指定のディレクトリで作業をさせたい時があります。&lt;br />
+そんな時、ワークフローの各ステップでコマンドを実行するディレクトリを設定することが可能です。デフォルトのディレクトリ指定とステップごとのディレクトリ指定の2種類の方法を紹介します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions プルリクエスト時に実行して結果に合わせてコメントを自動的に入れる</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/10/21/github-actions-pull_request_comment/</link><pubDate>Fri, 21 Oct 2022 18:00:00 +0900</pubDate><atom:modified>Fri, 21 Oct 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/10/21/github-actions-pull_request_comment/</guid><description>&lt;h1 id="githubgithub-actions-プルリクエスト時に実行してコメントを自動的に入れる">【GitHub】GitHub Actions プルリクエスト時に実行してコメントを自動的に入れる&lt;/h1>
+&lt;p>GitHub Actions プルリクエスト時に実行して結果に合わせてコメントを自動的に入れる&lt;/p>
+&lt;h2 id="プルリクエスト時にコメントを入れる">プルリクエスト時にコメントを入れる&lt;/h2>
+&lt;p>プルリクエストを出した際に実行されます。&lt;br />
+実行された結果によってプルリクエストにコメントを付けます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】Markdown でブロックをハイライトにする方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/09/14/github-markdown-note-warning/</link><pubDate>Wed, 14 Sep 2022 05:00:00 +0900</pubDate><atom:modified>Wed, 14 Sep 2022 05:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/09/14/github-markdown-note-warning/</guid><description>&lt;h1 id="githubmarkdown-でブロックをハイライトにする方法">【GitHub】Markdown でブロックをハイライトにする方法&lt;/h1>
+&lt;p>GitHub 上の Markdown でブロックをハイライトにする方法メモ&lt;/p>
+&lt;h2 id="ブロックハイライト">ブロックハイライト&lt;/h2>
+&lt;p>現在は &lt;code>Note&lt;/code>, &lt;code>Warning&lt;/code> にのみ対応している模様です。&lt;br />
+試しに　&lt;code>Error&lt;/code> とやってみましたが色は変わりませんでした。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub Markdown</category><category>GitHub</category></item><item><title>【GitHub】Markdown で表示、非表示を切り替える開閉ボタンを使用する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/09/14/github-markdown-expand/</link><pubDate>Wed, 14 Sep 2022 05:00:00 +0900</pubDate><atom:modified>Wed, 14 Sep 2022 05:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/09/14/github-markdown-expand/</guid><description>&lt;h1 id="githubgithub-上の-markdown-で表示非表示を切り替える開閉ボタンを使用する">【GitHub】GitHub 上の Markdown で表示、非表示を切り替える開閉ボタンを使用する&lt;/h1>
+&lt;p>GitHub 上の Markdown で表示、非表示を切り替える開閉ボタンを使用する&lt;/p>
+&lt;h2 id="開閉ボタン">開閉ボタン&lt;/h2>
+&lt;p>&lt;code>details&lt;/code> に囲まれた部分が非表示になります。&lt;br />
+&lt;code>summary&lt;/code> がボタンになります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub Markdown</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions で Dockle で Docker Image をチェックする</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/18/github-actions-dockle/</link><pubDate>Mon, 18 Jul 2022 13:00:00 +0900</pubDate><atom:modified>Mon, 18 Jul 2022 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/18/github-actions-dockle/</guid><description>&lt;h1 id="githubgithub-actions-で-dockle-で-docker-image-をチェックする">【GitHub】GitHub Actions で Dockle で Docker Image をチェックする&lt;/h1>
+&lt;p>GitHub Actions で Dockle で Docker Image をチェックする&lt;/p>
+&lt;h2 id="dockle">Dockle&lt;/h2>
+&lt;p>Dockle は Docker のコンテナイメージのセキュリティチェックツールです。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/goodwithtech/dockle" target="_blank" rel="nofollow noopener">goodwithtech/dockle: Container Image Linter for Security, Helping build the Best-Practice Docker Image, Easy to start&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="dockle-cis-ベンチマーク">Dockle CIS ベンチマーク&lt;/h3>
+&lt;p>Dockleでチェックできるセキュリティ項目は以下のとおりです。&lt;br />
+&lt;a href="https://github.com/docker/docker-bench-security" target="_blank" rel="nofollow noopener">docker / docker-bench-security&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>Docker</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions で Hadolint で Dockerfile をチェックする</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/18/github-actions-hadolint/</link><pubDate>Mon, 18 Jul 2022 13:00:00 +0900</pubDate><atom:modified>Mon, 18 Jul 2022 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/18/github-actions-hadolint/</guid><description>&lt;h1 id="githubgithub-actions-で-hadolint-で-dockerfile-をチェックする">【GitHub】GitHub Actions で Hadolint で Dockerfile をチェックする&lt;/h1>
+&lt;p>GitHub Actions で Hadolint で Dockerfile をチェックする&lt;/p>
+&lt;h2 id="hadolint">Hadolint&lt;/h2>
+&lt;p>Hadolint という Docker の lint ツールです。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/hadolint/hadolint" target="_blank" rel="nofollow noopener">hadolint/hadolint: Dockerfile linter, validate inline bash, written in Haskell&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="hadolint-cis-ベンチマーク">Hadolint CIS ベンチマーク&lt;/h3>
+&lt;p>Hadolintでチェックできるセキュリティ項目は以下のとおりです。&lt;br />
+&lt;a href="https://github.com/docker/docker-bench-security" target="_blank" rel="nofollow noopener">docker / docker-bench-security&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>Docker</category><category>GitHub</category></item><item><title>【Laravel】Laravel + PHPUnit で RuntimeException: A facade root has not been set. が出た時の対処方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/08/laravel-phpunit-setup-facade/</link><pubDate>Fri, 08 Jul 2022 12:00:00 +0900</pubDate><atom:modified>Fri, 08 Jul 2022 12:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/08/laravel-phpunit-setup-facade/</guid><description>&lt;h1 id="laravellaravel--phpunit-で-runtimeexception-a-facade-root-has-not-been-set-が出た時の対処方法">【Laravel】Laravel + PHPUnit で RuntimeException: A facade root has not been set. が出た時の対処方法&lt;/h1>
+&lt;p>Laravel + PHPUnit で &lt;code>RuntimeException: A facade root has not been set.&lt;/code> が出た時の対処方法メモ。&lt;/p>
+&lt;h2 id="失敗">失敗&lt;/h2>
+&lt;p>&lt;code>setUp&lt;/code> メソッドを追加してログを出すようにしました。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="hl">&lt;span class="lnt">13
+&lt;/span>&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php:tests/Unit/ExampleTest.php" data-lang="php:tests/Unit/ExampleTest.php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">namespace&lt;/span> &lt;span class="nx">Tests\Unit&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Tests\TestCase&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Support\Facades\Log&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">ExampleTest&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="nx">TestCase&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">protected&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">setUp&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">void&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="nx">Log&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">debug&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Start &amp;#39;&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="no">__CLASS__&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * A basic test example.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return void
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">testBasicTest&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">assertTrue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>下記のようなエラーが出ました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】Pull Request テンプレートを使用する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/07/github-pull-request-template/</link><pubDate>Thu, 07 Jul 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 07 Jul 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/07/github-pull-request-template/</guid><description>&lt;h1 id="githubpull-request-テンプレートを使用する">【GitHub】Pull Request テンプレートを使用する&lt;/h1>
+&lt;p>GitHub Pull Request テンプレートを作成して使用する方法。&lt;br />
+これを使用することによってPull Request作成時、項目などの記載ブレが減ります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub Actions】Flutter 各種 Build を自動化</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/06/github-actions-flutter-multi-build/</link><pubDate>Wed, 06 Jul 2022 12:00:00 +0900</pubDate><atom:modified>Wed, 06 Jul 2022 12:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/06/github-actions-flutter-multi-build/</guid><description>&lt;h1 id="github-actionsflutter-各種-build-を自動化">【GitHub Actions】Flutter 各種 Build を自動化&lt;/h1>
+&lt;p>GitHub Actions で Flutter の各種 Build を自動化してみました。&lt;/p>
+&lt;p>作成したビルド対象は以下の5種類です。&lt;/p>
+&lt;ul>
+&lt;li>Android&lt;/li>
+&lt;li>iOS&lt;/li>
+&lt;li>Linux Desktop&lt;/li>
+&lt;li>Windows Desktop&lt;/li>
+&lt;li>Web&lt;/li>
+&lt;/ul>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>以下を使用して Flutter を GitHub Actions で実行できるようにします。&lt;br />
+&lt;a href="https://github.com/marketplace/actions/flutter-action" target="_blank" rel="nofollow noopener">Flutter action · Actions · GitHub Marketplace&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>Flutter</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions ファイルの存在チェック</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/05/github-actions-file_exists/</link><pubDate>Tue, 05 Jul 2022 20:00:00 +0900</pubDate><atom:modified>Tue, 05 Jul 2022 20:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/05/github-actions-file_exists/</guid><description>&lt;h1 id="githubgithub-actions-ファイルの存在チェック">【GitHub】GitHub Actions ファイルの存在チェック&lt;/h1>
+&lt;p>GitHub Actions でファイルの存在チェックする方法。&lt;/p>
+&lt;h2 id="ファイル存在チェック">ファイル存在チェック&lt;/h2>
+&lt;h3 id="オプション">オプション&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>変数&lt;/th>
+&lt;th>必須&lt;/th>
+&lt;th>説明&lt;/th>
+&lt;th>デフォルト&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>files&lt;/code>&lt;/td>
+&lt;td>○&lt;/td>
+&lt;td>存在確認するためのファイルとディレクトリ（カンマ区切り）&lt;br> &lt;a href="https://github.com/isaacs/node-glob">glob paterns&lt;/a>.&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ignore_case&lt;/code>&lt;/td>
+&lt;td>x&lt;/td>
+&lt;td>ファイル名の大文字小文字の見分け&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>follow_symbolic_links&lt;/code>&lt;/td>
+&lt;td>x&lt;/td>
+&lt;td>シンボリックリンクを対象にする&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>allow_failure&lt;/code>&lt;/td>
+&lt;td>x&lt;/td>
+&lt;td>存在しなければエラーを出す&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="サンプル">サンプル&lt;/h3>
+&lt;p>&lt;code>package.json, LICENSE, README.md&lt;/code> の存在をチェックする。&lt;br />
+存在する場合は &lt;code>files_exists&lt;/code> に &lt;code>true&lt;/code>、存在しない場合は &lt;code>false&lt;/code> が入る。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions Debug 設定をする</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/04/github-actions-debug/</link><pubDate>Mon, 04 Jul 2022 12:00:00 +0900</pubDate><atom:modified>Mon, 04 Jul 2022 12:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/04/github-actions-debug/</guid><description>&lt;h1 id="githubgithub-actions-debug-設定をする">【GitHub】GitHub Actions Debug 設定をする&lt;/h1>
+&lt;p>GitHub Actions Debug 設定を方法。&lt;br />
+GitHub Actions 導入時にはデバッグしやすいように入れておくのが良いでしょう。&lt;/p>
+&lt;h2 id="設定値">設定値&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>ACTIONS_RUNNER_DEBUG&lt;/code>
+&lt;ul>
+&lt;li>Runnerの実行ログ&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>ACTIONS_STEP_DEBUG&lt;/code>
+&lt;ul>
+&lt;li>Step毎の実行ログ&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="設定">設定&lt;/h2>
+&lt;ol>
+&lt;li>導入したい &lt;code>Repository&lt;/code> の &lt;code>Settings&lt;/code>を選択。&lt;/li>
+&lt;li>左のメニューの &lt;code>Secrets&lt;/code> を指定&lt;/li>
+&lt;li>右上の &lt;code>New repository secret&lt;/code> を選択。&lt;/li>
+&lt;li>ランナーの診断ロギングの有効化&lt;/li>
+&lt;li>&lt;code>Name&lt;/code> に &lt;code>ACTIONS_RUNNER_DEBUG&lt;/code> を設定。&lt;/li>
+&lt;li>&lt;code>Value&lt;/code> に取得した &lt;code>true&lt;/code> を設定。&lt;/li>
+&lt;li>ステップのデバッグロギングの有効化&lt;/li>
+&lt;li>&lt;code>Name&lt;/code> に &lt;code>ACTIONS_STEP_DEBUG&lt;/code> を設定。&lt;/li>
+&lt;li>&lt;code>Value&lt;/code> に取得した &lt;code>true&lt;/code> を設定。&lt;/li>
+&lt;/ol>
+&lt;p>これで GitHub Actions 上で詳細なログが出力がされます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions リリースページを自動的に作る</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/07/11/github-actions-release/</link><pubDate>Mon, 04 Jul 2022 12:00:00 +0900</pubDate><atom:modified>Mon, 04 Jul 2022 12:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/07/11/github-actions-release/</guid><description>&lt;h1 id="githubgithub-actions-debug-設定をする">【GitHub】GitHub Actions Debug 設定をする&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/marketplace/actions/create-release" target="_blank" rel="nofollow noopener">Create Release · Actions · GitHub Marketplace&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="tag-を設定したら自動的にリリースページを作る">tag を設定したら自動的にリリースページを作る&lt;/h2>
+&lt;p>Git に &lt;code>v&lt;/code> が頭についたタグをプッシュした際に作られる公式サンプルです。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml:.github\workflows\release.yml" data-lang="yml:.github\workflows\release.yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tags&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;v*&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Create Release&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">build&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Create Release&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Checkout code&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Create Release&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">create_release&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/create-release@v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">tag_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.ref }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">release_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Release ${{ github.ref }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Changes in this Release
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - First Change
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - Second Change&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">draft&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">prerelease&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="応用編-master-への-pull-request-を-merge-した際に自動的にリリースページを作る">【応用編】 master への Pull Request を merge した際に自動的にリリースページを作る&lt;/h2>
+&lt;p>たとえば &lt;code>develop&lt;/code> ブランチからリリースするために &lt;code>master&lt;/code> ブランチへマージを行います。&lt;br />
+この際に Pull Request を作成して Pull Request の内容を利用してリリースページを作ることができます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Pages で React 公開時の404対策</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/05/09/github-pages-react-404/</link><pubDate>Mon, 09 May 2022 01:30:00 +0900</pubDate><atom:modified>Mon, 09 May 2022 01:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/05/09/github-pages-react-404/</guid><description>&lt;h1 id="githubgithub-pages-で-react-公開時の404対策">【GitHub】GitHub Pages で React 公開時の404対策&lt;/h1>
+&lt;p>&lt;code>GitHub Pages&lt;/code> で &lt;code>React&lt;/code> 公開時の404対策メモ。&lt;/p>
+&lt;h2 id="reactで作ったものを公開しても404になる">Reactで作ったものを公開しても404になる&lt;/h2>
+&lt;p>&lt;code>React&lt;/code> で作ったものを &lt;code>GitHub Pages&lt;/code> で公開したところ、公開ページのURLに接続すると &lt;code>index.html&lt;/code> が開かれるのでアプリが開かれます。&lt;br />
+ただルーティングをしていた場合に &lt;code>/sample/&lt;/code> のようなURLがアプリ上だと表示されるのですが、直接URLを開かれた場合 &lt;code>GitHub Pages&lt;/code> は直接 &lt;code>/sample/&lt;/code> というディレクトリを探しますが存在しないため404が表示されます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions で Lighthouse を使用して自動的にサイトのSEOなどをチェックする</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/01/01/github-actions-lghthouse/</link><pubDate>Sat, 01 Jan 2022 14:00:00 +0900</pubDate><atom:modified>Sat, 01 Jan 2022 14:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/01/01/github-actions-lghthouse/</guid><description>&lt;h1 id="githubgithub-actions-で-lighthouse-を使用して自動的にサイトのseoなどをチェックする">【GitHub】GitHub Actions で Lighthouse を使用して自動的にサイトのSEOなどをチェックする&lt;/h1>
+&lt;p>GitHub Actions で Lighthouse を使用して自動的にサイトのSEOなどをチェックする方法。&lt;/p>
+&lt;h2 id="lighthouseを導入する">Lighthouseを導入する&lt;/h2>
+&lt;p>サンプルの通りにまずは導入してみます。&lt;br />
+&lt;a href="https://www.foo.software/docs/lighthouse-check-github-action/examples#basic" target="_blank" rel="nofollow noopener">GitHub Lighthouse#Basic&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions で PHP を自動整形させる</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/10/22/github-actions-php_codesniffer/</link><pubDate>Fri, 22 Oct 2021 07:00:00 +0900</pubDate><atom:modified>Fri, 22 Oct 2021 07:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/10/22/github-actions-php_codesniffer/</guid><description>&lt;h1 id="githubgithub-actions-で-php-を自動整形させる">【GitHub】GitHub Actions で PHP を自動整形させる&lt;/h1>
+&lt;p>GitHub Actions で &lt;code>PHP_codesniffer&lt;/code> を利用して PHP の自動整形させる方法。&lt;br />
+ちなみにプルリクなどの際にコードチェックしてくれるのは以下の方法で可能なようです。&lt;br />
+&lt;a href="https://github.com/chekalsky/phpcs-action" target="_blank" rel="nofollow noopener"> chekalsky / phpcs-action&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>PHP</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions で Docker を使う</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/10/09/github-actions-docker/</link><pubDate>Sat, 09 Oct 2021 18:00:00 +0900</pubDate><atom:modified>Sat, 09 Oct 2021 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/10/09/github-actions-docker/</guid><description>&lt;h1 id="github-actions-dockerを使う">GitHub Actions Dockerを使う&lt;/h1>
+&lt;p>&lt;code>GitHub Actions&lt;/code> で自分が構築したDockerを使ってテストなどをする方法。&lt;/p>
+&lt;h2 id="dokcer-を使う">Dokcer を使う&lt;/h2>
+&lt;p>CentOS の Image を &lt;code>pull&lt;/code> してバージョンを出力するだけ&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml:.github/workflows/docker.yml" data-lang="yml:.github/workflows/docker.yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Docker&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Ubuntu&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Docker Set Up&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Docker Set Up&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> docker pull centos&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Docker Exec&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Docker Exec&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> docker run centos sh -c &amp;#34;cat /etc/redhat-release&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="docker-compose-を使う">Docker Compose を使う&lt;/h2>
+&lt;p>Docker で環境を作る際は Docker Compose で設定していることが多いと思いますので実際には使用する際にはこちらの方がメインになると思います。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>Docker</category><category>GitHub</category></item><item><title>【GitHub Actions】Flutter Web Build を自動化</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/08/09/github-actions-flutter-web-build/</link><pubDate>Mon, 09 Aug 2021 09:00:00 +0900</pubDate><atom:modified>Mon, 09 Aug 2021 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/08/09/github-actions-flutter-web-build/</guid><description>&lt;h1 id="github-actionsflutter-web-build-を自動化">【GitHub Actions】Flutter Web Build を自動化&lt;/h1>
+&lt;p>GitHub Actions で Flutter Web Build を自動化してみました。&lt;/p>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>サンプルでは &lt;code>Flutter Web&lt;/code> の build を行っております。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml:.github/workflows/build.yml" data-lang="yml:.github/workflows/build.yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Flutter Build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Ubuntu&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Checkout&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Flutter Setup&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">subosito/flutter-action@v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">flutter-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;2.0.5&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Flutter Web Build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> flutter pub get
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> flutter build web&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Commit&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Update Flutter Web &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">stefanzweifel/git-auto-commit-action@v4.2.0&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">commit_message&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Update Build Files&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Web以外の build 方法も下記にまとめられています。&lt;br />
+&lt;a href="https://github.com/marketplace/actions/flutter-action" target="_blank" rel="nofollow noopener">Flutter action · Actions · GitHub Marketplace&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Flutter-logo-animation-v1-2.gif" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>Flutter</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions を利用して PHPUnit を実行する</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/07/30/github-actions-phpunit/</link><pubDate>Thu, 29 Jul 2021 08:00:00 +0900</pubDate><atom:modified>Thu, 29 Jul 2021 08:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/07/30/github-actions-phpunit/</guid><description>&lt;h1 id="githubgithub-actions-を利用して-phpunit-を実行する">【GitHub】GitHub Actions を利用して PHPUnit を実行する&lt;/h1>
+&lt;p>ローカルで実行するのに時間がかる場合があるので GitHub Actions を利用して PHPUnit を実行してみました。&lt;/p>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml:.github/workflows/phpunit.yml" data-lang="yml:.github/workflows/phpunit.yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">PHPUnit&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">push]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">test&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># PHPのバージョンを複数指定&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">strategy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">matrix&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">php-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;7.4&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;8.0&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># PHP Setup&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Setup PHP ${{ matrix.php-version }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">shivammathur/setup-php@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">php-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ matrix.php-version }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Checkout&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Install dependencies&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">composer install --prefer-dist --no-progress --no-suggest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># テストを実行&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Run PHPUnit&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">php ./vendor/bin/phpunit tests/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>これを利用することによりGitHub Actionsでテストを実行してもらえます。&lt;br />
+また、複数バージョンを指定することによりPHPのバージョンアップのテストを行うことが可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions で自動的にGoogleにsitemap.xmlを送信する</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/07/07/github-actions-google-sitemap/</link><pubDate>Wed, 07 Jul 2021 07:00:00 +0900</pubDate><atom:modified>Wed, 07 Jul 2021 07:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/07/07/github-actions-google-sitemap/</guid><description>&lt;h1 id="github-actions-で自動的にgoogleにsitemapxmlを送信する">GitHub Actions で自動的にGoogleにsitemap.xmlを送信する&lt;/h1>
+&lt;p>SEO対策のために &lt;code>sitemap.xml&lt;/code> を GitHub Actions を利用して自動的に送信するように致しました。&lt;/p>
+&lt;h2 id="sitemapxml-を送信する">sitemap.xml を送信する&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml:.github/workflows/update-sitemap.yml" data-lang="yml:.github/workflows/update-sitemap.yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">update-sitemap&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">schedule&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">cron&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;0 0,12 * * *&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">update-sitemap&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Update Google Ping Sitemap&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> curl -X GET &amp;#34;https://www.google.com/ping?sitemap=https://example.com/sitemap.xml&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> curl -X GET &amp;#34;https://www.google.com/ping?sitemap=https://example2.com/sitemap.xml&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> curl -X GET &amp;#34;https://www.google.com/ping?sitemap=https://example3.com/sitemap.xml&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>※&lt;code>cron&lt;/code> の時間は &lt;code>UTC&lt;/code> なので 日本時間で考えると &lt;code>-9&lt;/code> 時間されますので注意してください。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions Discord に通知してみる</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/07/07/github-actions-discode-notification/</link><pubDate>Wed, 07 Jul 2021 06:30:00 +0900</pubDate><atom:modified>Wed, 07 Jul 2021 06:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/07/07/github-actions-discode-notification/</guid><description>&lt;h1 id="github-actions-discordに通知してみる">GitHub Actions Discordに通知してみる&lt;/h1>
+&lt;p>&lt;code>push&lt;/code> された通知など &lt;code>Discord&lt;/code> に通知してみます。&lt;/p>
+&lt;h2 id="discord-の用意">Discord の用意&lt;/h2>
+&lt;p>サーバー選択-&amp;gt;連携サービス-&amp;gt;ウェブフック-&amp;gt;新しいウェブフック&lt;br />
+ウェブフックを作成後、URLを取得。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions コミットメッセージ取得</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/07/07/github-actions-commit-message/</link><pubDate>Wed, 07 Jul 2021 06:00:00 +0900</pubDate><atom:modified>Wed, 07 Jul 2021 06:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/07/07/github-actions-commit-message/</guid><description>&lt;h1 id="github-actions-コミットメッセージ取得">GitHub Actions コミットメッセージ取得&lt;/h1>
+&lt;p>GitHub Actions でコミットメッセージを取得する際のパラメータ&lt;br />
+以下のどちらかを使用してください。&lt;/p>
+&lt;pre tabindex="0">&lt;code>github.event.head_commit.message
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>github.event.commits[0].message
+&lt;/code>&lt;/pre>&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://stackoverflow.com/questions/63619329/github-action-get-commit-message" target="_blank" rel="nofollow noopener">GitHub Action Get Commit Message - Stack Overflow&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.github.com/ja/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#push" target="_blank" rel="nofollow noopener">webhook イベントとペイロード - GitHub Docs&lt;/a>&lt;/li>
+&lt;/ul></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions Slack に通知してみる</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/07/05/github-actions-slack-notification/</link><pubDate>Mon, 05 Jul 2021 05:00:00 +0900</pubDate><atom:modified>Mon, 05 Jul 2021 05:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/07/05/github-actions-slack-notification/</guid><description>&lt;h1 id="github-actions-slackに通知してみる">GitHub Actions Slackに通知してみる&lt;/h1>
+&lt;p>&lt;code>push&lt;/code> された通知など &lt;code>Slack&lt;/code> に通知してみます。&lt;/p>
+&lt;h2 id="slack-の用意">Slack の用意&lt;/h2>
+&lt;p>以下の &lt;code>Slack&lt;/code> アプリの &lt;code>Incoming Webhook&lt;/code> を利用します。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://w1625424953-rox450381.slack.com/apps/A0F7XDUAZ--incoming-webhook-?tab=more_info" target="_blank" rel="nofollow noopener">Incoming Webhook&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Webhook URL&lt;/code> を取得します。&lt;/p>
+&lt;h2 id="github-の用意">GitHub の用意&lt;/h2>
+&lt;ol>
+&lt;li>導入したい &lt;code>Repository&lt;/code> の &lt;code>Settings&lt;/code>を選択。&lt;/li>
+&lt;li>左のメニューの &lt;code>Secrets&lt;/code> を指定&lt;/li>
+&lt;li>右上の &lt;code>New repository secret&lt;/code> を選択。&lt;/li>
+&lt;li>&lt;code>Name&lt;/code> に &lt;code>SLACK_WEBHOOK_URL&lt;/code> を設定。&lt;/li>
+&lt;li>&lt;code>Value&lt;/code> に取得した &lt;code>Webhook URL&lt;/code> を設定。&lt;/li>
+&lt;/ol>
+&lt;h2 id="github-actionsの設定">GitHub Actionsの設定&lt;/h2>
+&lt;p>GitHub Actions を作成します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions を利用して Hugo のブログを自動ビルド &amp; 自動コミット</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/06/19/github-actions-deploy/</link><pubDate>Sat, 19 Jun 2021 02:30:00 +0900</pubDate><atom:modified>Sat, 19 Jun 2021 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/06/19/github-actions-deploy/</guid><description>&lt;h1 id="github-actions-を利用して自動コミット">GitHub Actions を利用して自動コミット&lt;/h1>
+&lt;p>GitHub Actions を利用して Hugo を利用している当ブログを自動ビルド &amp;amp; 自動コミットしてみた。&lt;/p>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;p>Hugoを利用した当ブログを以下の yml を使用して自動的にビルド &amp;amp; コミットするようにしてみました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】GitHub Actions を利用して成果物を保存する</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/11/13/github-actions-artifact/</link><pubDate>Sat, 19 Jun 2021 02:30:00 +0900</pubDate><atom:modified>Sat, 19 Jun 2021 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/11/13/github-actions-artifact/</guid><description>&lt;h1 id="github-actions-を利用して成果物を保存する">GitHub Actions を利用して成果物を保存する&lt;/h1>
+&lt;p>GitHub Actions でテストをした時などログが出るかと思います。&lt;br />
+そういった成果物などをコミットするとブランチが汚れるしわざわざSlackなどに送るのも面倒。&lt;br />
+なので一時的にGitHubにアップする事が可能なのです。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>【GitHub】private リポジトリを clone する</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/06/11/github-private-clone/</link><pubDate>Fri, 11 Jun 2021 17:30:00 +0900</pubDate><atom:modified>Fri, 11 Jun 2021 17:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/06/11/github-private-clone/</guid><description>&lt;h1 id="private-リポジトリを-clone-する">private リポジトリを clone する&lt;/h1>
+&lt;p>ちょいちょい忘れるのでメモ。&lt;/p>
+&lt;pre tabindex="0">&lt;code>git clone https://{ユーザ名}:{パスワード}@github.com/hoge/for.git
+&lt;/code>&lt;/pre>&lt;p>ただし二段階認証を設定している場合は通常の GitHub のログインパスワードでは &lt;code>clone&lt;/code> 出来ません。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item><item><title>GitHub の HTML を Web上でプレビューする方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/05/22/github-html-preview/</link><pubDate>Sat, 22 May 2021 03:00:00 +0900</pubDate><atom:modified>Sat, 22 May 2021 03:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/05/22/github-html-preview/</guid><description>&lt;h1 id="github-の-html-を-web上でプレビューする方法">GitHub の HTML を Web上でプレビューする方法&lt;/h1>
+&lt;p>GitHub 上にある HTML は GitHub で見るとコードとして表示されますが、それをWeb上でプレビューする方法。&lt;/p>
+&lt;h2 id="github--bitbucket-html-preview">GitHub &amp;amp; BitBucket HTML Preview&lt;/h2>
+&lt;p>1.&lt;a href="https://htmlpreview.github.io/" target="_blank" rel="nofollow noopener">GitHub &amp;amp; BitBucket HTML Preview&lt;/a> にアクセス&lt;br />
+2.テキストボックスに見たい &lt;code>GitHub&lt;/code> 上のHTMLを指定&lt;br />
+サンプル例：&lt;code>https://github.com/twbs/bootstrap/blob/gh-pages/2.3.2/index.html&lt;/code>&lt;br />
+3.【Preview】ボタンを押下&lt;br />
+4.HTMLが表示される&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/GitHub_Logo_White.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GitHub</category><category>GitHub</category></item></channel></rss>

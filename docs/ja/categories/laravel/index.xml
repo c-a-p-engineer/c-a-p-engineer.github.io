@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Laravel on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/ja/categories/laravel/</link><description>Recent content in Laravel on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Sat, 14 Jan 2023 15:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/ja/categories/laravel/index.xml" rel="self" type="application/rss+xml"/><item><title>【Laravel】SeederをDBから逆生成する</title><link>https://c-a-p-engineer.github.io/ja/tech/2023/01/14/laravel-seeder-generation/</link><pubDate>Sat, 14 Jan 2023 15:30:00 +0900</pubDate><atom:modified>Sat, 14 Jan 2023 15:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2023/01/14/laravel-seeder-generation/</guid><description>&lt;h1 id="laravelseederをdbから逆生成する">【Laravel】SeederをDBから逆生成する&lt;/h1>
+&lt;p>Seederを一々作るのも面倒なので一気に逆生成する方法。&lt;/p>
+&lt;h2 id="手順">手順&lt;/h2>
+&lt;p>以下のパッケージを使用してSeederを逆生成します。&lt;br />
+&lt;a href="https://github.com/orangehill/iseed" target="_blank" rel="nofollow noopener">orangehill/iseed&lt;/a>&lt;/p>
+&lt;h3 id="インストール">インストール&lt;/h3>
+&lt;p>インストール方法&lt;/p>
+&lt;pre tabindex="0">&lt;code>composer require --dev &amp;#34;orangehill/iseed&amp;#34;
+&lt;/code>&lt;/pre>&lt;h3 id="逆生成">逆生成&lt;/h3>
+&lt;p>以下のコマンドを使用すると &lt;code>database/seeders&lt;/code> にファイルが生成されます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】大量INSERTする際に chunk を使おう</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/12/08/laravel-chunk-insert/</link><pubDate>Thu, 08 Dec 2022 01:40:00 +0900</pubDate><atom:modified>Thu, 08 Dec 2022 01:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/12/08/laravel-chunk-insert/</guid><description>&lt;h1 id="laravel大量insertする際に-chunk-を使おう">【Laravel】大量INSERTする際に chunk を使おう&lt;/h1>
+&lt;p>Laravel で大量INSERTする際にエラーが出たり、遅くなったりします。そういう時は &lt;code>chunk&lt;/code> を使用します。&lt;/p>
+&lt;p>できるだけ大量データを入れる際は &lt;code>chunk&lt;/code> を使用してください。&lt;br />
+僕の経験では一括で入れようとするとDBがエラーを起こしたり、挿入によるテーブルロックでDBが遅くなったりします。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】バリデーションに無名関数を使用してバリデーションを行う</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/12/08/laravel-validation-closure/</link><pubDate>Thu, 08 Dec 2022 01:20:00 +0900</pubDate><atom:modified>Thu, 08 Dec 2022 01:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/12/08/laravel-validation-closure/</guid><description>&lt;h1 id="laravelバリデーションに無名関数を使用してバリデーションを行う">【Laravel】バリデーションに無名関数を使用してバリデーションを行う&lt;/h1>
+&lt;p>Laravel でバリデーションに無名関数を使用してバリデーションを行う方法メモ&lt;br />
+特殊なバリデーションでそこでしか使用しない、わざわざ独自ルールを作るのも手間などの時に使用する方法です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】l5-swagger でAPI仕様書を簡単に作ろう</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/12/03/laravel-l5-swagger/</link><pubDate>Sat, 03 Dec 2022 02:00:00 +0900</pubDate><atom:modified>Sat, 03 Dec 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/12/03/laravel-l5-swagger/</guid><description>&lt;h1 id="laravell5-swagger-でapi仕様書を簡単に作ろう">【Laravel】l5-swagger でAPI仕様書を簡単に作ろう&lt;/h1>
+&lt;p>Laravel で l5-swagger を使用して簡単にSwaggerのAPI仕様書を作る&lt;/p>
+&lt;h2 id="l5-swagger">l5-swagger&lt;/h2>
+&lt;p>l5-swaggerを使用して簡単にAPI仕様書を作ります。&lt;br />
+&lt;a href="https://github.com/DarkaOnLine/L5-Swagger">DarkaOnLine/L5-Swagger&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】Class Redis Not Found が出た際の対処方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/11/25/laravel-redis-not-found/</link><pubDate>Fri, 25 Nov 2022 18:00:00 +0900</pubDate><atom:modified>Fri, 25 Nov 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/11/25/laravel-redis-not-found/</guid><description>&lt;h1 id="laravelclass-redis-not-found-が出た際の対処方法">【Laravel】Class Redis Not Found が出た際の対処方法&lt;/h1>
+&lt;p>LaravelでRedisを使用しようとしたら &lt;code>Class Redis Not Found&lt;/code> が出た際の対処方法&lt;/p>
+&lt;h2 id="発生環境">発生環境&lt;/h2>
+&lt;div class="alert alert-info" role="alert" data-dir="ltr">PHP 8.1.11&lt;br />
+Laravel Framework 9.33.0&lt;/div>
+&lt;p>Redisの設定値&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-conf:.env" data-lang="conf:.env">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">REDIS_HOST&lt;/span>&lt;span class="o">=&lt;/span>127.0.0.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">REDIS_PASSWORD&lt;/span>&lt;span class="o">=&lt;/span>null
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">REDIS_PORT&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">6379&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="対処法">対処法&lt;/h2>
+&lt;p>対処方法は2種類あります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】データベースに影響が出ないようにテストする</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/11/15/laravel-test-trait/</link><pubDate>Tue, 15 Nov 2022 18:00:00 +0900</pubDate><atom:modified>Tue, 15 Nov 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/11/15/laravel-test-trait/</guid><description>&lt;h1 id="laravelデータベースに影響が出ないようにテストする">【Laravel】データベースに影響が出ないようにテストする&lt;/h1>
+&lt;p>Laravel には各種テスト用の trait が用意されていて、それらを使用することでデータベースに影響が出ないようにテストができます。&lt;/p>
+&lt;h2 id="トランザクションを使用する">トランザクションを使用する&lt;/h2>
+&lt;p>&lt;code>DatabaseTransactions&lt;/code> を使用する。&lt;br />
+データベースにトランザクションを張って実行します。&lt;br />
+そのため他のテストに影響を与えませんが代わりにマイグレーションなどは自分で実装する必要があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】APIのエラーメッセージ「The given data was invalid.」を多言語か対応する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/11/09/laravel-api-request-validation-message/</link><pubDate>Wed, 09 Nov 2022 18:00:00 +0900</pubDate><atom:modified>Wed, 09 Nov 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/11/09/laravel-api-request-validation-message/</guid><description>&lt;h1 id="laravelapiのエラーメッセージthe-given-data-was-invalidを多言語か対応する">【Laravel】APIのエラーメッセージ「The given data was invalid.」を多言語か対応する&lt;/h1>
+&lt;p>Laravel のAPIのエラーメッセージ「The given data was invalid.」を多言語か対応する。&lt;br />
+&lt;del>これは僕がクソ実装されていることを忘れないための記事です。&lt;/del>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】日本語などのローカル言語ファイルを取得する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/11/09/laravel-lang-install/</link><pubDate>Wed, 09 Nov 2022 18:00:00 +0900</pubDate><atom:modified>Wed, 09 Nov 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/11/09/laravel-lang-install/</guid><description>&lt;h1 id="laravel日本語などのローカル言語ファイルを取得する">【Laravel】日本語などのローカル言語ファイルを取得する&lt;/h1>
+&lt;p>Laravel は英語の言語ファイルがデフォルトで適用されていますが日本語化するのが面倒くさい。&lt;br />
+そういう時に日本語などのローカル言語ファイルを簡単に取得、適用する方法。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】PHPUnit 419 エラー対応</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/11/01/laravel-phpunit-419/</link><pubDate>Tue, 01 Nov 2022 04:00:00 +0900</pubDate><atom:modified>Tue, 01 Nov 2022 04:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/11/01/laravel-phpunit-419/</guid><description>&lt;h1 id="laravelphpunit-419-エラー対応">【Laravel】PHPUnit 419 エラー対応&lt;/h1>
+&lt;p>Laravel の PHPUnitで 419 エラーが出た際の対応方法メモ。&lt;/p>
+&lt;p>419 エラーはCSRFエラーになります。&lt;br />
+そのためテスト時にはCSRFチェックをしないようにする必要があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】データ保存時に created_by, updated_by, delete_by を自動的に追加する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/10/27/laravel-createde_by/</link><pubDate>Thu, 27 Oct 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 27 Oct 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/10/27/laravel-createde_by/</guid><description>&lt;h1 id="laravelデータ保存時に-created_by-updated_by-delete_by-を自動的に追加する方法">【Laravel】データ保存時に created_by, updated_by, delete_by を自動的に追加する方法&lt;/h1>
+&lt;p>Laravelでデータ保存時に &lt;code>created_by&lt;/code>, &lt;code>updated_by&lt;/code>, &lt;code>delete_by&lt;/code> の登録者、更新者、削除者を自動的に追加する方法&lt;/p>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>&lt;code>boot&lt;/code> メソッドに各イベント時の動作を設定します。&lt;br />
+&lt;code>creating&lt;/code>, &lt;code>updating&lt;/code>, &lt;code>saving&lt;/code>, &lt;code>deleting&lt;/code> のイベント時に設定されています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】DBからモデルを逆生成する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/10/24/laravel-model-generation/</link><pubDate>Mon, 24 Oct 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 27 Oct 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/10/24/laravel-model-generation/</guid><description>&lt;h1 id="laraveldbからモデルを逆生成する">【Laravel】DBからモデルを逆生成する&lt;/h1>
+&lt;p>DBを修正するとモデルの修正しなければいけなくて面倒なのでLaravelでDBからモデルを逆生成する方法&lt;/p>
+&lt;h2 id="手順">手順&lt;/h2>
+&lt;p>以下のパッケージを使用してモデルを逆生成します。&lt;br />
+&lt;a href="https://github.com/reliese/laravel" target="_blank" rel="nofollow noopener">reliese/laravel&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】マイグレーションをDBから逆生成する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/10/24/laravel-migration-generator/</link><pubDate>Mon, 24 Oct 2022 18:00:00 +0900</pubDate><atom:modified>Mon, 24 Oct 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/10/24/laravel-migration-generator/</guid><description>&lt;h1 id="laravelマイグレーションをdbから逆生成する">【Laravel】マイグレーションをDBから逆生成する&lt;/h1>
+&lt;p>DBとマイグレーションファイルを修正するのも面倒なのでLaravelでマイグレーションをDBから逆生成する方法。&lt;/p>
+&lt;h2 id="手順">手順&lt;/h2>
+&lt;p>以下のパッケージを使用してマイグレーションを逆生成します。&lt;br />
+&lt;a href="https://github.com/kitloong/laravel-migrations-generator" target="_blank" rel="nofollow noopener">kitloong/laravel-migrations-generator&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】複数のSQLを一括実行する DB::unprepared</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/10/15/laravel-multiple-sql/</link><pubDate>Sat, 15 Oct 2022 16:30:00 +0900</pubDate><atom:modified>Sat, 15 Oct 2022 16:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/10/15/laravel-multiple-sql/</guid><description>&lt;h1 id="laravel複数のsqlを一括実行する-dbunprepared">【Laravel】複数のSQLを一括実行する DB::unprepared&lt;/h1>
+&lt;p>Laravel で複数のSQLを一括実行する &lt;code>DB::unprepared&lt;/code> を使用する&lt;/p>
+&lt;h2 id="dbunprepared-を使用する">DB::unprepared を使用する&lt;/h2>
+&lt;p>&lt;code>DB::Insert&lt;/code> などを使用する場合、1つのSQL文ずつしか流せません。&lt;br />
+複数のSQL文を実行するとエラーになります。&lt;br />
+そこで &lt;code>DB::unprepared&lt;/code> を使用します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】phpunit 実行時にマイグレーションを1回だけ実行する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/09/30/laravel-phpunit-migration-once/</link><pubDate>Fri, 30 Sep 2022 17:00:00 +0900</pubDate><atom:modified>Fri, 30 Sep 2022 17:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/09/30/laravel-phpunit-migration-once/</guid><description>&lt;h1 id="laravelphpunit-実行時に-migration-を1回だけ実行する">【Laravel】phpunit 実行時に migration を1回だけ実行する&lt;/h1>
+&lt;p>Laravel で phpunit 実行時にテスト側にマイグレーションを一々実行させると時間がかかるのでマイグレーションを1回だけ実行する&lt;/p>
+&lt;h2 id="実装">実装&lt;/h2>
+&lt;p>実装方法。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】コマンドの実行制限をさせる方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/09/27/laravel-command-dont-execute/</link><pubDate>Tue, 27 Sep 2022 02:00:00 +0900</pubDate><atom:modified>Tue, 27 Sep 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/09/27/laravel-command-dont-execute/</guid><description>&lt;h1 id="laravelコマンドの実行制限をさせる方法">【Laravel】コマンドの実行制限をさせる方法&lt;/h1>
+&lt;p>Laravel側で用意されているコマンドをたとえば本番環境で実行させたくない時などに使えるコマンドの実行制限をさせる方法です。&lt;/p>
+&lt;h2 id="特定のコマンドの実行制限をする">特定のコマンドの実行制限をする&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php:app/Console/Kernel.php" data-lang="php:app/Console/Kernel.php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">namespace&lt;/span> &lt;span class="nx">App\Console&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Support\Str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Console\Scheduling\Schedule&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Foundation\Console\Kernel&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nx">ConsoleKernel&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Illuminate\Support\Facades\DB&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Kernel&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="nx">ConsoleKernel&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 実行させたくないコマンド
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">const&lt;/span> &lt;span class="no">EXCLUDE_COMMAND&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;migrate:fresh&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;migrate:reset&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">handle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$input&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$output&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Laravel Load
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$this&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">bootstrap&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 実行させたくない環境
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;APP_ENV&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;production&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 入力されたコマンドの除外コマンド判定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">Str&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$input&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">getFirstArgument&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">EXCLUDE_COMMAND&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 除外コマンドであれば処理を停止
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">echo&lt;/span> &lt;span class="s1">&amp;#39;################# Warning #################&amp;#39;&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="nx">PHP_EOL&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> &lt;span class="nv">$input&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">getFirstArgument&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="s1">&amp;#39; is this &amp;#39;&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;APP_ENV&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="s1">&amp;#39; can\&amp;#39;t run &amp;#39;&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="nx">PHP_EOL&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> &lt;span class="s1">&amp;#39;###########################################&amp;#39;&lt;/span> &lt;span class="o">.&lt;/span> &lt;span class="nx">PHP_EOL&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 処理を実行
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">parent&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">handle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$input&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$output&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>コマンドを実行すると以下のようなエラーが出ます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】使用していないModel, DBのテーブルを特定するコマンドを自作</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/09/14/laravel-unuse-table/</link><pubDate>Wed, 14 Sep 2022 18:00:00 +0900</pubDate><atom:modified>Wed, 14 Sep 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/09/14/laravel-unuse-table/</guid><description>&lt;h1 id="laravel使用していないmodel-dbのテーブルを特定するコマンドを自作">【Laravel】使用していないModel, DBのテーブルを特定するコマンドを自作&lt;/h1>
+&lt;p>Laravelで使用していないModel, DBのテーブルを特定するコマンドを自作しました。&lt;br />
+リファクタの時に役立ちます！&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】バージョンを指定してインストールする</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/09/12/laravel-install-version/</link><pubDate>Mon, 12 Sep 2022 13:00:00 +0900</pubDate><atom:modified>Mon, 12 Sep 2022 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/09/12/laravel-install-version/</guid><description>&lt;h1 id="laravelバージョンを指定してインストールする">【Laravel】バージョンを指定してインストールする&lt;/h1>
+&lt;p>Laravelでバージョンを指定してインストールするためのメモ&lt;/p>
+&lt;h2 id="laravelをインストールする方法">Laravelをインストールする方法&lt;/h2>
+&lt;p>以下の方法だとLaravelの最新バージョンをダウンロードします。&lt;br />
+&lt;a href="https://laravel.com/docs/9.x#your-first-laravel-project" target="_blank" rel="nofollow noopener">Installation - Laravel - The PHP Framework For Web Artisans&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】使用していないController, Methodを特定するコマンドを自作</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/08/29/laravel-unuse-route/</link><pubDate>Mon, 29 Aug 2022 18:00:00 +0900</pubDate><atom:modified>Mon, 29 Aug 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/08/29/laravel-unuse-route/</guid><description>&lt;h1 id="laravel使用していないcontroller-methodを特定するコマンドを自作">【Laravel】使用していないController, Methodを特定するコマンドを自作&lt;/h1>
+&lt;p>Laravelで使用していないController, Methodを特定するコマンドを自作しました。&lt;br />
+リファクタの時に役立ちます！&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】Command を Contoroller や Command から実行する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/08/08/laravel-command-exec/</link><pubDate>Tue, 09 Aug 2022 08:00:00 +0900</pubDate><atom:modified>Tue, 09 Aug 2022 08:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/08/08/laravel-command-exec/</guid><description>&lt;h1 id="laravelcommand-を-contoroller-や-command-から実行する方法">【Laravel】Command を Contoroller や Command から実行する方法&lt;/h1>
+&lt;p>Laravel で Command を Contoroller や Command から実行する方法メモ。&lt;br />
+諸事情で Controller や 別Command から実行するためのメモです。&lt;/p>
+&lt;h2 id="command-呼び出し方法">Command 呼び出し方法&lt;/h2>
+&lt;p>以下の3つの方法があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】Controller を Controller や Command から実行する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/08/07/laravel-controler-exec/</link><pubDate>Sun, 07 Aug 2022 10:00:00 +0900</pubDate><atom:modified>Sun, 07 Aug 2022 10:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/08/07/laravel-controler-exec/</guid><description>&lt;h1 id="laravelcontroller-を-controller-や-command-から実行する方法">【Laravel】Controller を Controller や Command から実行する方法&lt;/h1>
+&lt;p>Laravel で Controller を Controller や Command から実行する方法メモ。&lt;br />
+諸事情で別 Controller や Command から実行するためのメモです。&lt;/p>
+&lt;h2 id="実行対象のcontroller">実行対象のController&lt;/h2>
+&lt;p>実際に実行するControllerを作成します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】mysql strict の注意点</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/06/01/laravel-mysql-strict/</link><pubDate>Wed, 01 Jun 2022 00:30:00 +0900</pubDate><atom:modified>Wed, 01 Jun 2022 00:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/06/01/laravel-mysql-strict/</guid><description>&lt;h1 id="laravelmysql-struct-の注意点">【Laravel】mysql struct の注意点&lt;/h1>
+&lt;p>&lt;code>Laravel&lt;/code> では &lt;code>mysql&lt;/code> への接続オプションとして &lt;code>strict&lt;/code>（厳密）モードがあり気をつける必要があります。&lt;/p>
+&lt;h2 id="strict-設定">strict 設定&lt;/h2>
+&lt;p>&lt;code>config/database.php&lt;/code> の &lt;code>mysql =&amp;gt; strict&lt;/code> の値が &lt;code>true&lt;/code> だと有効になっています。&lt;br />
+デフォルトの設定では &lt;code>true&lt;/code> です。&lt;br />
+&lt;a href="https://github.com/laravel/laravel/blob/9.x/config/database.php#L59" target="_blank" rel="nofollow noopener">Laravel 9.x config/database.php&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】Mysql とのコネクションをプーリングさせる方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/04/13/laravel-mysql-connection-pooling/</link><pubDate>Wed, 13 Apr 2022 02:30:00 +0900</pubDate><atom:modified>Wed, 13 Apr 2022 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/04/13/laravel-mysql-connection-pooling/</guid><description>&lt;h1 id="laravelmysql-とのコネクションをプーリングさせる方法">【Laravel】Mysql とのコネクションをプーリングさせる方法&lt;/h1>
+&lt;p>Laravel で Mysql とのコネクションプーリングを行う方法メモ。&lt;/p>
+&lt;h2 id="プーリングさせる意味">プーリングさせる意味&lt;/h2>
+&lt;p>PHPではデフォルトでDBへの接続をプーリングさせません。&lt;br />
+ですが、DBへのコネクション数を減らして負荷を下げる意味では行う方がベターです。&lt;br />
+また多数のSQLを発行する場面で一々コネクションの発生が抑えられるなどの効果があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Mysql</category><category>Laravel</category></item><item><title>【Laravel】ログを Slack に通知する</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/03/23/laravel-log-slack/</link><pubDate>Wed, 23 Mar 2022 02:50:00 +0900</pubDate><atom:modified>Wed, 23 Mar 2022 02:50:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/03/23/laravel-log-slack/</guid><description>&lt;h1 id="laravelログを-slack-に通知する">【Laravel】ログを Slack に通知する&lt;/h1>
+&lt;p>LaravelでログをSlackに通知する。&lt;br />
+Laravelはバージョン5.6から標準でSlackにログを出力する機能があり、簡単に設定が可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】CloudWatch Logs にログを出力する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2022/01/22/laravel-aws-cloudwatchlogs/</link><pubDate>Sat, 22 Jan 2022 18:00:00 +0900</pubDate><atom:modified>Sat, 22 Jan 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2022/01/22/laravel-aws-cloudwatchlogs/</guid><description>&lt;h1 id="laravelcloudwatch-logs-にログを出力する方法">【Laravel】CloudWatch Logs にログを出力する方法&lt;/h1>
+&lt;p>&lt;code>Laravel&lt;/code> で &lt;code>AWS&lt;/code> の &lt;code>CloudWatch Logs&lt;/code> にログを出力する方法。&lt;/p>
+&lt;h2 id="実装">実装&lt;/h2>
+&lt;h3 id="1-composer-インストール">1. composer インストール&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">composer require maxbanton/cwh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2-ログクラス作成">2. ログクラス作成&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php:config/logging.php" data-lang="php:config/logging.php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">namespace&lt;/span> &lt;span class="nx">App\Logging&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Aws\CloudWatchLogs\CloudWatchLogsClient&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Maxbanton\Cwh\Handler\CloudWatch&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Monolog\Logger&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">CloudWatchLoggerFactory&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sd">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * Create a custom Monolog instance.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> *
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @param array $config
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> * @return \Monolog\Logger
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="fm">__invoke&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">array&lt;/span> &lt;span class="nv">$config&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$sdkParams&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;sdk&amp;#34;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$tags&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;tags&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">??&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">??&lt;/span> &lt;span class="s1">&amp;#39;cloudwatch&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// AWS CloudWatchLogs Cliant
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$client&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">CloudWatchLogsClient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$sdkParams&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$handler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">CloudWatch&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$client&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;log_group&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="c1">// ロググループ
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;log_stream&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="c1">// ログストリーム
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;retention&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="c1">// ログ保持期間
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$tags&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$logger&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Logger&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$logger&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">pushHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$handler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nv">$logger&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-設定追加">3. 設定追加&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php:config/logging.php" data-lang="php:config/logging.php">&lt;span class="line">&lt;span class="cl">&lt;span class="s1">&amp;#39;cloudwatch&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;driver&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;custom&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 作成したクラス
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;via&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">\App\Logging\CloudWatchLoggerFactory&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">class&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;sdk&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// AWS リージョン
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;region&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;AWS_DEFAULT_REGION&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;us-east-1&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;version&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;latest&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// デプロイ先にIAMロールがアタッチされている場合、アタッチ済みロールを使用するなら削除する必要あり
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;credentials&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// AWS アクセスキー
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;key&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;AWS_ACCESS_KEY_ID&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// AWS シークレット
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;secret&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;AWS_SECRET_ACCESS_KEY&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ロググループ名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;log_group&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;CLOUDWATCH_LOG_GROUP&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;log-group&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ログストリーム名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;log_stream&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;CLOUDWATCH_LOG_STREAM&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;log-stream&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ログ保持期間
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;retention&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;CLOUDWATCH_LOG_RETENTION&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;level&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">env&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;CLOUDWATCH_LOG_LEVEL&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;error&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="注意点">注意点&lt;/h2>
+&lt;p>&lt;code>CloudWatchLogs&lt;/code> を使用するのでいくつかの注意点があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>AWS CloudWatch Logs</category><category>Laravel</category></item><item><title>【Laravel】ログをJSON化する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/12/01/laravel-log-json/</link><pubDate>Wed, 01 Dec 2021 04:00:00 +0900</pubDate><atom:modified>Wed, 01 Dec 2021 04:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/12/01/laravel-log-json/</guid><description>&lt;h1 id="laravelログをjson化する方法">【Laravel】ログをJSON化する方法&lt;/h1>
+&lt;p>ログをJSON化する方法&lt;/p>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;h2 id="確認環境">確認環境&lt;/h2>
+&lt;div class="alert alert-info" role="alert" data-dir="ltr">PHP 8.0.1&lt;br />
+Laravel 8.73.2&lt;/div>
+&lt;h3 id="jsonフォーマットクラスを作成">JSONフォーマットクラスを作成&lt;/h3>
+&lt;p>ログのフォーマットを変更するクラスを作成します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php:/app/Logging/JsonLogFormatter.php" data-lang="php:/app/Logging/JsonLogFormatter.php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">declare&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">strict_types&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">namespace&lt;/span> &lt;span class="nx">App\Logging&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Monolog\Formatter\LineFormatter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">JsonLogFormatter&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="nx">LineFormatter&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">array&lt;/span> &lt;span class="nv">$record&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="nx">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">json_encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">parent&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$record&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ログ適用クラスを作成">ログ適用クラスを作成&lt;/h3>
+&lt;p>ログのフォーマットを適用させるクラスを作成します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>【Laravel】ログにログ出力元のファイル情報などを出力する</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/12/01/laravel-log-custom/</link><pubDate>Wed, 01 Dec 2021 03:00:00 +0900</pubDate><atom:modified>Wed, 01 Dec 2021 03:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/12/01/laravel-log-custom/</guid><description>&lt;h1 id="laravelログにログ出力元のファイル情報などを出力する">【Laravel】ログにログ出力元のファイル情報などを出力する&lt;/h1>
+&lt;p>Laravelで簡単にログにログ出力元のファイル情報などを出力する方法メモ。&lt;/p>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;h2 id="確認環境">確認環境&lt;/h2>
+&lt;div class="alert alert-info" role="alert" data-dir="ltr">PHP 8.0.1&lt;br />
+Laravel 8.73.2&lt;/div>
+&lt;h3 id="ログカスタマイズクラスを作成">ログカスタマイズクラスを作成&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php:/app/Logging/CustomLog.php" data-lang="php:/app/Logging/CustomLog.php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">declare&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">strict_types&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">namespace&lt;/span> &lt;span class="nx">App\Logging&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">use&lt;/span> &lt;span class="nx">Monolog\Logger&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">CustomLog&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="fm">__invoke&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$monolog&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$monolog&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">getHandlers&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nv">$handler&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ファイル名、行、クラス名、ファンクション名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$handler&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">pushProcessor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">\Monolog\Processor\IntrospectionProcessor&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">\Monolog\Logger&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">DEBUG&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 出力しないフォルダ
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;Monolog\\&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Illuminate\\&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;Fruitcake\\&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ホスト名
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$handler&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">pushProcessor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">\Monolog\Processor\HostnameProcessor&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// メモリ最大使用量
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$handler&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">pushProcessor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">\Monolog\Processor\MemoryPeakUsageProcessor&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// メモリ使用量
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$handler&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">pushProcessor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">\Monolog\Processor\MemoryUsageProcessor&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// プロセスID
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nv">$handler&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">pushProcessor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">\Monolog\Processor\ProcessIdProcessor&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ログを追加">ログを追加&lt;/h3>
+&lt;p>&lt;code>logging.php&lt;/code> にログを追加。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Laravel</category></item><item><title>Laravel で PHPUnit を使用してメール本文を確認する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/03/26/laravel-phpunit-mail-text/</link><pubDate>Fri, 26 Mar 2021 05:00:00 +0900</pubDate><atom:modified>Fri, 26 Mar 2021 05:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/03/26/laravel-phpunit-mail-text/</guid><description>&lt;h1 id="laravel-で-phpunit-を使用してメール本文を確認する方法">Laravel で PHPUnit を使用してメール本文を確認する方法&lt;/h1>
+&lt;p>Laravel では 通常Mail送信時のメール内容の確認が出来ません。&lt;br />
+ただ文言の修正時に一々メールを送信して目で確認するのもとてもコストが掛かります。&lt;br />
+そのためにメール本文を確認する方法を確認します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>PHPUnit</category><category>テスト</category><category>Laravel</category></item><item><title>Laravel メールを自動的にマルチパート化する</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/03/13/laravel-mail-multipart/</link><pubDate>Sat, 13 Mar 2021 08:00:00 +0900</pubDate><atom:modified>Sat, 13 Mar 2021 08:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/03/13/laravel-mail-multipart/</guid><description>&lt;h1 id="larave-メールをマルチパート化">Larave メールをマルチパート化&lt;/h1>
+&lt;p>Laravel のメールで view を指定すると Laravel では view を実行してHTMLを生成します。&lt;br />
+そうするとHTMLメールになってしまいます。&lt;br />
+ただし、一部のメーラーだとHTMLメールが受け取れないのでテキストメールとのマルチパート化をする必要がありましたので、その時のメモ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Laravel</category><category>Laravel</category></item><item><title>Laravel View の文字列取得</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/03/10/laravel-view-render/</link><pubDate>Wed, 10 Mar 2021 18:00:00 +0900</pubDate><atom:modified>Wed, 10 Mar 2021 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/03/10/laravel-view-render/</guid><description>&lt;h1 id="laravel-view-の文字列取得">Laravel View の文字列取得&lt;/h1>
+&lt;p>Laravel で View の文字列を取得したい時の対応&lt;br />
+※Laravel 6.2 で確認&lt;/p>
+&lt;h2 id="サンプルソース">サンプルソース&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$viewStr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">View&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">make&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;home&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">render&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>指定のセクションを取得&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$viewStr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">View&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">make&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;home&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">renderSections&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="s1">&amp;#39;content&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Laravel</category><category>Laravel</category></item><item><title>Laravel Dusk テスト間でセッションデータを破棄する方法</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/02/13/laravel-dusk-session-destroy/</link><pubDate>Sat, 13 Feb 2021 09:00:00 +0900</pubDate><atom:modified>Tue, 16 Feb 2021 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/02/13/laravel-dusk-session-destroy/</guid><description>&lt;h1 id="laravel-dusk-テスト間でセッションデータを破棄する方法">Laravel Dusk テスト間でセッションデータを破棄する方法&lt;/h1>
+&lt;p>Laravel Duskでテストを作成していると&lt;strong>1クラス内で複数のテストメソッドを作った場合に同じブラウザでテストをされていたようでエラーになりました&lt;/strong>。&lt;br />
+そのため、例えばテストでログインした場合、次のテスト時にはログアウトを都度しなければいけないのと、前のセッションデータが残っていて想定してないエラーが発生する可能性があります。&lt;br />
+今回はその対策をメモ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>テスト</category><category>Laravel</category></item></channel></rss>

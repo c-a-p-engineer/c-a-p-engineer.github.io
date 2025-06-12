@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>JavaScript on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/categories/javascript/</link><description>Recent content in JavaScript on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Wed, 16 Apr 2025 01:00:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>【Javascript】 Web Audio API で音を操ろう！波形・周波数・音量をリアルタイム調整</title><link>https://c-a-p-engineer.github.io/tech/2025/04/16/web-audio-api-sound-control/</link><pubDate>Wed, 16 Apr 2025 01:00:00 +0900</pubDate><atom:modified>Wed, 16 Apr 2025 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2025/04/16/web-audio-api-sound-control/</guid><description>&lt;h1 id="web-audio-api-で音を操ろう波形周波数音量をリアルタイム調整">Web Audio API で音を操ろう！波形・周波数・音量をリアルタイム調整&lt;/h1>
+&lt;p>「ブラウザで音を鳴らす」そんなことが簡単にできるのをご存じでしょうか？&lt;/p>
+&lt;p>今回は &lt;strong>Web Audio API&lt;/strong> を使って、ブラウザ上で音を鳴らし、リアルタイムで「波形」「周波数」「音量」をコントロールできるサンプルを紹介します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>【Javascript】 ブラウザだけで音声合成！Web Speech APIの使い方とサンプルコード</title><link>https://c-a-p-engineer.github.io/tech/2025/04/16/web-speech-api-speech-synthesis-sample/</link><pubDate>Wed, 16 Apr 2025 01:00:00 +0900</pubDate><atom:modified>Wed, 16 Apr 2025 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2025/04/16/web-speech-api-speech-synthesis-sample/</guid><description>&lt;h1 id="ブラウザだけで音声合成web-speech-apiの使い方とサンプルコード">ブラウザだけで音声合成！Web Speech APIの使い方とサンプルコード&lt;/h1>
+&lt;p>最近のブラウザには便利な機能がたくさん搭載されています。その中でも「Web Speech API」を使えば、追加ライブラリなしでテキストを音声に変換することが可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>SVGで実現するインタラクティブ処理</title><link>https://c-a-p-engineer.github.io/tech/2025/03/20/svg-interactive/</link><pubDate>Thu, 20 Mar 2025 18:30:00 +0900</pubDate><atom:modified>Thu, 20 Mar 2025 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2025/03/20/svg-interactive/</guid><description>&lt;h1 id="svgで実現するインタラクティブ処理">SVGで実現するインタラクティブ処理&lt;/h1>
+&lt;p>Webデザインやインタラクティブなコンテンツ制作において、&lt;strong>SVG&lt;/strong>は非常に柔軟で高機能なツールです。&lt;br />
+ピクセルアート風のモンスターが画面いっぱいに動きながら、クリックした位置で爆発エフェクトを発生させるコードを例に、その仕組みと各部分の役割を解説します。&lt;br />
+SVGの仕組みのお陰で、要素ごとのアニメーションやイベントハンドリングがシームレスに実現できる点にも注目してください。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>【JavaScript】Handtrack.jsを使った手のリアルタイム検出</title><link>https://c-a-p-engineer.github.io/tech/2023/05/05/javascript-handtrack/</link><pubDate>Fri, 05 May 2023 17:30:00 +0900</pubDate><atom:modified>Fri, 05 May 2023 17:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/05/05/javascript-handtrack/</guid><description>&lt;h1 id="javascripthandtrackjsを使った手のリアルタイム検出">【JavaScript】Handtrack.jsを使った手のリアルタイム検出&lt;/h1>
+&lt;p>Handtrack.jsを使った手のリアルタイム検出して遊ぶ。&lt;/p>
+&lt;h2 id="handtrackjs">Handtrack.js&lt;/h2>
+&lt;p>近年の技術の進歩により、画像認識や物体検出などの機械学習タスクが簡単に実現できるようになりました。&lt;br />
+Handtrack.jsは、その中でも手の検出と追跡を行うためのJavaScriptライブラリです。&lt;br />
+Handtrack.jsを使用して手のリアルタイム検出を実装する方法をご紹介します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>【Javascript】Stream API を使って PHP から現在時刻を表示するサンプル</title><link>https://c-a-p-engineer.github.io/tech/2023/03/25/javascript-stream-api-php/</link><pubDate>Sat, 25 Mar 2023 16:00:00 +0900</pubDate><atom:modified>Sat, 25 Mar 2023 16:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/25/javascript-stream-api-php/</guid><description>&lt;h1 id="javascriptstream-api-を使って-php-から現在時刻を表示するサンプル">【Javascript】Stream API を使って PHP から現在時刻を表示するサンプル&lt;/h1>
+&lt;p>JavaScriptのStreams APIとPHPを使って、1秒ごとに時刻を更新する方法を説明します。&lt;br />
+サーバー側で1秒ごとに時刻を生成し、ブラウザ側でその時刻をリアルタイムで表示する方法を紹介します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>無料で使える WebSocket サーバー「Achex」</title><link>https://c-a-p-engineer.github.io/tech/2021/09/03/websocket-achex/</link><pubDate>Fri, 03 Sep 2021 10:00:00 +0900</pubDate><atom:modified>Fri, 03 Sep 2021 10:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/09/03/websocket-achex/</guid><description>&lt;h1 id="無料で使える-websocket-サーバーachex">無料で使える WebSocket サーバー「Achex」&lt;/h1>
+&lt;p>無料で使える WebSocket サーバー「Achex」を使用してみました。&lt;br />
+&lt;a href="https://achex.ca/" target="_blank" rel="nofollow noopener">Achex&lt;/a>&lt;/p>
+&lt;p>こちらは簡単に使用することが可能なのでチャットシステムなど簡単に作れそうです。&lt;br />
+ただし、使用する際はフリーのサーバーなのでセキュリティが必要なものにはおすすめしません。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>【JavaScript】PCのスクリーンキャプチャを取得する</title><link>https://c-a-p-engineer.github.io/tech/2021/08/29/javascript-display/</link><pubDate>Sun, 29 Aug 2021 09:00:00 +0900</pubDate><atom:modified>Sun, 29 Aug 2021 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/08/29/javascript-display/</guid><description>&lt;h1 id="javascriptスクリーンキャプチャを取得する">【JavaScript】スクリーンキャプチャを取得する&lt;/h1>
+&lt;p>PCのスクリーンキャプチャを取得するためのメモ&lt;/p>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>&lt;button id="start">Start Capture&lt;/button>&amp;nbsp;&lt;button id="stop">Stop Capture&lt;/button>&lt;/p>
+&lt;video id="video" autoplay>&lt;/video>
+&lt;script>
+const videoElem = document.getElementById("video");
+const logElem = document.getElementById("log");
+const startElem = document.getElementById("start");
+const stopElem = document.getElementById("stop");
+// 画面取得オプション
+var displayMediaOptions = {
+video: {
+cursor: "always"
+},
+audio: false
+};
+// イベント登録
+startElem.addEventListener("click", function(evt) {
+startCapture();
+}, false);
+stopElem.addEventListener("click", function(evt) {
+stopCapture();
+}, false);
+// 画面表示開始
+async function startCapture() {
+try {
+videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+dumpOptionsInfo();
+} catch(err) {
+console.error("Error: " + err);
+}
+}
+// 画面表示停止
+function stopCapture(evt) {
+let tracks = videoElem.srcObject.getTracks();
+tracks.forEach(track => track.stop());
+videoElem.srcObject = null;
+}
+&lt;/script>
+&lt;h2 id="サンプルソース">サンプルソース&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html:index.html" data-lang="html:index.html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;start&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Start Capture&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="ni">&amp;amp;nbsp;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stop&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Stop Capture&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">video&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;video&amp;#34;&lt;/span> &lt;span class="na">autoplay&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">video&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Log:&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">strong&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">pre&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;log&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">pre&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">videoElem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;video&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">logElem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;log&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">startElem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;start&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">stopElem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;stop&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 画面取得オプション
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">displayMediaOptions&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cursor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;always&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">audio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// イベント登録
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">startElem&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;click&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">evt&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">startCapture&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">},&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">stopElem&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;click&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">evt&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">stopCapture&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">},&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 画面表示開始
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">startCapture&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">videoElem&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">srcObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mediaDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getDisplayMedia&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">displayMediaOptions&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">dumpOptionsInfo&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Error: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 画面表示停止
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">stopCapture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">evt&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">tracks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">videoElem&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">srcObject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getTracks&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tracks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">track&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">track&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stop&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">videoElem&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">srcObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture" target="_blank" rel="nofollow noopener">Using the Screen Capture API - Web APIs | MDN&lt;/a>&lt;/li>
+&lt;/ul></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item><item><title>【JavaScript】カメラ・マイクを取得して画面に表示する</title><link>https://c-a-p-engineer.github.io/tech/2021/08/27/javascript-video/</link><pubDate>Fri, 27 Aug 2021 10:40:00 +0900</pubDate><atom:modified>Fri, 27 Aug 2021 10:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/08/27/javascript-video/</guid><description>&lt;h1 id="javascriptカメラを取得して画面に表示する">【JavaScript】カメラを取得して画面に表示する&lt;/h1>
+&lt;p>Web上でカメラ・マイクを取得、表示・停止するだけ。&lt;/p>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>&lt;button type="button" onclick="startVideo();">Start video&lt;/button> &lt;button type="button" onclick="stopVideo();">Stop video&lt;/button>&lt;br />
+&lt;video id="video" autoplay>&lt;/video>&lt;/p>
+&lt;script>
+var video = document.getElementById('video');
+var constraints = { audio: true, video: true };
+// カメラ・マイク開始
+function startVideo() {
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+video.srcObject = mediaStream;
+video.onloadedmetadata = function(e) {
+video.play();
+};
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); });
+}
+// カメラ・マイク停止
+function stopVideo() {
+let stream = video.srcObject;
+let tracks = stream.getTracks();
+tracks.forEach(function(track) {
+track.stop();
+});
+video.srcObject = null;
+}
+&lt;/script>
+&lt;h2 id="サンプルソース">サンプルソース&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html:index.html" data-lang="html:index.html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;button&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;startVideo();&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Start video&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;button&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stopVideo();&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Stop video&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">video&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;video&amp;#34;&lt;/span> &lt;span class="na">autoplay&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width: 240px; height: 180px; border: 1px solid black;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">video&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">video&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;video&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">constraints&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">audio&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">video&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// カメラ・マイク開始
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">startVideo&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mediaDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getUserMedia&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">constraints&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">mediaStream&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">srcObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">mediaStream&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onloadedmetadata&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">play&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// カメラ・マイク停止
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">stopVideo&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">stream&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">video&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">srcObject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">tracks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">stream&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getTracks&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tracks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">track&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">track&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">video&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">srcObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="nofollow noopener">MediaDevices.getUserMedia() - Web API | MDN&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/ja/docs/Web/API/MediaStreamTrack/stop" target="_blank" rel="nofollow noopener">MediaStreamTrack.stop() - Web API | MDN&lt;/a>&lt;/li>
+&lt;/ul></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/javascript.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>JavaScript</category><category>JavaScript</category></item></channel></rss>

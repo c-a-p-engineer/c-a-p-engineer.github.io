@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Git on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/tags/git/</link><description>Recent content in Git on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Fri, 06 Jan 2023 15:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>【Git】Git Clone を高速で行う</title><link>https://c-a-p-engineer.github.io/tech/2023/01/06/git-fast-clone/</link><pubDate>Fri, 06 Jan 2023 15:30:00 +0900</pubDate><atom:modified>Fri, 06 Jan 2023 15:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/01/06/git-fast-clone/</guid><description>&lt;h1 id="gitgit-clone-を高速で行う">【Git】Git Clone を高速で行う&lt;/h1>
+&lt;p>Git Clone を単純に行うと数分待つこともあります。そういう時に高速化する方法を紹介。&lt;/p>
+&lt;p>サンプルとして取得するGitリポジトリはFlutterを使用しています。&lt;br />
+計測は以下のようにしています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 git log をキレイに整えて見やすくする方法</title><link>https://c-a-p-engineer.github.io/tech/2022/09/19/git-log-pretty-format/</link><pubDate>Mon, 19 Sep 2022 09:00:00 +0900</pubDate><atom:modified>Mon, 19 Sep 2022 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/19/git-log-pretty-format/</guid><description>&lt;h1 id="git-git-log-をキレイに整えて見やすくする方法">【Git】 git log をキレイに整えて見やすくする方法&lt;/h1>
+&lt;p>git log をキレイに整えて見やすくする方法メモ&lt;/p>
+&lt;h2 id="git-log">git log&lt;/h2>
+&lt;p>&lt;code>git log&lt;/code> を普通に実行すると以下のようになります。&lt;/p>
+&lt;p>&lt;img src="https://c-a-p-engineer.github.io/tech/2022/09/19/git-log-pretty-format/git-log.png" alt="git-log" title="git-log">&lt;/p>
+&lt;h3 id="フォーマットを指定する">フォーマットを指定する&lt;/h3>
+&lt;p>&lt;code>--pretty&lt;/code> を使用することで出力する日付やハッシュなどに色を付けることが可能になります。&lt;br />
+また &lt;code>--graph&lt;/code> を使用するとコミットグラフを見ることができます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】複数のコミットをcherry-pickする方法</title><link>https://c-a-p-engineer.github.io/tech/2022/08/11/git-cherry-pick-multi/</link><pubDate>Thu, 11 Aug 2022 11:00:00 +0900</pubDate><atom:modified>Thu, 11 Aug 2022 11:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/08/11/git-cherry-pick-multi/</guid><description>&lt;h1 id="git複数のコミットをcherry-pickする方法">【Git】複数のコミットをcherry-pickする方法&lt;/h1>
+&lt;p>Gitで複数のコミットをcherry-pickする方法メモ&lt;/p>
+&lt;h2 id="通常のcherry-pick">通常のcherry-pick&lt;/h2>
+&lt;p>通常のcherry-pick&lt;/p>
+&lt;pre tabindex="0">&lt;code>git cherry-pick {コミットハッシュ}
+&lt;/code>&lt;/pre>&lt;h2 id="複数のコミットのcherry-pick">複数のコミットのcherry-pick&lt;/h2>
+&lt;p>複数のコミットのcherry-pick&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】別ブランチで作業したファイルを持ってくる</title><link>https://c-a-p-engineer.github.io/tech/2022/06/28/git-another-branch-file-get/</link><pubDate>Tue, 28 Jun 2022 18:30:00 +0900</pubDate><atom:modified>Tue, 28 Jun 2022 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/28/git-another-branch-file-get/</guid><description>&lt;h1 id="git別ブランチで作業したファイルを持ってくる">【Git】別ブランチで作業したファイルを持ってくる&lt;/h1>
+&lt;p>別ブランチで作業したファイルを現在のブランチに持ってくる方法。&lt;/p>
+&lt;h2 id="別ブランチから取得">別ブランチから取得&lt;/h2>
+&lt;pre tabindex="0">&lt;code>git checkout [取得元ブランチ or コミットハッシュ] [取得ファイル or 取得ディレクトリ]
+&lt;/code>&lt;/pre>&lt;p>以下のようにすると &lt;code>hoge&lt;/code> ブランチから &lt;code>sample.txt&lt;/code> を取得してきます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 fatal: Unable to create '.git/index.lock': File exists. の解決</title><link>https://c-a-p-engineer.github.io/tech/2022/04/08/git-fatal-index/</link><pubDate>Fri, 08 Apr 2022 02:00:00 +0900</pubDate><atom:modified>Fri, 08 Apr 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/04/08/git-fatal-index/</guid><description>&lt;h1 id="git-fatal-unable-to-create-gitindexlock-file-exists-の解決">【Git】 fatal: Unable to create &amp;lsquo;.git/index.lock&amp;rsquo;: File exists. の解決&lt;/h1>
+&lt;p>Git操作を行おうとしたら &lt;code>fatal: Unable to create '.git/index.lock': File exists.&lt;/code> が出たきたので解決方法メモ&lt;/p>
+&lt;h2 id="エラー">エラー&lt;/h2>
+&lt;p>&lt;code>pull&lt;/code> などのGitの操作を行った際に発生。&lt;/p>
+&lt;pre tabindex="0">&lt;code>fatal: Unable to create &amp;#39;.git/index.lock&amp;#39;: File exists.
+&lt;/code>&lt;/pre>&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>排他制御用のファイルが &lt;code>.git/index.lock&lt;/code> が存在する。&lt;br />
+そのため別にGitの操作が行われている。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 作業ブランチにリベースを使って指定のブランチと最新の状態にマージする</title><link>https://c-a-p-engineer.github.io/tech/2022/03/06/git-rebase-brunch/</link><pubDate>Sun, 06 Mar 2022 05:00:00 +0900</pubDate><atom:modified>Sun, 06 Mar 2022 05:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/03/06/git-rebase-brunch/</guid><description>&lt;h1 id="git-作業ブランチにリベースを使って指定のブランチと最新の状態にマージする">【【Git】 作業ブランチにリベースを使って指定のブランチと最新の状態にマージする&lt;/h1>
+&lt;p>作業ブランチで作業していると元ブランチとずっと枝分かれ状態で履歴が追いにくくなるので作業ブランチと指定のブランチをリベースを使ってマージする方法。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 複数のコミットを rebase を使って1つにまとめる</title><link>https://c-a-p-engineer.github.io/tech/2022/03/06/git-rebase-i/</link><pubDate>Sun, 06 Mar 2022 02:00:00 +0900</pubDate><atom:modified>Sun, 06 Mar 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/03/06/git-rebase-i/</guid><description>&lt;h1 id="git-複数のコミットを-rebase-を使って1つにまとめる">【Git】 複数のコミットを rebase を使って1つにまとめる&lt;/h1>
+&lt;p>複数のコミットログを rebase を使って1つのコミットとしてきれいにする方法&lt;/p>
+&lt;h2 id="rebase-を使って複数コミットをまとめる">rebase を使って複数コミットをまとめる&lt;/h2>
+&lt;h3 id="1-リベースを実行">1. リベースを実行&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>~&lt;/code> を使って指定&lt;br />
+&lt;code>~&lt;/code> の数に応じてコミットをまとめます。&lt;br />
+&lt;code>~&lt;/code> 4つなら4つのコミットを1つにします。&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>git rebase -i HEAD~~~~
+&lt;/code>&lt;/pre>&lt;br>
+* 数値を指定
+数値を指定してまとめるコミット数を指定します。
+```
+git rebase -i HEAD~4
+```
+&lt;br>
+* ハッシュ値を指定
+どこまでもコミットをまとめるかをハッシュ値を指定します。
+```
+git rebase [ハッシュ値]
+```
+&lt;h3 id="2-コミットメッセージ修正">2. コミットメッセージ修正&lt;/h3>
+&lt;p>リベースを実行するとエディタが起動します。&lt;br />
+指定された箇所までのコミットが表示されます。&lt;br />
+※特に設定してなければ &lt;code>Vim&lt;/code> が起動すると思うので使い慣れてない方は注意してください。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 直前のコミットのコミットを修正する amend</title><link>https://c-a-p-engineer.github.io/tech/2022/03/02/git-commit-change/</link><pubDate>Wed, 02 Mar 2022 05:00:00 +0900</pubDate><atom:modified>Wed, 02 Mar 2022 05:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/03/02/git-commit-change/</guid><description>&lt;h1 id="git-直前のコミットのコミットを修正する-amend">【Git】 直前のコミットのコミットを修正する amend&lt;/h1>
+&lt;p>Git でコミットメッセージに誤字やコミット忘れのファイルが有る際の対応メモ&lt;/p>
+&lt;h2 id="直前のコミットメッセージを修正">直前のコミットメッセージを修正&lt;/h2>
+&lt;h3 id="エディタを開いてコミットメッセージを編集">エディタを開いてコミットメッセージを編集&lt;/h3>
+&lt;p>エディタ上で修正します。&lt;/p>
+&lt;pre tabindex="0">&lt;code>git commit --amend
+&lt;/code>&lt;/pre>&lt;h3 id="コミットメッセージを指定">コミットメッセージを指定&lt;/h3>
+&lt;p>&lt;code>-m&lt;/code> オプションで文言をターミナル上で指定します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 would clobber existing tag を解決する</title><link>https://c-a-p-engineer.github.io/tech/2022/02/23/git-existing-tag/</link><pubDate>Wed, 23 Feb 2022 11:00:00 +0900</pubDate><atom:modified>Wed, 23 Feb 2022 11:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/02/23/git-existing-tag/</guid><description>&lt;h1 id="git-would-clobber-existing-tag-を解決する">【Git】 would clobber existing tag を解決する&lt;/h1>
+&lt;p>&lt;code>git pull&lt;/code> を行ったら以下のようなエラーが発生&lt;/p>
+&lt;pre tabindex="0">&lt;code>! [rejected] tag -&amp;gt; tag (would clobber existing tag)
+&lt;/code>&lt;/pre>&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>ローカルリポジトリとリモートリポジトリのタグの名前が重複していることが原因。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】ファイル名の大文字・小文字の変更を検知</title><link>https://c-a-p-engineer.github.io/tech/2022/01/11/git-ignorecase/</link><pubDate>Tue, 11 Jan 2022 23:40:00 +0900</pubDate><atom:modified>Tue, 11 Jan 2022 23:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/01/11/git-ignorecase/</guid><description>&lt;h1 id="gitファイル名の大文字小文字の変更を検知">【Git】ファイル名の大文字・小文字の変更を検知&lt;/h1>
+&lt;p>Gitではデフォルトでファイル名の大文字・小文字の変更は検知しない設定になっているため、ファイル名の大文字・小文字の変更を検知するメモ&lt;/p>
+&lt;h2 id="確認">確認&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ git config --local core.ignorecase
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>true&lt;/code> だとファイル名の大小文字の変更を検知しません。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】git で自動的に prune する</title><link>https://c-a-p-engineer.github.io/tech/2021/12/31/git-prune-setting/</link><pubDate>Fri, 31 Dec 2021 15:50:00 +0900</pubDate><atom:modified>Fri, 31 Dec 2021 15:50:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/12/31/git-prune-setting/</guid><description>&lt;h1 id="gitgit-で自動的に-prune-する">【Git】git で自動的に prune する&lt;/h1>
+&lt;p>不要になったブランチを取り除くために &lt;code>prune&lt;/code> を自動的に行う設定メモ&lt;br />
+&lt;code>prune&lt;/code> は Gitで削除されたリポジトリをローカルから取り除くためのコマンドです。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Docker】Docker Desktop で VPN を使用しているとwsl2でエラーが出る</title><link>https://c-a-p-engineer.github.io/tech/2021/11/09/docker-wsl2-vpn-error/</link><pubDate>Tue, 09 Nov 2021 02:00:00 +0900</pubDate><atom:modified>Tue, 09 Nov 2021 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/11/09/docker-wsl2-vpn-error/</guid><description>&lt;h1 id="dockerdocker-desktop-vpn-を使用しているとwsl2でエラーが出る">【Docker】Docker Desktop VPN を使用しているとwsl2でエラーが出る&lt;/h1>
+&lt;p>Docker Desktop で VPN を使用しているとwsl2でエラーが出る。&lt;/p>
+&lt;h2 id="現象">現象&lt;/h2>
+&lt;p>Docker Desktop を &lt;code>Hyper-v&lt;/code> から &lt;code>wsl2&lt;/code> に切り替え。&lt;br />
+切り替えて再起動後に Docker Desktop がエラーを出すようになりました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】 autocrlf false なのに CRLF に自動変換される現象</title><link>https://c-a-p-engineer.github.io/tech/2021/11/07/git-autocrlf-auto/</link><pubDate>Sun, 07 Nov 2021 16:00:00 +0900</pubDate><atom:modified>Sun, 07 Nov 2021 16:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/11/07/git-autocrlf-auto/</guid><description>&lt;h1 id="git-autocrlf-false-なのに-crlf-に自動変換される現象">【Git】 autocrlf false なのに CRLF に自動変換される現象&lt;/h1>
+&lt;p>Git で autocrlf false なのに CRLF に自動変換される現象が発生。&lt;br />
+その解決方法のメモ。&lt;/p>
+&lt;h2 id="現象">現象&lt;/h2>
+&lt;p>Git の &lt;code>autocrlf=false&lt;/code> なのにリポジトリにアップされているファイルと改行コードが違う。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【Git】error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)</title><link>https://c-a-p-engineer.github.io/tech/2021/06/29/github-error-rpc-failed/</link><pubDate>Tue, 29 Jun 2021 10:30:00 +0900</pubDate><atom:modified>Tue, 29 Jun 2021 10:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/06/29/github-error-rpc-failed/</guid><description>&lt;h1 id="error-rpc-failed-curl-92-http2-stream-0-was-not-closed-cleanly-cancel-err-8">error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)&lt;/h1>
+&lt;p>&lt;code>Git&lt;/code> を利用していて以下のエラーが発生しました。&lt;/p>
+&lt;pre tabindex="0">&lt;code>error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+&lt;/code>&lt;/pre>&lt;h2 id="対処">対処&lt;/h2>
+&lt;p>以下のコマンド &lt;code>HTTP/2&lt;/code> から &lt;code>HTTP/1.1&lt;/code> にダウングレードすることで解決しました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item><item><title>【bash】Git のローカルブランチが最新か判定するbashスクリプト</title><link>https://c-a-p-engineer.github.io/tech/2021/05/17/bash-git-update/</link><pubDate>Mon, 17 May 2021 09:00:00 +0900</pubDate><atom:modified>Mon, 17 May 2021 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/05/17/bash-git-update/</guid><description>&lt;h1 id="ローカルブランチが最新か判定するbashスクリプト">ローカルブランチが最新か判定するbashスクリプト&lt;/h1>
+&lt;p>Git のローカルブランチが最新か判定するbashスクリプト&lt;/p>
+&lt;h2 id="bash">bash&lt;/h2>
+&lt;p>&lt;code>cd /git/repo&lt;/code> は実際に調べたいディレクトリをしていしてください。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash:git_pull.sh" data-lang="bash:git_pull.sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /git/repo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">changed&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git status -uno &lt;span class="p">|&lt;/span> grep -q &lt;span class="s1">&amp;#39;Your branch is behind&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nv">changed&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="nv">$changed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 更新&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> git pull
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Updated successfully&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 最新&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Up-to-date&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>これを &lt;code>cron&lt;/code> に設定することで自動的に最新にすることが出来ます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>git</category><category>bash</category><category>bash</category></item><item><title>【Git】pull したら error: cannot lock ref が出たので対処</title><link>https://c-a-p-engineer.github.io/tech/2021/02/20/git-prune/</link><pubDate>Sat, 20 Feb 2021 09:00:00 +0900</pubDate><atom:modified>Sat, 20 Feb 2021 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/02/20/git-prune/</guid><description>&lt;h1 id="git-pull-したら-error-cannot-lock-ref-が出たので対処">git pull したら error: cannot lock ref が出たので対処&lt;/h1>
+&lt;p>&lt;code>git pull&lt;/code>をしたら以下のようなエラーが出てきました。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">error: cannot lock ref &lt;span class="s1">&amp;#39;refs/remotes/origin/feature/hoge/fuga&amp;#39;&lt;/span>: &lt;span class="s1">&amp;#39;refs/remotes/origin/feature/hoge&amp;#39;&lt;/span> exists&lt;span class="p">;&lt;/span> cannot create &lt;span class="s1">&amp;#39;refs/remotes/origin/feature/hoge/fuga&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="エラー理由">エラー理由&lt;/h2>
+&lt;p>これは古いブランチ &lt;code>refs/remotes/origin/feature/hoge&lt;/code> は既にリモートリポジトリから削除されているのですがローカルに存在するために &lt;code>git pull&lt;/code> しても新たに &lt;code>refs/remotes/origin/feature/hoge/fuga&lt;/code> が作れないというのが理由です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/git.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item></channel></rss>

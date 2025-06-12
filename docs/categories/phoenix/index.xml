@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Phoenix on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/categories/phoenix/</link><description>Recent content in Phoenix on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Wed, 15 Mar 2023 18:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/categories/phoenix/index.xml" rel="self" type="application/rss+xml"/><item><title>【Elixir】Phoenix LiveView でJSを書かずにアニメーションなどを実装する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/15/elixir-phoenix-live-js/</link><pubDate>Wed, 15 Mar 2023 18:30:00 +0900</pubDate><atom:modified>Wed, 15 Mar 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/15/elixir-phoenix-live-js/</guid><description>&lt;h1 id="elixirphoenix-liveview-でjsを書かずにアニメーションなどを実装する方法">【Elixir】Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法&lt;/h1>
+&lt;p>Elixir の Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法。&lt;br />
+折角 LiveView を使っているのに一々画面項目の表示/非表示などの簡単なJSを一々書きたくないなって考えたら実装方法がありましたのでメモ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】Phoenix で PhoenixLiveSession を使用して LiveView で Session を使用する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/14/elixir-phoenix-live-session/</link><pubDate>Tue, 14 Mar 2023 12:30:00 +0900</pubDate><atom:modified>Sun, 16 Apr 2023 00:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/14/elixir-phoenix-live-session/</guid><description>&lt;h1 id="elixirphoenix-で-phoenixlivesession-を使用して-liveview-で-session-を使用する">【Elixir】Phoenix で PhoenixLiveSession を使用して LiveView で Session を使用する&lt;/h1>
+&lt;p>Elixir Phoenix で PhoenixLiveSession を使用して LiveView で Session を使用する方法。&lt;br />
+通常 LiveView 上では Session を扱えません。&lt;br />
+Session を扱えるように PhoenixLiveSession を導入する必要があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】Phoenix で静的ファイルを追加する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/08/elixir-phoenix-static-file/</link><pubDate>Thu, 09 Mar 2023 12:30:00 +0900</pubDate><atom:modified>Thu, 09 Mar 2023 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/08/elixir-phoenix-static-file/</guid><description>&lt;h1 id="elixirphoenix-で静的ファイルを追加する">【Elixir】Phoenix で静的ファイルを追加する&lt;/h1>
+&lt;p>Elixir Phoenix の環境で静的ファイルを追加する方法&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="静的ファイルを追加する">静的ファイルを追加する&lt;/h2>
+&lt;ol>
+&lt;li>&lt;code>priv/static/&lt;/code> にフォルダを追加します。&lt;/li>
+&lt;li>&lt;code>lib/demo_web/endpoint.ex&lt;/code> に追加したフォルダ名を追加&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>only&lt;/code> の箇所に &lt;code>hoge&lt;/code> 追加&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="hl">&lt;span class="lnt">5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-lib/demo_web/endpoint.ex" data-lang="lib/demo_web/endpoint.ex">&lt;span class="line">&lt;span class="cl"> &lt;span class="n">plug&lt;/span> &lt;span class="nc">Plug.Static&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">at&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">from&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="ss">:sdm&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">gzip&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="no">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="ss">only&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="sx">~w(assets fonts images favicon.ico robots.txt hoge)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>&lt;code>Routes.static_path&lt;/code> を使用してテンプレート側で使用する。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html:lib/demo_web/templates/hoge/hoge.html.heex..html" data-lang="html:lib/demo_web/templates/hoge/hoge.html.heex..html">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">{Routes.static_path(@conn,&lt;/span> &lt;span class="err">&amp;#34;/&lt;/span>&lt;span class="na">hoge&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">hoge&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">png&lt;/span>&lt;span class="err">&amp;#34;)}&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;hoge&amp;#34;&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>これにより画像などの静的ファイルの呼び出しが可能になります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】ログイン制御 セッションでアクセス制限を実現する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/02/elixir-session-auth/</link><pubDate>Thu, 02 Mar 2023 18:30:00 +0900</pubDate><atom:modified>Thu, 02 Mar 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/02/elixir-session-auth/</guid><description>&lt;h1 id="elixirログイン制御-セッションでアクセス制限を実現する">【Elixir】ログイン制御 セッションでアクセス制限を実現する&lt;/h1>
+&lt;p>Elixir でログイン制御 セッションでアクセス制限を実現する&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="セッション制御">セッション制御&lt;/h2>
+&lt;p>特定のセッション（ログインなど）がない場合にアクセスが出来ないようにします。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item></channel></rss>

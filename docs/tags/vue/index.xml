@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Vue on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/tags/vue/</link><description>Recent content in Vue on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Tue, 20 Dec 2022 00:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>【Vue3 + Typescript】Pinia のデータを永続化する方法</title><link>https://c-a-p-engineer.github.io/tech/2022/12/20/vue3-typescript-pinia-persisted/</link><pubDate>Tue, 20 Dec 2022 00:30:00 +0900</pubDate><atom:modified>Tue, 20 Dec 2022 00:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/20/vue3-typescript-pinia-persisted/</guid><description>&lt;h1 id="vue3--typescriptpinia-のデータを永続化する方法">【Vue3 + Typescript】pinia のデータを永続化する方法&lt;/h1>
+&lt;p>Vue3 &amp;amp; Typescript 環境で Pinia のデータを永続化する方法メモ&lt;/p>
+&lt;h2 id="環境情報">環境情報&lt;/h2>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>Vite 3.2.38&lt;/li>
+&lt;li>Vue 3.0.9&lt;/li>
+&lt;li>TypeScript 3.0.9&lt;/li>
+&lt;li>Pinia 3.0.9&lt;/li>
+&lt;/ul>
+&lt;h2 id="pinia-のデータを永続化する">pinia のデータを永続化する&lt;/h2>
+&lt;p>今回 &lt;a href="https://github.com/prazdevs/pinia-plugin-persistedstate" target="_blank" rel="nofollow noopener">prazdevs/pinia-plugin-persistedstate&lt;/a> を使用します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/vue.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Vue</category><category>Vue</category></item><item><title>【Vue】Viteのホットリロードが動かない時の対応方法</title><link>https://c-a-p-engineer.github.io/tech/2022/12/08/vue3-vite-hotreload/</link><pubDate>Thu, 08 Dec 2022 00:30:00 +0900</pubDate><atom:modified>Thu, 08 Dec 2022 00:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/08/vue3-vite-hotreload/</guid><description>&lt;h1 id="vueviteのホットリロードが動かない時の対応方法">【Vue】Viteのホットリロードが動かない時の対応方法&lt;/h1>
+&lt;p>Dokcerで Vite + Vue3 + TypeScript で構成したフロントエンドがホットリロードが動かない時の対処法メモ&lt;/p>
+&lt;h2 id="環境情報">環境情報&lt;/h2>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>Vite 3.2.38&lt;/li>
+&lt;li>Vue 3.0.9&lt;/li>
+&lt;/ul>
+&lt;h2 id="対処方法">対処方法&lt;/h2>
+&lt;p>&lt;code>vite.config.ts&lt;/code> にホットリロードの設定を追記する。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="hl">&lt;span class="lnt">3
+&lt;/span>&lt;/span>&lt;span class="hl">&lt;span class="lnt">4
+&lt;/span>&lt;/span>&lt;span class="hl">&lt;span class="lnt">5
+&lt;/span>&lt;/span>&lt;span class="hl">&lt;span class="lnt">6
+&lt;/span>&lt;/span>&lt;span class="hl">&lt;span class="lnt">7
+&lt;/span>&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts:vite.config.ts" data-lang="ts:vite.config.ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="nx">defineConfig&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">plugins&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">vue&lt;/span>&lt;span class="p">()],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="nx">server&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="nx">watch&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="nx">usePolling&lt;/span>: &lt;span class="kt">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://qiita.com/kaazzo/items/53388e83d9587f50f856" target="_blank" rel="nofollow noopener">WSL2上のコンテナでの開発時にviteのホットリロードが効かない事象への対処法 - Qiita&lt;/a>&lt;/li>
+&lt;/ul></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/vue.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Vue</category><category>Vue</category></item></channel></rss>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>GoLang on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/categories/golang/</link><description>Recent content in GoLang on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Sat, 22 Oct 2022 12:00:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>【GoLang】ヒアドキュメント（複数行の文字列）を使用する方法</title><link>https://c-a-p-engineer.github.io/tech/2022/10/22/go-heredoc/</link><pubDate>Sat, 22 Oct 2022 12:00:00 +0900</pubDate><atom:modified>Sat, 22 Oct 2022 12:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/22/go-heredoc/</guid><description>&lt;h1 id="golangヒアドキュメント複数行の文字列を使用する方法">【GoLang】ヒアドキュメント（複数行の文字列）を使用する方法&lt;/h1>
+&lt;p>Go でヒアドキュメント（複数行の文字列）を使用する方法メモ&lt;/p>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;p>&lt;code>` &lt;/code> バッククォートで囲うと複数行にまたがって文字列を使用できます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="hl">&lt;span class="lnt">4
+&lt;/span>&lt;/span>&lt;span class="hl">&lt;span class="lnt">5
+&lt;/span>&lt;/span>&lt;span class="hl">&lt;span class="lnt">6
+&lt;/span>&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go:sample.go" data-lang="go:sample.go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="nx">str&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">`1st line
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl">&lt;span class="s">2nd line
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl">&lt;span class="s">3rd line`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Go_Logo_Aqua.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>GoLang</category><category>GoLang</category></item><item><title>【GoLang】クロスコンパイルさせる方法</title><link>https://c-a-p-engineer.github.io/tech/2022/09/05/go-build/</link><pubDate>Mon, 05 Sep 2022 19:00:00 +0900</pubDate><atom:modified>Mon, 05 Sep 2022 19:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/05/go-build/</guid><description>&lt;h1 id="golangクロスコンパイルさせる方法">【GoLang】クロスコンパイルさせる方法&lt;/h1>
+&lt;p>Go でクロスコンパイルさせる方法&lt;/p>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go:hello.go" data-lang="go:hello.go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="通常のビルドコマンド">通常のビルドコマンド&lt;/h2>
+&lt;p>実行環境用のビルドを行うコマンドです。&lt;/p>
+&lt;pre tabindex="0">&lt;code>go build [ビルドするファイル名]
+go build hello.go
+&lt;/code>&lt;/pre>&lt;p>このビルドを行うと実行環境用のコンパイルが走ります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Go_Logo_Aqua.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>GoLang</category><category>GoLang</category></item><item><title>【GoLang】go: cannot use path@version syntax in GOPATH mode 解決</title><link>https://c-a-p-engineer.github.io/tech/2022/06/22/golang-go-get-version/</link><pubDate>Wed, 22 Jun 2022 18:30:00 +0900</pubDate><atom:modified>Wed, 22 Jun 2022 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/22/golang-go-get-version/</guid><description>&lt;h1 id="golanggo-cannot-use-pathversion-syntax-in-gopath-mode-解決">【GoLang】go: cannot use path@version syntax in GOPATH mode 解決&lt;/h1>
+&lt;p>&lt;code>go: cannot use path@version syntax in GOPATH mode&lt;/code> 解決メモ&lt;/p>
+&lt;h2 id="現象">現象&lt;/h2>
+&lt;p>発生バージョン&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Go 1.15&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Go&lt;/code> の場合はパッケージを入れる際に &lt;code>@&lt;/code> の後ろにバージョンを指定すると指定のバージョンを入れることができます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Go_Logo_Aqua.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>GoLang</category><category>コーディング規約</category><category>GoLang</category></item><item><title>【GoLang】文字列を簡単に切り出す</title><link>https://c-a-p-engineer.github.io/tech/2022/05/18/golang-string-split/</link><pubDate>Tue, 17 May 2022 03:30:00 +0900</pubDate><atom:modified>Tue, 17 May 2022 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/05/18/golang-string-split/</guid><description>&lt;h1 id="golang文字列を簡単に切り出す">【GoLang】文字列を簡単に切り出す&lt;/h1>
+&lt;p>&lt;code>GoLang&lt;/code> で文字列を簡単に切り出すコロン記法メモ&lt;/p>
+&lt;h2 id="文字列を簡単に切り出す">文字列を簡単に切り出す&lt;/h2>
+&lt;p>&lt;code>GoLang&lt;/code> では簡単に文字列を切り出す方法があります。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go:main.go" data-lang="go:main.go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// わかりやすく数字&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">numbers&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;123456789&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 5文字目以降（56789&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">numbers&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">:])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 3文字目以前（123&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">numbers&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 6文字目 - 7文字目（67&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">numbers&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>1文字目は &lt;code>0&lt;/code> から始まります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Go_Logo_Aqua.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>GoLang</category><category>GoLang</category></item><item><title>【GoLang】コーディング規約</title><link>https://c-a-p-engineer.github.io/tech/2021/12/15/golang-coding-style/</link><pubDate>Wed, 15 Dec 2021 03:30:00 +0900</pubDate><atom:modified>Wed, 15 Dec 2021 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/12/15/golang-coding-style/</guid><description>&lt;h1 id="golangコーディング規約">【GoLang】コーディング規約&lt;/h1>
+&lt;p>Goのコーディング規約まとめ&lt;/p>
+&lt;h2 id="コーディング規約">コーディング規約&lt;/h2>
+&lt;h3 id="インデント">インデント&lt;/h3>
+&lt;ul>
+&lt;li>タブを使用
+&lt;ul>
+&lt;li>半角スペースは使用しない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="文字数">文字数&lt;/h3>
+&lt;ul>
+&lt;li>1行あたりの文字数の制限はない
+&lt;ul>
+&lt;li>長すぎる場合は改行しても良い&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="コメント">コメント&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>/* */&lt;/code> ブロックコメント&lt;/li>
+&lt;li>&lt;code>//&lt;/code> 行コメント&lt;/li>
+&lt;li>連続したコメントは縦に揃える&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span> &lt;span class="nx">T&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="c1">// name of the object&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">value&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="c1">// its value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="演算子">演算子&lt;/h3>
+&lt;ul>
+&lt;li>演算子の前後にスペースを入れない。
+&lt;ul>
+&lt;li>演算子の優先順位を明確にする時のみスペースを入れる。括弧は使用しない&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">x&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="mi">8&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">y&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="mi">16&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="自動整形">自動整形&lt;/h3>
+&lt;p>以下のコマンドを使用することで go が自動的に整形をしてくれます&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Go_Logo_Aqua.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>GoLang</category><category>コーディング規約</category><category>GoLang</category></item></channel></rss>

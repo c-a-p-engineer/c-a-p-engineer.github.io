@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Elixir on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/tags/elixir/</link><description>Recent content in Elixir on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Fri, 08 Nov 2024 13:00:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/tags/elixir/index.xml" rel="self" type="application/rss+xml"/><item><title>【Elixir】OptionParser.parse! でCLIオプションをパースする方法：Mixタスクでの実用例</title><link>https://c-a-p-engineer.github.io/tech/2024/11/08/elixir-cli-optionparser-mix-task/</link><pubDate>Fri, 08 Nov 2024 13:00:00 +0900</pubDate><atom:modified>Fri, 08 Nov 2024 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/11/08/elixir-cli-optionparser-mix-task/</guid><description>&lt;h1 id="elixiroptionparserparse-でcliオプションをパースする方法mixタスクでの実用例">【Elixir】OptionParser.parse! でCLIオプションをパースする方法：Mixタスクでの実用例&lt;/h1>
+&lt;p>ElixirでCLIツールやMixタスクを作成する際、ユーザーからのコマンドライン入力に応じて処理を分岐させたり、動的な引数を渡したりすることがよくあります。Elixirの&lt;code>OptionParser.parse!&lt;/code>を使うことで、コマンドラインオプションを簡単に解析し、柔軟な処理を行うことが可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix LiveView live_redirect内にlive_componentを配置する方法：aタグでシンプルに対応する</title><link>https://c-a-p-engineer.github.io/tech/2024/11/09/elixir-live_component_link/</link><pubDate>Fri, 08 Nov 2024 13:00:00 +0900</pubDate><atom:modified>Fri, 08 Nov 2024 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/11/09/elixir-live_component_link/</guid><description>&lt;h1 id="elixirphoenix-liveview-live_redirect内にlive_componentを配置する方法aタグでシンプルに対応する">【Elixir】Phoenix LiveView live_redirect内にlive_componentを配置する方法：aタグでシンプルに対応する&lt;/h1>
+&lt;p>Phoenix LiveViewを使って開発する際、&lt;code>live_redirect&lt;/code>の内部に&lt;code>live_component&lt;/code>を配置すると、コンパイルエラーが発生することがあります。このエラーは&lt;code>live_component&lt;/code>が&lt;code>live_redirect&lt;/code>内で正しく扱われないために発生します。この記事では、このエラーの原因と、&lt;code>a&lt;/code>タグでシンプルに解決する方法を解説します。実際のサンプルコードを用いながら、エラーの回避方法について説明します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】AWS RDSへの接続方法</title><link>https://c-a-p-engineer.github.io/tech/2024/07/26/elixir-awd-rds-ca/</link><pubDate>Fri, 26 Jul 2024 02:20:00 +0900</pubDate><atom:modified>Fri, 26 Jul 2024 02:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/07/26/elixir-awd-rds-ca/</guid><description>&lt;h1 id="elixiraws-rdsへの接続方法">【Elixir】AWS RDSへの接続方法&lt;/h1>
+&lt;p>Elixir で AWS RDSを使用する際にTLS接続を確保するためにサーバー証明書の検証が必要になることがあります。Elixirプロジェクトで&lt;code>aws_rds_castore&lt;/code>ライブラリを用いた証明書検証の方法を解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】MixプロジェクトでJasonを導入し、config.exsで使用する方法</title><link>https://c-a-p-engineer.github.io/tech/2024/07/20/elixir-jason-config/</link><pubDate>Sat, 20 Jul 2024 00:00:00 +0900</pubDate><atom:modified>Sat, 20 Jul 2024 00:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/07/20/elixir-jason-config/</guid><description>&lt;h1 id="elixirmixプロジェクトでjasonを導入しconfigexsで使用する方法">【Elixir】MixプロジェクトでJasonを導入し、config.exsで使用する方法&lt;/h1>
+&lt;p>ElixirプロジェクトでJSONエンコーディングとデコーディングを行うために、Jasonライブラリを導入し、無理やり&lt;code>config.exs&lt;/code>で使用する方法について&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】ガード節について</title><link>https://c-a-p-engineer.github.io/tech/2024/07/02/elixir-guards/</link><pubDate>Tue, 02 Jul 2024 03:30:00 +0900</pubDate><atom:modified>Tue, 02 Jul 2024 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/07/02/elixir-guards/</guid><description>&lt;h1 id="elixirガード節について">【Elixir】ガード節について&lt;/h1>
+&lt;p>Elixirは柔軟で強力なパターンマッチング機能を持ち、その一環としてガード節（guard clause）を利用することで、さらに詳細な条件でのマッチングが可能になります。Elixirのガード節について、基本的な使い方から具体的な例、使用できる関数と演算子についてのメモ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix LiveViewのライブナビゲーションイベント</title><link>https://c-a-p-engineer.github.io/tech/2024/06/17/elixir-phoenix-live-navigation-events/</link><pubDate>Mon, 17 Jun 2024 20:00:00 +0900</pubDate><atom:modified>Mon, 17 Jun 2024 20:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/06/17/elixir-phoenix-live-navigation-events/</guid><description>&lt;h1 id="phoenix-liveviewのライブナビゲーションイベント">Phoenix LiveViewのライブナビゲーションイベント&lt;/h1>
+&lt;p>Phoenix LiveViewを活用することで、リアルタイムのページナビゲーションを実現できます。ライブナビゲーションイベントの仕組みとその実装方法について詳しく解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ectoでのカスタム列の定義方法</title><link>https://c-a-p-engineer.github.io/tech/2024/06/01/elixir-ecto-custom-column-type/</link><pubDate>Sat, 01 Jun 2024 03:30:00 +0900</pubDate><atom:modified>Sat, 01 Jun 2024 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/06/01/elixir-ecto-custom-column-type/</guid><description>&lt;h1 id="elixirectoでのカスタム列の定義方法">【Elixir】Ectoでのカスタム列の定義方法&lt;/h1>
+&lt;p>Elixir の Ecto でカスタム列を定義する方法について解説します。特定の要件に応じたデータのキャスト、ロード、ダンプを行うことができます。&lt;/p>
+&lt;h2 id="ectoのカスタムタイプ">Ectoのカスタムタイプ&lt;/h2>
+&lt;p>Ectoのカスタムタイプは、Ectoスキーマで扱うデータ型を拡張するためのものです。デフォルトで提供される型に加え、独自の型を定義することで、特定のバリデーションや変換を適用できます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】EctoでSELECT句のクエリを柔軟に扱う：select_merge関数の効果的な使い方</title><link>https://c-a-p-engineer.github.io/tech/2024/05/01/elixir-ecto-name-bindings/</link><pubDate>Wed, 01 May 2024 20:00:00 +0900</pubDate><atom:modified>Wed, 01 May 2024 20:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/05/01/elixir-ecto-name-bindings/</guid><description>&lt;h1 id="elixirectoでselect句のクエリを柔軟に扱うselect_merge関数の効果的な使い方">【Elixir】EctoでSELECT句のクエリを柔軟に扱う：select_merge関数の効果的な使い方&lt;/h1>
+&lt;p>ElixirのEctoライブラリの&lt;code>select_merge/3&lt;/code>関数を使ったクエリの動的な構築方法を、具体例を交えて詳しく解説します。動的クエリがアプリケーションの柔軟性をどのように向上させるかを学び、実用的な利用シナリオを掘り下げます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ecto で名前付きバインドを利用する方法</title><link>https://c-a-p-engineer.github.io/tech/2024/04/24/elixir-ecto-name-bindings/</link><pubDate>Wed, 24 Apr 2024 01:00:00 +0900</pubDate><atom:modified>Wed, 24 Apr 2024 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/04/24/elixir-ecto-name-bindings/</guid><description>&lt;h1 id="elixirecto-で名前付きバインドを利用する方法">【Elixir】Ecto で名前付きバインドを利用する方法&lt;/h1>
+&lt;p>Elixir の Ecto ライブラリを使用するとき、クエリの組み立てに柔軟性を持たせる方法の1つとして、名前付きバインドがあります。この記事では、Ecto で名前付きバインドをどのように使用するかを解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】the underscored variable "_variable" is used after being set.の対処法</title><link>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-warning-underscored-variable/</link><pubDate>Wed, 20 Mar 2024 19:00:00 +0900</pubDate><atom:modified>Wed, 20 Mar 2024 19:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-warning-underscored-variable/</guid><description>&lt;h1 id="elixirwarning-the-underscored-variable-_variable-is-used-after-being-setの対処法">【Elixir】warning: the underscored variable &amp;ldquo;_variable&amp;rdquo; is used after being set.の対処法&lt;/h1>
+&lt;p>&lt;code>warning: the underscored variable &amp;quot;_variable&amp;quot; is used after being set.&lt;/code>の対処法。&lt;/p>
+&lt;h2 id="警告の背景">警告の背景&lt;/h2>
+&lt;p>Elixirでは、変数名の前にアンダースコア(&lt;code>_&lt;/code>)を付けることで、「この変数は使用されない」という意図を示します。これはElixirのみならず、Erlangや他の関数型言語においても見られる慣習です。しかし、アンダースコアで始まる変数に値を割り当てた後で、その変数をコード内で使用すると、Elixirコンパイラは開発者に対して警告を発します。これは、「本来使用されるべきでない変数が使用されている」という状況を指摘するためです。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】CLIで入力を受け取る</title><link>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-io-gets/</link><pubDate>Wed, 20 Mar 2024 01:00:00 +0900</pubDate><atom:modified>Wed, 20 Mar 2024 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-io-gets/</guid><description>&lt;h1 id="elixircliで入力を受け取る">【Elixir】CLIで入力を受け取る&lt;/h1>
+&lt;p>mix コマンドなどを作成した際に引数以外にも入力値を受け取って処理を行いたい際に使える方法。&lt;/p>
+&lt;h2 id="コマンドライン入力の受け取り方">コマンドライン入力の受け取り方&lt;/h2>
+&lt;p>&lt;a href="https://hexdocs.pm/elixir/IO.html#gets/2" target="_blank" rel="nofollow noopener">IO.gets/2&lt;/a> を使用します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-elixir" data-lang="elixir">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 名前の入力を促すメッセージを表示&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nc">IO&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;あなたの名前は何ですか？&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># コマンドラインからの入力を受け取る&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nc">IO&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">gets&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;What is your name?&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 受け取った入力を変数に格納し、トリム（改行文字を削除）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nc">String&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 挨拶と共に入力された名前を表示&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nc">IO&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;こんにちは、&lt;/span>&lt;span class="si">#{&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">さん！&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>IO.gets 関数は、引数としてプロンプトに表示する文字列を取ります。この例では空文字列 &amp;quot;&amp;quot; を使用していますが、必要に応じてプロンプトメッセージを指定できます。&lt;/li>
+&lt;li>受け取った入力には改行文字が含まれているため、String.trim 関数を使用して改行文字を削除します。これにより、扱いやすい形式の文字列を得ることができます。&lt;/li>
+&lt;li>この例では、受け取った入力をそのまま画面に表示していますが、この値を使ってさらに複雑な処理を行うことも可能です。&lt;/li>
+&lt;/ul></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】clauses with the same name and arity の意味と対処方法</title><link>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-warning-grouped/</link><pubDate>Wed, 20 Mar 2024 00:30:00 +0900</pubDate><atom:modified>Wed, 20 Mar 2024 00:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-warning-grouped/</guid><description>&lt;h1 id="elixirclauses-with-the-same-name-and-arity-の意味と対処方法">【Elixir】clauses with the same name and arity の意味と対処方法&lt;/h1>
+&lt;p>&lt;code>warning: clauses with the same name and arity (number of arguments) should be grouped together&lt;/code> が出た際の対処方法。&lt;/p>
+&lt;h2 id="エラーメッセージ">エラーメッセージ&lt;/h2>
+&lt;p>&lt;code>warning: clauses with the same name and arity (number of arguments) should be grouped together, &amp;quot;def handle_event/3&amp;quot; was previously defined&lt;/code>&lt;/p>
+&lt;p>このメッセージは、&lt;code>handle_event/3&lt;/code>関数がまとめられていないという意味になります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】mixコマンドを自作する</title><link>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-mix-command/</link><pubDate>Wed, 20 Mar 2024 00:30:00 +0900</pubDate><atom:modified>Wed, 20 Mar 2024 00:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/20/elixir-mix-command/</guid><description>&lt;h1 id="elixirclauses-with-the-same-name-and-arity-の意味と対処方法">【Elixir】clauses with the same name and arity の意味と対処方法&lt;/h1>
+&lt;p>Elixirのプロジェクト管理ツールであるmixは、プロジェクトのコンパイル、テスト、依存関係の管理など、多くのタスクを簡単に実行できます。Elixirのプロジェクトでカスタムmixコマンドを作成する方法についてご紹介いたします。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>Google ColabでElixirプログラミングを始める方法</title><link>https://c-a-p-engineer.github.io/tech/2024/03/15/google-colabo-elixir/</link><pubDate>Fri, 15 Mar 2024 02:30:00 +0900</pubDate><atom:modified>Fri, 15 Mar 2024 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/15/google-colabo-elixir/</guid><description>&lt;h1 id="google-colabでelixirプログラミングを始める方法">Google ColabでElixirプログラミングを始める方法&lt;/h1>
+&lt;p>Google Colabは、ブラウザ上でPythonコードを簡単に実行できる環境です。しかしPython以外のプログラミング言語、たとえばElixirを動かすことも可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ectoで個別にエラーを追加する方法</title><link>https://c-a-p-engineer.github.io/tech/2024/03/13/elixir-ecto-add_error/</link><pubDate>Wed, 13 Mar 2024 19:00:00 +0900</pubDate><atom:modified>Wed, 13 Mar 2024 19:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/13/elixir-ecto-add_error/</guid><description>&lt;h1 id="elixirectoで個別にエラーを追加する方法">【Elixir】Ectoで個別にエラーを追加する方法&lt;/h1>
+&lt;p>ElixirのEctoで個別にエラーを追加する方法。&lt;br />
+ちょっと面倒な時にやる僕が個人的にやっている方法。&lt;/p>
+&lt;h2 id="確認環境">確認環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="ectoスキーマの準備">Ectoスキーマの準備&lt;/h2>
+&lt;p>まず、Ectoスキーマを定義します。この例では具体的なフィールドは定義しませんが、必要に応じて追加してください。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】EctoでChangesetからデータを取得する方法</title><link>https://c-a-p-engineer.github.io/tech/2024/03/11/elixir-changeset-getfiled/</link><pubDate>Mon, 11 Mar 2024 12:30:00 +0900</pubDate><atom:modified>Mon, 11 Mar 2024 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/03/11/elixir-changeset-getfiled/</guid><description>&lt;h1 id="elixirectoでchangesetからデータを効率的に取得する方法">【Elixir】EctoでChangesetからデータを効率的に取得する方法&lt;/h1>
+&lt;p>Ectoの&lt;code>changeset&lt;/code>の各フィールドからデータを取得したい時の対応。&lt;/p>
+&lt;h2 id="get_field-関数による特定フィールドのデータ取得">get_field 関数による特定フィールドのデータ取得&lt;/h2>
+&lt;p>&lt;code>get_field&lt;/code>関数は、&lt;code>changeset&lt;/code>から特定のフィールドの現在の値を取得する際に使用します。この関数は、変更された値が存在する場合はその値を、そうでない場合は元の値を返します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix Liveview のファイルアップロードのテスト方法</title><link>https://c-a-p-engineer.github.io/tech/2023/11/28/elixir-phoenix-file-upload-test/</link><pubDate>Tue, 28 Nov 2023 01:00:00 +0900</pubDate><atom:modified>Tue, 28 Nov 2023 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/11/28/elixir-phoenix-file-upload-test/</guid><description>&lt;h1 id="elixirphoenix-liveview-のファイルアップロードのテスト方法">【Elixir】Phoenix Liveview のファイルアップロードのテスト方法&lt;/h1>
+&lt;p>Elixir Phoenix の Liveview のファイルアップロードのテスト方法&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="対象のコード">対象のコード&lt;/h2>
+&lt;p>テストをする対象のコードはこちらになります。&lt;/p>
+&lt;h3 id="elixirファイル">Elixirファイル&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-lib/demo_web/live/file_upload/index.ex" data-lang="lib/demo_web/live/file_upload/index.ex">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">defmodule&lt;/span> &lt;span class="nc">DemoWeb.FileUploadLive.Index&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">use&lt;/span> &lt;span class="nc">DemoWeb&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="ss">:live_view&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">@impl&lt;/span> &lt;span class="no">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">def&lt;/span> &lt;span class="n">mount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">_params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_session&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">socket&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">:ok&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">socket&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># アップロード設定&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&amp;gt;&lt;/span> &lt;span class="n">allow_upload&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="ss">:image&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="ss">accept&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="sx">~w(.jpg .jpeg .png)&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">@impl&lt;/span> &lt;span class="no">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">def&lt;/span> &lt;span class="n">handle_event&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;validate&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">socket&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="ss">:noreply&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">socket&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">@impl&lt;/span> &lt;span class="no">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">def&lt;/span> &lt;span class="n">handle_event&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;cancel-entry&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">%{&lt;/span>&lt;span class="s2">&amp;#34;ref&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="n">ref&lt;/span>&lt;span class="p">},&lt;/span> &lt;span class="n">socket&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># アップロードキャンセル&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="ss">:noreply&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">cancel_upload&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">socket&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="ss">:image&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ref&lt;/span>&lt;span class="p">)}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">@impl&lt;/span> &lt;span class="no">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">def&lt;/span> &lt;span class="n">handle_event&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;save&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">_params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">socket&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">uploaded_file&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">consume_uploaded_entries&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">socket&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="ss">:image&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">fn&lt;/span> &lt;span class="p">%{&lt;/span>&lt;span class="ss">path&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">path&lt;/span>&lt;span class="p">},&lt;/span> &lt;span class="n">entry&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># ファイルアップロード処理&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># path はファイルがアップロードされた場所&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># entry はアップされたファイル情報&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nc">File&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">cp!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">entry&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">client_name&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">entry&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">client_name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">end&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="ss">:noreply&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">socket&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&amp;gt;&lt;/span> &lt;span class="n">put_flash&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="ss">:info&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;ファイルアップロード完了&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&amp;gt;&lt;/span> &lt;span class="n">redirect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="ss">to&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">)}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">end&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">end&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="テンプレートファイル">テンプレートファイル&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html:lib/demo_web/live/file_upload/index.html.heex..html" data-lang="html:lib/demo_web/live/file_upload/index.html.heex..html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">form&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;post-form&amp;#34;&lt;/span> &lt;span class="na">phx-change&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;validate&amp;#34;&lt;/span> &lt;span class="na">phx-submit&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;save&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- アップロードされたらファイルアップ箇所は非表示 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;columns is-centered&amp;#34;&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">{&lt;/span> &lt;span class="na">if&lt;/span> &lt;span class="err">@&lt;/span>&lt;span class="na">uploads&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">image&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">entries&lt;/span> &lt;span class="err">!=&lt;/span> &lt;span class="err">[],&lt;/span> &lt;span class="na">do:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">display:none&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="err">}&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- ファイルをドラッグ &amp;amp; ドロップでもアップロードすることが可能 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;file is-boxed&amp;#34;&lt;/span> &lt;span class="na">phx-drop-target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">{&lt;/span> &lt;span class="err">@&lt;/span>&lt;span class="na">uploads&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">image&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">ref&lt;/span> &lt;span class="err">}&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;file-label&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>%= live_file_input @uploads.image, class: &amp;#34;file-input&amp;#34; %&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;file-cta&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;file-label p-6&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Choose a file…
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>%=
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # アップロードされたら表示
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for entry &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">-&lt;/span> &lt;span class="err">@&lt;/span>&lt;span class="na">uploads&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">image&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">entries&lt;/span> &lt;span class="na">do&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>%= live_img_preview entry %&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">figcaption&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="err">&amp;lt;&lt;/span>%= entry.client_name %&amp;gt;&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">figcaption&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">figure&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>%=
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # アップロードキャンセルボタン
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> submit gettext(&amp;#34;Cancel&amp;#34;), type: &amp;#34;button&amp;#34;, phx_click: &amp;#34;cancel-entry&amp;#34;, phx_value_ref: entry.ref %&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>%=
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # エラー表示
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for err &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">-&lt;/span> &lt;span class="na">upload_errors&lt;/span>&lt;span class="err">(@&lt;/span>&lt;span class="na">uploads&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">image&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">entry&lt;/span>&lt;span class="err">)&lt;/span> &lt;span class="na">do&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;alert alert-danger&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="err">&amp;lt;&lt;/span>%= err %&amp;gt;&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>% end %&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>% end %&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>%= submit gettext(&amp;#34;Save&amp;#34;), phx_disable_with: gettext(&amp;#34;Saving...&amp;#34;) %&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">form&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="テスト">テスト&lt;/h2>
+&lt;p>実際のテスト処理を書きます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenix 1.6 → 1.7 へのアップデートのメモ</title><link>https://c-a-p-engineer.github.io/tech/2023/11/26/elixir-phoenix-update/</link><pubDate>Sun, 26 Nov 2023 01:20:00 +0900</pubDate><atom:modified>Sun, 26 Nov 2023 01:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/11/26/elixir-phoenix-update/</guid><description>&lt;h1 id="elixirphoenix-16--17-へのアップデートのメモ">【Elixir】Phoenix 1.6 → 1.7 へのアップデートのメモ&lt;/h1>
+&lt;p>Elixir Phoenix 1.6 → 1.7 へのアップデートしようとした際のメモ。&lt;/p>
+&lt;p>&lt;strong>なおアップデートはしていない。&lt;/strong>&lt;/p>
+&lt;h2 id="アップデート方法は3種類">アップデート方法は3種類&lt;/h2>
+&lt;p>色々と試行錯誤を行った結果、以下の3種類のものをすべて試しました。それらを試した結果、僕は&lt;strong>アップデートを諦めました&lt;/strong>。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Elixir KoansでElixirを学ぼう</title><link>https://c-a-p-engineer.github.io/tech/2023/11/06/elixir-koans/</link><pubDate>Mon, 06 Nov 2023 12:30:00 +0900</pubDate><atom:modified>Mon, 06 Nov 2023 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/11/06/elixir-koans/</guid><description>&lt;h1 id="elixirelixir-koansでelixirを学ぼう">【Elixir】Elixir KoansでElixirを学ぼう&lt;/h1>
+&lt;p>Elixir Koansを使ってElixirの問題を解く方法を紹介します。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/elixirkoans/elixir-koans" target="_blank" rel="nofollow noopener">elixirkoans/elixir-koans: Elixir learning exercises&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="実行環境">実行環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.15.6&lt;/li>
+&lt;/ul>
+&lt;h2 id="elixir-koansとは">Elixir Koansとは？&lt;/h2>
+&lt;p>Elixir Koansは、Elixirの使用法を体験するための一連の練習問題です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】EctoクエリをSQLにして取得する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/09/28/elixir-ecto-to_sql/</link><pubDate>Thu, 28 Sep 2023 02:40:00 +0900</pubDate><atom:modified>Thu, 28 Sep 2023 02:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/28/elixir-ecto-to_sql/</guid><description>&lt;h1 id="elixirectoクエリをsqlにして取得する方法">【Elixir】EctoクエリをSQLにして取得する方法&lt;/h1>
+&lt;p>ElixirでEctoを使用している際に、EctoクエリからSQLを取得する方法メモ。&lt;br />
+このテクニックはデバッグやパフォーマンスチューニングに非常に役立ちます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ectoのプライマリーキーについて</title><link>https://c-a-p-engineer.github.io/tech/2023/09/28/elixir-ecto-primary-key/</link><pubDate>Thu, 28 Sep 2023 02:30:00 +0900</pubDate><atom:modified>Thu, 28 Sep 2023 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/28/elixir-ecto-primary-key/</guid><description>&lt;h1 id="elixirectoのプライマリーキーについて">【Elixir】Ectoのプライマリーキーについて&lt;/h1>
+&lt;p>今回はEctoでプライマリーキーを扱うさまざまな方法についてのまとめです。&lt;/p>
+&lt;ol>
+&lt;li>デフォルトのプライマリーキー&lt;/li>
+&lt;li>カスタムプライマリーキー&lt;/li>
+&lt;li>プライマリーキーなし&lt;/li>
+&lt;li>複合プライマリーキー&lt;/li>
+&lt;/ol>
+&lt;h2 id="デフォルトのプライマリーキー">デフォルトのプライマリーキー&lt;/h2>
+&lt;p>デフォルトでは、Ectoは各スキーマに&lt;code>：id&lt;/code>フィールドをプライマリーキーとして作成します。これは自動インクリメントの整数です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ecto で色々な関係の設定</title><link>https://c-a-p-engineer.github.io/tech/2023/09/23/elixir-ecto-relationship/</link><pubDate>Sat, 23 Sep 2023 18:40:00 +0900</pubDate><atom:modified>Sat, 23 Sep 2023 18:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/23/elixir-ecto-relationship/</guid><description>&lt;h1 id="elixirecto-で色々な関係の設定">【Elixir】Ecto で色々な関係の設定&lt;/h1>
+&lt;p>Elixir の Ecto で色々な関連設定について詳しく解説します。&lt;br />
+&lt;code>has_one&lt;/code>, &lt;code>has_many&lt;/code>, &lt;code>belongs_to&lt;/code>, &lt;code>through&lt;/code>オプションに焦点を当てます。&lt;/p>
+&lt;p>その他のオプションについても以下のページで確認できますのでご参考にどうぞ&lt;br />
+&lt;a href="https://hexdocs.pm/ecto/3.10.3/Ecto.Schema.html" target="_blank" rel="nofollow noopener">Ecto.Schema&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ecto で Preload の色々</title><link>https://c-a-p-engineer.github.io/tech/2023/09/23/elixir-ecto-preload/</link><pubDate>Sat, 23 Sep 2023 17:30:00 +0900</pubDate><atom:modified>Sat, 23 Sep 2023 17:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/23/elixir-ecto-preload/</guid><description>&lt;h1 id="elixirecto-で-preload-の色々">【Elixir】Ecto で Preload の色々&lt;/h1>
+&lt;p>Ecto の &lt;code>preload&lt;/code> 機能に焦点を当て、その使い方を色々と解説します。&lt;/p>
+&lt;p>&lt;a href="https://hexdocs.pm/ecto/Ecto.Query.html#preload/3" target="_blank" rel="nofollow noopener">preload/3&lt;/a>&lt;/p>
+&lt;h2 id="単一の関連付けを-preload">単一の関連付けを Preload&lt;/h2>
+&lt;p>もっとも基本的な使い方です。ユーザーとそのプロフィールを一緒に取得する例を見てみましょう。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】 PhoenixでバックグラウンドでルーティングのURLを取得する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/09/15/elixir-backend-routing/</link><pubDate>Fri, 15 Sep 2023 01:30:00 +0900</pubDate><atom:modified>Fri, 15 Sep 2023 01:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/15/elixir-backend-routing/</guid><description>&lt;h1 id="elixir-phoenixでバックグラウンドでルーティングのurlを取得する方法">【Elixir】 PhoenixでバックグラウンドでルーティングのURLを取得する方法&lt;/h1>
+&lt;p>ElixirのPhoenixフレームワークでWebアプリケーションを開発する際、バックグラウンドでルーティングのURLを取得するケースがあります。&lt;br />
+&lt;code>conn&lt;/code>を使うパターンと使わないパターンについて説明します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Ecto.Repoを拡張してSoft Deleteされていないレコードだけを取得する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/09/14/elixir-repo-exstend/</link><pubDate>Thu, 14 Sep 2023 13:00:00 +0900</pubDate><atom:modified>Thu, 14 Sep 2023 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/14/elixir-repo-exstend/</guid><description>&lt;h1 id="elixirectorepoを拡張してsoft-deleteされていないレコードだけを取得する方法">【Elixir】Ecto.Repoを拡張してSoft Deleteされていないレコードだけを取得する方法&lt;/h1>
+&lt;p>Elixirの&lt;code>Ecto.Repo&lt;/code>を拡張して、Soft Delete（&lt;code>deleted_at is nil&lt;/code>）されていないレコードだけを効率的に取得する方法について解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】サーバーから特定要素のイベントを実行する</title><link>https://c-a-p-engineer.github.io/tech/2023/09/11/elixir-liveview-js-exec/</link><pubDate>Mon, 11 Sep 2023 19:00:00 +0900</pubDate><atom:modified>Mon, 11 Sep 2023 19:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/11/elixir-liveview-js-exec/</guid><description>&lt;h1 id="elixirphoenix-独自に定義したイベントを実行する方法">【Elixir】Phoenix 独自に定義したイベントを実行する方法&lt;/h1>
+&lt;p>Elixir Phoenix でサーバーから特定の要素のイベントを実行する方法のメモ。&lt;/p>
+&lt;p>&lt;code>push_event&lt;/code> と組み合わせて特定の要素に設定されたイベントを実行します。&lt;br />
+&lt;a href="https://hexdocs.pm/phoenix_live_view/0.19.5/Phoenix.LiveView.html#push_event/3">Phoenix.LiveView.html#push_event/3&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenix 独自に定義したJavaScriptを実行する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/09/08/elixir-liveview-closing_attribute/</link><pubDate>Fri, 08 Sep 2023 01:40:00 +0900</pubDate><atom:modified>Fri, 08 Sep 2023 01:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/08/elixir-liveview-closing_attribute/</guid><description>&lt;h1 id="elixirphoenix-独自に定義したjavascriptを実行する方法">【Elixir】Phoenix 独自に定義したJavaScriptを実行する方法&lt;/h1>
+&lt;p>Elixir Phoenixで独自に定義したJavaScriptを実行する方法メモ。&lt;br />
+なぜか僕の環境ではちょっと面倒だったのでメモしました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenix のテンプレートエラー「expected closing `"` for attribute value」の解決方法</title><link>https://c-a-p-engineer.github.io/tech/2023/09/01/elixir-liveview-closing_attribute/</link><pubDate>Fri, 01 Sep 2023 01:20:00 +0900</pubDate><atom:modified>Fri, 01 Sep 2023 01:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/09/01/elixir-liveview-closing_attribute/</guid><description>&lt;h1 id="elixir-phoenixでのhtmlエラーexpected-closing--for-attribute-valueの解決方法">Elixir PhoenixでのHTMLエラー「expected closing &lt;code>&amp;quot;&lt;/code> for attribute value」の解決方法&lt;/h1>
+&lt;p>Elixir Phoenix のテンプレートエラー「expected closing &lt;code>&amp;quot;&lt;/code> for attribute value」が出てしまった時の解決方法。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】LiveView の render が発火しない時の対処方法</title><link>https://c-a-p-engineer.github.io/tech/2023/08/31/elixir-liveview-no-render/</link><pubDate>Thu, 31 Aug 2023 03:00:00 +0900</pubDate><atom:modified>Thu, 31 Aug 2023 03:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/08/31/elixir-liveview-no-render/</guid><description>&lt;h1 id="elixirliveview-の-render-が発火しない時の対処方法">【Elixir】LiveView の render が発火しない時の対処方法&lt;/h1>
+&lt;p>Elixir LiveView の &lt;code>render&lt;/code> が発火しないという現象が発生してちょっと泣きを見たのでメモ。&lt;br />
+&lt;code>render&lt;/code> で使用するテンプレートの切り替えを行っていたのですが発火してくれなくて画面が更新されなくて数時間奮闘するハメに…&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】コードの効率と可読性を高める Null合体演算子</title><link>https://c-a-p-engineer.github.io/tech/2023/08/30/elixir_null_coalescing_operator/</link><pubDate>Wed, 30 Aug 2023 00:30:00 +0900</pubDate><atom:modified>Wed, 30 Aug 2023 00:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/08/30/elixir_null_coalescing_operator/</guid><description>&lt;h1 id="elixirコードの効率と可読性を高める-null合体演算子">【Elixir】コードの効率と可読性を高める Null合体演算子&lt;/h1>
+&lt;p>ElixirのNull合体演算子の使い方を解説します。&lt;/p>
+&lt;h2 id="null合体演算子">Null合体演算子&lt;/h2>
+&lt;p>ElixirのNull合体演算子（&lt;code>||&lt;/code>）は、一見すると単なる論理演算子（&lt;code>or&lt;/code>）に見えます。&lt;br />
+この演算子は、&lt;code>nil&lt;/code>や&lt;code>false&lt;/code>といった「偽」と評価される値に対して、デフォルト値を簡単に設定できます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix PubSub を使ってリアルタイムデータ共有の方法</title><link>https://c-a-p-engineer.github.io/tech/2023/08/22/elixir_pubsub/</link><pubDate>Tue, 22 Aug 2023 13:00:00 +0900</pubDate><atom:modified>Tue, 22 Aug 2023 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/08/22/elixir_pubsub/</guid><description>&lt;h1 id="elixirphoenix-pubsub-を使ってリアルタイムデータ共有の方法">【Elixir】Phoenix PubSub を使ってリアルタイムデータ共有の方法&lt;/h1>
+&lt;p>Phoenix PubSubは、Elixirを使用したリアルタイムデータ共有の鍵となる機能です。&lt;br />
+リアルタイムに他のユーザなどにデータ共有が可能です。&lt;br />
+Phoenix PubSubの基本的な使用方法からサブスクライブの停止までの詳細なプロセスを紹介しています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】リストの先頭と末尾のデータを取得する</title><link>https://c-a-p-engineer.github.io/tech/2023/08/04/elixir-list-head-tail/</link><pubDate>Fri, 04 Aug 2023 12:30:00 +0900</pubDate><atom:modified>Fri, 04 Aug 2023 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/08/04/elixir-list-head-tail/</guid><description>&lt;h1 id="elixirリストの先頭と末尾のデータを取得する">【Elixir】リストの先頭と末尾のデータを取得する&lt;/h1>
+&lt;p>Elixirでリストの先頭と末尾のデータを取得する方法を解説します。&lt;/p>
+&lt;h2 id="確認環境">確認環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="リストの先頭データの取得">リストの先頭データの取得&lt;/h2>
+&lt;p>Elixirでリストの最初の要素を取得するには、&lt;code>List.first/1&lt;/code> 関数や &lt;code>hd/1&lt;/code> 関数を使用します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】LiveView で使用するテンプレートファイルを変更する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/07/22/elixir-liveview-render/</link><pubDate>Sat, 22 Jul 2023 15:00:00 +0900</pubDate><atom:modified>Sat, 22 Jul 2023 15:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/07/22/elixir-liveview-render/</guid><description>&lt;h1 id="elixir-liveview-で使用するテンプレートファイルを変更する方法">Elixir LiveView で使用するテンプレートファイルを変更する方法&lt;/h1>
+&lt;p>Elixir の LiveView でテンプレートファイルを変更したい場合があります。&lt;br />
+今回は対処方法についてまとめました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenix LiveComponentの簡単なサンプル実装</title><link>https://c-a-p-engineer.github.io/tech/2023/07/10/elixir-phoenix-live_component/</link><pubDate>Mon, 10 Jul 2023 10:00:00 +0900</pubDate><atom:modified>Mon, 10 Jul 2023 10:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/07/10/elixir-phoenix-live_component/</guid><description>&lt;h1 id="elixirphoenix-livecomponentの簡単なサンプル実装">【Elixir】Phoenix LiveComponentの簡単なサンプル実装&lt;/h1>
+&lt;p>LiveComponentのクリックするたびに数値が増減するというシンプルなアプリケーションの作り方について解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenix サーバーサイドからリアルタイム通知する</title><link>https://c-a-p-engineer.github.io/tech/2023/07/06/elixir-phoenix-channel/</link><pubDate>Thu, 06 Jul 2023 19:20:00 +0900</pubDate><atom:modified>Thu, 06 Jul 2023 19:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/07/06/elixir-phoenix-channel/</guid><description>&lt;h1 id="elixirphoenix-サーバーサイドからユーザーにリアルタイム通知する">【Elixir】Phoenix サーバーサイドからユーザーにリアルタイム通知する&lt;/h1>
+&lt;p>Elixir Phoenix サーバーサイドからユーザーに簡単にリアルタイム通知することが可能です。&lt;/p>
+&lt;h2 id="確認環境">確認環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h1 id="elixir-phoenixでの通知システムの作成">Elixir Phoenixでの通知システムの作成&lt;/h1>
+&lt;p>ElixirとPhoenixを使用して、リアルタイムの通知システムを作成する方法を探求します。このシステムは、特定のユーザーに対してメッセージの通知を送ることができ、ログイン中の全画面に適用されます。さらに、サーバーから特定のユーザーに通知を送ることも可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Ectoでの配列フィールドの定義とバリデーション方法</title><link>https://c-a-p-engineer.github.io/tech/2023/07/01/elixir-ecto-array-field/</link><pubDate>Sat, 01 Jul 2023 00:45:00 +0900</pubDate><atom:modified>Sat, 01 Jul 2023 00:45:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/07/01/elixir-ecto-array-field/</guid><description>&lt;h1 id="elixirectoでの配列フィールドの定義とバリデーション方法">【Elixir】Ectoでの配列フィールドの定義とバリデーション方法&lt;/h1>
+&lt;p>ElixirのEctoを使って、配列フィールドの定義とバリデーション方法についてやっていきます。&lt;/p>
+&lt;p>PostgreSQLの場合は配列方があるので使用するらしいです。&lt;br />
+僕の場合は画面からのバリデーションチェックに使用する目的で使用しています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix push_event を活用してJavaScriptを実行する</title><link>https://c-a-p-engineer.github.io/tech/2023/06/26/elixir-phoenix-push_event/</link><pubDate>Mon, 26 Jun 2023 18:50:00 +0900</pubDate><atom:modified>Mon, 26 Jun 2023 18:50:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/06/26/elixir-phoenix-push_event/</guid><description>&lt;h1 id="elixirphoenix-push_event-を活用してjavascriptを実行する">【Elixir】Phoenix push_event を活用してJavaScriptを実行する&lt;/h1>
+&lt;p>ElixirのPhoenixフレームワークでは、サーバーからクライアントへのイベントをプッシュするための&lt;code>push_event&lt;/code>という機能が提供されています。&lt;br />
+これを利用することで、サーバー側からクライント側のJavaScriptに対してイベントを発行し、特定の操作を行うことが可能になります。&lt;br />
+&lt;code>push_event&lt;/code> を活用してJavaScriptを実行してみます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenixでのレイアウトテンプレート設定方法</title><link>https://c-a-p-engineer.github.io/tech/2023/06/25/elixir-phoenix-layout/</link><pubDate>Sun, 25 Jun 2023 19:00:00 +0900</pubDate><atom:modified>Sun, 25 Jun 2023 19:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/06/25/elixir-phoenix-layout/</guid><description>&lt;h1 id="elixirphoenixでのレイアウトテンプレート設定方法">【Elixir】Phoenixでのレイアウトテンプレート設定方法&lt;/h1>
+&lt;p>Elixir Phoenixでのレイアウトテンプレート設定方法。&lt;/p>
+&lt;h2 id="確認環境">確認環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="アクションの設定">アクションの設定&lt;/h2>
+&lt;p>&lt;code>put_layout&lt;/code> を利用することでテンプレートを変更することが可能です。&lt;br />
+基本的な使い方は以下のようになります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】タイムゾーンエラーの解決策</title><link>https://c-a-p-engineer.github.io/tech/2023/06/16/elixir-utc_only_time_zone_database/</link><pubDate>Fri, 16 Jun 2023 01:30:00 +0900</pubDate><atom:modified>Fri, 16 Jun 2023 01:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/06/16/elixir-utc_only_time_zone_database/</guid><description>&lt;h1 id="elixirタイムゾーンエラーの解決策">【Elixir】タイムゾーンエラーの解決策&lt;/h1>
+&lt;p>Elixirで日付と時間を扱う際には、&lt;code>DateTime&lt;/code>モジュールが一般的に使用されます。&lt;br />
+しかし、特定のタイムゾーンを指定して現在の日時を取得しようとすると、&lt;code>cannot get current datetime in &amp;quot;Japan&amp;quot; time zone, reason: :utc_only_time_zone_database&lt;/code>というエラーが発生することがあります。&lt;br />
+このエラーの原因と解決策について詳しく説明します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Phoenixでのエラー解決: Stateful ComponentsのHTML Root Tag</title><link>https://c-a-p-engineer.github.io/tech/2023/06/16/elixir-phoenix-components-root/</link><pubDate>Fri, 16 Jun 2023 01:20:00 +0900</pubDate><atom:modified>Fri, 16 Jun 2023 01:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/06/16/elixir-phoenix-components-root/</guid><description>&lt;h1 id="elixirphoenixでのエラー解決-stateful-componentsのhtml-root-tag">【Elixir】Phoenixでのエラー解決: Stateful ComponentsのHTML Root Tag&lt;/h1>
+&lt;p>ライブコンポーネント作成時に出たエラーの解決方法について調べてみました。&lt;/p>
+&lt;pre tabindex="0">&lt;code>error on render/1 with id of &amp;#34;demo&amp;#34;. Stateful components must have a single static HTML tag at the root
+&lt;/code>&lt;/pre>&lt;p>このエラーは、Stateful component (状態を保持するコンポーネント) が一つの静的なHTMLタグをルート（最上位）に持たなければならないという規則に違反している時に発生します。&lt;br />
+これは、LiveViewでstatefulコンポーネントを扱う際の基本的なルールです。&lt;br />
+これにより、Phoenixはコンポーネントのライフサイクルを正しく管理し、必要な更新を適切に行うことができます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Mnesiaで分散データベースを構築し、クラスタ同期を行う</title><link>https://c-a-p-engineer.github.io/tech/2023/05/28/elixir-cluster-mnesia/</link><pubDate>Sun, 28 May 2023 02:20:00 +0900</pubDate><atom:modified>Sun, 28 May 2023 02:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/05/28/elixir-cluster-mnesia/</guid><description>&lt;h1 id="elixirmnesiaで分散データベースを構築しクラスタ同期を行う">【Elixir】Mnesiaで分散データベースを構築し、クラスタ同期を行う&lt;/h1>
+&lt;p>ElixirとErlangの分散データベースであるMnesiaを利用することで、分散システムにおけるデータの管理が格段に簡単になります。&lt;br />
+今回の記事では、Mnesiaのセットアップとクラスタ同期について詳しく説明します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenixでカスタムセッションストアを作る</title><link>https://c-a-p-engineer.github.io/tech/2023/05/26/elixir-phoenix-session-store/</link><pubDate>Fri, 26 May 2023 01:40:00 +0900</pubDate><atom:modified>Fri, 26 May 2023 01:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/05/26/elixir-phoenix-session-store/</guid><description>&lt;h1 id="elixirphoenixでカスタムセッションストアを作る">【Elixir】Phoenixでカスタムセッションストアを作る&lt;/h1>
+&lt;p>Elixir Phoenixで自作のセッションストアを作る方法についてやっていきます。&lt;br />
+今回はセッション情報を各セッションID名のJSONに保存するというセッションストアを作っていきます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】クラスタ内のノードの起動、停止を感知する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/05/24/elixir-nodeup-nodedown/</link><pubDate>Wed, 24 May 2023 01:20:00 +0900</pubDate><atom:modified>Wed, 24 May 2023 01:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/05/24/elixir-nodeup-nodedown/</guid><description>&lt;h1 id="elixirクラスタ内のノードの起動停止を感知する方法">【Elixir】クラスタ内のノードの起動、停止を感知する方法&lt;/h1>
+&lt;p>Elixir でクラスタ構成でクラスタ内のノードの起動、停止を感知する方法&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="ノード起動停止の感知するコード">ノード起動・停止の感知するコード&lt;/h2>
+&lt;p>ノードの起動、停止を実際に感知するコードは以下のようになります。&lt;br />
+&lt;a href="https://www.erlang.org/doc/man/net_kernel.html#monitor_nodes-1" target="_blank" rel="nofollow noopener">net_kernel.monitor_nodes/1&lt;/a> を使用してすべてのノードの起動、停止を感知します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】libclusterを使用して簡単にクラスタ化する</title><link>https://c-a-p-engineer.github.io/tech/2023/05/20/elixir-libcluster/</link><pubDate>Sat, 20 May 2023 20:00:00 +0900</pubDate><atom:modified>Sat, 20 May 2023 20:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/05/20/elixir-libcluster/</guid><description>&lt;h1 id="elixirlibclusterを使用して簡単にクラスタ化する">【Elixir】libclusterを使用して簡単にクラスタ化する&lt;/h1>
+&lt;p>libclusterというElixirのライブラリを使用することで、簡単にクラスタ構成を作ることができます。&lt;br />
+Elixirとlibclusterを使用してクラスタ構成を作ってみます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ecto V3以上でTelemetryを使ってSQLログを出力する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/04/26/elixir-ecto-v3-log/</link><pubDate>Wed, 26 Apr 2023 12:30:00 +0900</pubDate><atom:modified>Wed, 26 Apr 2023 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/04/26/elixir-ecto-v3-log/</guid><description>&lt;h1 id="elixirecto-v3以上でtelemetryを使ってsqlログを出力する方法">【Elixir】Ecto V3以上でTelemetryを使ってSQLログを出力する方法&lt;/h1>
+&lt;p>ElixirのEcto V3以上でTelemetryを使用してSQLログを出力する方法について説明します。&lt;br />
+Telemetryは、ErlangおよびElixirアプリケーションのメトリック、トレース、およびログを収集するためのライブラリです。&lt;br />
+これにより、アプリケーションのパフォーマンスを監視し、問題の特定やデバッグが容易になります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】LiveView でファイルをアップロードする</title><link>https://c-a-p-engineer.github.io/tech/2023/04/23/elixir-liveview-fileupload/</link><pubDate>Sun, 23 Apr 2023 12:00:00 +0900</pubDate><atom:modified>Sun, 23 Apr 2023 12:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/04/23/elixir-liveview-fileupload/</guid><description>&lt;h1 id="elixirliveview-でファイルをアップロードする">【Elixir】LiveView でファイルをアップロードする&lt;/h1>
+&lt;p>Elixir で LiveView で簡単にファイルをアップロードする方法メモ&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;p>サンプルコードでは以下のことをできるようになっています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】LiveView でボタンクリック時に確認ダイアログを簡単に出す方法</title><link>https://c-a-p-engineer.github.io/tech/2023/04/21/elixir-liveview-confirmpho/</link><pubDate>Fri, 21 Apr 2023 01:30:00 +0900</pubDate><atom:modified>Fri, 21 Apr 2023 01:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/04/21/elixir-liveview-confirmpho/</guid><description>&lt;h1 id="elixirliveview-でボタンクリック時に確認ダイアログを簡単に出す方法">【Elixir】LiveView でボタンクリック時に確認ダイアログを簡単に出す方法&lt;/h1>
+&lt;p>Elixir で LiveView でボタンクリック時に確認ダイアログを簡単に出す方法&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="サンプルコード">サンプルコード&lt;/h2>
+&lt;p>&lt;code>data_confirm&lt;/code> の属性をつければ良いだけで簡単に確認ダイアログが出力されます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】PhoenixLiveSession 使用時にテストでエラーが出る対処方法</title><link>https://c-a-p-engineer.github.io/tech/2023/04/08/elixir-phoenix_live_session-test/</link><pubDate>Sat, 08 Apr 2023 01:00:00 +0900</pubDate><atom:modified>Sat, 08 Apr 2023 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/04/08/elixir-phoenix_live_session-test/</guid><description>&lt;h1 id="elixirphoenixlivesession-使用時にテストでエラーが出る対処方法">【Elixir】PhoenixLiveSession 使用時にテストでエラーが出る対処方法&lt;/h1>
+&lt;p>PhoenixLiveSession 使用時にテストする際、エラーが出てしまいます。&lt;br />
+今回はその対処方法をメモです。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;li>PhoenixLiveSession 0.1.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="エラー">エラー&lt;/h2>
+&lt;p>LiveViewSessionを使用した箇所で以下のエラーが発生しました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】SlackLog を使って Slack にログを送る方法</title><link>https://c-a-p-engineer.github.io/tech/2023/04/08/elixir-slack_log/</link><pubDate>Sat, 08 Apr 2023 00:50:00 +0900</pubDate><atom:modified>Sat, 08 Apr 2023 00:50:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/04/08/elixir-slack_log/</guid><description>&lt;h1 id="elixirliveview-でパスワードが消えてしまう現象の解決方法">【Elixir】LiveView でパスワードが消えてしまう現象の解決方法&lt;/h1>
+&lt;p>Elixir で開発されたアプリケーションからSlackにログを送信する方法を紹介します。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="slacklog">SlackLog&lt;/h2>
+&lt;p>SlackLog を入れることにより開発チームはSlackでアプリケーションのログをリアルタイムで確認でき、問題の検出や解決がスムーズになります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】logger_file_backend を使用してログをファイルに出力する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/04/08/elixir-logger_file_backend/</link><pubDate>Sat, 08 Apr 2023 00:40:00 +0900</pubDate><atom:modified>Sat, 08 Apr 2023 00:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/04/08/elixir-logger_file_backend/</guid><description>&lt;h1 id="elixirlogger_file_backend-を使用してログをファイルに出力する方法">【Elixir】logger_file_backend を使用してログをファイルに出力する方法&lt;/h1>
+&lt;p>Elixir で &lt;code>logger_file_backend&lt;/code> を使用してログをファイルに出力する方法を紹介します。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="logger_file_backend">logger_file_backend&lt;/h2>
+&lt;p>Elixir では、標準で &lt;code>Logger&lt;/code> モジュールが提供されており、これを利用して簡単にログを取得できます。&lt;br />
+ただし、デフォルトでは標準出力にログが出力されるため、ファイルに出力するには &lt;code>logger_file_backend&lt;/code> というライブラリを使うことで実現できます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】LiveView でパスワードが消えてしまう現象の解決方法</title><link>https://c-a-p-engineer.github.io/tech/2023/03/31/elixir-liveview-password/</link><pubDate>Fri, 31 Mar 2023 13:30:00 +0900</pubDate><atom:modified>Fri, 31 Mar 2023 13:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/31/elixir-liveview-password/</guid><description>&lt;h1 id="elixirliveview-でパスワードが消えてしまう現象の解決方法">【Elixir】LiveView でパスワードが消えてしまう現象の解決方法&lt;/h1>
+&lt;p>Elixir で LiveView でパスワードが消えてしまう現象がありました。&lt;br />
+その解決方法メモ。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="現象">現象&lt;/h2>
+&lt;p>以下のような LiveView を使用してログインフォームを作ったところ、パスワード欄に入力した値が消える現象が時折発生。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】if 文からの返り値をもらう方法</title><link>https://c-a-p-engineer.github.io/tech/2023/03/31/elixir-if-return/</link><pubDate>Fri, 31 Mar 2023 12:40:00 +0900</pubDate><atom:modified>Fri, 31 Mar 2023 12:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/31/elixir-if-return/</guid><description>&lt;h1 id="elixirif-文からの返り値をもらう方法">【Elixir】if 文からの返り値をもらう方法&lt;/h1>
+&lt;p>Elixir で if 文からの返り値をもらう方法メモ。&lt;br />
+Elixir は if 文内の変更を if 文外に作用させないため if文内での処理結果をもらう時に使い方です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】ヒアドキュメントで制御構文を使用する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/03/29/elixir-heredoc-if/</link><pubDate>Wed, 29 Mar 2023 00:40:00 +0900</pubDate><atom:modified>Wed, 29 Mar 2023 00:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/29/elixir-heredoc-if/</guid><description>&lt;h1 id="elixirヒアドキュメントで制御構文を使用する方法">【Elixir】ヒアドキュメントで制御構文を使用する方法&lt;/h1>
+&lt;p>Elixir のヒアドキュメントで制御構文を使用する方法。&lt;br />
+これにより、動的な文字列を生成する際に、より簡潔で読みやすいコードを書くことができます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Bambooを使って簡単にメール送信する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/03/27/elixir-mail-bamboo/</link><pubDate>Mon, 27 Mar 2023 18:20:00 +0900</pubDate><atom:modified>Mon, 27 Mar 2023 18:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/27/elixir-mail-bamboo/</guid><description>&lt;h1 id="elixirbambooを使って簡単にメール送信する方法">【Elixir】Bambooを使って簡単にメール送信する方法&lt;/h1>
+&lt;p>Elixir で &lt;code>Bamboo&lt;/code> を使って簡単にメール送信する方法。&lt;/p>
+&lt;p>メール送信を行う &lt;code>Bamboo&lt;/code> のドキュメントはこちらです。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://hexdocs.pm/bamboo/2.3.0/readme.html" target="_blank" rel="nofollow noopener">Bamboo — bamboo v2.3.0&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/thoughtbot/bamboo" target="_blank" rel="nofollow noopener">thoughtbot/bamboo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Bamboo&lt;/code> はさまざまなアダプターが用意されていていますが、今回はSMTPでの送信方法のサンプルをご紹介します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】キャッシュを簡単に扱う Cachex の紹介</title><link>https://c-a-p-engineer.github.io/tech/2023/03/24/elixir-cachex/</link><pubDate>Fri, 24 Mar 2023 01:00:00 +0900</pubDate><atom:modified>Fri, 24 Mar 2023 01:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/24/elixir-cachex/</guid><description>&lt;h1 id="elixirキャッシュを簡単に扱う方法-cachex-の紹介">【Elixir】キャッシュを簡単に扱う方法: Cachex の紹介&lt;/h1>
+&lt;p>Elixir では、Cachex という強力なキャッシュライブラリを使用することで、簡単にキャッシュを扱うことができます。&lt;br />
+この記事では、Cachex のインストール方法と基本的な使い方を紹介します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Ecto.Schema.embedded_schema を使ってリクエストを処理する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/03/21/elixir-embedded_schema/</link><pubDate>Tue, 21 Mar 2023 12:40:00 +0900</pubDate><atom:modified>Tue, 21 Mar 2023 12:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/21/elixir-embedded_schema/</guid><description>&lt;h1 id="elixirectoschemaembedded_schema-を複雑な使ってリクエストに対してのリクエストを処理する方法のメモ">【Elixir】Ecto.Schema.embedded_schema を複雑な使ってリクエストに対してのリクエストを処理する方法のメモ&lt;/h1>
+&lt;p>Elixir で LiveView に対する認証・認可を自作する&lt;/p>
+&lt;p>以下のドキュメントを参考にしています。&lt;br />
+&lt;a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Schema.html#t:embedded_schema/0" target="_blank" rel="nofollow noopener">Ecto.Schema — Ecto v3.9.4 - HexDocs # embedded_schema&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】LiveView に対する認証・認可を自作する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/19/elixir-liveview-auth/</link><pubDate>Sun, 19 Mar 2023 09:00:00 +0900</pubDate><atom:modified>Sun, 19 Mar 2023 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/19/elixir-liveview-auth/</guid><description>&lt;h1 id="elixirliveview-に対する認証認可を自作する">【Elixir】LiveView に対する認証・認可を自作する&lt;/h1>
+&lt;p>Elixir で LiveView に対する認証・認可を自作する&lt;/p>
+&lt;p>以下のドキュメントを参考にしています。&lt;br />
+&lt;a href="https://hexdocs.pm/phoenix_live_view/security-model.html" target="_blank" rel="nofollow noopener">Security considerations of the LiveView model — Phoenix LiveView v0.18.18&lt;/a>&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="liveview-認証認可モジュールの作成">LiveView 認証・認可モジュールの作成&lt;/h2>
+&lt;p>LiveView 用の認証・認可モジュールを作成します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】URIクエリパラメータを作る</title><link>https://c-a-p-engineer.github.io/tech/2023/03/18/elixir-uri-query/</link><pubDate>Sat, 18 Mar 2023 18:00:00 +0900</pubDate><atom:modified>Sat, 18 Mar 2023 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/18/elixir-uri-query/</guid><description>&lt;h1 id="elixiruriクエリパラメータを作る">【Elixir】URIクエリパラメータを作る&lt;/h1>
+&lt;p>Elixir でURIクエリパラメータを作るメモ&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="elixir-の-uriencode_query">Elixir の URI.encode_query&lt;/h2>
+&lt;p>ElixirにはURIモジュールがあり、URLを操作するための機能を提供しています。その中でも、URI.encode_query/1は、クエリパラメータをエンコードするために便利なメソッドです。&lt;br />
+&lt;code>URI.encode_query&lt;/code> とは &lt;code>URI.encode_query/1&lt;/code>は、キーと値のペアから構成されるマップを受け取り、URLエンコードされた文字列を返します。&lt;br />
+このエンコードは、クエリストリングの形式でURLに付与するために使用されます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】HTTPoison を使って API などの通信を行ってみる</title><link>https://c-a-p-engineer.github.io/tech/2023/03/18/elixir-httpoison/</link><pubDate>Sat, 18 Mar 2023 17:40:00 +0900</pubDate><atom:modified>Sat, 18 Mar 2023 17:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/18/elixir-httpoison/</guid><description>&lt;h1 id="elixirhttpoison-を使って-api-などの通信を行ってみる">【Elixir】HTTPoison を使って API などの通信を行ってみる&lt;/h1>
+&lt;p>Elixir で HTTP通信ができる HTTPoison を使って API などの通信を行ってみる&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="httpoisonのインストール">HTTPoisonのインストール&lt;/h2>
+&lt;p>&lt;code>mix.exs&lt;/code> ファイルのdeps関数にHTTPoisonを追加し、アプリケーションの依存関係を更新します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】XMLを簡単に Map にしてくれる XmlToMap を使う</title><link>https://c-a-p-engineer.github.io/tech/2023/03/17/elixir-xml-to-map/</link><pubDate>Fri, 17 Mar 2023 12:30:00 +0900</pubDate><atom:modified>Fri, 17 Mar 2023 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/17/elixir-xml-to-map/</guid><description>&lt;h1 id="elixirxmlを簡単に-map-にしてくれる-xmltomap-を使う">【Elixir】XMLを簡単に Map にしてくれる XmlToMap を使う&lt;/h1>
+&lt;p>Elixir で標準で用意されてるXMLの読み込みのクセが強いので簡単に Map にしてくれる XmlToMap を使ってみました。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="xmlを普通に読み込んで見る">XMLを普通に読み込んで見る&lt;/h2>
+&lt;p>比較するためにいったん普通にXMLを読み込んでみます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix LiveView でJSを書かずにアニメーションなどを実装する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/15/elixir-phoenix-live-js/</link><pubDate>Wed, 15 Mar 2023 18:30:00 +0900</pubDate><atom:modified>Wed, 15 Mar 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/15/elixir-phoenix-live-js/</guid><description>&lt;h1 id="elixirphoenix-liveview-でjsを書かずにアニメーションなどを実装する方法">【Elixir】Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法&lt;/h1>
+&lt;p>Elixir の Phoenix LiveView でJSを書かずにアニメーションなどを実装する方法。&lt;br />
+折角 LiveView を使っているのに一々画面項目の表示/非表示などの簡単なJSを一々書きたくないなって考えたら実装方法がありましたのでメモ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】Phoenix で PhoenixLiveSession を使用して LiveView で Session を使用する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/14/elixir-phoenix-live-session/</link><pubDate>Tue, 14 Mar 2023 12:30:00 +0900</pubDate><atom:modified>Sun, 16 Apr 2023 00:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/14/elixir-phoenix-live-session/</guid><description>&lt;h1 id="elixirphoenix-で-phoenixlivesession-を使用して-liveview-で-session-を使用する">【Elixir】Phoenix で PhoenixLiveSession を使用して LiveView で Session を使用する&lt;/h1>
+&lt;p>Elixir Phoenix で PhoenixLiveSession を使用して LiveView で Session を使用する方法。&lt;br />
+通常 LiveView 上では Session を扱えません。&lt;br />
+Session を扱えるように PhoenixLiveSession を導入する必要があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】Phoenix で静的ファイルを追加する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/08/elixir-phoenix-static-file/</link><pubDate>Thu, 09 Mar 2023 12:30:00 +0900</pubDate><atom:modified>Thu, 09 Mar 2023 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/08/elixir-phoenix-static-file/</guid><description>&lt;h1 id="elixirphoenix-で静的ファイルを追加する">【Elixir】Phoenix で静的ファイルを追加する&lt;/h1>
+&lt;p>Elixir Phoenix の環境で静的ファイルを追加する方法&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="静的ファイルを追加する">静的ファイルを追加する&lt;/h2>
+&lt;ol>
+&lt;li>&lt;code>priv/static/&lt;/code> にフォルダを追加します。&lt;/li>
+&lt;li>&lt;code>lib/demo_web/endpoint.ex&lt;/code> に追加したフォルダ名を追加&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>only&lt;/code> の箇所に &lt;code>hoge&lt;/code> 追加&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="hl">&lt;span class="lnt">5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-lib/demo_web/endpoint.ex" data-lang="lib/demo_web/endpoint.ex">&lt;span class="line">&lt;span class="cl"> &lt;span class="n">plug&lt;/span> &lt;span class="nc">Plug.Static&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">at&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">from&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="ss">:sdm&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">gzip&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="no">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="cl"> &lt;span class="ss">only&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="sx">~w(assets fonts images favicon.ico robots.txt hoge)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>&lt;code>Routes.static_path&lt;/code> を使用してテンプレート側で使用する。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html:lib/demo_web/templates/hoge/hoge.html.heex..html" data-lang="html:lib/demo_web/templates/hoge/hoge.html.heex..html">&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">{Routes.static_path(@conn,&lt;/span> &lt;span class="err">&amp;#34;/&lt;/span>&lt;span class="na">hoge&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">hoge&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">png&lt;/span>&lt;span class="err">&amp;#34;)}&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;hoge&amp;#34;&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>これにより画像などの静的ファイルの呼び出しが可能になります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】データ取得時に複数のChangesetを返すようにする</title><link>https://c-a-p-engineer.github.io/tech/2023/03/04/elixir-select-structs/</link><pubDate>Sat, 04 Mar 2023 16:00:00 +0900</pubDate><atom:modified>Sat, 04 Mar 2023 16:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/04/elixir-select-structs/</guid><description>&lt;h1 id="elixirデータ取得時に複数のchangesetを返すようにする">【Elixir】データ取得時に複数のChangesetを返すようにする&lt;/h1>
+&lt;p>Elixir でRepoを使用したデータ取得時に複数のChangesetを返すようにする方法。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;/ul>
+&lt;h2 id="通常通りにjoinしてデータを取得する">通常通りにJOINしてデータを取得する&lt;/h2>
+&lt;p>JOINして複数のテーブルからデータを取得します。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-ex" data-lang="ex">&lt;span class="line">&lt;span class="cl">&lt;span class="n">query&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">user&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nc">Demo.Models.User&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">join&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">post&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nc">Demo.Models.Post&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ss">on&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">user&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">id&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">post&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">user_id&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nc">IO&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">inspect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nc">Repo&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">all&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>実行すると &lt;code>users&lt;/code> テーブルのデータしか取得していません。&lt;br />
+これでは困ります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】ログイン制御 セッションでアクセス制限を実現する</title><link>https://c-a-p-engineer.github.io/tech/2023/03/02/elixir-session-auth/</link><pubDate>Thu, 02 Mar 2023 18:30:00 +0900</pubDate><atom:modified>Thu, 02 Mar 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/03/02/elixir-session-auth/</guid><description>&lt;h1 id="elixirログイン制御-セッションでアクセス制限を実現する">【Elixir】ログイン制御 セッションでアクセス制限を実現する&lt;/h1>
+&lt;p>Elixir でログイン制御 セッションでアクセス制限を実現する&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="セッション制御">セッション制御&lt;/h2>
+&lt;p>特定のセッション（ログインなど）がない場合にアクセスが出来ないようにします。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category><category>Phoenix</category></item><item><title>【Elixir】gettext で日本語化をする（多言語対応</title><link>https://c-a-p-engineer.github.io/tech/2023/02/24/elixir-gettext-ja/</link><pubDate>Fri, 24 Feb 2023 02:00:00 +0900</pubDate><atom:modified>Fri, 24 Feb 2023 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/02/24/elixir-gettext-ja/</guid><description>&lt;h1 id="elixirgettext-で日本語化をする多言語対応">【Elixir】gettext で日本語化をする（多言語対応&lt;/h1>
+&lt;p>Elixir gettext で日本語化をする方法&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="インストール">インストール&lt;/h2>
+&lt;p>まずはプロジェクト作成を行います。&lt;/p>
+&lt;pre tabindex="0">&lt;code>mix phx.new my_app --no-ecto
+&lt;/code>&lt;/pre>&lt;h2 id="パッケージ追加">パッケージ追加&lt;/h2>
+&lt;p>※Phoenix ではデフォルトでインストールされているようなので不要です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】DB検索時などの際に動的に列を指定する方法</title><link>https://c-a-p-engineer.github.io/tech/2023/02/15/elixir-query-dynamic-colmun/</link><pubDate>Wed, 15 Feb 2023 18:30:00 +0900</pubDate><atom:modified>Wed, 15 Feb 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/02/15/elixir-query-dynamic-colmun/</guid><description>&lt;h1 id="elixirdb検索時などの際に動的に列を指定する方法">【Elixir】DB検索時などの際に動的に列を指定する方法&lt;/h1>
+&lt;p>Elixir DBの検索を行う際など汎用的に列を変数化したりして検索したい時があります。その実装方法のメモです。&lt;/p>
+&lt;h2 id="実装">実装&lt;/h2>
+&lt;p>&lt;code>Ecto.Query.API&lt;/code> の &lt;code>filed/2&lt;/code> の関数を使用します。&lt;br />
+&lt;a href="https://hexdocs.pm/ecto/3.9.4/Ecto.Query.API.html#field/2" target="_blank" rel="nofollow noopener">Ecto.Query.API — Ecto v3.9.4 #field/2&lt;/a>&lt;br />
+この関数は指定されたテーブルの列をAtom型で渡すと、その列を使用してくれます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】カスタムバリデーションを作ってみる</title><link>https://c-a-p-engineer.github.io/tech/2023/02/15/elixir-custom-validation/</link><pubDate>Wed, 15 Feb 2023 18:30:00 +0900</pubDate><atom:modified>Wed, 15 Feb 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/02/15/elixir-custom-validation/</guid><description>&lt;h1 id="elixirカスタムバリデーションを作ってみる">【Elixir】カスタムバリデーションを作ってみる&lt;/h1>
+&lt;p>Elixir 独自のバリデーション、カスタムバリデーションを作ってみる&lt;/p>
+&lt;h2 id="カスタムバリデーション">カスタムバリデーション&lt;/h2>
+&lt;p>バリデーション用ファイルの作成&lt;br />
+&lt;code>changeset&lt;/code> の &lt;code>:username&lt;/code> が4文字未満もしくは15文字以上でエラーにしています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】ループの癖が強かった</title><link>https://c-a-p-engineer.github.io/tech/2023/02/05/elixir-loop-trap/</link><pubDate>Sun, 05 Feb 2023 17:30:00 +0900</pubDate><atom:modified>Sun, 05 Feb 2023 17:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/02/05/elixir-loop-trap/</guid><description>&lt;h1 id="elixirループの癖が強いかった">【Elixir】ループの癖が強いかった&lt;/h1>
+&lt;p>Elixir 初心者の僕がループを使用してハマったことをメモしておきます&lt;/p>
+&lt;h2 id="ハマったこと">ハマったこと&lt;/h2>
+&lt;p>Elixer で勉強用にコードを書いていて「渡された数値の回数 1～X までループして 1～X までの合計を出す」という単純な問題をやっていたのですが、これがハマった。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix 5分でCRUDを作ってみます！</title><link>https://c-a-p-engineer.github.io/tech/2023/01/29/elixir-phoenix-crud/</link><pubDate>Sun, 29 Jan 2023 15:20:00 +0900</pubDate><atom:modified>Sun, 29 Jan 2023 15:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/01/29/elixir-phoenix-crud/</guid><description>&lt;h1 id="elixirphoenix-5分でcrudを作ってみます">【Elixir】Phoenix 5分でCRUDを作ってみます！&lt;/h1>
+&lt;p>Elixir Phoenix で5分でCRUDをやってみます！&lt;/p>
+&lt;p>インストール関係は省きます。&lt;br />
+今回 &lt;code>demo&lt;/code> という名前でプロジェクトを作っています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】Ecto.dump load でデータのエクスポート、インポートを行う</title><link>https://c-a-p-engineer.github.io/tech/2023/01/23/elixir-ecto-dump/</link><pubDate>Mon, 23 Jan 2023 18:30:00 +0900</pubDate><atom:modified>Mon, 23 Jan 2023 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/01/23/elixir-ecto-dump/</guid><description>&lt;h1 id="elixirectodump-load-でデータのエクスポートインポートを行う">【Elixir】Ecto.dump load でデータのエクスポート、インポートを行う&lt;/h1>
+&lt;p>Ecto.dump load でデータのエクスポート、インポートを行う。&lt;/p>
+&lt;p>今回使用する2つの機能は以下です。&lt;br />
+&lt;a href="https://hexdocs.pm/ecto_sql/3.9.2/Mix.Tasks.Ecto.Dump.html" target="_blank" rel="nofollow noopener">mix ecto.dump — Ecto SQL v3.9.2&lt;/a>&lt;br />
+&lt;a href="https://hexdocs.pm/ecto_sql/3.9.2/Mix.Tasks.Ecto.Load.html" target="_blank" rel="nofollow noopener">mix ecto.load — Ecto SQL v3.9.2&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Livebook でサクッと遊ぼう！</title><link>https://c-a-p-engineer.github.io/tech/2023/01/07/elixir-livebook/</link><pubDate>Sat, 07 Jan 2023 14:30:00 +0900</pubDate><atom:modified>Sat, 07 Jan 2023 14:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/01/07/elixir-livebook/</guid><description>&lt;h1 id="elixirlivebook-でサクッと遊ぼう">【Elixir】Livebook でサクッと遊ぼう！&lt;/h1>
+&lt;h2 id="動かす方法">動かす方法&lt;/h2>
+&lt;p>動かす方法は色々ある模様です。&lt;br />
+（僕はDockerで動かしています。&lt;/p>
+&lt;p>公式サイト &lt;a href="https://livebook.dev/" target="_blank" rel="nofollow noopener">Livebook.dev&lt;/a>&lt;/p>
+&lt;h3 id="livebook-アプリをインストール">Livebook アプリをインストール&lt;/h3>
+&lt;p>&lt;a href="https://livebook.dev/#install" target="_blank" rel="nofollow noopener">Livebook.dev #install&lt;/a> の左側からアプリをダウンロードしてインストールする。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Elixir</category></item><item><title>【Elixir】Phoenix で Quantum を使用してプログラム定期実行する方法</title><link>https://c-a-p-engineer.github.io/tech/2022/12/30/elixir-phoenix-quantum/</link><pubDate>Fri, 30 Dec 2022 16:00:00 +0900</pubDate><atom:modified>Fri, 30 Dec 2022 16:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/30/elixir-phoenix-quantum/</guid><description>&lt;h1 id="elixirphoenix-で-quantum-を使用してプログラム定期実行する方法">【Elixir】Phoenix で Quantum を使用してプログラム定期実行する方法&lt;/h1>
+&lt;p>Elixir Phoenix 環境で Quantum を使用してプログラム定期実行する方法&lt;/p>
+&lt;p>Quantum のドキュメントはこちら&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/quantum-elixir/quantum-core" target="_blank" rel="nofollow noopener">quantum-elixir/quantum-core: Cron-like job scheduler for Elixir&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hexdocs.pm/quantum/3.5.0/readme.html" target="_blank" rel="nofollow noopener">Quantum — Quantum v3.5.0&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;li>Quantum 3.5.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>GitHub を見つつ進めていきます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Elixir】 Phoenix で LiveView を使ってみる</title><link>https://c-a-p-engineer.github.io/tech/2022/12/27/elixir-phoenix-liveview/</link><pubDate>Tue, 27 Dec 2022 02:40:00 +0900</pubDate><atom:modified>Tue, 27 Dec 2022 02:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/27/elixir-phoenix-liveview/</guid><description>&lt;h1 id="elixir-phoenix-で-liveview-を使ってみる">【Elixir】 Phoenix で LiveView を使ってみる&lt;/h1>
+&lt;p>今回はLiveViewを使ってバックエンドだけでリッチなフロントエンドを作成してみます。&lt;br />
+&lt;a href="https://hexdocs.pm/phoenix_live_view/0.17.5/Phoenix.LiveView.html">Phoenix.LiveView — Phoenix LiveView v0.17.5&lt;/a>&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;li>LiveView 0.17.5&lt;/li>
+&lt;/ul>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>こちらの参考ページを元に進めていきます。&lt;br />
+&lt;a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/phoenix-liveview-basics.html" target="_blank" rel="nofollow noopener">Phoenix LiveView Basics :: Phoenix Beginner&amp;rsquo;s Guide&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Official_Elixir_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Elixir</category><category>Phoenix</category><category>Elixir</category></item><item><title>【Docker】Elixir Phoenix の環境を作る</title><link>https://c-a-p-engineer.github.io/tech/2022/12/27/docker-elixir-phoenix/</link><pubDate>Tue, 27 Dec 2022 01:40:00 +0900</pubDate><atom:modified>Tue, 27 Dec 2022 01:40:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/27/docker-elixir-phoenix/</guid><description>&lt;h1 id="dockerelixir-phoenix-の環境を作る">【Docker】Elixir Phoenix の環境を作る&lt;/h1>
+&lt;p>Docker で Elixir Phoenix の環境を作る&lt;/p>
+&lt;h2 id="作成する環境">作成する環境&lt;/h2>
+&lt;ul>
+&lt;li>Elixir 1.14.2&lt;/li>
+&lt;li>Phoenix 1.6.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="docker-compose-ファイル作成">Docker Compose ファイル作成&lt;/h2>
+&lt;p>&lt;code>docker-compose.yml&lt;/code> を用意します。&lt;br />
+作るのは Elixir Phoenix の環境です。&lt;br />
+Postgresも入っています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Docker</category><category>Elixir</category><category>Phoenix</category><category>Docker</category></item></channel></rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>TypeScript on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/categories/typescript/</link><description>Recent content in TypeScript on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Fri, 16 Dec 2022 02:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/categories/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>【TypeScript】JSONを自動的にTypeScriptの型に変換してくれる json2ts</title><link>https://c-a-p-engineer.github.io/tech/2022/12/16/ts-json2ts/</link><pubDate>Fri, 16 Dec 2022 02:30:00 +0900</pubDate><atom:modified>Fri, 16 Dec 2022 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/16/ts-json2ts/</guid><description>&lt;h1 id="typescriptjsonを自動的にtypescriptの型に変換してくれる-json2ts">【TypeScript】JSONを自動的にTypeScriptの型に変換してくれる json2ts&lt;/h1>
+&lt;p>TypeScript で一々型を作るのは面倒と言う時にJSONを入れると自動的にTypeScriptの型に変換してくれる json2ts のご紹介&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://json2ts.com/" target="_blank" rel="nofollow noopener">json2ts&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="使用方法">使用方法&lt;/h2>
+&lt;ol>
+&lt;li>tsの型にしたいjsonをテキストエリアに入れる&lt;/li>
+&lt;li>下の &lt;code>generate TypeScript&lt;/code> ボタンを押すだけ。&lt;/li>
+&lt;/ol>
+&lt;p>以下のようなサンプルのjsonを入れてみてください。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Typescript_logo_2020.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>TypeScript</category><category>TypeScript</category></item><item><title>【TypeScript】axios の接続先のbaseurlなどの設定を行う</title><link>https://c-a-p-engineer.github.io/tech/2022/12/11/axios-settings/</link><pubDate>Sun, 11 Dec 2022 02:00:00 +0900</pubDate><atom:modified>Sun, 11 Dec 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/11/axios-settings/</guid><description>&lt;h1 id="typescriptaxios-の接続先のbaseurlなどの設定を行う">【TypeScript】axios の接続先のbaseurlなどの設定を行う&lt;/h1>
+&lt;p>&lt;code>axios&lt;/code> を使用する際に接続先のbaseurlなどの設定を行う方法。&lt;/p>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;p>僕の場合ですが、&lt;code>AxiosBaseService.ts&lt;/code> を作成してそこで &lt;code>axios&lt;/code> の共通設定を行います。&lt;br />
+場合によっては &lt;code>AxiosXXXXService.ts&lt;/code> を作成して接続先ごとに設定を変えられるような作りにしています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Typescript_logo_2020.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>TypeScript</category><category>TypeScript</category></item><item><title>【TypeScript + Webpack】TypeScript emitted no output エラー解決</title><link>https://c-a-p-engineer.github.io/tech/2022/03/30/typescript-webpack-emitted-no-output/</link><pubDate>Wed, 30 Mar 2022 02:30:00 +0900</pubDate><atom:modified>Wed, 30 Mar 2022 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/03/30/typescript-webpack-emitted-no-output/</guid><description>&lt;h1 id="typescript--webpacktypescript-emitted-no-output-エラー解決">【TypeScript + Webpack】TypeScript emitted no output エラー解決&lt;/h1>
+&lt;p>TypeScript &amp;amp; Webpack 環境で TypeScript emitted no output のエラーが出たので解決方法メモ。&lt;/p>
+&lt;h2 id="エラー">エラー&lt;/h2>
+&lt;p>TypeScript &amp;amp; Webpack の環境でビルドをした際に以下のエラーが発生。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/TypeScript_logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>TypeScript</category><category>TypeScript</category></item><item><title>【React + TypeScript】 react-router-dom を使ってルーティングを実装する</title><link>https://c-a-p-engineer.github.io/tech/2022/03/14/react-router-dom-typescript/</link><pubDate>Mon, 14 Mar 2022 02:00:00 +0900</pubDate><atom:modified>Mon, 14 Mar 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/03/14/react-router-dom-typescript/</guid><description>&lt;h1 id="git-複数のコミットを-rebase-を使って1つにまとめる">【Git】 複数のコミットを rebase を使って1つにまとめる&lt;/h1>
+&lt;p>【React + TypeScript】 &lt;code>react-router-dom&lt;/code> を使ってルーティングを実装する&lt;/p>
+&lt;h2 id="前提">前提&lt;/h2>
+&lt;ul>
+&lt;li>node 14.17.5&lt;/li>
+&lt;li>react-router-dom 6.2.2&lt;/li>
+&lt;/ul>
+&lt;p>公式のチュートリアルを参考に進めます。&lt;br />
+（公式のチュートリアルは &lt;code>React&lt;/code> のため少々記載とは異なります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/React_Logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>React</category><category>TypeScript</category><category>React</category><category>TypeScript</category></item></channel></rss>

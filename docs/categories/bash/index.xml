@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Bash on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/categories/bash/</link><description>Recent content in Bash on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Sat, 07 Jun 2025 03:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/categories/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>【Linux】シェルでファイルを一括リネーム：ワンライナー集</title><link>https://c-a-p-engineer.github.io/tech/2025/06/07/linux-mv-rename-one-liners/</link><pubDate>Sat, 07 Jun 2025 03:30:00 +0900</pubDate><atom:modified>Sat, 07 Jun 2025 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2025/06/07/linux-mv-rename-one-liners/</guid><description>&lt;h1 id="linuxシェルでファイルを一括リネームワンライナー集">【Linux】シェルでファイルを一括リネーム：ワンライナー集&lt;/h1>
+&lt;p>GUIで複数ファイルを1つずつリネームするのは面倒……。&lt;br />
+そんなときこそLinuxの &lt;code>mv&lt;/code>コマンドとシェルのワンライナーが役立ちます。&lt;/p>
+&lt;p>この記事では、&lt;code>mv&lt;/code>だけを使って以下のようなファイルリネームを一括で実行する方法を紹介します：&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>ターミナルのプロンプト記号の意味を理解しよう</title><link>https://c-a-p-engineer.github.io/tech/2024/12/13/terminal-prompt-symbols/</link><pubDate>Fri, 13 Dec 2024 01:30:00 +0900</pubDate><atom:modified>Fri, 13 Dec 2024 01:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/12/13/terminal-prompt-symbols/</guid><description>&lt;h1 id="ターミナルのプロンプト記号の意味を理解しよう">ターミナルのプロンプト記号の意味を理解しよう&lt;/h1>
+&lt;p>ターミナルを操作していると、コマンドの先頭に&lt;code>$&lt;/code>や&lt;code>#&lt;/code>などの記号が表示されることに気づくと思います。これらの記号は、ただの飾りではなく、ユーザーの操作環境や権限に関する重要な情報を提供しています。この記事では、それぞれの記号の意味と役割について詳しく説明します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>【bash】簡単にJSONファイルを自動整形する方法</title><link>https://c-a-p-engineer.github.io/tech/2024/11/25/bash-json-format/</link><pubDate>Mon, 25 Nov 2024 13:00:00 +0900</pubDate><atom:modified>Mon, 25 Nov 2024 13:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2024/11/25/bash-json-format/</guid><description>&lt;h1 id="bash簡単にjsonファイルを自動整形する方法">【bash】簡単にJSONファイルを自動整形する方法&lt;/h1>
+&lt;p>整形されていないJSONは読みにくく、解析が困難になることがあります。この記事では、Bashコマンドを使って簡単にJSONファイルを整形する方法を解説します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>translate-shell を使って自動翻訳してみる</title><link>https://c-a-p-engineer.github.io/tech/2023/08/11/translate-shell/</link><pubDate>Fri, 11 Aug 2023 20:30:00 +0900</pubDate><atom:modified>Fri, 11 Aug 2023 20:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2023/08/11/translate-shell/</guid><description>&lt;h1 id="translate-shell-を使って自動翻訳してみる">translate-shell を使って自動翻訳してみる&lt;/h1>
+&lt;p>translate-shellは、コマンドライン上で動作する無料の翻訳ツールです。&lt;br />
+Google Translate, Bing Translator, Yandex.Translateなど、多くのオンライン翻訳サービスと連携して、50以上の言語間での翻訳が可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>【bash】コマンドを無限ループさせたい</title><link>https://c-a-p-engineer.github.io/tech/2022/12/03/bash-infinity-loop/</link><pubDate>Sat, 03 Dec 2022 02:00:00 +0900</pubDate><atom:modified>Sat, 03 Dec 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/03/bash-infinity-loop/</guid><description>&lt;h1 id="bashコマンドを無限ループさせたい">【bash】コマンドを無限ループさせたい&lt;/h1>
+&lt;p>コマンドを無限ループさせたい。って事はあんまりないのですがちょっと特殊で監視的な作業などの時にオススメです。&lt;/p>
+&lt;h2 id="無限ループ">無限ループ&lt;/h2>
+&lt;p>以下のように書きます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> true&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> &lt;span class="o">[&lt;/span>コマンド1&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="o">[&lt;/span>コマンド2&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>1秒ごとに日時を表示する&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>【bash】ログが行方不明に！？実行場所を気にしないシェルスクリプトの作り方</title><link>https://c-a-p-engineer.github.io/tech/2022/10/22/bash-script-dir/</link><pubDate>Sat, 22 Oct 2022 08:00:00 +0900</pubDate><atom:modified>Sat, 22 Oct 2022 08:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/22/bash-script-dir/</guid><description>&lt;h1 id="bashログが行方不明に実行場所を気にしないシェルスクリプトの作り方">【bash】ログが行方不明に！？実行場所を気にしないシェルスクリプトの作り方&lt;/h1>
+&lt;p>シェルスクリプトは実行した場所がカレントディレクトリとして扱われます。&lt;br />
+そのため僕はログが実行場所にできてしまったりして行方不明になったりしました。&lt;br />
+実行場所を気にしないようなシェルスクリプトの作り方。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>【bash】シェル内でヒアドキュメントを使用する</title><link>https://c-a-p-engineer.github.io/tech/2022/10/15/bash-heredoc/</link><pubDate>Sat, 15 Oct 2022 13:30:00 +0900</pubDate><atom:modified>Sat, 15 Oct 2022 13:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/15/bash-heredoc/</guid><description>&lt;h1 id="bashシェル内でヒアドキュメントを使用する">【bash】シェル内でヒアドキュメントを使用する&lt;/h1>
+&lt;p>シェル内でヒアドキュメント使用する方法&lt;/p>
+&lt;h2 id="ヒアドキュメント">ヒアドキュメント&lt;/h2>
+&lt;p>最初に &lt;strong>ヒアドキュメントは標準出力として扱われる&lt;/strong> ということです。&lt;/p>
+&lt;p>試しに以下のように &lt;code>echo&lt;/code> してみます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s">&amp;lt;&amp;lt; EOS
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">ab
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">456
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">cdef
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOS&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>こうすると標準出力扱いのため改行のみ出力されます。&lt;br />
+以下のようにすると文字列を出力します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>【bash】パイプした時の各終了ステータスを確認する</title><link>https://c-a-p-engineer.github.io/tech/2021/10/08/bash-pipistatus/</link><pubDate>Fri, 08 Oct 2021 18:00:00 +0900</pubDate><atom:modified>Fri, 08 Oct 2021 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/10/08/bash-pipistatus/</guid><description>&lt;h1 id="bashパイプした時の各終了ステータスを確認する">【bash】パイプした時の各終了ステータスを確認する&lt;/h1>
+&lt;p>&lt;code>bash&lt;/code> 利用時に &lt;code>|&lt;/code> を利用してパイプする時がありますが、これがエラーになるとどこで落ちているかわからない時があります。&lt;br />
+&lt;code>PIPESTATUS&lt;/code> を利用して確認します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>bash</category><category>bash</category></item><item><title>【bash】Git のローカルブランチが最新か判定するbashスクリプト</title><link>https://c-a-p-engineer.github.io/tech/2021/05/17/bash-git-update/</link><pubDate>Mon, 17 May 2021 09:00:00 +0900</pubDate><atom:modified>Mon, 17 May 2021 09:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/05/17/bash-git-update/</guid><description>&lt;h1 id="ローカルブランチが最新か判定するbashスクリプト">ローカルブランチが最新か判定するbashスクリプト&lt;/h1>
+&lt;p>Git のローカルブランチが最新か判定するbashスクリプト&lt;/p>
+&lt;h2 id="bash">bash&lt;/h2>
+&lt;p>&lt;code>cd /git/repo&lt;/code> は実際に調べたいディレクトリをしていしてください。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash:git_pull.sh" data-lang="bash:git_pull.sh">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /git/repo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">changed&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git status -uno &lt;span class="p">|&lt;/span> grep -q &lt;span class="s1">&amp;#39;Your branch is behind&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nv">changed&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="nv">$changed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span> &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 更新&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> git pull
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Updated successfully&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 最新&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;Up-to-date&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>これを &lt;code>cron&lt;/code> に設定することで自動的に最新にすることが出来ます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/Gnu-bash-logo.svg" medium="image"><media:title type="html">featured image</media:title></media:content><category>git</category><category>bash</category><category>bash</category></item></channel></rss>

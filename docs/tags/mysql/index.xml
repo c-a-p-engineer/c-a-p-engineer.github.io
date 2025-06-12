@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Mysql on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/tags/mysql/</link><description>Recent content in Mysql on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Thu, 08 Dec 2022 18:00:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml"/><item><title>【Mysql】コマンドラインで入力中だったものを終了させる方法</title><link>https://c-a-p-engineer.github.io/tech/2022/12/08/mysql-cli-abort/</link><pubDate>Thu, 08 Dec 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 08 Dec 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/08/mysql-cli-abort/</guid><description>&lt;h1 id="mysqlコマンドラインで入力中だったものを終了させる方法">【Mysql】コマンドラインで入力中だったものを終了させる方法&lt;/h1>
+&lt;p>Mysql でコマンドラインでtypoしたりして入力中だったものを途中で終了させる方法&lt;/p>
+&lt;h2 id="途中終了させる方法">途中終了させる方法&lt;/h2>
+&lt;p>Mysql のコマンドラインで途中終了させるには &lt;code>\c&lt;/code> を入力すると終了します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Docker】Swagger環境を構築する</title><link>https://c-a-p-engineer.github.io/tech/2022/12/03/docker-swagger/</link><pubDate>Sat, 03 Dec 2022 02:00:00 +0900</pubDate><atom:modified>Sat, 03 Dec 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/12/03/docker-swagger/</guid><description>&lt;h1 id="dockerswagger環境を構築する">【Docker】Swagger環境を構築する&lt;/h1>
+&lt;p>Docker で Swagger環境を構築するメモ&lt;/p>
+&lt;h2 id="docker-composeyml-作成">docker-compose.yml 作成&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yml:docker-compose.yml" data-lang="yml:docker-compose.yml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;3.0&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">services&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">swagger-editor&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">swaggerapi/swagger-editor&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;swagger-editor&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s2">&amp;#34;8001:8080&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">swagger-ui&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">swaggerapi/swagger-ui&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;swagger-ui&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s2">&amp;#34;8002:8080&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./api/openapi.yaml:/openapi.yaml&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Swagger File&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">environment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">SWAGGER_JSON&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/openapi.yaml&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Swagger File&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">swagger-api&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">stoplight/prism:latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;swagger-api&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s2">&amp;#34;8003:4010&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">command&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mock -h 0.0.0.0 /openapi.yaml&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Swagger File&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./api/openapi.yaml:/openapi.yaml&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Swagger File&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="sample-yaml作成">Sample yaml作成&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml:openapi.yaml" data-lang="yaml:openapi.yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">openapi&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;3.0.3&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">info&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Test1-API&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;1.0.0&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">paths&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;/helloWorld&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">get&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">responses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;200&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;test-ok&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">content&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">application/json&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">schema&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">string&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">example&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Hello World&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="起動">起動&lt;/h2>
+&lt;p>Dockerを起動します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Docker</category><category>Mysql</category><category>Docker</category></item><item><title>【Mysql】DBが存在することを確認する方法</title><link>https://c-a-p-engineer.github.io/tech/2022/10/23/mysql-show-database/</link><pubDate>Sun, 23 Oct 2022 05:30:00 +0900</pubDate><atom:modified>Sun, 23 Oct 2022 05:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/23/mysql-show-database/</guid><description>&lt;h1 id="mysqldbが存在することを確認する方法">【Mysql】DBが存在することを確認する方法&lt;/h1>
+&lt;p>Mysql でDBが存在することを確認する方法&lt;/p>
+&lt;h2 id="db一覧">DB一覧&lt;/h2>
+&lt;p>すべてのDBを出力する&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SHOW&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">DATABASES&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="dbを指定する">DBを指定する&lt;/h2>
+&lt;p>DB名を指定して存在を確認する&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SHOW&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">DATABASES&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LIKE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;[DB名]&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ワイルドカードを使用する">ワイルドカードを使用する&lt;/h3>
+&lt;p>普通のLIKEと同様に &lt;code>%&lt;/code> を使用して前方一致検索などが可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】外部キー制約を無効化する方法</title><link>https://c-a-p-engineer.github.io/tech/2022/10/20/mysql-foreign_key_checks/</link><pubDate>Thu, 20 Oct 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 20 Oct 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/20/mysql-foreign_key_checks/</guid><description>&lt;h1 id="mysql外部キー制約を無効化する方法">【Mysql】外部キー制約を無効化する方法&lt;/h1>
+&lt;p>Mysql でテーブルやデータを削除する時に外部キーのせいで簡単に出来ない時がそれを解決するために外部キー制約を無効化する方法&lt;/p>
+&lt;h2 id="外部キー制約を無効化">外部キー制約を無効化&lt;/h2>
+&lt;p>以下のコマンドを使用すると外部キーチェックを無効化ができます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】大量のスロークエリログを簡単に解析できる mysqldumpslow</title><link>https://c-a-p-engineer.github.io/tech/2022/10/18/mysql-mysqldumpslow/</link><pubDate>Tue, 18 Oct 2022 18:00:00 +0900</pubDate><atom:modified>Tue, 18 Oct 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/18/mysql-mysqldumpslow/</guid><description>&lt;h1 id="mysqlスロークエリを簡単に解析できる-mysqldumpslow">【Mysql】スロークエリを簡単に解析できる mysqldumpslow&lt;/h1>
+&lt;p>Mysql のスロークエリログを簡単に解析できる mysqldumpslow を使ってみる。&lt;/p>
+&lt;h2 id="mysqldumpslow">mysqldumpslow&lt;/h2>
+&lt;p>&lt;code>mysqldumpslow&lt;/code> コマンドを使用することで大量のスロークエリログを簡単に解析できます。&lt;/p>
+&lt;h3 id="インストール">インストール&lt;/h3>
+&lt;p>&lt;code>mysqldumpslow&lt;/code> コマンドを使用するにには &lt;code>mysql-server&lt;/code> のインストールが必要なようです。&lt;br />
+僕は面倒なので mysql のコンテナを使用しました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1248 (42000): Every derived table must have its own alias エラーの解決</title><link>https://c-a-p-engineer.github.io/tech/2022/10/15/mysql-own-ailias/</link><pubDate>Sat, 15 Oct 2022 16:00:00 +0900</pubDate><atom:modified>Sat, 15 Oct 2022 16:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/15/mysql-own-ailias/</guid><description>&lt;h1 id="mysqlerror-1248-42000-every-derived-table-must-have-its-own-alias-エラーの解決">【Mysql】ERROR 1248 (42000): Every derived table must have its own alias エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1248 (42000): Every derived table must have its own alias&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="エラー">エラー&lt;/h2>
+&lt;p>以下のようなSQLを実行すると &lt;code>ERROR 1248 (42000): Every derived table must have its own alias&lt;/code> が出てしまいます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】連続した日付の表を作る</title><link>https://c-a-p-engineer.github.io/tech/2022/10/14/mysql-date-sequence/</link><pubDate>Fri, 14 Oct 2022 01:50:00 +0900</pubDate><atom:modified>Fri, 14 Oct 2022 01:50:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/14/mysql-date-sequence/</guid><description>&lt;h1 id="mysql連続した日付の表を作る">【Mysql】連続した日付の表を作る&lt;/h1>
+&lt;p>Mysql で 連続した日付の表を作る方法&lt;/p>
+&lt;h2 id="sqlを実行する">SQLを実行する&lt;/h2>
+&lt;p>以下のSQLを使用すると &lt;code>2022-10-14&lt;/code> と &lt;code>2022-10-13&lt;/code> の仮想表が作られます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;2022-10-14&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">INTERVAL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">seq_no&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DAY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">date&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">-- 開始日
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">seq_no&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">seq_no&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SEQ&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">-- シーケンスNo
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">information_schema&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">COLUMNS&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">seq_no&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">as&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">-- 変数の初期化
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">seq_no&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">DATEDIFF&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2022-10-14&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;2022-10-13&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">-- 開始日 - 終了日 の差+1日数分を表示
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>結果は以下のようになります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】UNIXタイムスタンプ &lt;=> 日時 変換方法</title><link>https://c-a-p-engineer.github.io/tech/2022/10/04/mysql-unixtime-convert/</link><pubDate>Tue, 04 Oct 2022 01:20:00 +0900</pubDate><atom:modified>Tue, 04 Oct 2022 01:20:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/10/04/mysql-unixtime-convert/</guid><description>&lt;h1 id="mysqlunixタイムスタンプ--日時-変換方法">【Mysql】UNIXタイムスタンプ &amp;lt;=&amp;gt; 日時 変換方法&lt;/h1>
+&lt;p>UNIXタイムスタンプ &amp;lt;=&amp;gt; 日時 変換方法メモ&lt;/p>
+&lt;h2 id="日時--unixタイムスタンプ">日時 =&amp;gt; UNIXタイムスタンプ&lt;/h2>
+&lt;p>&lt;code>UNIX_TIMESTAMP&lt;/code> に日時を入れるとUNIXタイムスタンプに変換されます。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">UNIX_TIMESTAMP&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2022/10/04 01:20:00&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="unixタイムスタンプ--日時">UNIXタイムスタンプ =&amp;gt; 日時&lt;/h2>
+&lt;p>&lt;code>FROM_UNIXTIME&lt;/code> にUNIXタイムスタンプを入れると日時に変換されます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】mysqlコマンドから直接SQLを実行する</title><link>https://c-a-p-engineer.github.io/tech/2022/09/22/mysql-command-execute/</link><pubDate>Thu, 22 Sep 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 22 Sep 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/22/mysql-command-execute/</guid><description>&lt;h1 id="mysqlmysqlコマンドから直接sqlを実行する">【Mysql】mysqlコマンドから直接SQLを実行する&lt;/h1>
+&lt;p>Mysql で mysqlコマンドから直接SQLを実行するメモ&lt;/p>
+&lt;h2 id="sqlを実行する">SQLを実行する&lt;/h2>
+&lt;p>以下の &lt;code>[SQL]&lt;/code> の部分に実行したいSQLを入れてください。&lt;/p>
+&lt;pre tabindex="0">&lt;code>mysql -u[UserName] -p[Password] [DatabaseNmae] -e&amp;#34;[SQL]&amp;#34;
+&lt;/code>&lt;/pre>&lt;h3 id="実行サンプル">実行サンプル&lt;/h3>
+&lt;p>以下のようにするとテーブル一覧を出力してくれます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】mysqlコマンドを実行する際、パスワードに記号が入っている際の対応方法</title><link>https://c-a-p-engineer.github.io/tech/2022/09/22/mysql-command-password-escape/</link><pubDate>Thu, 22 Sep 2022 18:00:00 +0900</pubDate><atom:modified>Thu, 22 Sep 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/22/mysql-command-password-escape/</guid><description>&lt;h1 id="mysqlmysqlコマンドを実行する際にパスワードに記号が入っている際の対応方法">【Mysql】mysqlコマンドを実行する際にパスワードに記号が入っている際の対応方法&lt;/h1>
+&lt;p>Mysql で mysqlコマンドを実行する際、パスワードに記号が入っている際の対応方法メモ。&lt;/p>
+&lt;h2 id="パスワードに記号が入っている">パスワードに記号が入っている&lt;/h2>
+&lt;p>mysqlコマンドを実行する際、パスワードに記号が入ってると以下のようにエラーが発生します。&lt;br />
+パスワードには &lt;code>p@ssword&lt;/code> としています。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】実行中のプロセスを検索する</title><link>https://c-a-p-engineer.github.io/tech/2022/09/21/mysql-processlist-search/</link><pubDate>Wed, 21 Sep 2022 18:00:00 +0900</pubDate><atom:modified>Wed, 21 Sep 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/21/mysql-processlist-search/</guid><description>&lt;h1 id="mysql長時間実行しているプロセスを確認する">【Mysql】長時間実行しているプロセスを確認する&lt;/h1>
+&lt;p>&lt;code>processlist&lt;/code> を使用し実行中のプロセスを見ることができますが、プロセス数が多いと対象のプロセスを探すのが困難になりますがそんなプロセスを確認する方法。&lt;/p>
+&lt;h2 id="プロセスを検索する方法">プロセスを検索する方法&lt;/h2>
+&lt;p>&lt;code>information_schema.PROCESSLIST&lt;/code> に対して &lt;code>select&lt;/code> する事でプロセスの検索が可能です。&lt;br />
+※ &lt;code>SHOW FULL PROCESSLIST&lt;/code> と &lt;code>SELECT * FROM INFORMATION_SCHEMA.PROCESSLIST&lt;/code> は同等の結果になります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1136 (21S01): Column count doesn't match value count at row のエラー解決方法</title><link>https://c-a-p-engineer.github.io/tech/2022/09/16/mysql-column-dosent-match/</link><pubDate>Sat, 17 Sep 2022 17:00:00 +0900</pubDate><atom:modified>Sat, 17 Sep 2022 17:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/16/mysql-column-dosent-match/</guid><description>&lt;h1 id="mysqlerror-1136-21s01-column-count-doesnt-match-value-count-at-row-エラーの解決">【Mysql】ERROR 1136 (21S01): Column count doesn&amp;rsquo;t match value count at row エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1136 (21S01): Column count doesn't match value count at row&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>INSERTに指定された列と値の数と一致しないのが原因です。&lt;/p>
+&lt;h2 id="解決方法">解決方法&lt;/h2>
+&lt;p>列数と値の数を一致させる。&lt;br />
+そのためINSERT文の指定した列と値に過不足があるか見直しをすれば解決します。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】指定したパーティションのみを検索する</title><link>https://c-a-p-engineer.github.io/tech/2022/09/15/mysql-partition-select/</link><pubDate>Fri, 16 Sep 2022 18:00:00 +0900</pubDate><atom:modified>Fri, 16 Sep 2022 18:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/09/15/mysql-partition-select/</guid><description>&lt;h1 id="mysql指定したパーティションのみを検索する">【Mysql】指定したパーティションのみを検索する&lt;/h1>
+&lt;p>Mysqlで指定したパーティションのみを検索する方法メモ。&lt;/p>
+&lt;h2 id="パーティションを指定して検索する">パーティションを指定して検索する&lt;/h2>
+&lt;p>以下の方法で指定したパーティションのみの検索が可能です。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="k">TABLE_NAME&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">PARTITION_NAME&lt;/span>&lt;span class="p">]);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="サンプルテーブルの作成">サンプルテーブルの作成&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">sample&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">unsigned&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">AUTO_INCREMENT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">decimal&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DEFAULT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">PRIMARY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ENGINE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">InnoDB&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DEFAULT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">CHARSET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">utf8mb4&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">RANGE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">FLOOR&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">num&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="p">))(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">p0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">VALUES&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LESS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THAN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">VALUES&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LESS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THAN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">p2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">VALUES&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LESS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THAN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">30&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">PARTITION&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">p3&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">VALUES&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LESS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">THAN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">MAXVALUE&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="データを入れる">データを入れる&lt;/h3>
+&lt;p>作成したテーブルにデータを入れてみます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】テーブル更新時間を確認する</title><link>https://c-a-p-engineer.github.io/tech/2022/08/12/mysql-update-log/</link><pubDate>Fri, 12 Aug 2022 18:30:00 +0900</pubDate><atom:modified>Fri, 12 Aug 2022 18:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/08/12/mysql-update-log/</guid><description>&lt;h1 id="mysqlテーブル更新時間を確認する">【Mysql】テーブル更新時間を確認する&lt;/h1>
+&lt;p>Mysql でテーブル更新時間を確認する方法メモ。&lt;br />
+Mysql で該当のテーブルが使われているか確認したいと思い、更新されている値を取得する方法を探しました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1526 (HY000): Table has no partition for value エラーの解決</title><link>https://c-a-p-engineer.github.io/tech/2022/06/15/mysql-has-no-partition/</link><pubDate>Wed, 15 Jun 2022 12:30:00 +0900</pubDate><atom:modified>Wed, 15 Jun 2022 12:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/15/mysql-has-no-partition/</guid><description>&lt;h1 id="error-1526-hy000-table-has-no-partition-for-value-エラーの解決">ERROR 1526 (HY000): Table has no partition for value エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1526 (HY000): Table has no partition for value&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>パーティションの範囲外の値が指定されている。&lt;/p>
+&lt;h2 id="解決方法">解決方法&lt;/h2>
+&lt;p>パーティションの範囲の範囲を増やすことで対応できます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1503 (HY000): A PRIMARY KEY must include all columns in the table's partitioning function エラーの解決</title><link>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-primary-partitioning/</link><pubDate>Fri, 10 Jun 2022 03:30:00 +0900</pubDate><atom:modified>Fri, 10 Jun 2022 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-primary-partitioning/</guid><description>&lt;h1 id="mysqlerror-1503-hy000-a-primary-key-must-include-all-columns-in-the-tables-partitioning-function-エラーの解決">【Mysql】ERROR 1503 (HY000): A PRIMARY KEY must include all columns in the table&amp;rsquo;s partitioning function エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1503 (HY000): A PRIMARY KEY must include all columns in the table's partitioning function&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>パーティショニングを行う列はプライマリキーに含めていないため。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1564 (HY000): This partition function is not allowed エラーの解決</title><link>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-partition-function-not-allowed/</link><pubDate>Fri, 10 Jun 2022 03:30:00 +0900</pubDate><atom:modified>Fri, 10 Jun 2022 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-partition-function-not-allowed/</guid><description>&lt;h1 id="mysqlerror-1564-hy000-this-partition-function-is-not-allowed-エラーの解決">【Mysql】ERROR 1564 (HY000): This partition function is not allowed エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1564 (HY000): This partition function is not allowed&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>パーティション設定時に使用できる関数以外が指定されている。&lt;/p>
+&lt;h2 id="解決方法">解決方法&lt;/h2>
+&lt;p>パーティショニングを行う際には以下のリンクの関数を使用する。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1659 (HY000): Field 'num' is of a not allowed type for this type of partitioning エラーの解決</title><link>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-not-allowed-type-partitioning/</link><pubDate>Fri, 10 Jun 2022 03:30:00 +0900</pubDate><atom:modified>Fri, 10 Jun 2022 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-not-allowed-type-partitioning/</guid><description>&lt;h1 id="mysqlerror-1659-hy000-field-num-is-of-a-not-allowed-type-for-this-type-of-partitioning-エラーの解決">【Mysql】ERROR 1659 (HY000): Field &amp;rsquo;num&amp;rsquo; is of a not allowed type for this type of partitioning エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1659 (HY000): Field 'num' is of a not allowed type for this type of partitioning&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>列がパーティションに指定できる型ではない。&lt;/p>
+&lt;h2 id="解決方法">解決方法&lt;/h2>
+&lt;p>解決方法は2つ。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】ERROR 1659 (HY000): The PARTITION function returns the wrong type エラーの解決</title><link>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-partition-returns-wrong-type/</link><pubDate>Fri, 10 Jun 2022 03:30:00 +0900</pubDate><atom:modified>Fri, 10 Jun 2022 03:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-partition-returns-wrong-type/</guid><description>&lt;h1 id="mysqlerror-1564-hy000-the-partition-function-returns-the-wrong-type-エラーの解決">【Mysql】ERROR 1564 (HY000): The PARTITION function returns the wrong type エラーの解決&lt;/h1>
+&lt;p>Mysql &lt;code>ERROR 1564 (HY000): The PARTITION function returns the wrong type&lt;/code> エラーの解決メモ&lt;/p>
+&lt;h2 id="原因">原因&lt;/h2>
+&lt;p>パーティション設定時に使用した関数の返却値の型がパーティションに設定できる型ではない。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】float, double型でテーブルのパーティションが切れない</title><link>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-partition-float-double/</link><pubDate>Fri, 10 Jun 2022 03:00:00 +0900</pubDate><atom:modified>Fri, 10 Jun 2022 03:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/06/10/mysql-partition-float-double/</guid><description>&lt;h1 id="mysqlfloat-double型でテーブルのパーティションが切れない">【Mysql】float, double型でテーブルのパーティションが切れない&lt;/h1>
+&lt;p>Mysql で float, double型でテーブルのパーティションが切れなかったため解決した方法のメモ&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://dev.mysql.com/doc/refman/8.0/ja/partitioning-columns.html" target="_blank" rel="nofollow noopener">MySQL :: MySQL 8.0 リファレンスマニュアル :: 24.2.3 COLUMNS パーティショニング&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="パーティショニング可能な型">パーティショニング可能な型&lt;/h2>
+&lt;p>以下がパーティショニング可能な型になります。&lt;br />
+これ以外は &lt;strong>基本的には使用できません&lt;/strong>。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】テーブルの件数を取得する際に TABLE_ROWS と COUNT の違いの注意点</title><link>https://c-a-p-engineer.github.io/tech/2022/05/21/mysql-table-row/</link><pubDate>Sat, 21 May 2022 05:30:00 +0900</pubDate><atom:modified>Sat, 21 May 2022 05:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/05/21/mysql-table-row/</guid><description>&lt;h1 id="mysqlテーブルの件数を取得する際に-table_rows-と-count-の違いの注意点">【Mysql】テーブルの件数を取得する際に TABLE_ROWS と COUNT の違いの注意点&lt;/h1>
+&lt;p>テーブルのデータ量が多く、COUNT だと時間が掛かるため、&lt;code>INFORMATION_SCHEMATABLES.TABLE_ROWS&lt;/code> から件数を確認してみたのですが、これが実際の件数と違うので注意が必要です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】CREATE TABLE はトランザクションが効かないで暗黙的にコミットされる</title><link>https://c-a-p-engineer.github.io/tech/2022/05/07/mysql-create-table-transaction/</link><pubDate>Sat, 07 May 2022 02:00:00 +0900</pubDate><atom:modified>Sat, 07 May 2022 02:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/05/07/mysql-create-table-transaction/</guid><description>&lt;h1 id="mysqlcreate-table-はトランザクションが効かないで暗黙的にコミットされる">【Mysql】CREATE TABLE はトランザクションが効かないで暗黙的にコミットされる&lt;/h1>
+&lt;p>Mysqlでは &lt;code>CREATE TABLE&lt;/code> はトランザクションが効かないで暗黙的にコミットされる。&lt;/p>
+&lt;p>一部のステートメントでは暗黙的にコミットされトランザクションが効かなくなるとのことです。&lt;br />
+&lt;a href="https://dev.mysql.com/doc/refman/8.0/ja/implicit-commit.html" target="_blank" rel="nofollow noopener">MySQL :: MySQL 8.0 リファレンスマニュアル :: 13.3.3 暗黙的なコミットを発生させるステートメント&lt;/a>&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Laravel】Mysql とのコネクションをプーリングさせる方法</title><link>https://c-a-p-engineer.github.io/tech/2022/04/13/laravel-mysql-connection-pooling/</link><pubDate>Wed, 13 Apr 2022 02:30:00 +0900</pubDate><atom:modified>Wed, 13 Apr 2022 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/04/13/laravel-mysql-connection-pooling/</guid><description>&lt;h1 id="laravelmysql-とのコネクションをプーリングさせる方法">【Laravel】Mysql とのコネクションをプーリングさせる方法&lt;/h1>
+&lt;p>Laravel で Mysql とのコネクションプーリングを行う方法メモ。&lt;/p>
+&lt;h2 id="プーリングさせる意味">プーリングさせる意味&lt;/h2>
+&lt;p>PHPではデフォルトでDBへの接続をプーリングさせません。&lt;br />
+ですが、DBへのコネクション数を減らして負荷を下げる意味では行う方がベターです。&lt;br />
+また多数のSQLを発行する場面で一々コネクションの発生が抑えられるなどの効果があります。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/laravel-l-slant.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>PHP</category><category>Laravel</category><category>Mysql</category><category>Laravel</category></item><item><title>【Mysql】#hy000you can't specify target table 'hoge' for update in from clause の解決方法</title><link>https://c-a-p-engineer.github.io/tech/2022/04/10/mysq-cant-specify-target-table/</link><pubDate>Sun, 10 Apr 2022 02:30:00 +0900</pubDate><atom:modified>Sun, 10 Apr 2022 02:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2022/04/10/mysq-cant-specify-target-table/</guid><description>&lt;h1 id="mysqlhy000you-cant-specify-target-table-hoge-for-update-in-from-clause-の解決方法">【Mysql】#hy000you can&amp;rsquo;t specify target table &amp;lsquo;hoge&amp;rsquo; for update in from clause の解決方法&lt;/h1>
+&lt;p>MysqlでSQLを実行したら&lt;code>#hy000you can't specify target table 'hoge' for update in from clause&lt;/code> というエラーが出たので解決方法メモ。&lt;/p>
+&lt;h2 id="エラー">エラー&lt;/h2>
+&lt;p>以下のようなSQLを実行すると &lt;code>#hy000you can't specify target table 'hoge' for update in from clause&lt;/code> というエラーが出てきます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Mysql】テーブルバックアップ方法</title><link>https://c-a-p-engineer.github.io/tech/2021/10/13/mysql-table-backup/</link><pubDate>Wed, 13 Oct 2021 22:00:00 +0900</pubDate><atom:modified>Wed, 13 Oct 2021 22:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/10/13/mysql-table-backup/</guid><description>&lt;h1 id="mysqlテーブルバックアップ方法">Mysqlテーブルバックアップ方法&lt;/h1>
+&lt;p>Mysql で簡単にテーブルのバックアップをする方法。&lt;br />
+これさえ、あればテーブルのバックアップを簡単に取っておくことが出来ます。&lt;/p>
+&lt;h2 id="サンプル">サンプル&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">-- テーブルの構造コピー
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="err">バックアップ先テーブル名&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">LIKE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="err">バックアップ元テーブル名&lt;/span>&lt;span class="p">];&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c1">-- データコピー
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">INSERT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INTO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="err">バックアップ先テーブル名&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="err">バックアップ元テーブル名&lt;/span>&lt;span class="p">];&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://dev.mysql.com/doc/refman/8.0/ja/create-table-like.html" target="_blank" rel="nofollow noopener">MySQL :: MySQL 8.0 リファレンスマニュアル :: 13.1.20.3 CREATE TABLE &amp;hellip; LIKE ステートメント&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dev.mysql.com/doc/refman/8.0/ja/insert-select.html" target="_blank" rel="nofollow noopener">MySQL :: MySQL 8.0 リファレンスマニュアル :: 13.2.6.1 INSERT &amp;hellip; SELECT ステートメント&lt;/a>&lt;/li>
+&lt;/ul></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item><item><title>【Docker】Mysql が立ち上がらない（ユーザ設定エラー）</title><link>https://c-a-p-engineer.github.io/tech/2021/07/05/docker-mysql/</link><pubDate>Mon, 05 Jul 2021 04:00:00 +0900</pubDate><atom:modified>Mon, 05 Jul 2021 04:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/07/05/docker-mysql/</guid><description>&lt;h1 id="mysql-が立ち上がらないパスワード設定エラー">Mysql が立ち上がらない（パスワード設定エラー）&lt;/h1>
+&lt;p>Docker で Mysql が立ち上がらなかったのでメモ。&lt;/p>
+&lt;h2 id="現象">現象&lt;/h2>
+&lt;p>Docker で Mysql のコンテナ立ち上げ時にうまく立ち上がらなかったので &lt;code>docker-compose logs&lt;/code> でログを確認&lt;br />
+同じようなログ2種類を確認しました。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Docker</category><category>Mysql</category><category>Docker</category></item><item><title>【Mysql】存在チェックINSERT文 重複行を挿入しない方法</title><link>https://c-a-p-engineer.github.io/tech/2021/02/23/mysql-exists-insert/</link><pubDate>Tue, 23 Feb 2021 08:00:00 +0900</pubDate><atom:modified>Tue, 23 Feb 2021 08:00:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/tech/2021/02/23/mysql-exists-insert/</guid><description>&lt;h1 id="存在チェックinsert文-重複行を挿入しない方法">存在チェックINSERT文 重複行を挿入しない方法&lt;/h1>
+&lt;p>データ登録時に同一データがある場合は一意制約違反でエラーが発生したり、重複を挿入したくない時のためのメモ。&lt;br />
+挿入済みデータの存在チェックを行い、同一データの挿入を防ぎます。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/powered-by-mysql-167x86.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Mysql</category><category>DB</category><category>Mysql</category></item></channel></rss>

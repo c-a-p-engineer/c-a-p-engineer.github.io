@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Ubuntu on こぴぺたん ログ</title><link>https://c-a-p-engineer.github.io/ja/categories/ubuntu/</link><description>Recent content in Ubuntu on こぴぺたん ログ</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;{year}, All Rights Reserved</copyright><lastBuildDate>Fri, 30 Apr 2021 11:30:00 +0900</lastBuildDate><atom:link href="https://c-a-p-engineer.github.io/ja/categories/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>【Ubuntu】Node.js をインストール</title><link>https://c-a-p-engineer.github.io/ja/tech/2021/04/30/ubuntu-nodejs-install/</link><pubDate>Fri, 30 Apr 2021 11:30:00 +0900</pubDate><atom:modified>Fri, 30 Apr 2021 11:30:00 +0900</atom:modified><guid>https://c-a-p-engineer.github.io/ja/tech/2021/04/30/ubuntu-nodejs-install/</guid><description>&lt;h1 id="nodejs-をインストール備忘録">Node.js をインストール備忘録&lt;/h1>
-&lt;p>UbuntuにNode.js をインストールする備忘録&lt;/p>
-&lt;h2 id="実行環境">実行環境&lt;/h2>
-&lt;ul>
-&lt;li>Ubuntu 20.04.2 LTS&lt;/li>
-&lt;/ul>
-&lt;h2 id="ppaを利用して-nodejs-をインストール">PPAを利用して Node.js をインストール&lt;/h2>
-&lt;p>&lt;code>16.x&lt;/code> の箇所を変更することで他のバージョンをインストールすることが可能です。&lt;br />
-使用可能なバージョンは &lt;a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="nofollow noopener">NodeSourceドキュメント&lt;/a> で確認が可能です。&lt;/p></description><dc:creator>こぴぺたん</dc:creator><media:content url="https://c-a-p-engineer.github.io/images/thumbnail/delivered-by_orange_hex.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Ubuntu</category><category>Node.js</category><category>Ubuntu</category></item></channel></rss>

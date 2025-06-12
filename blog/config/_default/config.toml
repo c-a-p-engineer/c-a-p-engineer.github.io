@@ -3,7 +3,7 @@ title = "Copy & Paste Engineer Log"
 theme = "zzo"
 
 defaultContentLanguage = "ja"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
 
 summaryLength = 70

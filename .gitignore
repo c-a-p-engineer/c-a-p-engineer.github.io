@@ -1,2 +1,5 @@
 */node_modules/*
 */vendor/*
+
+# ビルドされたファイル
+**/blog/public/**

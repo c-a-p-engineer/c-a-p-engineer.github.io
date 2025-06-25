@@ -46,42 +46,84 @@
 </span><span class=lnt>36
 </span><span class=lnt>37
 </span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsonc data-lang=jsonc><span class=line><span class=cl><span class=c1>// .devcontainer/devcontainer.json
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=c1>// VS Code上に表示されるコンテナ名
+</span></span><span class=line><span class=cl>  <span class=c1>// コンテナ名（任意の識別用）
 </span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Kotlin Dev Container&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  <span class=c1>// ベースイメージ：Java 17＋Debian Bullseye、Gradleプリインストール版
+</span></span><span class=line><span class=cl>  <span class=c1>// ベースとなるイメージ。Java 17（Bullseye）を利用
 </span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;image&#34;</span><span class=p>:</span> <span class=s2>&#34;mcr.microsoft.com/devcontainers/java:0-17-bullseye&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  <span class=c1>// 追加Feature定義
+</span></span><span class=line><span class=cl>  <span class=c1>// Dev Container の Features
 </span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;features&#34;</span><span class=p>:</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Java Feature：Mavenは不要、Gradleのみ有効化
+</span></span><span class=line><span class=cl>    <span class=c1>// Java Feature：Maven は不要、Gradle のみインストール
 </span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;ghcr.io/devcontainers/features/java:1&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>      <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=s2>&#34;none&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>      <span class=nt>&#34;installMaven&#34;</span><span class=p>:</span> <span class=s2>&#34;false&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>      <span class=nt>&#34;installGradle&#34;</span><span class=p>:</span> <span class=s2>&#34;true&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;installMaven&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;installGradle&#34;</span><span class=p>:</span> <span class=kc>true</span>
 </span></span><span class=line><span class=cl>    <span class=p>},</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// Kotlinコンパイラ（kotlinc）をインストール
+</span></span><span class=line><span class=cl>    <span class=c1>// Kotlin コンパイラをコンテナ内に導入
 </span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nt>&#34;ghcr.io/mikaello/devcontainer-features/kotlinc:1&#34;</span><span class=p>:</span> <span class=p>{}</span>
 </span></span><span class=line><span class=cl>  <span class=p>},</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  <span class=c1>// VS Code拡張機能の自動インストール
+</span></span><span class=line><span class=cl>  <span class=c1>// VS Code 上のカスタマイズ
 </span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;customizations&#34;</span><span class=p>:</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nt>&#34;vscode&#34;</span><span class=p>:</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>      <span class=nt>&#34;extensions&#34;</span><span class=p>:</span> <span class=p>[</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;fwcd.kotlin&#34;</span><span class=p>,</span>               <span class=c1>// Kotlin言語サポート
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=s2>&#34;vscjava.vscode-java-pack&#34;</span><span class=p>,</span>  <span class=c1>// Java開発パック
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=s2>&#34;vscjava.vscode-gradle&#34;</span>      <span class=c1>// Gradleタスク連携
-</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=c1>// インストールする拡張機能一覧
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nt>&#34;extensions&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;mathiasfrohlich.Kotlin&#34;</span><span class=p>,</span>         <span class=c1>// シンタックスハイライト＆基本補完
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=s2>&#34;restia.vscode-kotlin-formatter&#34;</span><span class=p>,</span> <span class=c1>// ktlint/ktfmt ベースのフォーマッタ
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=s2>&#34;vscjava.vscode-java-pack&#34;</span><span class=p>,</span>       <span class=c1>// Java 開発パック（デバッガー等）
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=s2>&#34;vscjava.vscode-gradle&#34;</span>           <span class=c1>// Gradle タスクランナー
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=p>],</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=c1>// VS Code の設定
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// .kt/.kts を両方とも Kotlin 言語として認識
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;files.associations&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;*.kt&#34;</span><span class=p>:</span> <span class=s2>&#34;kotlin&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;*.kts&#34;</span><span class=p>:</span> <span class=s2>&#34;kotlin&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=p>},</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>// Kotlin ファイル全般（.kt/.kts）で保存時に自動フォーマット
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nt>&#34;[kotlin]&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;editor.defaultFormatter&#34;</span><span class=p>:</span> <span class=s2>&#34;restia.vscode-kotlin-formatter&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=nt>&#34;editor.formatOnSave&#34;</span><span class=p>:</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>  <span class=p>},</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  <span class=c1>// ホストの作業フォルダをコンテナにマウント
+</span></span><span class=line><span class=cl>  <span class=c1>// コンテナ起動後に ktlint CLI をダウンロード＆配置
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// restia.vscode-kotlin-formatter が内部で利用する
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;postCreateCommand&#34;</span><span class=p>:</span> <span class=s2>&#34;curl -sSLO https://github.com/pinterest/ktlint/releases/download/1.6.0/ktlint &amp;&amp; chmod +x ktlint &amp;&amp; sudo install -m 0755 ktlint /usr/local/bin/ktlint&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// ローカルフォルダをコンテナ内 /workspace にマウント
 </span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;workspaceMount&#34;</span><span class=p>:</span> <span class=s2>&#34;source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>  <span class=nt>&#34;workspaceFolder&#34;</span><span class=p>:</span> <span class=s2>&#34;/workspace&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  <span class=c1>// コンテナ停止後もファイルを保持
+</span></span><span class=line><span class=cl>  <span class=c1>// エディタ終了時にコンテナは停止（デフォルト）
 </span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nt>&#34;shutdownAction&#34;</span><span class=p>:</span> <span class=s2>&#34;none&#34;</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><p>これで <code>.kt</code>,<code>.kts</code> のファイルはエディター上の上部にある▶️ボタンを押すことで実行できます。</p><h2 id=使い分けポイント>使い分けポイント</h2><p>Kotlinファイルには大きく分けて「コンパイルしてJARを実行する <code>.kt</code>」と「スクリプト実行できる <code>.kts</code>」の2種類があります。用途に応じて使い分けましょう。</p><table><thead><tr><th>用途</th><th>ファイル拡張子</th><th>特長</th></tr></thead><tbody><tr><td>大規模アプリ開発</td><td><code>.kt</code></td><td>パッケージ管理・IDEフルサポート／デバッグ機能あり</td></tr><tr><td>簡易スクリプト実行</td><td><code>.kts</code></td><td>書いてすぐ実行可能／起動オーバーヘッドが小さい</td></tr></tbody></table><hr><h2 id=kt-の使い方と実行例>.kt の使い方と実行例</h2><h3 id=hellokt>Hello.kt</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1

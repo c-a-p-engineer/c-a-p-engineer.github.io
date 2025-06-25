@@ -31,42 +31,64 @@ Kotlinを学ぶ際、ローカル環境を汚さずにサクッと試せるの�
 ```jsonc
 // .devcontainer/devcontainer.json
 {
-  // VS Code上に表示されるコンテナ名
+  // コンテナ名（任意の識別用）
   "name": "Kotlin Dev Container",
 
-  // ベースイメージ：Java 17＋Debian Bullseye、Gradleプリインストール版
+  // ベースとなるイメージ。Java 17（Bullseye）を利用
   "image": "mcr.microsoft.com/devcontainers/java:0-17-bullseye",
 
-  // 追加Feature定義
+  // Dev Container の Features
   "features": {
-    // Java Feature：Mavenは不要、Gradleのみ有効化
+    // Java Feature：Maven は不要、Gradle のみインストール
     "ghcr.io/devcontainers/features/java:1": {
       "version": "none",
-      "installMaven": "false",
-      "installGradle": "true"
+      "installMaven": false,
+      "installGradle": true
     },
-    // Kotlinコンパイラ（kotlinc）をインストール
+    // Kotlin コンパイラをコンテナ内に導入
     "ghcr.io/mikaello/devcontainer-features/kotlinc:1": {}
   },
 
-  // VS Code拡張機能の自動インストール
+  // VS Code 上のカスタマイズ
   "customizations": {
     "vscode": {
+      // インストールする拡張機能一覧
       "extensions": [
-        "fwcd.kotlin",               // Kotlin言語サポート
-        "vscjava.vscode-java-pack",  // Java開発パック
-        "vscjava.vscode-gradle"      // Gradleタスク連携
-      ]
+        "mathiasfrohlich.Kotlin",         // シンタックスハイライト＆基本補完
+        "restia.vscode-kotlin-formatter", // ktlint/ktfmt ベースのフォーマッタ
+        "vscjava.vscode-java-pack",       // Java 開発パック（デバッガー等）
+        "vscjava.vscode-gradle"           // Gradle タスクランナー
+      ],
+
+      // VS Code の設定
+      "settings": {
+        // .kt/.kts を両方とも Kotlin 言語として認識
+        "files.associations": {
+          "*.kt": "kotlin",
+          "*.kts": "kotlin"
+        },
+
+        // Kotlin ファイル全般（.kt/.kts）で保存時に自動フォーマット
+        "[kotlin]": {
+          "editor.defaultFormatter": "restia.vscode-kotlin-formatter",
+          "editor.formatOnSave": true
+        }
+      }
     }
   },
 
-  // ホストの作業フォルダをコンテナにマウント
+  // コンテナ起動後に ktlint CLI をダウンロード＆配置
+  // restia.vscode-kotlin-formatter が内部で利用する
+  "postCreateCommand": "curl -sSLO https://github.com/pinterest/ktlint/releases/download/1.6.0/ktlint && chmod +x ktlint && sudo install -m 0755 ktlint /usr/local/bin/ktlint",
+
+  // ローカルフォルダをコンテナ内 /workspace にマウント
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
 
-  // コンテナ停止後もファイルを保持
+  // エディタ終了時にコンテナは停止（デフォルト）
   "shutdownAction": "none"
 }
+
 ```
 
 これで `.kt`,`.kts` のファイルはエディター上の上部にある▶️ボタンを押すことで実行できます。

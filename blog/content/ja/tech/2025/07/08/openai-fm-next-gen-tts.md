@@ -7,7 +7,7 @@ enableToc: true
 enableTocContent: true
 tags: ["OpenAI", "AI", "Text-to-Speech", "音声合成", "TTS"]
 categories: ["AI"]
-image: images/thumbnail/ai_robot.png
+image: images/thumbnail/ai_robot.jpg
 ---
 
 ## はじめに

@@ -3,11 +3,13 @@ title: "MySQL の SYSDATE() と NOW() の違いを整理する"
 date: 2025-10-05T09:00:00+09:00
 publishDate: 2025-10-05T09:00:00+09:00
 description: "MySQL の日付関数 SYSDATE() と NOW() の違いと使い分け、レプリケーションへの影響や設定オプションを整理します。"
-tags:
-- MySQL
-categories:
-- MySQL
-thumbnail: "images/thumbnail/powered-by-mysql-167x86.png"
+tags: 
+- Mysql
+- DB
+categories: 
+- Mysql
+image: images/thumbnail/powered-by-mysql-167x86.png
+image_description: 'MySQLは、Oracleの米国およびその他の国における商標または登録商標です。'
 slug: "mysql-sysdate-vs-now"
 draft: false
 enableToc: true

@@ -41,8 +41,8 @@
     publishDate: 2024-05-12T09:00:00+09:00
     description: "クラウド移行時に考慮すべきアーキテクチャ設計の要点を、実プロジェクトの知見から整理しました。"
     tags: ["cloud", "architecture", "migration"]
-    categories: ["tech"]
-    thumbnail: "images/thumbnail/cloud-architecture.png"
+    categories: ["cloud"]
+    image: "images/thumbnail/cloud-architecture.png"
     draft: false
     ---
 

@@ -1,13 +1,13 @@
 ---
-title: 【Python】標準出力の効果的な出力制御
-date: 2024-09-24T01:00:00+09:00
+title: 【Python】標準出力の効果的な出力制御（実践編）
+date: 2024-09-29T01:00:00+09:00
 description: Pythonで標準出力を操作する際、一般的には print() 関数を使うことがほとんどです。
 draft: false
 enableToc: true
 enableTocContent: true
-tags: 
+tags:
 - Python
-categories: 
+categories:
 - Python
 image: images/thumbnail/python-logo-master-v3-TM.png
 image_description: 'Pythonロゴは、Python SoftwareFoundationの商標です。'

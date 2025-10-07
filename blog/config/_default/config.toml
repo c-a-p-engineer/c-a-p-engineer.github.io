@@ -27,6 +27,9 @@ enableGitInfo = false
 
 enableRobotsTXT = true
 
+[permalinks]
+  tech = "/:filename/"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

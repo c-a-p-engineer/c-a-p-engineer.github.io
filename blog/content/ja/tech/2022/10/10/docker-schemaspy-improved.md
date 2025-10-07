@@ -1,21 +1,21 @@
 ---
-title: "【Docker】SchemaSpy（スキームスパイ） を使って自動的にER図を生成する（2022/10/10 改良版"
+title: "【Docker】SchemaSpy（スキームスパイ） を使って自動的にER図を生成する（2022/10/10 改良版）"
 date: 2022-10-10T16:30:00+09:00
-description: "Docker で SchemaSpy（スキームスパイ） を使って自動的にER図を生成する（2022/10/10 改良版"
+description: "Docker で SchemaSpy（スキームスパイ） を使って自動的にER図を生成する（2022/10/10 改良版）"
 draft: false
 enableToc: true
 enableTocContent: true
-tags: 
+tags:
 - Docker
 - DB
-categories: 
+categories:
 - Docker
 image: images/thumbnail/docker.png
 ---
 
 # 【Docker】SchemaSpy（スキームスパイ） を使って自動的にER図を生成する（改良版
 Docker で SchemaSpy（スキームスパイ） を使って自動的にER図を生成する。（改良版
-以前書いた記事（<a href="tech/2022/03/31/docker-schemaspy/" target="_blank" rel="nofollow noopener">【Docker】SchemaSpy を使って自動的にER図を生成する</a>）がSchemaSpyのアップデートのためか動作がおかしくなったため改良版を書きました。
+以前書いた記事（<a href="/tech/docker-schemaspy/" target="_blank" rel="nofollow noopener">【Docker】SchemaSpy を使って自動的にER図を生成する</a>）がSchemaSpyのアップデートのためか動作がおかしくなったため改良版を書きました。
 
 ## SchemaSpy を使ってみる
 SchemaSpyを使ってみます。
@@ -143,10 +143,10 @@ docker-compose up -d --build schemaspy
 `schemaspy/output` のディレクトリにファイルが出力されたら成功です。
 出力されたHTMLを見るとテーブル情報を確認ができます。
 
-![schemaspy_001](/tech/2022/10/10/docker-schemaspy/schemaspy_001.png "schemaspy_001")
+![schemaspy_001](/docker-schemaspy-improved/schemaspy_001.png "schemaspy_001")
 
 またER図を出力してくれるのでリレーションの確認もできます。
-![schemaspy_002](/tech/2022/10/10/docker-schemaspy/schemaspy_002.png "schemaspy_002")
+![schemaspy_002](/docker-schemaspy-improved/schemaspy_002.png "schemaspy_002")
 
 ## 参考
 * <a href="https://hub.docker.com/r/schemaspy/schemaspy/" target="_blank" rel="nofollow noopener">schemaspy/schemaspy - Docker Image | Docker Hub</a>

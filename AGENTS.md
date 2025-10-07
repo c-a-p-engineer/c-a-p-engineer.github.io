@@ -20,7 +20,7 @@
   - Hugo コマンドを利用する場合は `hugo new --kind post ja/tech/YYYY/MM/DD/<slug>.md` を指定すると雛形が生成されます。生成後に必要な項目を埋めてください。
   - フロントマターは YAML 形式で管理し、最低限 `title`, `date`, `description`, `tags`, `categories`, `thumbnail` を設定します。
 - 日時の扱い
-  - `date` は ISO 8601 (`YYYY-MM-DDTHH:MM:SS+09:00` など) で JST 基準とします。
+  - `date` は ISO 8601 (`YYYY-MM-DDTHH:MM:SS+09:00` など) で JST 基準とします。作成日時にしてください。
   - 公開予約が必要な場合は `publishDate` を併用し、ドラフト中は `draft: true` を指定します。公開時は `draft` を削除または `false` に更新します。
 - サムネイル運用
   - サムネイル画像は必ず `blog/static/images/thumbnail/` 内に保存されている既存ファイルまたは新規追加ファイルから選定します。必要に応じてディレクトリを作成できますが、ファイルは 200KB 以内を目安に最適化してください。
@@ -30,7 +30,7 @@
   - 固定ページでない限り `slug` は英小文字+ハイフンを推奨します（多言語 URL 問題を回避）。
   - SNS シェア向け `description` は 120 文字程度を目安とし、要約かつキーワードを含めます。
 - ライティングの参考
-  - 既存のテックカテゴリ記事（例: `blog/content/ja/tech/2024/03/01/terraform-best-practices.md` など）を読み、見出し構成やコードブロックの書き方を踏襲してください。
+  - 既存のテックカテゴリ記事（例: `blog/content/ja/tech/YYYY/MM/DD/terraform-best-practices.md` など）を読み、見出し構成やコードブロックの書き方を踏襲してください。
   - リンクの書き方（例: `<a href="https://example.com" target="_blank" rel="nofollow noopener">Example.com</a>` リンク先と名前は修正）
   - 以下はサンプルとなるフロントマターと本文の骨子です。必要に応じて調整してください。
 
@@ -44,6 +44,7 @@
     categories: ["cloud"]
     image: "images/thumbnail/cloud-architecture.png"
     draft: false
+    slug: "example"
     ---
 
     # クラウド移行で押さえたい 5 つの設計ポイント

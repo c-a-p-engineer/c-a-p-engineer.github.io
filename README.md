@@ -7,7 +7,7 @@
 # Install
 Docker起動
 ```
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 コンテナに入る

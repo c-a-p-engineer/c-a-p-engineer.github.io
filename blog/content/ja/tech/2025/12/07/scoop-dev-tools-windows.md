@@ -1,6 +1,6 @@
 ---
 title: 管理者権限なしで Git をインストールして VSCode で使う最短手順【Scoop 利用・Windows】
-date: 2025-10-26T05:00:00+09:00
+date: 2025-12-07T02:00:00+09:00
 description: ソフトウェアのインストールに管理者権限が使えないことがありますそんな環境でも問題なく Git を導入できるの方法があります。 
 draft: false
 enableToc: true

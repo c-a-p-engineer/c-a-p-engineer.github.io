@@ -41,6 +41,12 @@ hugo --minify
 rm -rf ../docs;hugo --minify && mv -fv ./public/ ../docs/
 ```
 
+GitHub Pages デプロイ（履歴を残さない gh-pages ブランチへ強制反映）
+```
+./scripts/deploy-gh-pages.sh
+```
+※ `origin` リモートが設定されている前提です。
+
 ブログ確認
 ```
 docker exec -it blog-hugo hugo server

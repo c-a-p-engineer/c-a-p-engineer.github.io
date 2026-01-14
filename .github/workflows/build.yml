@@ -8,9 +8,11 @@ on:
       - 'blog/**'
 
 jobs:
-  Bulid:
+  build:
     # Ubuntu
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       # Checkout
       - name: Checkout
@@ -42,16 +44,17 @@ jobs:
       - name: Build
         run: |
           sudo chmod -R 777 ./blog
-          cd ./blog
-          sudo rm -rf ../docs
-          hugo --minify
-          mv -fv ./public/ ../docs/
+          sudo rm -rf ./docs
+          hugo --minify --source ./blog --destination ./docs
 
-      # Commit
-      - name: Update Hugo
-        uses: stefanzweifel/git-auto-commit-action@v4.2.0
+      # Deploy
+      - name: Deploy to gh-pages (force orphan)
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          commit_message: Update Build Files
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          force_orphan: true
 
   Lighthouse:
     runs-on: ubuntu-latest
@@ -72,7 +75,7 @@ jobs:
   Notification:
     # Ubuntu
     runs-on: ubuntu-latest
-    needs: bulid
+    needs: build
     steps:
       # Checkout
       - name: Checkout

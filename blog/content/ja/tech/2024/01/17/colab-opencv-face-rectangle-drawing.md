@@ -80,10 +80,10 @@ plt.show()
 ### 実行結果
 実行前の画像はこちら
 
-![before](/tech/2024/01/17/colab-opencv-face-rectangle-drawing/before.png "before") 
+![before](./before.png "before") 
 
 実行すると以下のように顔の判定をして四角で囲まれます。
 
-![after](/tech/2024/01/17/colab-opencv-face-rectangle-drawing/after.png "after") 
+![after](./after.png "after") 
 
 アニメ画像などで試してみましたが顔検出のデータが **実写以外には対応できていない** ためお気をつけてください。

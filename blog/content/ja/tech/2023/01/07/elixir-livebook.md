@@ -46,7 +46,7 @@ livebook server
 
 ## Livebook を使ってみる
 まずは初期画面の右上の `New notebook` で実行画面に移ります。
-![Livebook](/tech/2023/01/07/elixir-livebook/Livebook.png "Livebook") 
+![Livebook](./Livebook.png "Livebook") 
 
 とりあえず `Hello world` の表示確認をしてみます。
 以下のコードを `Section` 部分入れて実行してみます。
@@ -56,7 +56,7 @@ IO.puts "Hello world"
 
 入力したら左上の再生ボタン（▶）を押して実行してください
 そうすると実行されます。
-![Helloworld](/tech/2023/01/07/elixir-livebook/Helloworld.png "Helloworld") 
+![Helloworld](./Helloworld.png "Helloworld") 
 
 ## かっこよくリアルタイムに表示されるグラフを書いてみる
 こちらの記事のコードを利用させていただきました。
@@ -118,7 +118,7 @@ end
 ```
 
 これらを実行するとこうなります。
-![memory](/tech/2023/01/07/elixir-livebook/memory.gif "memory") 
+![memory](./memory.gif "memory") 
 
 ## Livebookを使ってみての感想
 通常のオンラインエディタと違って図や表をリアルタイムで表示されるのがとてもいい感じ。

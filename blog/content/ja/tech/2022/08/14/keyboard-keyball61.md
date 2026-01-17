@@ -14,7 +14,7 @@ image: tech/2022/08/14/keyboard-keyball61/keyball61.jpg
 
 # 【キーボード】Keyball61 を使ってみた
 自作キーボードの Keyball61 を購入してみて使ってみた感想。
-![keyball61](/tech/2022/08/14/keyboard-keyball61/keyball61.jpg "keyball61") 
+![keyball61](./keyball61.jpg "keyball61") 
 
 ## keyball61 構成
 自作キーボードなのですがフリマサイト見つけて今回組み立て済みのものを購入させていただきました。

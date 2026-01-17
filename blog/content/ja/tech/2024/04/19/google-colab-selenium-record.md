@@ -90,14 +90,14 @@ xvfb.stop()
 
 スクリーンショット
 
-![screenshot](/tech/2024/04/19/google-colab-selenium-record/1.png "screenshot") 
-![screenshot](/tech/2024/04/19/google-colab-selenium-record/2.png "screenshot") 
-![screenshot](/tech/2024/04/19/google-colab-selenium-record/3.png "screenshot") 
+![screenshot](./1.png "screenshot") 
+![screenshot](./2.png "screenshot") 
+![screenshot](./3.png "screenshot") 
 
 撮影した動画（出力ファイルはmkvですがmp4に変換したものを載せています。
 
 <video style="width:300px;" autoplay loop>
-    <source src="/tech/2024/04/19/google-colab-selenium-record/ouxkt.mp4" type="video/mp4">
+    <source src="./ouxkt.mp4" type="video/mp4">
 </video>
 
 録画できました！

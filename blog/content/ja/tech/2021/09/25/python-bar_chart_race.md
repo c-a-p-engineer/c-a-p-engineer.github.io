@@ -83,7 +83,7 @@ bcr.bar_chart_race(
 出来上がった動画はこちらになります。
 
 <video controls>
-    <source src="/tech/2021/09/25/python-bar_chart_race/covid19_daily.mp4" type="video/mp4">
+    <source src="./covid19_daily.mp4" type="video/mp4">
     Sorry, your browser doesn't support embedded videos.
 </video>
 

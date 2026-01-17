@@ -133,7 +133,7 @@ echo CliColor::text("Hello, World!", [CliColor::WHITE, CliColor::BG_RED]) . PHP_
 ```
 
 下のように出力されます。
-![php-cli-text-color](/tech/2023/04/17/php-cli-text-color/php-cli-text-color.png "php-cli-text-color") 
+![php-cli-text-color](./php-cli-text-color.png "php-cli-text-color") 
 
 
 ## 参考

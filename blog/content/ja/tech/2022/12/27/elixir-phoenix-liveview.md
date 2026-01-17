@@ -104,7 +104,7 @@ mix phx.server
 
 起動後に <a href="http://localhost:4000/light" target="_blank" rel="nofollow noopener">http://localhost:4000/light</a> に接続すると画面が出てきます。
 
-![liveview](/tech/2022/12/27/elixir-phoenix-liveview/elixir-phoenix-liveview-light.gif "liveview") 
+![liveview](./elixir-phoenix-liveview-light.gif "liveview") 
 
 ## 参考
 * <a href="https://www.wintermeyer-consulting.de/books/phoenix/1.5/phoenix-liveview-basics.html" target="_blank" rel="nofollow noopener">Phoenix LiveView Basics :: Phoenix Beginner's Guide</a>

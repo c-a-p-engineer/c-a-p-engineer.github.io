@@ -110,7 +110,7 @@ mix phx.server
 ```
 
 <a href="http://localhost:4000" target="_blank" rel="nofollow noopener">http://localhost:4000</a> に接続してWelcomeページが出たら成功です。
-![phoenix](/tech/2022/12/27/docker-elixir-phoenix/phoenix.png "phoenix") 
+![phoenix](./phoenix.png "phoenix") 
 
 * プロジェクト作成後に `docker-compose.yml` のコメントアウトを外すと起動時に自動的にサーバーが起動する設定にできます。
 ```yml:docker-compose.yml

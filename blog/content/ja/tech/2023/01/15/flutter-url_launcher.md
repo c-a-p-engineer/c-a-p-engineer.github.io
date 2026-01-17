@@ -53,7 +53,7 @@ Future<void> _launchUrl() async {
 ```
 
 ブラウザが開くようになりました。
-![url_launcher](/tech/2023/01/15/flutter-url_launcher/flutter-url_launcher.gif "url_launcher") 
+![url_launcher](._launcher/flutter-url_launcher.gif "url_launcher") 
 
 ## 参考
 * <a href="https://pub.dev/packages/url_launcher" target="_blank" rel="nofollow noopener">url_launcher | Flutter</a>

@@ -86,11 +86,11 @@ Tripo3Dは**クレジット制**で、生成やテクスチャの高品質化な
 
 **正面**  
 
-<img src="/tech/2025/03/27/tripo3d-start/front.jpg" width="300" />
+<img src="./front.jpg" width="300" />
 
 **背面**  
 
-<img src="/tech/2025/03/27/tripo3d-start/back.jpg" width="300" />
+<img src="./back.jpg" width="300" />
 
 この2枚の画像をTripo3Dに読み込ませて3D化してみます。
 
@@ -105,15 +105,15 @@ Tripo3Dは**クレジット制**で、生成やテクスチャの高品質化な
 
 **正面**  
 
-<img src="/tech/2025/03/27/tripo3d-start/tripo3d_001.png" width="300" />
+<img src="./tripo3d_001.png" width="300" />
 
 **サイド**  
 
-<img src="/tech/2025/03/27/tripo3d-start/tripo3d_002.png" width="300" />
+<img src="./tripo3d_002.png" width="300" />
 
 **背面**  
 
-<img src="/tech/2025/03/27/tripo3d-start/tripo3d_003.png" width="300" />
+<img src="./tripo3d_003.png" width="300" />
 
 ここから以下の機能も利用できます：
 

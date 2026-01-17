@@ -95,7 +95,7 @@ print(f"ngrok URL: {public_url}")
 
 VSCodeの画面が現れてターミナルなども操作可能で感動します！
 
-![VSCode](/tech/2024/12/28/google-colab-vscode-setup-guide.png "VSCode") 
+![VSCode](..png "VSCode") 
 
 ---
 

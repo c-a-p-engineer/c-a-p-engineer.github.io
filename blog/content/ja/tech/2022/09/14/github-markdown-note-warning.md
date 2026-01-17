@@ -32,7 +32,7 @@ GitHub 上の Markdown でブロックをハイライトにする方法メモ
 ```
 
 以下のようになります。
-![github-markdown-note-warning](/tech/2022/09/14/github-markdown-note-warning/note-warning.png "github-markdown-note-warning") 
+![github-markdown-note-warning](./note-warning.png "github-markdown-note-warning") 
 
 ## 参考
 * <a href="https://github.com/community/community/discussions/16925" target="_blank" rel="nofollow noopener">[Markdown] An option to highlight a &quot;Note&quot; and &quot;Warning&quot; using blockquote (Beta) · Discussion #16925 · community/community</a>

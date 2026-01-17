@@ -18,7 +18,7 @@ git log をキレイに整えて見やすくする方法メモ
 ## git log
 `git log` を普通に実行すると以下のようになります。
 
-![git-log](/tech/2022/09/19/git-log-pretty-format/git-log.png "git-log") 
+![git-log](./git-log.png "git-log") 
 
 ### フォーマットを指定する
 `--pretty` を使用することで出力する日付やハッシュなどに色を付けることが可能になります。
@@ -30,7 +30,7 @@ git log --graph --pretty=format:' %Cgreen[%ai]%C(#ff0ab3)(%cr) %Cred%h - %Creset
 
 <br>
 
-![git-log-pretty-format](/tech/2022/09/19/git-log-pretty-format/git-log-pretty-format.png "git-log-pretty-format") 
+![git-log-pretty-format](./git-log-pretty-format.png "git-log-pretty-format") 
 
 
 ### フォーマット詳細

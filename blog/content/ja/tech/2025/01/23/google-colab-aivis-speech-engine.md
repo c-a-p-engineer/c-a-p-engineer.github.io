@@ -222,7 +222,7 @@ Audio("audio.wav", autoplay=True)
 サンプルとして作った音声です。
 
 <video style="width:300px;" controls="true">
-    <source src="/tech/2025/01/23/google-colab-aivis-speech-engine/sample.mp4" type="video/mp4">
+    <source src="./sample.mp4" type="video/mp4">
 </video>
 
 ## 参考

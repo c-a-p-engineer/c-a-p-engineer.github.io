@@ -56,7 +56,7 @@ docker run --rm -it -t x11 xeyes
 ```
 
 以下のような目が出てくれば成功です！
-![xeyes](/tech/2023/01/01/docker-xwindow/xeyes.png "xeyes") 
+![xeyes](./xeyes.png "xeyes") 
 
 一応コマンドの説明を載せておきます。
 ```

@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 サンプルを実行するとこんなふうになります。（声は載せたくないのでGifでご勘弁ください
-![stt_sample](/tech/2023/01/09/flutter-speech_to_text/stt_sample.gif "stt_sample") 
+![stt_sample](._to_text/stt_sample.gif "stt_sample") 
 
 精度としてはまぁまぁな感じです。
 

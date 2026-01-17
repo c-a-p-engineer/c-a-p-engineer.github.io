@@ -420,7 +420,7 @@ class _MyAppState extends State<MyApp> {
 ## 実行確認
 中々に酷い…初期の Text To Speech のような音声です。
 <video controls>
-    <source src="/tech/2023/01/09/flutter-text_to_speech/tts_sample.mp4" type="video/mp4">
+    <source src="._to_speech/tts_sample.mp4" type="video/mp4">
     Sorry, your browser doesn't support embedded videos.
 </video>
 

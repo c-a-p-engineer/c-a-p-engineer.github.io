@@ -48,7 +48,7 @@ Audio('../data.wav', autoplay=True)
 
 実際に作成した音声が以下です。
 
-<audio controls src="/tech/2024/01/18/colabo-voicevox/data.wav"></audio>
+<audio controls src="./data.wav"></audio>
 
 これで自分の好きな音声を生成ができます。
 

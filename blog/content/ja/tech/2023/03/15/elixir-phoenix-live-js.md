@@ -66,7 +66,7 @@ end
 
 実装をした結果がこちらです。
 JSは一切書かずに色々な動きを実装ができます。
-![elixir-phoenix-live-js](/tech/2023/03/15/elixir-phoenix-live-js/elixir-phoenix-live-js.gif "elixir-phoenix-live-js") 
+![elixir-phoenix-live-js](./elixir-phoenix-live-js.gif "elixir-phoenix-live-js") 
 
 ## 参考
 * <a href="https://hexdocs.pm/phoenix_live_view/0.18.17/Phoenix.LiveView.JS.html" target="_blank" rel="nofollow noopener">Phoenix.LiveView.JS — Phoenix LiveView v0.18.17</a>

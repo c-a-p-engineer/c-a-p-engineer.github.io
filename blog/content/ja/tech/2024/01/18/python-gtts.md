@@ -55,6 +55,6 @@ Audio('audio.mp3')
 ```
 
 実際に作成した音声が以下です。
-<audio controls src="/tech/2024/01/18/python-gtts/audio.mp3"></audio>
+<audio controls src="./audio.mp3"></audio>
 
 漢字もそのまま読んでくれますが、漢字によっては狙った読みをしてくれなかったりするのでそれに合わせて平仮名に変えたりなどの対応が必要になるかと思います。

@@ -58,7 +58,7 @@ This share link expires in 72 hours. For free permanent hosting and GPU upgrades
 
 Gradio に公開された画面です。
 
-![gradio](/tech/2024/02/15/google-colabo-gradio/gradio.png "gradio") 
+![gradio](./gradio.png "gradio") 
 
 ## まとめ
 

@@ -19,7 +19,7 @@ image: images/thumbnail/video_editor.webp
 絵文字を組み合わせて遊ぼう！
 
 🫠 + 🐰 を組み合わせると以下のような溶けるうさぎが作れたりするツールです。
-![溶けるうさぎ](/tech/2024/03/11/emoji-kitchen/rabbit.png "溶けるうさぎ") 
+![溶けるうさぎ](./rabbit.png "溶けるうさぎ") 
 
 ## WEBサイトの特徴
 

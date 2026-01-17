@@ -139,7 +139,7 @@ glxgears
 
 グラフィックが動くと下記のような歯車画面が出てきて歯車が回ります。
 
-![glxgears](/tech/2023/12/02/php-docker-glfw/glxgears.gif "glxgears.gif") 
+![glxgears](./glxgears.gif "glxgears.gif") 
 
 ## サンプル
 
@@ -186,7 +186,7 @@ php sample.php
 
 これはマウスの位置によって背景色が変わるものです。
 
-![glxgears](/tech/2023/12/02/php-docker-glfw/php-glfw.gif "php-glfw.gif") 
+![glxgears](./php-glfw.gif "php-glfw.gif") 
 
 
 ## その他サンプル
@@ -196,7 +196,7 @@ php sample.php
 - <a href="https://phpgl.net/examples/00-about-examples.html" target="_blank" rel="nofollow noopener">Examples</a>
 
 
-![3d-cube](/tech/2023/12/02/php-docker-glfw/3d-cube.gif "3d-cube.gif") 
+![3d-cube](./3d-cube.gif "3d-cube.gif") 
 
 ## まとめ
 

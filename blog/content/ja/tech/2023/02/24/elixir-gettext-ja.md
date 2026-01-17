@@ -109,5 +109,5 @@ config :gettext, :default_locale, "ja"
 ```
 
 これでWelcomeページの日本語化ができました。
-![en](/tech/2023/02/24/elixir-gettext-ja/en.png "en") 
-![ja](/tech/2023/02/24/elixir-gettext-ja/ja.png "ja") 
+![en](./en.png "en") 
+![ja](./ja.png "ja") 

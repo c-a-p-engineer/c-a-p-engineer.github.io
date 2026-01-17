@@ -35,7 +35,7 @@ image: images/thumbnail/ai_robot.jpg
 自動的に下記の動画を作成してくれました。
 
 <video controls>
-    <source src="/tech/2023/12/15/suno-ai/suno-ai.mp4" type="video/mp4">
+    <source src="./suno-ai.mp4" type="video/mp4">
     Sorry, your browser doesn't support embedded videos.
 </video>
 

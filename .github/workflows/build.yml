@@ -41,7 +41,7 @@ jobs:
       # Crete Ogp
       - name: Create Ogp
         run: |
-          sudo php ./php/ogp/exec.php
+          php ./php/ogp/exec.php
 
       # Deploy
       - name: Deploy to gh-pages

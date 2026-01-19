@@ -38,6 +38,11 @@ jobs:
           php-version: '8.1'
           extensions: gd
 
+      - name: Prepare ogp directory
+        run: |
+          sudo rm -rf ./blog/static/ogp
+          mkdir -p ./blog/static/ogp
+
       # Crete Ogp
       - name: Create Ogp
         run: |

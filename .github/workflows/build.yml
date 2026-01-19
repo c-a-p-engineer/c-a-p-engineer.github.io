@@ -6,6 +6,9 @@ on:
       - master
     paths:
       - 'blog/**'
+      - 'scripts/deploy-gh-pages.sh'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
 
 jobs:
   build:

@@ -87,7 +87,7 @@ class Image
         );
         $dirName = dirname($output);
         if (!file_exists($dirName)) {
-            mkdir(dirname($output), '0777', true);
+            mkdir($dirName, 0777, true);
         }
         // ファイル名を指定して画像出力
         imagepng($image, $output);

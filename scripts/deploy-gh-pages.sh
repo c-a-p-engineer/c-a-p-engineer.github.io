@@ -44,8 +44,11 @@ git checkout --orphan "${PAGES_BRANCH}"
 
 git rm -rf . >/dev/null 2>&1 || true
 
+# Copy to root and /docs to match GitHub Pages folder setting.
 cp -a "${DOCS_DIR}/." "${WORKTREE_DIR}/"
-touch "${WORKTREE_DIR}/.nojekyll"
+mkdir -p "${WORKTREE_DIR}/docs"
+cp -a "${DOCS_DIR}/." "${WORKTREE_DIR}/docs/"
+touch "${WORKTREE_DIR}/.nojekyll" "${WORKTREE_DIR}/docs/.nojekyll"
 
 git add -A
 git commit -m "${COMMIT_MESSAGE}"

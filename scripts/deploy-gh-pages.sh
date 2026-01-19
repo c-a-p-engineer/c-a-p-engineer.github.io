@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-BUILD_DIR="${ROOT_DIR}/.gh-pages-build"
+DOCS_DIR="${ROOT_DIR}/docs"
 WORKTREE_DIR="${ROOT_DIR}/.gh-pages-worktree"
 PAGES_BRANCH="gh-pages"
 COMMIT_MESSAGE="Deploy Hugo site"
@@ -22,9 +22,14 @@ if ! git -C "${ROOT_DIR}" remote get-url origin >/dev/null 2>&1; then
   exit 1
 fi
 
-rm -rf "${BUILD_DIR}" "${WORKTREE_DIR}"
+rm -rf "${DOCS_DIR}" "${WORKTREE_DIR}"
 
-hugo --minify --source "${ROOT_DIR}/blog" --destination "${BUILD_DIR}"
+hugo --minify --source "${ROOT_DIR}/blog" --destination "${DOCS_DIR}"
+
+if [ ! -f "${DOCS_DIR}/index.html" ]; then
+  echo "Build output not found: ${DOCS_DIR}/index.html" >&2
+  exit 1
+fi
 
 mkdir -p "${WORKTREE_DIR}"
 git -C "${ROOT_DIR}" worktree add --detach "${WORKTREE_DIR}"
@@ -39,7 +44,8 @@ git checkout --orphan "${PAGES_BRANCH}"
 
 git rm -rf . >/dev/null 2>&1 || true
 
-cp -a "${BUILD_DIR}/." "${WORKTREE_DIR}/"
+cp -a "${DOCS_DIR}/." "${WORKTREE_DIR}/"
+touch "${WORKTREE_DIR}/.nojekyll"
 
 git add -A
 git commit -m "${COMMIT_MESSAGE}"
@@ -49,6 +55,5 @@ git push -f origin "${PAGES_BRANCH}"
 popd >/dev/null
 
 git -C "${ROOT_DIR}" worktree remove "${WORKTREE_DIR}" --force
-rm -rf "${BUILD_DIR}"
 
 echo "Deployment to ${PAGES_BRANCH} completed."

@@ -1,6 +1,6 @@
 ---
 title: "【Git】ignore PCや個人、プロジェクトごとの設定方法"
-date: 2036-01-18T06:00:00+09:00
+date: 2026-01-18T06:00:00+09:00
 description: Gitで開発していると、必ず直面するのが **「どのファイルを無視するか問題」** です。
 draft: false
 enableToc: true

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-label="Git ignore 設定の3層構造">
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" fill="#ffffff"/>
+
+  <!-- Bottom Layer : Global (All repositories, personal) -->
+  <g filter="url(#shadow)">
+    <polygon points="150,380 750,380 800,340 200,340" fill="#fae8ff" stroke="#9333ea" stroke-width="2"/>
+    <polygon points="750,380 800,340 800,460 750,500" fill="#f5d0fe" stroke="#9333ea" stroke-width="2"/>
+    <rect x="150" y="380" width="600" height="120" fill="#fdf4ff" stroke="#9333ea" stroke-width="2"/>
+
+    <text class="label" x="450" y="430" font-size="26" text-anchor="middle">全リポジトリ個人 (core.excludesfile)</text>
+    <text class="sub" x="450" y="462" font-size="15" text-anchor="middle">PC全体で共通に適用される ignore 設定</text>
+  </g>
+
+  <!-- Middle Layer : Repository personal -->
+  <g filter="url(#shadow)">
+    <polygon points="235,240 665,240 705,210 275,210" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <polygon points="665,240 705,210 705,330 665,360" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+    <rect x="235" y="240" width="430" height="120" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+
+    <text class="label" x="450" y="295" font-size="24" text-anchor="middle">リポジトリ個人 (.git/info/exclude)</text>
+    <text class="sub" x="450" y="327" font-size="15" text-anchor="middle">特定リポジトリのみで有効な個人設定</text>
+  </g>
+
+  <!-- Top Layer : Project shared (expanded width) -->
+  <g filter="url(#shadow)">
+    <polygon points="260,120 640,120 680,95 300,95" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <polygon points="640,120 680,95 680,205 640,230" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="260" y="120" width="380" height="110" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+
+    <text class="label" x="450" y="170" font-size="24" text-anchor="middle">プロジェクト共通 (.gitignore)</text>
+    <text class="sub" x="450" y="202" font-size="14" text-anchor="middle">プロジェクトで共有・最優先</text>
+  </g>
+</svg>

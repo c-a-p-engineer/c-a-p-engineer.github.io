@@ -1,0 +1,9 @@
+{
+  "name": "c-a-p-engineer.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "astro dev", "build": "astro check && astro build", "preview": "astro preview", "migrate:hugo": "python3 scripts/migrate-hugo-content.py && python3 scripts/migrate-hugo-assets.py", "verify:content": "python3 scripts/verify-content.py" },
+  "dependencies": { "@astrojs/sitemap": "^3.2.1", "astro": "^7.2.0" },
+  "devDependencies": { "@astrojs/check": "^0.9.4", "typescript": "^5.7.0" }
+}

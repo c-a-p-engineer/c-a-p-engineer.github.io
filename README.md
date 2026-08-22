@@ -1,82 +1,33 @@
-# Hugo Docker環境
+# Copy & Paste Engineer
 
-# Requirement
-* [docker](https://www.docker.com/)
-* [Hugo](https://gohugo.io/)
+The personal Engineer Hub and technical article archive for
+[`c-a-p-engineer.github.io`](https://c-a-p-engineer.github.io/).
 
-# Install
-Docker起動
-```
-docker compose up -d --build
-```
+## Stack
 
-コンテナに入る
-```
-docker exec -it blog-hugo bash
-```
+- Astro 7
+- Markdown content collections
+- GitHub Pages
+- GitHub Actions
 
-ブログを作る
-```
-hugo new site <ブログ名>
+## Development
+
+```bash
+npm install
+npm run dev
 ```
 
-起動
-```
-cd <ブログ名>
-hugo server
+Before publishing:
+
+```bash
+npm run verify:content
+npm run build
 ```
 
-ファイル出力
-```
-hugo
-```
+Historical articles are generated at their original root-level slugs, for
+example `/blog-move/`.
 
-ファイル出力（圧縮）
-```
-hugo --minify
-```
+## Deployment
 
-ファイル出力（削除 & 出力 & フォルダ移動）
-```
-rm -rf ../docs;hugo --minify && mv -fv ./public/ ../docs/
-```
-
-GitHub Pages デプロイ（履歴を残さない gh-pages ブランチへ強制反映）
-```
-./scripts/deploy-gh-pages.sh
-```
-※ `origin` リモートが設定されている前提です。
-
-ブログ確認
-```
-docker exec -it blog-hugo hugo server
-```
-
-トピック生成（現在は生成を中止
-```
-docker exec -it blog-php php topic.php
-```
-
-# Usage
-http://localhost:1313
-
-## Use Sample Mermaid
-blog\content\ja\tech\2022\03\06\git-rebase-brunch.md
-
-## Shortcodes Sample
-blog\themes\zzo\exampleSite\content\en\posts\shortcodes.md
-
-# Note
-* [HUGO](https://gohugo.io/) 
-* [Zzo – Z Themes Documentation](https://gohugo.io/content-management/syntax-highlighting/)
-* [Syntax Highlighting | Hugo](https://zzo-docs.vercel.app/zzo)
-
-## Hugo Themes
-* [GitHub Style](https://themes.gohugo.io/github-style/)
-* [Zzo](https://themes.gohugo.io/hugo-theme-zzo/)
-
-# Author
-* [こぴぺたん](https://twitter.com/c_a_p_engineer)
-
-# License
-[MIT license](https://en.wikipedia.org/wiki/MIT_License).
+Pushes to `master` run `.github/workflows/deploy.yml`. The repository's Pages
+source must be set to **GitHub Actions**.

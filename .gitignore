@@ -1,6 +1,3 @@
-*/node_modules/*
-*/vendor/*
-
-# ビルドされたファイル
-**/blog/public/**
-/docs/
+node_modules/
+dist/
+.astro/

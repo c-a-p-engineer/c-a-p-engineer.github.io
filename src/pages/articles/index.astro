@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'; import { articles } from '../../lib'; const all=await articles();
+---
+<BaseLayout title="Articles | Copy & Paste Engineer"><section class="section"><p class="eyebrow">Articles</p><h1>技術記事</h1><p>{all.length}本の記録</p><div class="grid">{all.map(a=><a class="card" href={`/${a.data.legacySlug}/`}><p class="meta">{a.data.date.toLocaleDateString('ja-JP')}</p><h2>{a.data.title}</h2><p>{a.data.description}</p>{a.data.tags.slice(0,4).map(t=><span class="tag">{t}</span>)}</a>)}</div></section></BaseLayout>

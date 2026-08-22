@@ -1,0 +1,6 @@
+---
+import { getCollection, render } from 'astro:content'; import BaseLayout from '../layouts/BaseLayout.astro';
+export async function getStaticPaths(){const entries=await getCollection('articles',({data})=>!data.draft);const seen=new Set();return entries.map(entry=>{if(seen.has(entry.data.legacySlug)) throw new Error(`Duplicate legacy slug: ${entry.data.legacySlug}`);seen.add(entry.data.legacySlug);return {params:{slug:entry.data.legacySlug},props:{entry}}})}
+const { entry }=Astro.props; const { Content }=await render(entry);
+---
+<BaseLayout title={`${entry.data.title} | Copy & Paste Engineer`} description={entry.data.description}><article class="article"><p class="meta">{entry.data.date.toLocaleDateString('ja-JP')}</p><h1>{entry.data.title}</h1><p>{entry.data.tags.map(t=><span class="tag">{t}</span>)}</p><Content /></article></BaseLayout>

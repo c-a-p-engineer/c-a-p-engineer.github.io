@@ -4,4 +4,5 @@ description: 子どもがスマートフォンやタブレットで遊びなが�
 href: https://c-a-p-engineer.github.io/kids-learning/
 tags: [Education, Kids, Web]
 featured: true
+order: 10
 ---

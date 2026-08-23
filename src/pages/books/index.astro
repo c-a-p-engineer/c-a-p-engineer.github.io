@@ -1,4 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'; import { getCollection } from 'astro:content'; const books=await getCollection('books');
+const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
 ---
-<BaseLayout title="Books | Copy & Paste Engineer"><section class="section"><p class="eyebrow">Books</p><h1>Books & Publishing</h1><div class="grid">{books.map(b=><a class="card" href={b.data.href || '#'}><h2>{b.data.title}</h2><p>{b.data.description}</p></a>)}</div></section></BaseLayout>
+<BaseLayout title="Books | Copy & Paste Engineer"><section class="section"><p class="eyebrow">Books</p><h1>Books & Publishing</h1><div class="grid">{books.map(b=>{const href=b.data.href || '#'; const external=isExternal(href); return <a class="card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}><h2>{b.data.title}</h2><p>{b.data.description}</p></a>})}</div></section></BaseLayout>

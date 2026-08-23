@@ -1,5 +1,25 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'; import { getCollection } from 'astro:content'; const books=await getCollection('books');
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const books = (await getCollection('books')).sort((a, b) => a.data.order - b.data.order);
 const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
 ---
-<BaseLayout title="Books | Copy & Paste Engineer"><section class="section"><p class="eyebrow">Books</p><h1>Books & Publishing</h1><div class="grid">{books.map(b=>{const href=b.data.href || '#'; const external=isExternal(href); return <a class="card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}><h2>{b.data.title}</h2><p>{b.data.description}</p></a>})}</div></section></BaseLayout>
+<BaseLayout title="Books | Copy & Paste Engineer">
+  <section class="section">
+    <p class="eyebrow">Books</p>
+    <h1>Books & Publishing</h1>
+    <p class="lead">技術書典で公開した技術書。各カードから書籍ページを開けます。</p>
+    <div class="grid">
+      {books.map(b => {
+        const href = b.data.href || '#';
+        const external = isExternal(href);
+        return <a class="card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+          <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}</p>
+          <h2>{b.data.title}{external && <span aria-hidden="true"> ↗</span>}</h2>
+          <p>{b.data.description}</p>
+        </a>;
+      })}
+    </div>
+    <div class="actions"><a class="button ghost" href="https://techbookfest.org/organization/5zdy9h5eA5kDzByP9rserV" target="_blank" rel="noopener noreferrer">技術書典で一覧を見る ↗</a></div>
+  </section>
+</BaseLayout>

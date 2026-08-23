@@ -1,4 +1,93 @@
 ---
 const { title = 'Copy & Paste Engineer', description = 'Software / AI / OSS / Automation' } = Astro.props;
 ---
-<!doctype html><html lang="ja"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><link rel="icon" href="/favicon.svg" /><title>{title}</title></head><body><header><a class="brand" href="/">Copy & Paste Engineer</a><nav><a href="/projects/">Projects</a><a href="/articles/">Articles</a><a href="/books/">Books</a><a href="/about/">About</a><a href="https://github.com/c-a-p-engineer">GitHub ↗</a></nav></header><main><slot /></main><footer>© {new Date().getFullYear()} Copy & Paste Engineer</footer></body></html><style is:global> :root{font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#172033;background:#f7f8fc;line-height:1.7}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1120px;margin:auto;padding:1.25rem 1.5rem}header{display:flex;gap:2rem;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:1.15rem}nav{display:flex;gap:1rem;flex-wrap:wrap}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}main{min-height:80vh}footer{color:#637083;font-size:.9rem}.hero{padding:4rem 0 2rem}.eyebrow{color:#5561c7;font-weight:700}.hero h1{font-size:clamp(2.5rem,7vw,5.8rem);line-height:1.05;margin:.25rem 0 1rem}.lead{font-size:1.25rem;max-width:44rem}.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0}.button{background:#252f89;color:white;padding:.65rem 1rem;border-radius:.5rem}.button.ghost{background:white;color:#252f89;border:1px solid #ccd1e6}.section{margin:4rem 0}.section h2{font-size:1.7rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}.card{background:white;padding:1.25rem;border:1px solid #e0e4ef;border-radius:.75rem}.card h3{margin-top:0}.meta{color:#637083;font-size:.9rem}.tag{display:inline-block;background:#edf0ff;color:#37429f;border-radius:999px;padding:.1rem .55rem;margin:.15rem .15rem 0 0;font-size:.8rem}.article{max-width:780px;margin:auto}.article h1{line-height:1.2;font-size:clamp(2rem,5vw,3.6rem)}.article img{max-width:100%;height:auto}@media(max-width:720px){header{align-items:flex-start;flex-direction:column;gap:.6rem}.hero{padding-top:2rem}}</style>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">Copy & Paste Engineer</a>
+      <nav aria-label="Global navigation">
+        <a href="/projects/">Projects</a>
+        <a href="/articles/">Articles</a>
+        <a href="/books/">Books</a>
+        <a href="/about/">About</a>
+        <span class="nav-separator" aria-hidden="true"></span>
+        <a href="https://x.com/c_a_p_engineer" target="_blank" rel="noopener noreferrer">X ↗</a>
+        <a href="https://github.com/c-a-p-engineer" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer>
+      <span>© {new Date().getFullYear()} Copy & Paste Engineer</span>
+      <span class="footer-links"><a href="https://x.com/c_a_p_engineer" target="_blank" rel="noopener noreferrer">X</a><a href="https://github.com/c-a-p-engineer" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+    </footer>
+  </body>
+</html>
+<style is:global>
+  :root{font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#172033;background:#f7f8fc;line-height:1.7}
+  *{box-sizing:border-box}
+  body{margin:0}
+  header,main,footer{max-width:1180px;margin:auto;padding:1.25rem 1.5rem}
+  header{display:flex;gap:2rem;align-items:center;justify-content:space-between;border-bottom:1px solid #e0e4ef}
+  .brand{font-weight:850;font-size:1.15rem;letter-spacing:-.02em}
+  nav{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+  .nav-separator{width:1px;height:1rem;background:#ccd1e6}
+  a{color:inherit;text-decoration:none}
+  a:hover{text-decoration:underline}
+  main{min-height:80vh}
+  footer{display:flex;justify-content:space-between;gap:1rem;align-items:center;color:#637083;font-size:.9rem;border-top:1px solid #e0e4ef}
+  .footer-links{display:flex;gap:1rem}
+  .hero{padding:5rem 0 2.5rem}
+  .eyebrow{color:#5561c7;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+  .hero h1{font-size:clamp(2.8rem,7vw,6.2rem);line-height:1.02;letter-spacing:-.055em;margin:.25rem 0 1.25rem;max-width:12ch}
+  .lead{font-size:1.18rem;max-width:46rem;color:#4e596b}
+  .actions{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0}
+  .button{display:inline-flex;align-items:center;justify-content:center;background:#252f89;color:white;padding:.65rem 1rem;border-radius:.5rem;font-weight:700}
+  .button:hover{text-decoration:none;filter:brightness(.96)}
+  .button.ghost{background:white;color:#252f89;border:1px solid #ccd1e6}
+  .section{margin:5rem 0}
+  .section-heading{display:flex;align-items:baseline;gap:.8rem;padding-bottom:.8rem;margin-bottom:1.25rem;border-bottom:1px solid #d8ddea}
+  .section-heading h2{margin:0;font-size:clamp(1.6rem,3vw,2.15rem);line-height:1.2;letter-spacing:-.025em}
+  .section-index{font-size:.78rem;font-weight:850;letter-spacing:.14em;color:#5561c7}
+  .section-more{margin-left:auto;color:#5561c7;font-size:.92rem;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+  .card{display:block;background:white;padding:1.25rem;border:1px solid #e0e4ef;border-radius:.75rem;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+  .card:hover{text-decoration:none;transform:translateY(-2px);border-color:#bec6dd;box-shadow:0 10px 28px rgba(23,32,51,.06)}
+  .card h2,.card h3{margin-top:0;line-height:1.35;letter-spacing:-.015em}
+  .meta{color:#637083;font-size:.86rem}
+  .tag{display:inline-block;background:#edf0ff;color:#37429f;border-radius:999px;padding:.1rem .55rem;margin:.15rem .15rem 0 0;font-size:.8rem}
+  .book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.25rem}
+  .book-card{display:grid;grid-template-rows:auto 1fr;min-width:0}
+  .book-cover{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;background:#202852;color:white;border-radius:.75rem;padding:1.25rem;margin-bottom:.9rem;border:1px solid #151b3c;box-shadow:0 12px 28px rgba(23,32,51,.12);overflow:hidden}
+  .book-cover-label{font-size:.72rem;letter-spacing:.14em;font-weight:800;opacity:.72}
+  .book-cover-title{font-size:clamp(1.2rem,2.2vw,1.7rem);line-height:1.25;font-weight:850;letter-spacing:-.035em}
+  .book-cover-mark{height:5px;width:2.8rem;background:white;opacity:.9}
+  .book-info h3,.book-info h2{margin:.2rem 0 .45rem;line-height:1.35}
+  .book-info p:last-child{margin-bottom:0;color:#4e596b}
+  .connect-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+  .connect-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#172033;color:white;border-radius:.75rem;padding:1.2rem 1.3rem}
+  .connect-card:hover{text-decoration:none;filter:brightness(1.08)}
+  .connect-name{font-size:1.15rem;font-weight:800}
+  .connect-handle{font-size:.9rem;opacity:.72}
+  .article{max-width:780px;margin:auto}
+  .article h1{line-height:1.2;font-size:clamp(2rem,5vw,3.6rem)}
+  .article img{max-width:100%;height:auto}
+  @media(max-width:720px){
+    header{align-items:flex-start;flex-direction:column;gap:.65rem}
+    nav{gap:.75rem}
+    .nav-separator{display:none}
+    .hero{padding-top:2.7rem}
+    .section{margin:3.8rem 0}
+    .section-heading{align-items:flex-start;flex-wrap:wrap}
+    .section-more{width:100%;margin-left:0}
+    .connect-grid{grid-template-columns:1fr}
+    footer{align-items:flex-start;flex-direction:column}
+  }
+</style>

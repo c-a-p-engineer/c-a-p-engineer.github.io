@@ -10,6 +10,19 @@ const article = defineCollection({
     image: z.string().optional(),
   }),
 });
-const project = defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/projects' }), schema: z.object({ title: z.string(), description: z.string(), href: z.string().min(1), tags: z.array(z.string()).default([]), featured: z.boolean().default(false) }) });
-const book = defineCollection({ loader: glob({ pattern: '**/*.md', base: './src/content/books' }), schema: z.object({ title: z.string(), description: z.string(), href: z.string().min(1).optional(), year: z.number().optional() }) });
+const project = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(), description: z.string(), href: z.string().min(1),
+    tags: z.array(z.string()).default([]), featured: z.boolean().default(false),
+    order: z.number().default(100),
+  }),
+});
+const book = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/books' }),
+  schema: z.object({
+    title: z.string(), description: z.string(), href: z.string().min(1).optional(),
+    year: z.number().optional(), event: z.string().optional(), order: z.number().default(100),
+  }),
+});
 export const collections = { articles: article, projects: project, books: book };

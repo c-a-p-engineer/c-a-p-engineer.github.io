@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { articles } from '../lib';
+import { articles, techBookFestOgp } from '../lib';
 
 const [projectEntries, bookEntries, recent] = [
   await getCollection('projects'),
@@ -67,12 +67,20 @@ const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || hre
       {books.slice(0, 4).map(b => {
         const href = b.data.href || '/books/';
         const external = isExternal(href);
+        const cover = techBookFestOgp(href);
         return <a class="book-card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-          <div class="book-cover" aria-hidden="true">
-            <span class="book-cover-label">{b.data.event || 'TECH BOOK'}</span>
-            <span class="book-cover-title">{b.data.title}</span>
-            <span class="book-cover-mark"></span>
-          </div>
+          {cover ? (
+            <div class="book-cover book-cover-image">
+              <img src={cover} alt="" loading="lazy" decoding="async" />
+              <span class="book-cover-badge">{b.data.event || 'TECH BOOK'}</span>
+            </div>
+          ) : (
+            <div class="book-cover" aria-hidden="true">
+              <span class="book-cover-label">{b.data.event || 'TECH BOOK'}</span>
+              <span class="book-cover-title">{b.data.title}</span>
+              <span class="book-cover-mark"></span>
+            </div>
+          )}
           <div class="book-info">
             <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}</p>
             <h3>{b.data.title}{external && <span aria-hidden="true"> ↗</span>}</h3>

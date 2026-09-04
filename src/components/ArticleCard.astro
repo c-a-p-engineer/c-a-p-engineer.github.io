@@ -1,0 +1,171 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  heading?: 'h2' | 'h3';
+}
+
+const { article, heading = 'h2' } = Astro.props;
+const Heading = heading;
+const { title, description, date, tags, categories, legacySlug, image } = article.data;
+
+const resolveImage = (value?: string) => {
+  if (!value) return undefined;
+  if (/^https?:\/\//.test(value) || value.startsWith('/')) return value;
+  if (value.startsWith('images/')) return `/${value}`;
+  const fileName = value.split('/').filter(Boolean).at(-1);
+  return fileName ? `/legacy-assets/${legacySlug}/${fileName}` : undefined;
+};
+
+const thumbnail = resolveImage(image);
+const labels = [...categories, ...tags].filter((value, index, self) => self.indexOf(value) === index);
+const fallbackLabel = labels[0] || 'TECH';
+---
+<a
+  class="article-card"
+  href={`/${legacySlug}/`}
+  data-tags={JSON.stringify(tags)}
+  data-categories={JSON.stringify(categories)}
+>
+  <div class="article-thumb" aria-hidden="true">
+    <div class="article-thumb-fallback">
+      <span class="fallback-mark">&lt;/&gt;</span>
+      <span class="fallback-label">{fallbackLabel}</span>
+    </div>
+    {thumbnail && (
+      <img
+        class="article-thumb-image"
+        src={thumbnail}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        onerror="this.remove()"
+      />
+    )}
+    {labels[0] && <span class="article-thumb-badge">{labels[0]}</span>}
+  </div>
+
+  <div class="article-card-body">
+    <p class="article-meta">{date.toLocaleDateString('ja-JP')}</p>
+    <Heading>{title}</Heading>
+    {description && <p class="article-description">{description}</p>}
+    {labels.length > 0 && (
+      <div class="article-labels" aria-label="記事の分類">
+        {labels.slice(0, 2).map(label => <span>{label}</span>)}
+        {labels.length > 2 && <span>+{labels.length - 2}</span>}
+      </div>
+    )}
+  </div>
+</a>
+
+<style>
+  .article-card{
+    display:grid;
+    grid-template-rows:auto 1fr;
+    min-width:0;
+    overflow:hidden;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:rgba(255,255,255,.92);
+    box-shadow:0 1px 0 rgba(25,27,32,.02);
+    transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+  }
+  .article-card:hover{
+    transform:translateY(-4px);
+    border-color:#ccd1da;
+    box-shadow:0 18px 42px rgba(25,27,32,.09);
+    text-decoration:none;
+  }
+  .article-thumb{
+    position:relative;
+    aspect-ratio:16/9;
+    overflow:hidden;
+    background:#151820;
+  }
+  .article-thumb-fallback{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:1.15rem;
+    color:white;
+    background:
+      radial-gradient(circle at 85% 15%,rgba(129,140,248,.38),transparent 32%),
+      linear-gradient(145deg,#181b25,#2a2f47);
+  }
+  .fallback-mark{font:800 1rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;opacity:.75}
+  .fallback-label{
+    max-width:90%;
+    overflow:hidden;
+    font-size:clamp(1.25rem,2.8vw,2rem);
+    font-weight:850;
+    letter-spacing:-.04em;
+    line-height:1;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .article-thumb-image{
+    position:absolute;
+    inset:0;
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:#f5f6f8;
+    transition:transform .25s ease;
+  }
+  .article-card:hover .article-thumb-image{transform:scale(1.025)}
+  .article-thumb-badge{
+    position:absolute;
+    left:.75rem;
+    bottom:.7rem;
+    max-width:calc(100% - 1.5rem);
+    overflow:hidden;
+    padding:.22rem .55rem;
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:999px;
+    background:rgba(17,19,24,.72);
+    color:#fff;
+    font-size:.68rem;
+    font-weight:750;
+    line-height:1.4;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    backdrop-filter:blur(8px);
+  }
+  .article-card-body{display:flex;flex-direction:column;padding:1.1rem 1.15rem 1.2rem}
+  .article-meta{margin:0 0 .38rem;color:var(--muted);font-size:.78rem;font-variant-numeric:tabular-nums}
+  h2,h3{
+    margin:0;
+    font-size:1.12rem;
+    line-height:1.42;
+    letter-spacing:-.025em;
+    text-wrap:balance;
+  }
+  .article-description{
+    display:-webkit-box;
+    margin:.55rem 0 0;
+    overflow:hidden;
+    color:#5d6675;
+    font-size:.9rem;
+    line-height:1.65;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+  }
+  .article-labels{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto;padding-top:.9rem}
+  .article-labels span{
+    padding:.13rem .48rem;
+    border:1px solid #e0e3ee;
+    border-radius:999px;
+    background:#f6f7ff;
+    color:#5652a5;
+    font-size:.68rem;
+    font-weight:650;
+  }
+  @media(max-width:560px){
+    .article-card{border-radius:15px}
+    .article-card-body{padding:1rem}
+  }
+</style>

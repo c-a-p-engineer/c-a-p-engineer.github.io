@@ -87,10 +87,10 @@ const hiddenCategories = categories.slice(12);
 </BaseLayout>
 
 <script>
-  const cards = Array.from(document.querySelectorAll('[data-article-grid] .article-card'));
-  const buttons = Array.from(document.querySelectorAll('[data-filter-kind]'));
-  const reset = document.querySelector('[data-filter-reset]');
-  const status = document.querySelector('.filter-status');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-article-grid] .article-card'));
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-filter-kind]'));
+  const reset = document.querySelector<HTMLButtonElement>('[data-filter-reset]');
+  const status = document.querySelector<HTMLElement>('.filter-status');
 
   let activeKind = '';
   let activeValue = '';

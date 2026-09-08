@@ -10,7 +10,7 @@ tags:
   - Python
 categories:
   - AI
-draft: true
+draft: false
 legacySlug: ai-agent-skill-router-yaml
 ---
 

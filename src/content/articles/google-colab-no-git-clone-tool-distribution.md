@@ -9,7 +9,7 @@ tags:
   - 自動化
 categories:
   - Python
-draft: true
+draft: false
 legacySlug: google-colab-no-git-clone-tool-distribution
 ---
 

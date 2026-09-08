@@ -10,7 +10,7 @@ tags:
   - 移行
 categories:
   - JavaScript
-draft: true
+draft: false
 legacySlug: astro-legacy-slug-migration
 ---
 

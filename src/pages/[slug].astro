@@ -1,9 +1,17 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { articles } from '../lib';
+
+const taxonomySlug = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
+const resolvePublicPath = (value?: string) => {
+  if (!value) return undefined;
+  if (/^https?:\/\//.test(value) || value.startsWith('/')) return value;
+  return `/${value}`;
+};
 
 export async function getStaticPaths() {
-  const entries = await getCollection('articles', ({ data }) => !data.draft);
+  const entries = await articles();
   const seen = new Set<string>();
 
   return entries.map(entry => {
@@ -18,15 +26,15 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const publishedTime = entry.data.date.toISOString();
-const articleUrl = new URL(`/${entry.data.legacySlug}/`, Astro.site ?? Astro.url.origin).href;
-const imageUrl = entry.data.image
-  ? new URL(entry.data.image, Astro.site ?? Astro.url.origin).href
-  : undefined;
+const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
+const articleUrl = new URL(`/${entry.data.legacySlug}/`, siteOrigin).href;
+const imagePath = resolvePublicPath(entry.data.image);
+const imageUrl = imagePath ? new URL(imagePath, siteOrigin).href : undefined;
 
 const author = {
   '@type': 'Person',
   name: 'Copy & Paste Engineer',
-  url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
+  url: new URL('/about/', siteOrigin).href,
   sameAs: [
     'https://github.com/c-a-p-engineer',
     'https://x.com/c_a_p_engineer',
@@ -52,7 +60,7 @@ const jsonLd = {
 <BaseLayout
   title={`${entry.data.title} | Copy & Paste Engineer`}
   description={entry.data.description}
-  image={entry.data.image}
+  image={imagePath}
   type="article"
   publishedTime={publishedTime}
   tags={entry.data.tags}
@@ -63,7 +71,16 @@ const jsonLd = {
       <time datetime={publishedTime}>{entry.data.date.toLocaleDateString('ja-JP')}</time>
     </p>
     <h1>{entry.data.title}</h1>
-    <p>{entry.data.tags.map(tag => <span class="tag">{tag}</span>)}</p>
+    {(entry.data.categories.length > 0 || entry.data.tags.length > 0) && (
+      <p aria-label="記事の分類">
+        {entry.data.categories.map(category => (
+          <a class="tag" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>
+        ))}
+        {entry.data.tags.map(tag => (
+          <a class="tag" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>
+        ))}
+      </p>
+    )}
     <Content />
   </article>
 </BaseLayout>

@@ -1,6 +1,69 @@
 ---
-import { getCollection, render } from 'astro:content'; import BaseLayout from '../layouts/BaseLayout.astro';
-export async function getStaticPaths(){const entries=await getCollection('articles',({data})=>!data.draft);const seen=new Set();return entries.map(entry=>{if(seen.has(entry.data.legacySlug)) throw new Error(`Duplicate legacy slug: ${entry.data.legacySlug}`);seen.add(entry.data.legacySlug);return {params:{slug:entry.data.legacySlug},props:{entry}}})}
-const { entry }=Astro.props; const { Content }=await render(entry);
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('articles', ({ data }) => !data.draft);
+  const seen = new Set<string>();
+
+  return entries.map(entry => {
+    if (seen.has(entry.data.legacySlug)) {
+      throw new Error(`Duplicate legacy slug: ${entry.data.legacySlug}`);
+    }
+    seen.add(entry.data.legacySlug);
+    return { params: { slug: entry.data.legacySlug }, props: { entry } };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const publishedTime = entry.data.date.toISOString();
+const articleUrl = new URL(`/${entry.data.legacySlug}/`, Astro.site ?? Astro.url.origin).href;
+const imageUrl = entry.data.image
+  ? new URL(entry.data.image, Astro.site ?? Astro.url.origin).href
+  : undefined;
+
+const author = {
+  '@type': 'Person',
+  name: 'Copy & Paste Engineer',
+  url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
+  sameAs: [
+    'https://github.com/c-a-p-engineer',
+    'https://x.com/c_a_p_engineer',
+  ],
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: entry.data.title,
+  description: entry.data.description,
+  datePublished: publishedTime,
+  url: articleUrl,
+  mainEntityOfPage: articleUrl,
+  inLanguage: 'ja-JP',
+  author,
+  publisher: author,
+  ...(entry.data.tags.length > 0 ? { keywords: entry.data.tags.join(', ') } : {}),
+  ...(entry.data.categories.length > 0 ? { articleSection: entry.data.categories } : {}),
+  ...(imageUrl ? { image: [imageUrl] } : {}),
+};
 ---
-<BaseLayout title={`${entry.data.title} | Copy & Paste Engineer`} description={entry.data.description}><article class="article"><p class="meta">{entry.data.date.toLocaleDateString('ja-JP')}</p><h1>{entry.data.title}</h1><p>{entry.data.tags.map(t=><span class="tag">{t}</span>)}</p><Content /></article></BaseLayout>
+<BaseLayout
+  title={`${entry.data.title} | Copy & Paste Engineer`}
+  description={entry.data.description}
+  image={entry.data.image}
+  type="article"
+  publishedTime={publishedTime}
+  tags={entry.data.tags}
+  jsonLd={jsonLd}
+>
+  <article class="article">
+    <p class="meta">
+      <time datetime={publishedTime}>{entry.data.date.toLocaleDateString('ja-JP')}</time>
+    </p>
+    <h1>{entry.data.title}</h1>
+    <p>{entry.data.tags.map(tag => <span class="tag">{tag}</span>)}</p>
+    <Content />
+  </article>
+</BaseLayout>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { articles } from '../../lib';
+
+const taxonomySlug = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
+
+export async function getStaticPaths() {
+  const entries = await articles();
+  const groups = new Map<string, { label: string; entries: typeof entries }>();
+
+  for (const entry of entries) {
+    for (const tag of entry.data.tags) {
+      const slug = taxonomySlug(tag);
+      const group = groups.get(slug) ?? { label: tag, entries: [] };
+      group.entries.push(entry);
+      groups.set(slug, group);
+    }
+  }
+
+  return [...groups.entries()].map(([tag, props]) => ({ params: { tag }, props }));
+}
+
+const { label, entries } = Astro.props;
+const description = `${label} に関する技術記事の一覧です。Copy & Paste Engineerで公開している実装メモ、検証、トラブルシュートをまとめています。`;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${label}の記事一覧`,
+  description,
+  url: pageUrl,
+  inLanguage: 'ja-JP',
+};
+---
+<BaseLayout title={`${label}の記事一覧 | Copy & Paste Engineer`} description={description} jsonLd={jsonLd}>
+  <section class="section">
+    <p class="eyebrow">Tag</p>
+    <h1>{label}</h1>
+    <p class="lead">{description}</p>
+    <div class="taxonomy-grid">
+      {entries.map(article => <ArticleCard article={article} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .taxonomy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:2rem}
+  @media(max-width:940px){.taxonomy-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:640px){.taxonomy-grid{grid-template-columns:1fr}}
+</style>

@@ -12,8 +12,30 @@ const [projectEntries, bookEntries, recent] = [
 const projects = projectEntries.sort((a, b) => a.data.order - b.data.order);
 const books = bookEntries.sort((a, b) => a.data.order - b.data.order);
 const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
+const description = 'ソフトウェア開発、生成AI、OSS、自動化を中心に、実際に作って試した技術記事・プロジェクト・出版物をまとめるCopy & Paste Engineerの技術ブログです。';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Copy & Paste Engineer',
+  url: new URL('/', Astro.site ?? Astro.url.origin).href,
+  description,
+  inLanguage: 'ja-JP',
+  publisher: {
+    '@type': 'Person',
+    name: 'Copy & Paste Engineer',
+    url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
+    sameAs: [
+      'https://github.com/c-a-p-engineer',
+      'https://x.com/c_a_p_engineer',
+    ],
+  },
+};
 ---
-<BaseLayout>
+<BaseLayout
+  title="Copy & Paste Engineer | ソフトウェア・AI・OSS・自動化の技術ブログ"
+  description={description}
+  jsonLd={jsonLd}
+>
   <section class="hero">
     <p class="eyebrow">Software / AI / OSS / Automation</p>
     <h1>作る。試す。<br/>記録する。</h1>

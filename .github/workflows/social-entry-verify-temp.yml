@@ -27,4 +27,5 @@ jobs:
           grep -q "AIで先に要点を見る" "$page"
           grep -q "この記事をAIで解説" "$page"
           grep -q "AIエージェントへ大量のルールを常時読み込ませる代わりに" "$page"
-          test "$(grep -o 'data-ai-explain-root' "$page" | wc -l)" -eq 2
+          grep -q 'aria-labelledby="ai-explain-top-ai-agent-skill-router-yaml-title"' "$page"
+          grep -q 'aria-labelledby="ai-explain-bottom-ai-agent-skill-router-yaml-title"' "$page"

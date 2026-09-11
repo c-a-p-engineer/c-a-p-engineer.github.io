@@ -1,4 +1,136 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { articles } from '../lib';
+
+const [allArticles, projectEntries, bookEntries] = await Promise.all([
+  articles(),
+  getCollection('projects'),
+  getCollection('books'),
+]);
+
+const projects = projectEntries.sort((a, b) => a.data.order - b.data.order);
+const books = bookEntries.sort((a, b) => a.data.order - b.data.order);
+const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
+const description = 'Copy & Paste Engineerの活動、個人開発、技術記事、OSS、出版物をまとめたプロフィールページです。';
 ---
-<BaseLayout title="About | Copy & Paste Engineer"><article class="article"><p class="eyebrow">About</p><h1>Copy & Paste Engineer</h1><p>ソフトウェア、AI、OSS、自動化を中心に、つくりながら学んだことを記録しています。</p><p><a href="https://github.com/c-a-p-engineer">GitHub で活動を見る →</a></p></article></BaseLayout>
+<BaseLayout title="About | Copy & Paste Engineer" description={description}>
+  <section class="section about-page">
+    <p class="eyebrow">About</p>
+    <h1>Copy & Paste Engineer</h1>
+    <p class="lead">ソフトウェア、生成AI、OSS、自動化を中心に、実際に作って、試して、分かったことをコード・記事・書籍として残しています。</p>
+
+    <div class="about-stats" aria-label="活動概要">
+      <div><strong>{projects.length}</strong><span>Projects</span></div>
+      <div><strong>{allArticles.length}</strong><span>Articles</span></div>
+      <div><strong>{books.length}</strong><span>Books</span></div>
+    </div>
+
+    <section class="about-block" aria-labelledby="about-work">
+      <p class="eyebrow">What I do</p>
+      <h2 id="about-work">作る。試す。記録する。</h2>
+      <div class="about-grid">
+        <article class="about-card">
+          <p class="meta">BUILD</p>
+          <h3>個人開発 / OSS</h3>
+          <p>必要なものを自分で作り、実際に使いながら改善します。完成品だけでなく、設計や試行錯誤も公開します。</p>
+          <a href="/projects/">Projectsを見る →</a>
+        </article>
+        <article class="about-card">
+          <p class="meta">WRITE</p>
+          <h3>技術記事</h3>
+          <p>ソフトウェア開発、生成AI、自動化など、実際に試して得た知見を再現できる形で残します。</p>
+          <a href="/articles/">Articlesを見る →</a>
+        </article>
+        <article class="about-card">
+          <p class="meta">PUBLISH</p>
+          <h3>技術書</h3>
+          <p>単発の記事では収まりきらないテーマは、まとまった技術書として整理して公開しています。</p>
+          <a href="/books/">Booksを見る →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-block" aria-labelledby="about-projects">
+      <div class="about-heading">
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h2 id="about-projects">現在の制作物</h2>
+        </div>
+        <a href="/projects/">一覧を見る →</a>
+      </div>
+      <div class="project-list">
+        {projects.map(project => {
+          const external = isExternal(project.data.href);
+          return (
+            <a class="project-row" href={project.data.href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+              <span>
+                <strong>{project.data.title}</strong>
+                <small>{project.data.description}</small>
+              </span>
+              <span aria-hidden="true">{external ? '↗' : '→'}</span>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="about-block" aria-labelledby="about-find">
+      <p class="eyebrow">Explore</p>
+      <h2 id="about-find">蓄積した技術記事から探す</h2>
+      <p>過去の記事はタイトル、説明、タグ、カテゴリを横断して検索できます。</p>
+      <a class="button" href="/search/">記事を検索する</a>
+    </section>
+
+    <section class="about-block" aria-labelledby="about-connect">
+      <p class="eyebrow">Connect</p>
+      <h2 id="about-connect">活動を追う</h2>
+      <div class="connect-grid">
+        <a class="connect-card" href="https://x.com/c_a_p_engineer" target="_blank" rel="noopener noreferrer">
+          <span><span class="connect-name">X</span><br/><span class="connect-handle">@c_a_p_engineer</span></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a class="connect-card" href="https://github.com/c-a-p-engineer" target="_blank" rel="noopener noreferrer">
+          <span><span class="connect-name">GitHub</span><br/><span class="connect-handle">c-a-p-engineer</span></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page{max-width:1040px;margin-top:clamp(3rem,7vw,5.5rem)}
+  .about-page > .lead{max-width:760px}
+  .about-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:2.2rem 0 5rem}
+  .about-stats > div{padding:1.2rem 1.3rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.78)}
+  .about-stats strong{display:block;font-size:2rem;line-height:1.2;letter-spacing:-.04em}
+  .about-stats span{color:var(--muted);font-size:.78rem;font-weight:750;text-transform:uppercase;letter-spacing:.08em}
+  .about-block{margin:4.5rem 0}
+  .about-block > h2,.about-heading h2{margin:.1rem 0 1.2rem;font-size:clamp(1.75rem,3.5vw,2.5rem);line-height:1.2;letter-spacing:-.035em}
+  .about-block > p:not(.eyebrow){max-width:720px;color:#596273}
+  .about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+  .about-card{display:flex;flex-direction:column;padding:1.35rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.84)}
+  .about-card h3{margin:.25rem 0 .6rem;font-size:1.15rem;letter-spacing:-.02em}
+  .about-card p:not(.meta){margin:0;color:#596273}
+  .about-card a{margin-top:auto;padding-top:1rem;color:#4640bd;font-weight:750;font-size:.9rem}
+  .about-card a:hover{text-decoration:underline;text-underline-offset:.22em}
+  .about-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+  .about-heading .eyebrow{margin-bottom:.3rem}
+  .about-heading > a{flex:0 0 auto;color:#4640bd;font-size:.9rem;font-weight:750}
+  .project-list{border-top:1px solid var(--line-strong)}
+  .project-row{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:1rem .1rem;border-bottom:1px solid var(--line)}
+  .project-row:hover{text-decoration:none;background:rgba(255,255,255,.45)}
+  .project-row strong{display:block;margin-bottom:.15rem}
+  .project-row small{display:block;color:#697180;line-height:1.55}
+  @media(max-width:760px){
+    .about-grid{grid-template-columns:1fr}
+    .about-stats{grid-template-columns:1fr 1fr 1fr;gap:.65rem}
+    .about-stats > div{padding:1rem}
+    .about-stats strong{font-size:1.55rem}
+  }
+  @media(max-width:560px){
+    .about-stats{grid-template-columns:1fr}
+    .about-heading{align-items:flex-start;flex-direction:column}
+  }
+</style>

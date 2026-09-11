@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articles } from '../../lib';
+
+const all = await articles();
+const description = 'Copy & Paste Engineerの技術記事を、タイトル・説明・タグ・カテゴリから横断検索できます。';
+---
+<BaseLayout title="Search | Copy & Paste Engineer" description={description}>
+  <section class="section search-page">
+    <p class="eyebrow">Search</p>
+    <h1>記事を検索</h1>
+    <p class="lead">タイトル、説明、タグ、カテゴリを横断して、過去の記事から必要なものを探せます。</p>
+
+    <form class="search-form" role="search" data-search-form>
+      <label for="site-search">キーワード</label>
+      <div class="search-control">
+        <input id="site-search" name="q" type="search" autocomplete="off" placeholder="例: Docker GitHub Actions" data-search-input />
+        <button type="submit">検索</button>
+      </div>
+      <p class="search-help">複数語はすべて含む記事を対象にし、タイトル・タグ・カテゴリを優先して順位付けします。</p>
+    </form>
+
+    <div class="search-summary">
+      <p class="search-status" aria-live="polite" data-search-status>{all.length}本から検索できます</p>
+      <a href="/articles/">タグ・カテゴリから探す →</a>
+    </div>
+
+    <div class="search-results" data-search-results>
+      {all.map(article => (
+        <a
+          class="search-result"
+          href={`/${article.data.legacySlug}/`}
+          data-title={article.data.title}
+          data-description={article.data.description}
+          data-tags={article.data.tags.join('\u001f')}
+          data-categories={article.data.categories.join('\u001f')}
+          data-slug={article.data.legacySlug}
+          data-date={article.data.date.valueOf()}
+        >
+          <p class="meta">{article.data.date.toLocaleDateString('ja-JP')}</p>
+          <h2>{article.data.title}</h2>
+          {article.data.description && <p class="result-description">{article.data.description}</p>}
+          {(article.data.categories.length > 0 || article.data.tags.length > 0) && (
+            <div class="result-labels" aria-label="記事の分類">
+              {[...article.data.categories, ...article.data.tags]
+                .filter((value, index, self) => self.indexOf(value) === index)
+                .slice(0, 5)
+                .map(label => <span>{label}</span>)}
+            </div>
+          )}
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-search-form]');
+  const input = document.querySelector<HTMLInputElement>('[data-search-input]');
+  const status = document.querySelector<HTMLElement>('[data-search-status]');
+  const results = document.querySelector<HTMLElement>('[data-search-results]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.search-result'));
+
+  const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase('ja-JP').trim();
+  const values = (card: HTMLElement, name: string) => normalize(card.dataset[name] || '').split('\u001f').filter(Boolean);
+
+  const score = (card: HTMLElement, tokens: string[]) => {
+    const title = normalize(card.dataset.title || '');
+    const description = normalize(card.dataset.description || '');
+    const tags = values(card, 'tags');
+    const categories = values(card, 'categories');
+    const slug = normalize(card.dataset.slug || '');
+    const haystack = [title, description, slug, ...tags, ...categories].join(' ');
+
+    if (!tokens.every(token => haystack.includes(token))) return -1;
+
+    return tokens.reduce((total, token) => {
+      let tokenScore = 0;
+      if (title === token) tokenScore += 120;
+      else if (title.includes(token)) tokenScore += 55;
+
+      tokenScore += tags.reduce((sum, tag) => sum + (tag === token ? 40 : tag.includes(token) ? 22 : 0), 0);
+      tokenScore += categories.reduce((sum, category) => sum + (category === token ? 32 : category.includes(token) ? 16 : 0), 0);
+      if (description.includes(token)) tokenScore += 10;
+      if (slug.includes(token)) tokenScore += 4;
+      return total + tokenScore;
+    }, 0);
+  };
+
+  const applySearch = () => {
+    if (!input || !results || !status) return;
+
+    const query = input.value.trim();
+    const tokens = normalize(query).split(/\s+/).filter(Boolean);
+    const ranked = cards.map(card => ({
+      card,
+      score: tokens.length ? score(card, tokens) : 0,
+      date: Number(card.dataset.date || 0),
+    }));
+
+    ranked.sort((a, b) => b.score - a.score || b.date - a.date);
+
+    let visible = 0;
+    for (const item of ranked) {
+      const show = item.score >= 0;
+      item.card.hidden = !show;
+      results.append(item.card);
+      if (show) visible += 1;
+    }
+
+    status.textContent = tokens.length
+      ? `${visible}本見つかりました${query ? `：「${query}」` : ''}`
+      : `${cards.length}本から検索できます`;
+
+    const url = new URL(window.location.href);
+    if (query) url.searchParams.set('q', query);
+    else url.searchParams.delete('q');
+    window.history.replaceState(null, '', url);
+  };
+
+  const initialQuery = new URL(window.location.href).searchParams.get('q') || '';
+  if (input) input.value = initialQuery;
+  applySearch();
+
+  input?.addEventListener('input', applySearch);
+  form?.addEventListener('submit', event => {
+    event.preventDefault();
+    applySearch();
+  });
+</script>
+
+<style>
+  .search-page{max-width:980px;margin-top:clamp(3rem,7vw,5.5rem)}
+  .search-page > .lead{max-width:760px}
+  .search-form{margin:2.2rem 0 1.25rem;padding:1.2rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.84)}
+  .search-form > label{display:block;margin-bottom:.45rem;font-size:.82rem;font-weight:800;color:#596273}
+  .search-control{display:grid;grid-template-columns:1fr auto;gap:.65rem}
+  .search-control input{width:100%;min-height:48px;padding:.72rem .85rem;border:1px solid var(--line-strong);border-radius:10px;background:#fff;color:var(--text);font:inherit;font-size:1rem}
+  .search-control input:focus{outline:3px solid rgba(79,70,229,.2);border-color:#8b87d8}
+  .search-control button{min-width:88px;border:1px solid #3730a3;border-radius:10px;background:#3f3aa8;color:#fff;font:inherit;font-weight:750;cursor:pointer}
+  .search-help{margin:.65rem 0 0;color:#7a8290;font-size:.78rem}
+  .search-summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:1rem 0}
+  .search-summary p{margin:0;color:#667085;font-size:.9rem}
+  .search-summary a{color:#4640bd;font-size:.86rem;font-weight:750}
+  .search-results{display:grid;gap:.8rem}
+  .search-result{display:block;padding:1.1rem 1.2rem;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.84);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+  .search-result:hover{transform:translateY(-2px);border-color:#ccd1da;box-shadow:0 12px 28px rgba(25,27,32,.07);text-decoration:none}
+  .search-result[hidden]{display:none}
+  .search-result h2{margin:.2rem 0 .45rem;font-size:1.15rem;line-height:1.4;letter-spacing:-.02em}
+  .result-description{margin:0;color:#596273;line-height:1.65}
+  .result-labels{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+  .result-labels span{padding:.12rem .48rem;border:1px solid #e0e3ee;border-radius:999px;background:#f6f7ff;color:#5652a5;font-size:.68rem;font-weight:650}
+  @media(max-width:600px){
+    .search-control{grid-template-columns:1fr}
+    .search-control button{min-height:44px}
+    .search-summary{align-items:flex-start;flex-direction:column}
+  }
+</style>

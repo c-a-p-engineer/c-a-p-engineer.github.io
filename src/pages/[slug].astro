@@ -1,5 +1,6 @@
 ---
 import { render } from 'astro:content';
+import ArticleCard from '../components/ArticleCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { articles } from '../lib';
 
@@ -30,6 +31,19 @@ const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
 const articleUrl = new URL(`/${entry.data.legacySlug}/`, siteOrigin).href;
 const imagePath = resolvePublicPath(entry.data.image);
 const imageUrl = imagePath ? new URL(imagePath, siteOrigin).href : undefined;
+
+const allArticles = await articles();
+const relatedArticles = allArticles
+  .filter(candidate => candidate.id !== entry.id)
+  .map(candidate => {
+    const sharedTags = candidate.data.tags.filter(tag => entry.data.tags.includes(tag)).length;
+    const sharedCategories = candidate.data.categories.filter(category => entry.data.categories.includes(category)).length;
+    return { article: candidate, score: sharedTags * 4 + sharedCategories * 2 };
+  })
+  .filter(candidate => candidate.score > 0)
+  .sort((a, b) => b.score - a.score || b.article.data.date.valueOf() - a.article.data.date.valueOf())
+  .slice(0, 3)
+  .map(candidate => candidate.article);
 
 const author = {
   '@type': 'Person',
@@ -83,4 +97,39 @@ const jsonLd = {
     )}
     <Content />
   </article>
+
+  <section class="article-followup" aria-labelledby="related-articles-title">
+    <div class="followup-heading">
+      <div>
+        <p class="eyebrow">Keep reading</p>
+        <h2 id="related-articles-title">関連記事</h2>
+      </div>
+      <a href="/search/">記事を検索 →</a>
+    </div>
+
+    {relatedArticles.length > 0 ? (
+      <div class="related-grid">
+        {relatedArticles.map(article => <ArticleCard article={article} heading="h3" />)}
+      </div>
+    ) : (
+      <p class="related-empty">関連する記事がまだありません。キーワード検索から過去の記事を探せます。</p>
+    )}
+  </section>
 </BaseLayout>
+
+<style>
+  .article-followup{max-width:960px;margin:-2rem auto 6rem;padding-top:2.2rem;border-top:1px solid var(--line-strong)}
+  .followup-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}
+  .followup-heading .eyebrow{margin-bottom:.3rem}
+  .followup-heading h2{margin:0;font-size:clamp(1.55rem,3vw,2rem);letter-spacing:-.03em}
+  .followup-heading > a{flex:0 0 auto;color:#4640bd;font-size:.9rem;font-weight:750}
+  .followup-heading > a:hover{text-decoration:underline;text-underline-offset:.22em}
+  .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+  .related-empty{margin:0;color:#667085}
+  @media(max-width:840px){.related-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){
+    .article-followup{margin-top:-3rem}
+    .followup-heading{align-items:flex-start;flex-direction:column}
+    .related-grid{grid-template-columns:1fr}
+  }
+</style>

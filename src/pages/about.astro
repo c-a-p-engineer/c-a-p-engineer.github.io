@@ -13,8 +13,29 @@ const projects = projectEntries.sort((a, b) => a.data.order - b.data.order);
 const books = bookEntries.sort((a, b) => a.data.order - b.data.order);
 const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
 const description = 'Copy & Paste Engineerの活動、個人開発、技術記事、OSS、出版物をまとめたプロフィールページです。';
+const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
+const profileUrl = new URL('/about/', siteOrigin).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  name: 'About | Copy & Paste Engineer',
+  description,
+  url: profileUrl,
+  inLanguage: 'ja-JP',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Copy & Paste Engineer',
+    url: profileUrl,
+    description: 'ソフトウェア開発、生成AI、OSS、自動化を中心に、作って試した知見を公開するソフトウェアエンジニア。',
+    sameAs: [
+      'https://github.com/c-a-p-engineer',
+      'https://x.com/c_a_p_engineer',
+    ],
+    knowsAbout: ['Software Engineering', 'Generative AI', 'OSS', 'Automation'],
+  },
+};
 ---
-<BaseLayout title="About | Copy & Paste Engineer" description={description}>
+<BaseLayout title="About | Copy & Paste Engineer" description={description} jsonLd={jsonLd}>
   <section class="section about-page">
     <p class="eyebrow">About</p>
     <h1>Copy & Paste Engineer</h1>

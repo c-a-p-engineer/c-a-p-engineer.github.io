@@ -27,8 +27,10 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const publishedTime = entry.data.date.toISOString();
+const modifiedTime = (entry.data.updated ?? entry.data.date).toISOString();
 const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
 const articleUrl = new URL(`/${entry.data.legacySlug}/`, siteOrigin).href;
+const markdownPath = `/${entry.data.legacySlug}.md`;
 const imagePath = resolvePublicPath(entry.data.image);
 const imageUrl = imagePath ? new URL(imagePath, siteOrigin).href : undefined;
 
@@ -61,6 +63,7 @@ const jsonLd = {
   headline: entry.data.title,
   description: entry.data.description,
   datePublished: publishedTime,
+  dateModified: modifiedTime,
   url: articleUrl,
   mainEntityOfPage: articleUrl,
   inLanguage: 'ja-JP',
@@ -77,6 +80,8 @@ const jsonLd = {
   image={imagePath}
   type="article"
   publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  markdownAlternate={markdownPath}
   tags={entry.data.tags}
   jsonLd={jsonLd}
 >

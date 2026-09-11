@@ -1,0 +1,48 @@
+name: Temporary npm audit repair
+
+on:
+  push:
+    branches: [fix/npm-audit-20260911]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/npm-audit-20260911
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Capture audit before
+        run: npm audit --json > audit-before.json || true
+      - name: Apply safe audit fixes to lockfile
+        run: npm audit fix --package-lock-only || true
+      - run: npm ci
+      - name: Capture audit after
+        run: npm audit --json > audit-after.json || true
+      - run: npm run verify:content
+      - run: npm run build
+      - name: Commit lockfile update
+        run: |
+          if git diff --quiet -- package-lock.json; then
+            echo "No lockfile changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "fix(deps): apply npm audit fixes"
+          git push origin HEAD:fix/npm-audit-20260911
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: npm-audit-reports
+          path: |
+            audit-before.json
+            audit-after.json

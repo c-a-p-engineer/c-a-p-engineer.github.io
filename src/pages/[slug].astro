@@ -1,5 +1,6 @@
 ---
 import { render } from 'astro:content';
+import AiExplain from '../components/AiExplain.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { articles } from '../lib';
@@ -31,6 +32,7 @@ const modifiedTime = (entry.data.updated ?? entry.data.date).toISOString();
 const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
 const articleUrl = new URL(`/${entry.data.legacySlug}/`, siteOrigin).href;
 const markdownPath = `/${entry.data.legacySlug}.md`;
+const markdownUrl = new URL(markdownPath, siteOrigin).href;
 const imagePath = resolvePublicPath(entry.data.image);
 const imageUrl = imagePath ? new URL(imagePath, siteOrigin).href : undefined;
 
@@ -103,6 +105,8 @@ const jsonLd = {
     <Content />
   </article>
 
+  <AiExplain title={entry.data.title} markdownUrl={markdownUrl} />
+
   <section class="article-followup" aria-labelledby="related-articles-title">
     <div class="followup-heading">
       <div>
@@ -123,7 +127,7 @@ const jsonLd = {
 </BaseLayout>
 
 <style>
-  .article-followup{max-width:960px;margin:-2rem auto 6rem;padding-top:2.2rem;border-top:1px solid var(--line-strong)}
+  .article-followup{max-width:960px;margin:0 auto 6rem;padding-top:2.2rem;border-top:1px solid var(--line-strong)}
   .followup-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}
   .followup-heading .eyebrow{margin-bottom:.3rem}
   .followup-heading h2{margin:0;font-size:clamp(1.55rem,3vw,2rem);letter-spacing:-.03em}
@@ -133,7 +137,6 @@ const jsonLd = {
   .related-empty{margin:0;color:#667085}
   @media(max-width:840px){.related-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:640px){
-    .article-followup{margin-top:-3rem}
     .followup-heading{align-items:flex-start;flex-direction:column}
     .related-grid{grid-template-columns:1fr}
   }

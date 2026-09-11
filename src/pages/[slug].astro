@@ -36,8 +36,9 @@ const markdownUrl = new URL(markdownPath, siteOrigin).href;
 const imagePath = resolvePublicPath(entry.data.image);
 const imageUrl = imagePath ? new URL(imagePath, siteOrigin).href : undefined;
 
-const codeBlocks = entry.body.match(/```[\s\S]*?```/g) ?? [];
-const proseCharacters = entry.body.replace(/```[\s\S]*?```/g, '').replace(/\s+/g, '').length;
+const articleBody = entry.body ?? '';
+const codeBlocks = articleBody.match(/```[\s\S]*?```/g) ?? [];
+const proseCharacters = articleBody.replace(/```[\s\S]*?```/g, '').replace(/\s+/g, '').length;
 const codeLines = codeBlocks.reduce((count, block) => count + block.split('\n').length, 0);
 const readingMinutes = Math.max(1, Math.ceil(proseCharacters / 600 + codeLines / 20));
 

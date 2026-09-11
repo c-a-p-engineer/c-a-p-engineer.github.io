@@ -1,0 +1,272 @@
+name: Temporary AI discoverability build
+
+on:
+  push:
+    branches: [feat/ai-discoverability-v1]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/ai-discoverability-v1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Apply AI discoverability v1
+        shell: bash
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text()
+              if old not in text:
+                  raise SystemExit(f"expected text not found in {path}: {old[:80]!r}")
+              p.write_text(text.replace(old, new, 1))
+
+          Path('src/pages/llms.txt.ts').write_text(r'''import type { APIRoute } from 'astro';
+          import { articles } from '../lib';
+
+          export const prerender = true;
+
+          const site = 'https://c-a-p-engineer.github.io';
+          const absolute = (path: string) => new URL(path, site).href;
+          const aiPattern = /(?:^|\W)AI(?:\W|$)|LLM|OpenAI|ChatGPT|生成AI|AIエージェント|agent|harness/i;
+
+          export const GET = (async () => {
+            const allArticles = await articles();
+            const aiArticles = allArticles
+              .filter(entry => aiPattern.test([
+                entry.data.title,
+                entry.data.description,
+                ...entry.data.tags,
+                ...entry.data.categories,
+              ].join(' ')))
+              .slice(0, 24);
+            const recentArticles = allArticles.slice(0, 12);
+
+            const articleLine = (entry: typeof allArticles[number]) =>
+              `- [${entry.data.title}](${absolute(`/${entry.data.legacySlug}.md`)}): ${entry.data.description}`;
+
+            const body = [
+              '# Copy & Paste Engineer',
+              '',
+              '> ソフトウェア開発、生成AI、OSS、自動化を、実際に作って試した結果として記録する技術ブログです。',
+              '',
+              '## Site',
+              '',
+              `- [Home](${absolute('/')})`,
+              `- [About](${absolute('/about/')})`,
+              `- [Articles](${absolute('/articles/')})`,
+              `- [Projects](${absolute('/projects/')})`,
+              `- [Books](${absolute('/books/')})`,
+              `- [Search](${absolute('/search/')})`,
+              `- [RSS](${absolute('/rss.xml')})`,
+              `- [Sitemap](${absolute('/sitemap-index.xml')})`,
+              '',
+              '## AI / Agents',
+              '',
+              ...(aiArticles.length > 0 ? aiArticles.map(articleLine) : ['- No matching articles yet.']),
+              '',
+              '## Recent articles',
+              '',
+              ...recentArticles.map(articleLine),
+              '',
+              '## Machine-readable articles',
+              '',
+              'Every published article is available as Markdown at `/<legacySlug>.md` and links back to its canonical HTML page.',
+              '',
+              'Prefer canonical HTML URLs when citing the site to end users; use Markdown URLs when a plain-text representation is easier to process.',
+              '',
+            ].join('\n');
+
+            return new Response(body, {
+              headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+            });
+          }) satisfies APIRoute;
+          ''')
+
+          Path('src/pages/[slug].md.ts').write_text(r'''import type { APIRoute } from 'astro';
+          import type { CollectionEntry } from 'astro:content';
+          import { articles } from '../lib';
+
+          export const prerender = true;
+
+          export async function getStaticPaths() {
+            return (await articles()).map(entry => ({
+              params: { slug: entry.data.legacySlug },
+              props: { entry },
+            }));
+          }
+
+          export const GET = (({ props }) => {
+            const entry = props.entry as CollectionEntry<'articles'>;
+            const site = 'https://c-a-p-engineer.github.io';
+            const canonical = new URL(`/${entry.data.legacySlug}/`, site).href;
+            const published = entry.data.date.toISOString();
+            const modified = (entry.data.updated ?? entry.data.date).toISOString();
+            const tags = entry.data.tags.join(', ') || 'none';
+            const categories = entry.data.categories.join(', ') || 'none';
+            const body = entry.body?.trim() ?? '';
+
+            const markdown = [
+              `# ${entry.data.title}`,
+              '',
+              `> ${entry.data.description}`,
+              '',
+              `- Canonical: ${canonical}`,
+              `- Published: ${published}`,
+              `- Updated: ${modified}`,
+              `- Categories: ${categories}`,
+              `- Tags: ${tags}`,
+              '',
+              '---',
+              '',
+              body,
+              '',
+            ].join('\n');
+
+            return new Response(markdown, {
+              headers: { 'Content-Type': 'text/markdown; charset=utf-8' },
+            });
+          }) satisfies APIRoute;
+          ''')
+
+          Path('src/pages/rss.xml.ts').write_text(r'''import type { APIRoute } from 'astro';
+          import { articles } from '../lib';
+
+          export const prerender = true;
+
+          const escapeXml = (value: string) => value
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&apos;');
+
+          export const GET = (async () => {
+            const site = 'https://c-a-p-engineer.github.io';
+            const recent = (await articles()).slice(0, 50);
+            const latest = recent[0];
+            const lastBuildDate = (latest?.data.updated ?? latest?.data.date ?? new Date(0)).toUTCString();
+            const items = recent.map(entry => {
+              const link = new URL(`/${entry.data.legacySlug}/`, site).href;
+              return [
+                '    <item>',
+                `      <title>${escapeXml(entry.data.title)}</title>`,
+                `      <link>${escapeXml(link)}</link>`,
+                `      <guid isPermaLink="true">${escapeXml(link)}</guid>`,
+                `      <pubDate>${entry.data.date.toUTCString()}</pubDate>`,
+                `      <description>${escapeXml(entry.data.description)}</description>`,
+                '    </item>',
+              ].join('\n');
+            }).join('\n');
+
+            const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n  <channel>\n    <title>Copy &amp; Paste Engineer</title>\n    <link>${site}/</link>\n    <description>ソフトウェア、AI、OSS、自動化を中心に、つくりながら学んだことを記録する技術ブログです。</description>\n    <language>ja-JP</language>\n    <lastBuildDate>${lastBuildDate}</lastBuildDate>\n    <atom:link href="${site}/rss.xml" rel="self" type="application/rss+xml" />\n${items}\n  </channel>\n</rss>\n`;
+
+            return new Response(xml, {
+              headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' },
+            });
+          }) satisfies APIRoute;
+          ''')
+
+          replace_once(
+              'src/content.config.ts',
+              "    image: z.string().optional(),\n",
+              "    image: z.string().optional(), updated: z.coerce.date().optional(),\n",
+          )
+
+          replace_once(
+              'src/layouts/BaseLayout.astro',
+              "  publishedTime?: string;\n  tags?: string[];\n",
+              "  publishedTime?: string;\n  modifiedTime?: string;\n  alternateMarkdownHref?: string;\n  tags?: string[];\n",
+          )
+          replace_once(
+              'src/layouts/BaseLayout.astro',
+              "  publishedTime,\n  tags = [],\n",
+              "  publishedTime,\n  modifiedTime,\n  alternateMarkdownHref,\n  tags = [],\n",
+          )
+          replace_once(
+              'src/layouts/BaseLayout.astro',
+              "    <link rel=\"sitemap\" href=\"/sitemap-index.xml\" />\n",
+              "    <link rel=\"sitemap\" href=\"/sitemap-index.xml\" />\n    <link rel=\"alternate\" type=\"application/rss+xml\" title=\"Copy & Paste Engineer RSS\" href=\"/rss.xml\" />\n    {alternateMarkdownHref && <link rel=\"alternate\" type=\"text/markdown\" href={alternateMarkdownHref} />}\n",
+          )
+          replace_once(
+              'src/layouts/BaseLayout.astro',
+              "    {type === 'article' && publishedTime && <meta property=\"article:published_time\" content={publishedTime} />}\n",
+              "    {type === 'article' && publishedTime && <meta property=\"article:published_time\" content={publishedTime} />}\n    {type === 'article' && modifiedTime && <meta property=\"article:modified_time\" content={modifiedTime} />}\n",
+          )
+          replace_once(
+              'src/layouts/BaseLayout.astro',
+              "      <span class=\"footer-links\"><a href=\"https://x.com/c_a_p_engineer\" target=\"_blank\" rel=\"noopener noreferrer\">X</a><a href=\"https://github.com/c-a-p-engineer\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a></span>\n",
+              "      <span class=\"footer-links\"><a href=\"/rss.xml\">RSS</a><a href=\"/llms.txt\">llms.txt</a><a href=\"https://x.com/c_a_p_engineer\" target=\"_blank\" rel=\"noopener noreferrer\">X</a><a href=\"https://github.com/c-a-p-engineer\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a></span>\n",
+          )
+
+          replace_once(
+              'src/pages/[slug].astro',
+              "const publishedTime = entry.data.date.toISOString();\n",
+              "const publishedTime = entry.data.date.toISOString();\nconst modifiedTime = (entry.data.updated ?? entry.data.date).toISOString();\n",
+          )
+          replace_once(
+              'src/pages/[slug].astro',
+              "  datePublished: publishedTime,\n",
+              "  datePublished: publishedTime,\n  dateModified: modifiedTime,\n",
+          )
+          replace_once(
+              'src/pages/[slug].astro',
+              "  publishedTime={publishedTime}\n  tags={entry.data.tags}\n",
+              "  publishedTime={publishedTime}\n  modifiedTime={modifiedTime}\n  alternateMarkdownHref={`/${entry.data.legacySlug}.md`}\n  tags={entry.data.tags}\n",
+          )
+
+          replace_once(
+              'src/pages/about.astro',
+              "const description = 'Copy & Paste Engineerの活動、個人開発、技術記事、OSS、出版物をまとめたプロフィールページです。';\n",
+              "const description = 'Copy & Paste Engineerの活動、個人開発、技術記事、OSS、出版物をまとめたプロフィールページです。';\nconst siteOrigin = Astro.site ?? new URL(Astro.url.origin);\nconst profileUrl = new URL('/about/', siteOrigin).href;\nconst jsonLd = {\n  '@context': 'https://schema.org',\n  '@type': 'ProfilePage',\n  name: 'About Copy & Paste Engineer',\n  description,\n  url: profileUrl,\n  mainEntity: {\n    '@type': 'Person',\n    name: 'Copy & Paste Engineer',\n    url: profileUrl,\n    sameAs: [\n      'https://github.com/c-a-p-engineer',\n      'https://x.com/c_a_p_engineer',\n    ],\n    knowsAbout: ['Software Engineering', 'Generative AI', 'Open Source Software', 'Automation'],\n  },\n};\n",
+          )
+          replace_once(
+              'src/pages/about.astro',
+              '<BaseLayout title="About | Copy & Paste Engineer" description={description}>\n',
+              '<BaseLayout title="About | Copy & Paste Engineer" description={description} jsonLd={jsonLd}>\n',
+          )
+
+          replace_once(
+              'astro.config.mjs',
+              "  integrations: [sitemap()],\n",
+              "  integrations: [sitemap({ filter: page => !page.endsWith('.md') && !page.endsWith('/llms.txt') && !page.endsWith('/rss.xml') })],\n",
+          )
+          PY
+      - run: npm ci
+      - run: npm run verify:content
+      - run: npm run build
+      - name: Verify generated discovery artifacts
+        shell: bash
+        run: |
+          test -s dist/llms.txt
+          test -s dist/rss.xml
+          count=$(find dist -maxdepth 1 -type f -name '*.md' | wc -l)
+          test "$count" -gt 400
+          grep -q '# Copy & Paste Engineer' dist/llms.txt
+          grep -q '<rss version="2.0"' dist/rss.xml
+          sample=$(find dist -maxdepth 1 -type f -name '*.md' | head -n 1)
+          grep -q -- '- Canonical: https://c-a-p-engineer.github.io/' "$sample"
+          grep -q 'rel="alternate" type="text/markdown"' dist/*.html
+          grep -q 'ProfilePage' dist/about/index.html
+          grep -q 'dateModified' dist/*.html
+          git diff --check
+      - name: Commit verified implementation and remove temporary workflow
+        shell: bash
+        run: |
+          git rm .github/workflows/ai-discoverability-temp.yml
+          git add astro.config.mjs src/content.config.ts src/layouts/BaseLayout.astro src/pages/[slug].astro src/pages/about.astro src/pages/llms.txt.ts src/pages/[slug].md.ts src/pages/rss.xml.ts
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "feat: add AI discoverability endpoints"
+          git push origin HEAD:feat/ai-discoverability-v1

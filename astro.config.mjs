@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+// AI/retrieval alternates complement canonical HTML pages; keep only the HTML URLs in the search sitemap.
 const isHumanCanonicalPage = (page) =>
   !page.endsWith('.md') &&
   !page.endsWith('/llms.txt') &&

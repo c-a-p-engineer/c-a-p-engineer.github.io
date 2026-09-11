@@ -32,36 +32,19 @@ const titleId = `${id}-title`;
     )}
   </div>
 
-  <div class="ai-explain-actions" aria-label="AIサービスを選ぶ">
+  <div class="ai-explain-actions" aria-label="AIで記事を解説">
     <a
       class="ai-explain-button ai-explain-button-primary"
       href={chatGptUrl}
       target="_blank"
       rel="noopener noreferrer"
       data-ai-explain
-      data-provider="ChatGPT"
       data-prompt={prompt}
     >
       {variant === 'compact' ? 'ChatGPT' : 'ChatGPTで解説'} <span aria-hidden="true">↗</span>
     </a>
-    <a
-      class="ai-explain-button"
-      href="https://gemini.google.com/app"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-ai-explain
-      data-provider="Gemini"
-      data-prompt={prompt}
-    >
-      {variant === 'compact' ? 'Gemini' : 'Geminiで解説'} <span aria-hidden="true">↗</span>
-    </a>
   </div>
 
-  {variant === 'full' && (
-    <p class="ai-explain-note">
-      ChatGPTは入力済みの状態で開きます。Geminiはプロンプトをコピーして開くため、入力欄へ貼り付けてください。
-    </p>
-  )}
   <p class="ai-explain-status" data-ai-explain-status aria-live="polite"></p>
 </aside>
 
@@ -75,17 +58,14 @@ const titleId = `${id}-title`;
     for (const link of links) {
       link.addEventListener('click', () => {
         const prompt = link.dataset.prompt;
-        const provider = link.dataset.provider ?? 'AI';
         if (!prompt || !navigator.clipboard) return;
 
         void navigator.clipboard.writeText(prompt).then(() => {
           if (!status) return;
-          status.textContent = provider === 'Gemini'
-            ? 'プロンプトをコピーしました。Geminiの入力欄へ貼り付けてください。'
-            : 'プロンプトもコピーしました。入力されなかった場合は貼り付けてください。';
+          status.textContent = 'プロンプトもコピーしました。入力されなかった場合は貼り付けてください。';
         }).catch(() => {
           if (!status) return;
-          status.textContent = `${provider}を開きます。必要に応じて記事URLを貼り付けてください。`;
+          status.textContent = 'ChatGPTを開きます。必要に応じて記事URLを貼り付けてください。';
         });
       });
     }
@@ -154,7 +134,7 @@ const titleId = `${id}-title`;
     box-shadow:0 5px 16px rgba(63,58,168,.14);
   }
   .ai-explain-button-primary:hover{border-color:#3730a3;background:#3730a3;box-shadow:0 8px 20px rgba(63,58,168,.19)}
-  .ai-explain-note,.ai-explain-status{margin:.35rem 0 0;color:#667085;font-size:.82rem;line-height:1.65}
+  .ai-explain-status{margin:.35rem 0 0;color:#667085;font-size:.82rem;line-height:1.65}
   .ai-explain-compact .ai-explain-status{grid-column:1 / -1;margin:0}
   .ai-explain-status:empty{display:none}
   @media(max-width:720px){
@@ -166,7 +146,7 @@ const titleId = `${id}-title`;
     .ai-explain-full .ai-explain-actions{display:grid;grid-template-columns:1fr}
     .ai-explain-full .ai-explain-button{width:100%}
     .ai-explain-compact{margin-top:1.15rem;padding:.9rem}
-    .ai-explain-compact .ai-explain-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+    .ai-explain-compact .ai-explain-actions{display:grid;grid-template-columns:1fr;width:100%}
     .ai-explain-compact .ai-explain-button{width:100%}
   }
 </style>

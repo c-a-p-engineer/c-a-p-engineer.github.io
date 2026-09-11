@@ -25,7 +25,10 @@ const hiddenCategories = categories.slice(12);
     <p class="eyebrow">Articles</p>
     <h1>技術記事</h1>
     <div class="archive-intro">
-      <p>{all.length}本の記録。サムネイルからざっと眺めて、必要ならタグやカテゴリで絞り込めます。</p>
+      <div>
+        <p>{all.length}本の記録。サムネイルからざっと眺めて、必要ならタグやカテゴリで絞り込めます。</p>
+        <a class="archive-search" href="/search/">キーワードで横断検索 →</a>
+      </div>
       <p class="filter-status" aria-live="polite">{all.length}本を表示中</p>
     </div>
 
@@ -143,6 +146,8 @@ const hiddenCategories = categories.slice(12);
   .article-archive{margin-top:clamp(3rem,7vw,5.5rem)}
   .archive-intro{display:flex;gap:1rem;align-items:flex-end;justify-content:space-between;margin:0 0 1.4rem;color:#596273}
   .archive-intro p{margin:0}
+  .archive-search{display:inline-block;margin-top:.45rem;color:#4640bd;font-size:.88rem;font-weight:750}
+  .archive-search:hover{text-decoration:underline;text-underline-offset:.22em}
   .filter-status{flex:0 0 auto;font-size:.86rem;font-weight:700;color:#666d7b}
   .taxonomy-panel{
     margin:0 0 1.6rem;

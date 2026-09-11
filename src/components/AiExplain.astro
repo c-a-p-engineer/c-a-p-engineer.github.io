@@ -2,18 +2,34 @@
 interface Props {
   title: string;
   markdownUrl: string;
+  variant?: 'compact' | 'full';
+  id: string;
 }
 
-const { title, markdownUrl } = Astro.props as Props;
+const { title, markdownUrl, variant = 'full', id } = Astro.props as Props;
 
 const prompt = `次の記事を読んで、日本語で分かりやすく解説してください。\n\n記事タイトル: ${title}\n\n以下を中心に整理してください。\n- この記事が解決する問題\n- 重要なポイント\n- 実際の使い方\n- 注意点\n\n必要なら記事内容についての追加質問にも答えてください。\n\n記事: ${markdownUrl}`;
 const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
+const titleId = `${id}-title`;
 ---
-<aside class="ai-explain" aria-labelledby="ai-explain-title">
+<aside
+  class:list={['ai-explain', `ai-explain-${variant}`]}
+  aria-labelledby={titleId}
+  data-ai-explain-root
+>
   <div class="ai-explain-copy">
-    <p class="eyebrow">Ask AI</p>
-    <h2 id="ai-explain-title">この記事をAIで解説</h2>
-    <p>記事のMarkdown版をAIに渡して、要点・使い方・注意点を対話形式で確認できます。</p>
+    {variant === 'full' ? (
+      <>
+        <p class="eyebrow">Ask AI</p>
+        <h2 id={titleId}>この記事をAIで解説</h2>
+        <p>記事のMarkdown版をAIに渡して、要点・使い方・注意点を対話形式で確認できます。</p>
+      </>
+    ) : (
+      <>
+        <p class="ai-explain-compact-title" id={titleId}><span aria-hidden="true">✦</span> AIで先に要点を見る</p>
+        <p class="ai-explain-compact-copy">長文を読む前に、この記事の要点をAIへ聞けます。</p>
+      </>
+    )}
   </div>
 
   <div class="ai-explain-actions" aria-label="AIサービスを選ぶ">
@@ -26,7 +42,7 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
       data-provider="ChatGPT"
       data-prompt={prompt}
     >
-      ChatGPTで解説 <span aria-hidden="true">↗</span>
+      {variant === 'compact' ? 'ChatGPT' : 'ChatGPTで解説'} <span aria-hidden="true">↗</span>
     </a>
     <a
       class="ai-explain-button"
@@ -37,48 +53,65 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
       data-provider="Gemini"
       data-prompt={prompt}
     >
-      Geminiで解説 <span aria-hidden="true">↗</span>
+      {variant === 'compact' ? 'Gemini' : 'Geminiで解説'} <span aria-hidden="true">↗</span>
     </a>
   </div>
 
-  <p class="ai-explain-note">
-    ChatGPTは入力済みの状態で開きます。Geminiはプロンプトをコピーして開くため、入力欄へ貼り付けてください。
-  </p>
+  {variant === 'full' && (
+    <p class="ai-explain-note">
+      ChatGPTは入力済みの状態で開きます。Geminiはプロンプトをコピーして開くため、入力欄へ貼り付けてください。
+    </p>
+  )}
   <p class="ai-explain-status" data-ai-explain-status aria-live="polite"></p>
 </aside>
 
 <script>
-  const links = document.querySelectorAll<HTMLAnchorElement>('[data-ai-explain]');
-  const status = document.querySelector<HTMLElement>('[data-ai-explain-status]');
+  const roots = document.querySelectorAll<HTMLElement>('[data-ai-explain-root]');
 
-  for (const link of links) {
-    link.addEventListener('click', () => {
-      const prompt = link.dataset.prompt;
-      const provider = link.dataset.provider ?? 'AI';
-      if (!prompt || !navigator.clipboard) return;
+  for (const root of roots) {
+    const links = root.querySelectorAll<HTMLAnchorElement>('[data-ai-explain]');
+    const status = root.querySelector<HTMLElement>('[data-ai-explain-status]');
 
-      void navigator.clipboard.writeText(prompt).then(() => {
-        if (!status) return;
-        status.textContent = provider === 'Gemini'
-          ? 'プロンプトをコピーしました。Geminiの入力欄へ貼り付けてください。'
-          : 'プロンプトもコピーしました。入力されなかった場合は貼り付けてください。';
-      }).catch(() => {
-        if (!status) return;
-        status.textContent = `${provider}を開きます。必要に応じて記事URLを貼り付けてください。`;
+    for (const link of links) {
+      link.addEventListener('click', () => {
+        const prompt = link.dataset.prompt;
+        const provider = link.dataset.provider ?? 'AI';
+        if (!prompt || !navigator.clipboard) return;
+
+        void navigator.clipboard.writeText(prompt).then(() => {
+          if (!status) return;
+          status.textContent = provider === 'Gemini'
+            ? 'プロンプトをコピーしました。Geminiの入力欄へ貼り付けてください。'
+            : 'プロンプトもコピーしました。入力されなかった場合は貼り付けてください。';
+        }).catch(() => {
+          if (!status) return;
+          status.textContent = `${provider}を開きます。必要に応じて記事URLを貼り付けてください。`;
+        });
       });
-    });
+    }
   }
 </script>
 
 <style>
   .ai-explain{
+    border:1px solid #dfe2f3;
+    background:linear-gradient(145deg,#fff 0%,#f7f7ff 100%);
+  }
+  .ai-explain-full{
     max-width:820px;
     margin:-2.75rem auto 4.5rem;
     padding:1.4rem;
-    border:1px solid #dfe2f3;
     border-radius:18px;
-    background:linear-gradient(145deg,#fff 0%,#f7f7ff 100%);
     box-shadow:0 12px 32px rgba(63,58,168,.08);
+  }
+  .ai-explain-compact{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:.8rem 1.1rem;
+    align-items:center;
+    margin:1.35rem 0 2.4rem;
+    padding:1rem 1.05rem;
+    border-radius:14px;
   }
   .ai-explain-copy h2{
     margin:.1rem 0 .45rem;
@@ -87,7 +120,11 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
     letter-spacing:-.03em;
   }
   .ai-explain-copy > p:last-child{margin:.45rem 0 0;color:#596273}
+  .ai-explain-compact-title{margin:0;color:#292677;font-size:.96rem;font-weight:820;line-height:1.45}
+  .ai-explain-compact-title span{margin-right:.25rem}
+  .ai-explain-compact-copy{margin:.15rem 0 0!important;color:#667085!important;font-size:.84rem;line-height:1.55}
   .ai-explain-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:1.15rem 0 .75rem}
+  .ai-explain-compact .ai-explain-actions{margin:0;flex-wrap:nowrap}
   .ai-explain-button{
     display:inline-flex;
     min-height:46px;
@@ -102,6 +139,7 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
     font-weight:780;
     transition:transform .16s ease,box-shadow .16s ease,background-color .16s ease,border-color .16s ease;
   }
+  .ai-explain-compact .ai-explain-button{min-height:44px;padding:.58rem .82rem;font-size:.88rem}
   .ai-explain-button:hover{
     transform:translateY(-1px);
     border-color:#bfc4d0;
@@ -117,10 +155,18 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
   }
   .ai-explain-button-primary:hover{border-color:#3730a3;background:#3730a3;box-shadow:0 8px 20px rgba(63,58,168,.19)}
   .ai-explain-note,.ai-explain-status{margin:.35rem 0 0;color:#667085;font-size:.82rem;line-height:1.65}
+  .ai-explain-compact .ai-explain-status{grid-column:1 / -1;margin:0}
   .ai-explain-status:empty{display:none}
+  @media(max-width:720px){
+    .ai-explain-compact{grid-template-columns:1fr}
+    .ai-explain-compact .ai-explain-actions{justify-content:flex-start}
+  }
   @media(max-width:640px){
-    .ai-explain{margin-top:-3.25rem;padding:1.2rem}
-    .ai-explain-actions{display:grid;grid-template-columns:1fr}
-    .ai-explain-button{width:100%}
+    .ai-explain-full{margin-top:-3.25rem;padding:1.2rem}
+    .ai-explain-full .ai-explain-actions{display:grid;grid-template-columns:1fr}
+    .ai-explain-full .ai-explain-button{width:100%}
+    .ai-explain-compact{margin-top:1.15rem;padding:.9rem}
+    .ai-explain-compact .ai-explain-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+    .ai-explain-compact .ai-explain-button{width:100%}
   }
 </style>

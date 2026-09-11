@@ -3,9 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { articles } from '../../lib';
 
-const taxonomySlug = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
-
 export async function getStaticPaths() {
+  const taxonomySlug = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
   const entries = await articles();
   const groups = new Map<string, { label: string; entries: typeof entries }>();
 

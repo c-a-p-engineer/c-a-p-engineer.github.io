@@ -36,6 +36,12 @@ const markdownUrl = new URL(markdownPath, siteOrigin).href;
 const imagePath = resolvePublicPath(entry.data.image);
 const imageUrl = imagePath ? new URL(imagePath, siteOrigin).href : undefined;
 
+const articleBody = entry.body ?? '';
+const codeBlocks = articleBody.match(/```[\s\S]*?```/g) ?? [];
+const proseCharacters = articleBody.replace(/```[\s\S]*?```/g, '').replace(/\s+/g, '').length;
+const codeLines = codeBlocks.reduce((count, block) => count + block.split('\n').length, 0);
+const readingMinutes = Math.max(1, Math.ceil(proseCharacters / 600 + codeLines / 20));
+
 const allArticles = await articles();
 const relatedArticles = allArticles
   .filter(candidate => candidate.id !== entry.id)
@@ -88,24 +94,41 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <article class="article">
-    <p class="meta">
-      <time datetime={publishedTime}>{entry.data.date.toLocaleDateString('ja-JP')}</time>
-    </p>
-    <h1>{entry.data.title}</h1>
-    {(entry.data.categories.length > 0 || entry.data.tags.length > 0) && (
-      <p aria-label="記事の分類">
-        {entry.data.categories.map(category => (
-          <a class="tag" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>
-        ))}
-        {entry.data.tags.map(tag => (
-          <a class="tag" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>
-        ))}
+    <header class="article-entry-header">
+      <p class="meta article-entry-meta">
+        <time datetime={publishedTime}>{entry.data.date.toLocaleDateString('ja-JP')}</time>
+        <span aria-hidden="true">·</span>
+        <span>読了目安 約{readingMinutes}分</span>
       </p>
-    )}
+      <h1>{entry.data.title}</h1>
+      <p class="article-entry-summary">{entry.data.description}</p>
+      {(entry.data.categories.length > 0 || entry.data.tags.length > 0) && (
+        <p class="article-entry-taxonomy" aria-label="記事の分類">
+          {entry.data.categories.map(category => (
+            <a class="tag" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>
+          ))}
+          {entry.data.tags.map(tag => (
+            <a class="tag" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>
+          ))}
+        </p>
+      )}
+      <AiExplain
+        id={`ai-explain-top-${entry.data.legacySlug}`}
+        title={entry.data.title}
+        markdownUrl={markdownUrl}
+        variant="compact"
+      />
+    </header>
+
     <Content />
   </article>
 
-  <AiExplain title={entry.data.title} markdownUrl={markdownUrl} />
+  <AiExplain
+    id={`ai-explain-bottom-${entry.data.legacySlug}`}
+    title={entry.data.title}
+    markdownUrl={markdownUrl}
+    variant="full"
+  />
 
   <section class="article-followup" aria-labelledby="related-articles-title">
     <div class="followup-heading">
@@ -127,6 +150,10 @@ const jsonLd = {
 </BaseLayout>
 
 <style>
+  .article-entry-header{margin-bottom:2.2rem;padding-bottom:.2rem;border-bottom:1px solid var(--line)}
+  .article-entry-meta{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
+  .article-entry-summary{max-width:46rem;margin:.9rem 0 .2rem;color:#535d6d;font-size:1.02rem;line-height:1.85}
+  .article-entry-taxonomy{margin:.25rem 0 0}
   .article-followup{max-width:960px;margin:0 auto 6rem;padding-top:2.2rem;border-top:1px solid var(--line-strong)}
   .followup-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}
   .followup-heading .eyebrow{margin-bottom:.3rem}
@@ -137,6 +164,8 @@ const jsonLd = {
   .related-empty{margin:0;color:#667085}
   @media(max-width:840px){.related-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:640px){
+    .article-entry-header{margin-bottom:1.8rem}
+    .article-entry-summary{font-size:.96rem;line-height:1.75}
     .followup-heading{align-items:flex-start;flex-direction:column}
     .related-grid{grid-template-columns:1fr}
   }

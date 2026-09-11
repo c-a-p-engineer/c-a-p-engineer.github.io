@@ -1,0 +1,28 @@
+name: Temporary AI explain verification
+
+on:
+  push:
+    branches: [feat/ai-explain-buttons-20260911]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify:content
+      - run: npm run build
+      - name: Verify AI explain CTA output
+        run: |
+          test -f dist/php-rss/index.html
+          grep -q "ChatGPTで解説" dist/php-rss/index.html
+          grep -q "Geminiで解説" dist/php-rss/index.html
+          grep -q "chatgpt.com/?q=" dist/php-rss/index.html
+          grep -q "gemini.google.com/app" dist/php-rss/index.html

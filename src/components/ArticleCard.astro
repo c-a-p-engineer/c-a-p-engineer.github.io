@@ -20,7 +20,8 @@ const resolveImage = (value?: string) => {
   return fileName ? `/legacy-assets/${legacySlug}/${fileName}` : undefined;
 };
 
-const thumbnail = resolveImage(image);
+const generatedThumbnail = `/thumbnails/${legacySlug}.svg`;
+const thumbnail = resolveImage(image) ?? generatedThumbnail;
 const labels = [...categories, ...tags].filter((value, index, self) => self.indexOf(value) === index);
 const fallbackLabel = labels[0] || 'TECH';
 ---
@@ -42,7 +43,7 @@ const fallbackLabel = labels[0] || 'TECH';
         alt=""
         loading="lazy"
         decoding="async"
-        onerror="this.remove()"
+        onerror={`this.onerror=null;this.src='${generatedThumbnail}'`}
       />
     )}
     {labels[0] && <span class="article-thumb-badge">{labels[0]}</span>}

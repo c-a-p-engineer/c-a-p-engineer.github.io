@@ -9,11 +9,12 @@ interface Props {
   markdownAlternate?: string;
   tags?: string[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  robots?: string;
 }
 
 const {
-  title = 'Copy & Paste Engineer',
-  description = 'ソフトウェア、AI、OSS、自動化を中心に、つくりながら学んだことを記録する技術ブログです。',
+  title = 'Copy & Paste Engineer | AI・自動化・ソフトウェア開発の技術ブログ',
+  description = 'AI協働開発、自動化、Docker、GitHub Actions、Python、Web開発など、実際に作って試した結果を記録する技術ブログです。',
   image,
   type = 'website',
   publishedTime,
@@ -21,6 +22,7 @@ const {
   markdownAlternate,
   tags = [],
   jsonLd,
+  robots,
 } = Astro.props as Props;
 
 const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
@@ -35,6 +37,8 @@ const jsonLdText = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : un
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="author" content="c-a-p-engineer" />
+    {robots && <meta name="robots" content={robots} />}
     <meta name="theme-color" content="#f6f7f9" />
     <link rel="icon" href="/favicon.svg" />
     <link rel="canonical" href={canonicalUrl.href} />
@@ -50,6 +54,7 @@ const jsonLdText = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : un
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl.href} />
     {imageUrl && <meta property="og:image" content={imageUrl} />}
+    {imageUrl && <meta property="og:image:alt" content={title} />}
     <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
     <meta name="twitter:site" content="@c_a_p_engineer" />
     <meta name="twitter:title" content={title} />

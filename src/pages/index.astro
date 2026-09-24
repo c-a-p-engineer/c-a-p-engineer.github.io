@@ -12,43 +12,111 @@ const [projectEntries, bookEntries, recent] = [
 const projects = projectEntries.sort((a, b) => a.data.order - b.data.order);
 const books = bookEntries.sort((a, b) => a.data.order - b.data.order);
 const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
-const description = 'ソフトウェア開発、生成AI、OSS、自動化を中心に、実際に作って試した技術記事・プロジェクト・出版物をまとめるCopy & Paste Engineerの技術ブログです。';
+const taxonomySlug = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
+const topicCounts = new Map<string, number>();
+for (const article of await articles()) {
+  for (const category of article.data.categories) {
+    topicCounts.set(category, (topicCounts.get(category) || 0) + 1);
+  }
+}
+const topTopics = [...topicCounts.entries()]
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))
+  .slice(0, 8);
+const description = 'AI協働開発、自動化、Docker、GitHub Actions、Python、Web開発を中心に、実際に作って試した技術記事・プロジェクト・出版物をまとめるCopy & Paste Engineerの技術ブログです。';
+const siteUrl = new URL('/', Astro.site ?? Astro.url.origin).href;
+const person = {
+  '@type': 'Person',
+  '@id': new URL('/about/#author', Astro.site ?? Astro.url.origin).href,
+  name: 'Copy & Paste Engineer',
+  alternateName: ['c-a-p-engineer', 'こぴぺたん'],
+  url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
+  sameAs: [
+    'https://github.com/c-a-p-engineer',
+    'https://x.com/c_a_p_engineer',
+  ],
+};
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Copy & Paste Engineer',
-  url: new URL('/', Astro.site ?? Astro.url.origin).href,
-  description,
-  inLanguage: 'ja-JP',
-  publisher: {
-    '@type': 'Person',
-    name: 'Copy & Paste Engineer',
-    url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
-    sameAs: [
-      'https://github.com/c-a-p-engineer',
-      'https://x.com/c_a_p_engineer',
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: 'Copy & Paste Engineer',
+      url: siteUrl,
+      description,
+      inLanguage: 'ja-JP',
+      publisher: { '@id': person['@id'] },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: new URL('/search/?q={search_term_string}', Astro.site ?? Astro.url.origin).href,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Blog',
+      '@id': `${siteUrl}#blog`,
+      name: 'Copy & Paste Engineer',
+      url: siteUrl,
+      description,
+      inLanguage: 'ja-JP',
+      author: { '@id': person['@id'] },
+    },
+    person,
+  ],
 };
 ---
 <BaseLayout
-  title="Copy & Paste Engineer | ソフトウェア・AI・OSS・自動化の技術ブログ"
+  title="Copy & Paste Engineer | AI・自動化・ソフトウェア開発の技術ブログ"
   description={description}
   jsonLd={jsonLd}
 >
   <section class="hero">
-    <p class="eyebrow">Software / AI / OSS / Automation</p>
-    <h1>作る。試す。<br/>記録する。</h1>
-    <p class="lead">Copy & Paste Engineer の活動拠点。プロダクト、技術記事、出版物をまとめています。</p>
+    <p class="eyebrow">AI / Software / Automation / OSS</p>
+    <h1>作って試した技術を、再現できる形で残す。</h1>
+    <p class="lead">AI協働開発、自動化、Docker、GitHub Actions、Python、Web開発を中心に、実装・検証・失敗から得た知見を公開しています。</p>
     <div class="actions">
-      <a class="button" href="/projects/">Projects</a>
-      <a class="button ghost" href="/articles/">Articles</a>
+      <a class="button" href="/articles/">技術記事を読む</a>
+      <a class="button ghost" href="/search/">記事を検索</a>
+      <a class="button ghost" href="/projects/">Projects</a>
     </div>
   </section>
 
   <section class="section">
     <div class="section-heading">
       <span class="section-index">01</span>
+      <h2>Latest writing</h2>
+      <a class="section-more" href="/articles/">すべての記事 →</a>
+    </div>
+    <p class="section-lead">実装メモだけでなく、検証結果、失敗、設計判断まで含めて記録しています。</p>
+    <div class="home-article-grid">
+      {recent.map(article => <ArticleCard article={article} heading="h3" />)}
+    </div>
+  </section>
+
+  {topTopics.length > 0 && (
+    <section class="section topics-section">
+      <div class="section-heading">
+        <span class="section-index">02</span>
+        <h2>Topics</h2>
+        <a class="section-more" href="/articles/">記事一覧へ →</a>
+      </div>
+      <div class="topic-links">
+        {topTopics.map(([topic, count]) => (
+          <a href={`/categories/${taxonomySlug(topic)}/`}>
+            <span>{topic}</span>
+            <small>{count} articles</small>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="section-index">03</span>
       <h2>Projects</h2>
       <a class="section-more" href="/projects/">すべて見る →</a>
     </div>
@@ -67,18 +135,7 @@ const jsonLd = {
 
   <section class="section">
     <div class="section-heading">
-      <span class="section-index">02</span>
-      <h2>Writing</h2>
-      <a class="section-more" href="/articles/">すべての記事 →</a>
-    </div>
-    <div class="home-article-grid">
-      {recent.map(article => <ArticleCard article={article} heading="h3" />)}
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-heading">
-      <span class="section-index">03</span>
+      <span class="section-index">04</span>
       <h2>Books</h2>
       <a class="section-more" href="/books/">すべての出版物 →</a>
     </div>
@@ -112,7 +169,7 @@ const jsonLd = {
 
   <section class="section">
     <div class="section-heading">
-      <span class="section-index">04</span>
+      <span class="section-index">05</span>
       <h2>Connect</h2>
     </div>
     <div class="connect-grid">
@@ -129,10 +186,22 @@ const jsonLd = {
 </BaseLayout>
 
 <style>
+  .section-lead{max-width:46rem;margin:-.35rem 0 1.35rem;color:#596273}
   .home-article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+  .topic-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}
+  .topic-links a{display:flex;min-width:0;flex-direction:column;gap:.2rem;padding:1rem 1.05rem;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.82)}
+  .topic-links a:hover{border-color:#ccd1da;background:#fff;text-decoration:none}
+  .topic-links span{font-weight:800}
+  .topic-links small{color:var(--muted)}
+
   .book-cover-image{position:relative;aspect-ratio:1200/630;padding:0;border-color:var(--line-strong);background:#fff}
   .book-cover-image img{display:block;width:100%;height:100%;object-fit:cover}
   .book-cover-badge{position:absolute;top:.65rem;left:.65rem;padding:.22rem .5rem;border-radius:999px;background:rgba(17,19,24,.82);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.06em;backdrop-filter:blur(8px)}
-  @media(max-width:940px){.home-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  @media(max-width:640px){.home-article-grid{grid-template-columns:1fr}}
+  @media(max-width:940px){
+    .home-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .topic-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media(max-width:640px){
+    .home-article-grid,.topic-links{grid-template-columns:1fr}
+  }
 </style>

@@ -5,7 +5,7 @@ import { articles } from '../../lib';
 const all = await articles();
 const description = 'Copy & Paste Engineerの技術記事を、タイトル・説明・タグ・カテゴリから横断検索できます。';
 ---
-<BaseLayout title="Search | Copy & Paste Engineer" description={description}>
+<BaseLayout title="記事検索 | Copy & Paste Engineer" description={description} robots="noindex,follow">
   <section class="section search-page">
     <p class="eyebrow">Search</p>
     <h1>記事を検索</h1>

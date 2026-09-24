@@ -19,8 +19,28 @@ const visibleTags = tags.slice(0, 16);
 const hiddenTags = tags.slice(16);
 const visibleCategories = categories.slice(0, 12);
 const hiddenCategories = categories.slice(12);
+const description = `AI、Docker、GitHub Actions、Python、PHP、Web開発など、Copy & Paste Engineerが公開している技術記事${all.length}本の一覧です。`;
+const pageUrl = new URL('/articles/', Astro.site ?? Astro.url.origin).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: '技術記事 | Copy & Paste Engineer',
+  description,
+  url: pageUrl,
+  inLanguage: 'ja-JP',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: all.length,
+    itemListElement: all.slice(0, 50).map((article, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: new URL(`/${article.data.legacySlug}/`, Astro.site ?? Astro.url.origin).href,
+      name: article.data.title,
+    })),
+  },
+};
 ---
-<BaseLayout title="Articles | Copy & Paste Engineer">
+<BaseLayout title="技術記事一覧 | Copy & Paste Engineer" description={description} jsonLd={jsonLd}>
   <section class="section article-archive">
     <p class="eyebrow">Articles</p>
     <h1>技術記事</h1>

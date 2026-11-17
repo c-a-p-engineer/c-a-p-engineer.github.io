@@ -82,6 +82,14 @@ const jsonLd = {
       <a class="button ghost" href="/search/">記事を検索</a>
       <a class="button ghost" href="/projects/">Projects</a>
     </div>
+    <a class="book-promo" href="https://nextpublishing.jp/book/19913.html" target="_blank" rel="noopener noreferrer" aria-label="商業出版『実践AI駆動開発』の出版社公式ページを見る">
+      <span class="book-promo-copy">
+        <span class="book-promo-kicker">商業出版 · インプレス NextPublishing</span>
+        <strong>『実践AI駆動開発』を出版しました</strong>
+        <span>壊れにくいコードを生むための設計者思考。要件定義からレビュー・運用まで、AIと開発するための判断をまとめた一冊。</span>
+      </span>
+      <span class="book-promo-cta" aria-hidden="true">書籍を見る ↗</span>
+    </a>
   </section>
 
   <section class="section">
@@ -186,6 +194,13 @@ const jsonLd = {
 </BaseLayout>
 
 <style>
+  .book-promo{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;max-width:850px;margin-top:1.5rem;padding:1.1rem 1.3rem;border:1px solid #c7d2fe;border-radius:16px;background:#eef2ff;color:var(--text);text-decoration:none;transition:border-color .2s,background .2s}
+  .book-promo:hover{border-color:var(--accent);background:#e5eaff;text-decoration:none}
+  .book-promo-copy{display:flex;flex-direction:column;gap:.2rem;min-width:0}
+  .book-promo-kicker{color:#4338ca;font-size:.75rem;font-weight:800;letter-spacing:.03em}
+  .book-promo-copy strong{font-size:1.13rem;line-height:1.45}
+  .book-promo-copy>span:last-child{color:#475467;font-size:.88rem}
+  .book-promo-cta{flex-shrink:0;color:#4338ca;font-weight:800;white-space:nowrap}
   .section-lead{max-width:46rem;margin:-.35rem 0 1.35rem;color:#596273}
   .home-article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
   .topic-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}
@@ -202,6 +217,7 @@ const jsonLd = {
     .topic-links{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
   @media(max-width:640px){
+    .book-promo{align-items:flex-start;flex-direction:column;gap:.65rem}
     .home-article-grid,.topic-links{grid-template-columns:1fr}
   }
 </style>

@@ -22,7 +22,7 @@ const book = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/books' }),
   schema: z.object({
     title: z.string(), description: z.string(), href: z.string().min(1).optional(),
-    year: z.number().optional(), event: z.string().optional(), coverImage: z.string().url().optional(), order: z.number().default(100),
+    year: z.number().optional(), event: z.string().optional(), status: z.string().optional(), coverImage: z.string().url().optional(), order: z.number().default(100),
   }),
 });
 export const collections = { articles: article, projects: project, books: book };

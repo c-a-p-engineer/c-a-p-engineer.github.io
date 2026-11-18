@@ -16,7 +16,7 @@ const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || hre
       {books.map(b => {
         const href = b.data.href || '#';
         const external = isExternal(href);
-        const cover = b.data.coverImage || techBookFestOgp(href);
+        const cover = b.data.coverImage || (b.data.status ? undefined : techBookFestOgp(href));
         return <a class="book-card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
           {cover ? (
             <div class={b.data.coverImage ? 'book-cover book-cover-image book-cover-publisher' : 'book-cover book-cover-image'}>
@@ -31,7 +31,7 @@ const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || hre
             </div>
           )}
           <div class="book-info">
-            <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}</p>
+            <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}{b.data.status ? ` · ${b.data.status}` : ''}</p>
             <h2>{b.data.title}{external && <span aria-hidden="true"> ↗</span>}</h2>
             <p>{b.data.description}</p>
           </div>

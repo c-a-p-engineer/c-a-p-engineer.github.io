@@ -152,10 +152,10 @@ const jsonLd = {
       <a class="section-more" href="/books/">すべての出版物 →</a>
     </div>
     <div class="book-grid">
-      {books.slice(0, 4).map(b => {
+      {books.slice(0, 5).map(b => {
         const href = b.data.href || '/books/';
         const external = isExternal(href);
-        const cover = b.data.coverImage || techBookFestOgp(href);
+        const cover = b.data.coverImage || (b.data.status ? undefined : techBookFestOgp(href));
         return <a class="book-card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
           {cover ? (
             <div class={b.data.coverImage ? 'book-cover book-cover-image book-cover-publisher' : 'book-cover book-cover-image'}>
@@ -170,7 +170,7 @@ const jsonLd = {
             </div>
           )}
           <div class="book-info">
-            <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}</p>
+            <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}{b.data.status ? ` · ${b.data.status}` : ''}</p>
             <h3>{b.data.title}{external && <span aria-hidden="true"> ↗</span>}</h3>
             <p>{b.data.description}</p>
           </div>

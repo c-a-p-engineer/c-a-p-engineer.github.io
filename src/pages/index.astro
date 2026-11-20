@@ -1,51 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 import { articles, techBookFestOgp } from '../lib';
 
-const [projectEntries, bookEntries, recent] = [
-  await getCollection('projects'),
-  await getCollection('books'),
-  (await articles()).slice(0, 3),
-];
+const allArticles = await articles();
+const [projectEntries, bookEntries] = await Promise.all([
+  getCollection('projects'),
+  getCollection('books'),
+]);
 const projects = projectEntries.sort((a, b) => a.data.order - b.data.order);
 const books = bookEntries.sort((a, b) => a.data.order - b.data.order);
+const recent = allArticles.slice(0, 5);
 const isExternal = (href?: string) => Boolean(href?.startsWith('http://') || href?.startsWith('https://'));
 const taxonomySlug = (value: string) => value.trim().toLowerCase().replace(/\s+/g, '-');
 const topicCounts = new Map<string, number>();
-for (const article of await articles()) {
+for (const article of allArticles) {
   for (const category of article.data.categories) {
     topicCounts.set(category, (topicCounts.get(category) || 0) + 1);
   }
 }
 const topTopics = [...topicCounts.entries()]
   .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))
-  .slice(0, 8);
-const description = 'AI協働開発、自動化、Docker、GitHub Actions、Python、Web開発を中心に、実際に作って試した技術記事・プロジェクト・出版物をまとめるCopy & Paste Engineerの技術ブログです。';
+  .slice(0, 9);
+const description = 'こぴぺたん（Copy & Paste Engineer）のほ～むぺ～じ。平成の個人サイト風に、技術記事・個人開発・AI・技術書を紹介します。';
 const siteUrl = new URL('/', Astro.site ?? Astro.url.origin).href;
-const person = {
-  '@type': 'Person',
-  '@id': new URL('/about/#author', Astro.site ?? Astro.url.origin).href,
-  name: 'Copy & Paste Engineer',
-  alternateName: ['c-a-p-engineer', 'こぴぺたん'],
-  url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
-  sameAs: [
-    'https://github.com/c-a-p-engineer',
-    'https://x.com/c_a_p_engineer',
-  ],
-};
+const personId = new URL('/about/#author', Astro.site ?? Astro.url.origin).href;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'WebSite',
-      '@id': `${siteUrl}#website`,
+      '@id': siteUrl + '#website',
       name: 'Copy & Paste Engineer',
+      alternateName: 'こぴぺたんのほ～むぺ～じ',
       url: siteUrl,
       description,
       inLanguage: 'ja-JP',
-      publisher: { '@id': person['@id'] },
+      publisher: { '@id': personId },
       potentialAction: {
         '@type': 'SearchAction',
         target: {
@@ -57,180 +48,406 @@ const jsonLd = {
     },
     {
       '@type': 'Blog',
-      '@id': `${siteUrl}#blog`,
+      '@id': siteUrl + '#blog',
       name: 'Copy & Paste Engineer',
       url: siteUrl,
       description,
       inLanguage: 'ja-JP',
-      author: { '@id': person['@id'] },
+      author: { '@id': personId },
     },
-    person,
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: 'Copy & Paste Engineer',
+      alternateName: ['c-a-p-engineer', 'こぴぺたん'],
+      url: new URL('/about/', Astro.site ?? Astro.url.origin).href,
+      sameAs: ['https://github.com/c-a-p-engineer', 'https://x.com/c_a_p_engineer'],
+    },
   ],
 };
 ---
-<BaseLayout
-  title="Copy & Paste Engineer | AI・自動化・ソフトウェア開発の技術ブログ"
-  description={description}
-  jsonLd={jsonLd}
->
-  <section class="hero">
-    <p class="eyebrow">AI / Software / Automation / OSS</p>
-    <h1>作って試した技術を、再現できる形で残す。</h1>
-    <p class="lead">AI協働開発、自動化、Docker、GitHub Actions、Python、Web開発を中心に、実装・検証・失敗から得た知見を公開しています。</p>
-    <div class="actions">
-      <a class="button" href="/articles/">技術記事を読む</a>
-      <a class="button ghost" href="/search/">記事を検索</a>
-      <a class="button ghost" href="/projects/">Projects</a>
-    </div>
-    <a class="book-promo" href="https://nextpublishing.jp/book/19913.html" target="_blank" rel="noopener noreferrer" aria-label="商業出版『実践AI駆動開発』の出版社公式ページを見る">
-      <span class="book-promo-cover" aria-hidden="true">
-        <img src="https://nextpublishing.jp/wp-content/uploads/2026/10/N02661.jpg" alt="" loading="eager" decoding="async" />
-      </span>
-      <span class="book-promo-copy">
-        <span class="book-promo-kicker">商業出版 · インプレス NextPublishing</span>
-        <strong>『実践AI駆動開発』を出版しました</strong>
-        <span>壊れにくいコードを生むための設計者思考。要件定義からレビュー・運用まで、AIと開発するための判断をまとめた一冊。</span>
-      </span>
-      <span class="book-promo-cta" aria-hidden="true">書籍を見る ↗</span>
-    </a>
-    <p class="book-promo-news"><a href="https://news.nextpublishing.jp/news/detail/1642/" target="_blank" rel="noopener noreferrer">インプレスの刊行ニュースを読む →</a></p>
-  </section>
+<BaseLayout title="こぴぺたんのほ～むぺ～じ | Copy & Paste Engineer" description={description} jsonLd={jsonLd} theme="retro">
+  <div class="retro-page">
+    <div class="retro-topline"><span>★　WELCOME TO MY HOMEPAGE　★</span><span>ネットの片隅で今日もなにか作っています。</span></div>
 
-  <section class="section">
-    <div class="section-heading">
-      <span class="section-index">01</span>
-      <h2>Latest writing</h2>
-      <a class="section-more" href="/articles/">すべての記事 →</a>
-    </div>
-    <p class="section-lead">実装メモだけでなく、検証結果、失敗、設計判断まで含めて記録しています。</p>
-    <div class="home-article-grid">
-      {recent.map(article => <ArticleCard article={article} heading="h3" />)}
-    </div>
-  </section>
+    <header class="retro-masthead">
+      <div class="masthead-stickers" aria-hidden="true"><span>★</span><span>✦</span><span>★</span></div>
+      <p class="retro-kicker">ようこそ！　いらっしゃいませ～！</p>
+      <h1><span class="retro-name">こぴぺたんの</span><span class="retro-home">ほ～むぺ～じ</span></h1>
+      <p class="retro-subtitle">★ AI × プログラミング × 個人開発 × 技術書 ★</p>
+      <div class="retro-welcome-strip"><span class="sparkle" aria-hidden="true">✧</span> キリ番踏んだら心の中で報告してね！ <span class="sparkle" aria-hidden="true">✧</span></div>
+    </header>
 
-  {topTopics.length > 0 && (
-    <section class="section topics-section">
-      <div class="section-heading">
-        <span class="section-index">02</span>
-        <h2>Topics</h2>
-        <a class="section-more" href="/articles/">記事一覧へ →</a>
-      </div>
-      <div class="topic-links">
-        {topTopics.map(([topic, count]) => (
-          <a href={`/categories/${taxonomySlug(topic)}/`}>
-            <span>{topic}</span>
-            <small>{count} articles</small>
-          </a>
-        ))}
-      </div>
-    </section>
-  )}
+    <div class="retro-marquee" aria-label="サイトからのお知らせ">
+      <span>★★★　祝・ご訪問！　ここは「こぴぺたん」の個人サイトです。リンクフリー／無断リンク大歓迎！　BGMは鳴りません。安心してお楽しみください。　★★★</span>
+    </div>
 
-  <section class="section">
-    <div class="section-heading">
-      <span class="section-index">03</span>
-      <h2>Projects</h2>
-      <a class="section-more" href="/projects/">すべて見る →</a>
-    </div>
-    <div class="grid">
-      {projects.filter(p => p.data.featured).map(p => {
-        const external = isExternal(p.data.href);
-        return <a class="card" href={p.data.href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-          <p class="meta">Featured Project</p>
-          <h3>{p.data.title}{external && <span aria-hidden="true"> ↗</span>}</h3>
-          <p>{p.data.description}</p>
-          <div>{p.data.tags.map(t => <span class="tag">{t}</span>)}</div>
-        </a>;
-      })}
-    </div>
-  </section>
+    <nav class="retro-local-nav" aria-label="このページの目次">
+      <a href="#welcome">はじめに</a>
+      <a href="#diary">更新履歴</a>
+      <a href="#program">技術の部屋</a>
+      <a href="#works">作品置き場</a>
+      <a href="#bookshelf">ほんだな</a>
+      <a href="#links">リンク集</a>
+    </nav>
 
-  <section class="section">
-    <div class="section-heading">
-      <span class="section-index">04</span>
-      <h2>Books</h2>
-      <a class="section-more" href="/books/">すべての出版物 →</a>
-    </div>
-    <div class="book-grid">
-      {books.slice(0, 5).map(b => {
-        const href = b.data.href || '/books/';
-        const external = isExternal(href);
-        const cover = b.data.coverImage || (b.data.status ? undefined : techBookFestOgp(href));
-        return <a class="book-card" href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-          {cover ? (
-            <div class={b.data.coverImage ? 'book-cover book-cover-image book-cover-publisher' : 'book-cover book-cover-image'}>
-              <img src={cover} alt="" loading="lazy" decoding="async" />
-              <span class="book-cover-badge">{b.data.event || 'TECH BOOK'}</span>
+    <div class="retro-columns">
+      <aside class="retro-left" aria-label="プロフィールとメニュー">
+        <section class="retro-panel counter-box">
+          <h2>☆ あくせすかうんた ☆</h2>
+          <p class="counter-label">あなたは</p>
+          <div class="counter-digits" aria-label="アクセスカウンターは停止中">??????</div>
+          <p class="counter-label">人目のお客様です</p>
+          <p class="counter-note">※ カウンター故障中。気持ちは100万HIT。</p>
+        </section>
+
+        <section class="retro-panel side-menu">
+          <h2>■ MENU ■</h2>
+          <a href="/">★ TOP</a>
+          <a href="/about/">★ 管理人について</a>
+          <a href="/articles/">★ 技術日記</a>
+          <a href="/search/">★ 記事をさがす</a>
+          <a href="/projects/">★ おへや・制作物</a>
+          <a href="/books/">★ 自費出版・書籍</a>
+          <a href="/rss.xml">★ RSS購読</a>
+          <a href="https://github.com/c-a-p-engineer" target="_blank" rel="noopener noreferrer">★ GitHub</a>
+        </section>
+
+        <section class="retro-panel profile-box">
+          <h2>管理人ぷろふぃーる</h2>
+          <p class="profile-avatar" aria-hidden="true">（ ´∀｀）<span>ノ</span></p>
+          <p><strong>HN：</strong>こぴぺたん</p>
+          <p><strong>属性：</strong>ソフトウェアエンジニア</p>
+          <p><strong>すき：</strong>コード・AI・ものづくり・古き良きインターネット</p>
+          <a href="/about/">≫ もっと詳しく</a>
+        </section>
+
+        <div class="retro-banners" aria-label="懐かしのミニバナー">
+          <span class="mini-banner bn-purple">BEST VIEWED<br /><b>1024×768</b></span>
+          <span class="mini-banner bn-blue">HTML &amp; CSS<br /><b>LOVE IT!</b></span>
+          <span class="mini-banner bn-green">NO BGM<br /><b>PEACEFUL</b></span>
+          <span class="mini-banner bn-orange">LINK<br /><b>FREE!</b></span>
+        </div>
+      </aside>
+
+      <div class="retro-main">
+        <section id="welcome" class="retro-section greeting">
+          <h2><span>★</span> はじめに <span>★</span></h2>
+          <p class="greeting-big">ようこそ、こぴぺたんのほ～むぺ～じへ！</p>
+          <p>ここは管理人「こぴぺたん」が、プログラミング・生成AI・自作ツール・書いた本などを好き勝手に並べているインターネットの片隅です。</p>
+          <p>見た目は平成、動いている技術は令和。実装したこと、失敗したこと、気付いたことを残していきます。初めての方も常連さんも、どうぞごゆっくり。</p>
+          <p class="pink-note">※ 掲載記事は今も読めます。古いURLもそのままです。</p>
+        </section>
+
+        <section class="retro-section pickup">
+          <h2><span>☆</span> 管理人からのお知らせ <span>☆</span></h2>
+          <div class="pickup-inner">
+            <div class="new-stamp" aria-hidden="true">NEW!</div>
+            <div>
+              <p class="pickup-label">商業出版のおしらせ</p>
+              <h3>『実践AI駆動開発』を出版しました！</h3>
+              <p>AIと開発するための設計・レビュー・運用の考え方をまとめた一冊です。</p>
+              <a href="https://nextpublishing.jp/book/19913.html" target="_blank" rel="noopener noreferrer">≫ 出版社の書籍ページを見る</a>
+              <a href="https://news.nextpublishing.jp/news/detail/1642/" target="_blank" rel="noopener noreferrer">≫ 刊行ニュース</a>
             </div>
-          ) : (
-            <div class="book-cover" aria-hidden="true">
-              <span class="book-cover-label">{b.data.event || 'TECH BOOK'}</span>
-              <span class="book-cover-title">{b.data.title}</span>
-              <span class="book-cover-mark"></span>
-            </div>
-          )}
-          <div class="book-info">
-            <p class="meta">{b.data.event}{b.data.year ? ` · ${b.data.year}` : ''}{b.data.status ? ` · ${b.data.status}` : ''}</p>
-            <h3>{b.data.title}{external && <span aria-hidden="true"> ↗</span>}</h3>
-            <p>{b.data.description}</p>
           </div>
-        </a>;
-      })}
-    </div>
-  </section>
+        </section>
 
-  <section class="section">
-    <div class="section-heading">
-      <span class="section-index">05</span>
-      <h2>Connect</h2>
+        <section id="diary" class="retro-section">
+          <h2><span>★</span> 更新りれき <span>★</span></h2>
+          <p class="retro-small">技術記事の新着を自動表示しています。</p>
+          <ul class="news-list">
+            {recent.map(article => (
+              <li>
+                <time datetime={article.data.date.toISOString()}>{article.data.date.toLocaleDateString('ja-JP')}</time>
+                <a href={'/' + article.data.legacySlug + '/'}>{article.data.title}</a>
+                <span class="news-new">NEW</span>
+              </li>
+            ))}
+          </ul>
+          <p class="more-link"><a href="/articles/">≫ 技術日記を全部読む</a></p>
+        </section>
+
+        <section id="program" class="retro-section">
+          <h2><span>★</span> 技術の部屋 <span>★</span></h2>
+          <p>気になるジャンルをクリックしてね。昔のホームページ風だけど、中身はちゃんとエンジニアリング。</p>
+          <div class="topic-board">
+            {topTopics.map(([topic, count]) => (
+              <a href={'/categories/' + taxonomySlug(topic) + '/'}><span class="topic-icon" aria-hidden="true">◆</span> {topic} <small>({count})</small></a>
+            ))}
+            <a class="topic-search" href="/search/">⌕ 記事を検索する</a>
+          </div>
+        </section>
+
+        <section id="works" class="retro-section">
+          <h2><span>★</span> 作品おきば <span>★</span></h2>
+          <p>自分で作ったアプリやOSS。気になるものはご自由にどうぞ。</p>
+          <div class="retro-work-grid">
+            {projects.filter(project => project.data.featured).slice(0, 6).map(project => {
+              const external = isExternal(project.data.href);
+              return (
+                <a class="work-item" href={project.data.href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+                  <span class="folder-icon" aria-hidden="true">▣</span>
+                  <strong>{project.data.title}</strong>
+                  <small>{project.data.description}</small>
+                </a>
+              );
+            })}
+          </div>
+          <p class="more-link"><a href="/projects/">≫ 作品ぜんぶ見る</a></p>
+        </section>
+
+        <section id="bookshelf" class="retro-section">
+          <h2><span>★</span> こぴぺたんの本だな <span>★</span></h2>
+          <p>技術書典や商業出版で出した本たちを並べています。</p>
+          <div class="retro-books">
+            {books.slice(0, 5).map(book => {
+              const href = book.data.href || '/books/';
+              const external = isExternal(href);
+              const cover = book.data.coverImage || (book.data.status ? undefined : techBookFestOgp(href));
+              return (
+                <a href={href} class="retro-book" target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+                  <span class="retro-book-cover">
+                    {cover ? <img src={cover} alt="" loading="lazy" decoding="async" /> : <span class="no-cover" aria-hidden="true">技<br />術<br />書</span>}
+                  </span>
+                  <strong>{book.data.title}</strong>
+                  <small>{book.data.event || 'BOOK'}</small>
+                </a>
+              );
+            })}
+          </div>
+          <p class="more-link"><a href="/books/">≫ 本だなを全部見る</a></p>
+        </section>
+
+        <section id="links" class="retro-section">
+          <h2><span>★</span> リンク集 <span>★</span></h2>
+          <p class="retro-small">当サイトはリンクフリーです。直リンクOK！ 報告は不要です。</p>
+          <div class="retro-link-list">
+            <a href="https://github.com/c-a-p-engineer" target="_blank" rel="noopener noreferrer">[ GitHub ] ソースコードの置き場</a>
+            <a href="https://x.com/c_a_p_engineer" target="_blank" rel="noopener noreferrer">[ X ] こぴぺたんの近況</a>
+            <a href="https://techbookfest.org/organization/5zdy9h5eA5kDzByP9rserV" target="_blank" rel="noopener noreferrer">[ 技術書典 ] こぴみずむの本</a>
+            <a href="/rss.xml">[ RSS ] 更新を追いかける</a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="retro-right" aria-label="おまけとお知らせ">
+        <section class="retro-panel">
+          <h2>★ ごあんない ★</h2>
+          <p class="ascii-flower" aria-hidden="true">☆ﾟ.*･｡ﾟ</p>
+          <p>このサイトは、古き良き「個人ほむぺ」を愛する方向けに装飾をたっぷり盛っています。</p>
+          <p class="side-emphasis">スマホからも見られるよ！</p>
+        </section>
+
+        <section class="retro-panel">
+          <h2>工事中...</h2>
+          <div class="construction" aria-hidden="true">＼ 只今改装中 ／</div>
+          <p>掲示板・チャット・同盟バナーは準備中です。</p>
+          <p>そのうち何か増える……かもしれない。</p>
+        </section>
+
+        <section class="retro-panel secret-panel">
+          <h2>ひみつのへや</h2>
+          <details>
+            <summary>？？？ 開けてみる ？？？</summary>
+            <p>ここまで見つけたあなたは立派なネット老人会員です。</p>
+            <p>隠しページを作るのが楽しかったあの頃を忘れない。</p>
+          </details>
+        </section>
+
+        <section class="retro-panel net-etiquette">
+          <h2>おやくそく</h2>
+          <p>・リンクフリー</p>
+          <p>・転載するときは出典を添えてね</p>
+          <p>・BGM自動再生なし</p>
+          <p>・怪しいポップアップなし</p>
+          <p>・ブラウザを閉じても呪われません</p>
+        </section>
+      </aside>
     </div>
-    <div class="connect-grid">
-      <a class="connect-card" href="https://x.com/c_a_p_engineer" target="_blank" rel="noopener noreferrer">
-        <span><span class="connect-name">X</span><br/><span class="connect-handle">@c_a_p_engineer</span></span>
-        <span aria-hidden="true">↗</span>
-      </a>
-      <a class="connect-card" href="https://github.com/c-a-p-engineer" target="_blank" rel="noopener noreferrer">
-        <span><span class="connect-name">GitHub</span><br/><span class="connect-handle">c-a-p-engineer</span></span>
-        <span aria-hidden="true">↗</span>
-      </a>
+
+    <div class="retro-finale">
+      <p>★ 最後まで見てくれてありがとう ★</p>
+      <p>また遊びにきてね！ (・∀・)ノ</p>
+      <div class="badge-row" aria-hidden="true"><span>LINK FREE</span><span>MADE WITH ♥ &amp; CODE</span><span>平成魂 / 令和技術</span></div>
+      <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">▲ PAGE TOP ▲</a>
     </div>
-  </section>
+  </div>
 </BaseLayout>
 
-<style>
-  .book-promo{display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:center;gap:1.3rem;max-width:850px;margin-top:1.5rem;padding:1.1rem 1.3rem;border:1px solid #c7d2fe;border-radius:16px;background:#eef2ff;color:var(--text);text-decoration:none;transition:border-color .2s,background .2s}
-  .book-promo:hover{border-color:var(--accent);background:#e5eaff;text-decoration:none}
-  .book-promo-cover{display:block;width:112px;max-width:100%;overflow:hidden;border-radius:5px;background:#fff;box-shadow:0 5px 16px rgba(17,24,39,.15)}
-  .book-promo-cover img{display:block;width:100%;height:auto;object-fit:contain}
-  .book-promo-copy{display:flex;flex-direction:column;gap:.2rem;min-width:0}
-  .book-promo-kicker{color:#4338ca;font-size:.75rem;font-weight:800;letter-spacing:.03em}
-  .book-promo-copy strong{font-size:1.13rem;line-height:1.45}
-  .book-promo-copy>span:last-child{color:#475467;font-size:.88rem}
-  .book-promo-cta{flex-shrink:0;color:#4338ca;font-weight:800;white-space:nowrap}
-  .book-promo-news{max-width:850px;margin:.55rem 0 0;font-size:.83rem;text-align:right}
-  .book-promo-news a{color:#4338ca;font-weight:700;text-underline-offset:.2em}
-  .section-lead{max-width:46rem;margin:-.35rem 0 1.35rem;color:#596273}
-  .home-article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
-  .topic-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}
-  .topic-links a{display:flex;min-width:0;flex-direction:column;gap:.2rem;padding:1rem 1.05rem;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.82)}
-  .topic-links a:hover{border-color:#ccd1da;background:#fff;text-decoration:none}
-  .topic-links span{font-weight:800}
-  .topic-links small{color:var(--muted)}
-
-  .book-cover-image{position:relative;aspect-ratio:1200/630;padding:0;border-color:var(--line-strong);background:#fff}
-  .book-cover-image img{display:block;width:100%;height:100%;object-fit:cover}
-  .book-cover-publisher{background:#eef2ff}
-  .book-cover-publisher img{object-fit:contain;padding:.4rem}
-  .book-cover-badge{position:absolute;top:.65rem;left:.65rem;padding:.22rem .5rem;border-radius:999px;background:rgba(17,19,24,.82);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.06em;backdrop-filter:blur(8px)}
-  @media(max-width:940px){
-    .home-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .topic-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+<style is:global>
+  body.retro-mode {
+    --accent: #b30091;
+    --line: #ccabc9;
+    --line-strong: #a885aa;
+    --text: #30204e;
+    --muted: #67557c;
+    --accent-soft: #fff0fa;
+    background-color: #10134e;
+    background-image:
+      radial-gradient(circle at 12px 12px, #eabaff 1px, transparent 2px),
+      radial-gradient(circle at 38px 41px, #6a9cfa 1px, transparent 2px),
+      linear-gradient(135deg, #151a58, #242064 52%, #16174d);
+    background-size: 74px 74px, 103px 103px, auto;
+    color: #30204e;
+    font-family: "MS PGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif;
   }
-  @media(max-width:640px){
-    .book-promo{grid-template-columns:84px minmax(0,1fr);align-items:center;gap:.75rem;padding:1rem}
-    .book-promo-cover{width:84px}
-    .book-promo-copy strong{font-size:1rem}
-    .book-promo-cta{grid-column:2;justify-self:start}
-    .home-article-grid,.topic-links{grid-template-columns:1fr}
+  body.retro-mode a:focus-visible,
+  body.retro-mode button:focus-visible,
+  body.retro-mode summary:focus-visible { outline: 3px solid #ec008c; outline-offset: 3px; }
+  body.retro-mode .site-header {
+    position: static;
+    max-width: 1020px;
+    margin: 16px auto 0;
+    padding: 10px 15px;
+    border: 4px ridge #f6c5fa;
+    background: #fff4fa;
+    backdrop-filter: none;
+    box-shadow: 5px 5px 0 #090c33;
+  }
+  body.retro-mode .brand { color: #87046c; font-family: Georgia, serif; }
+  body.retro-mode .brand::before { content: "★"; background: #b30091; border-radius: 0; color: #fff; }
+  body.retro-mode .site-header nav a { color: #640e72; border-radius: 0; text-decoration: underline; }
+  body.retro-mode .site-header nav a:hover { color: #d7008a; background: #ffe2f7; }
+  body.retro-mode main { max-width: 1040px; min-height: 0; margin: 0 auto; padding: 0 10px; }
+  body.retro-mode > footer {
+    max-width: 1020px;
+    margin: 0 auto 18px;
+    padding: 15px;
+    border: 4px ridge #f6c5fa;
+    background: #fff4fa;
+    color: #563960;
+  }
+  @media (max-width: 820px) {
+    body.retro-mode .site-header { margin-top: 8px; }
+    body.retro-mode .site-header nav { overflow-x: auto; }
+  }
+</style>
+
+<style>
+  .retro-page { margin: 10px 0 12px; border: 6px ridge #ffa2e1; background: #fff9ec; box-shadow: 7px 9px 0 #080a38; font-size: .95rem; line-height: 1.7; }
+  .retro-page a { color: #173da5; text-decoration: underline; text-underline-offset: 2px; }
+  .retro-page a:hover { color: #dc0b82; }
+  .retro-topline { display: flex; justify-content: space-between; gap: 10px; padding: 4px 12px; background: #30106c; color: #fff7b5; font-size: .74rem; letter-spacing: .03em; }
+  .retro-masthead { position: relative; overflow: hidden; padding: 32px 15px 22px; border-bottom: 5px double #eb68b3; background: repeating-linear-gradient(135deg,#ffe6f5 0 13px,#fff2fb 13px 26px); text-align: center; }
+  .masthead-stickers { display: flex; justify-content: space-around; position: absolute; inset: 0; align-items: center; color: #ed4ba0; font-size: clamp(2rem,7vw,5rem); opacity: .3; pointer-events: none; }
+  .retro-kicker { position: relative; margin: 0 0 8px; color: #80177b; font-weight: 800; letter-spacing: .08em; }
+  .retro-masthead h1 { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0; max-width: none; margin: 0; line-height: 1.1; letter-spacing: .035em; font-weight: 900; text-shadow: 3px 3px 0 #fff, 6px 6px 0 #ffc2e5; }
+  .retro-name { color: #5c2593; font-size: clamp(1.65rem, 4.8vw, 3.2rem); }
+  .retro-home { color: #e6007d; font-size: clamp(2.1rem, 7vw, 5rem); }
+  .retro-subtitle { position: relative; margin: 14px 0 12px; font-weight: 800; color: #453088; }
+  .retro-welcome-strip { display: inline-block; position: relative; max-width: 100%; padding: 3px 15px; border: 2px dashed #e1389b; background: #fffdf2; color: #8a2261; font-size: .86rem; }
+  .sparkle { color: #f33c84; animation: pulse 1.5s steps(2,end) infinite; }
+  .retro-marquee { overflow: hidden; border-top: 2px solid #fff; border-bottom: 2px solid #6a348b; background: #fff3b8; color: #a40070; font-weight: 800; font-size: .8rem; white-space: nowrap; }
+  .retro-marquee span { display: inline-block; padding: 5px 0; padding-left: 100%; animation: scroll-left 26s linear infinite; }
+  .retro-marquee:hover span { animation-play-state: paused; }
+  .retro-local-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; padding: 10px; border-bottom: 4px double #ad5aa4; background: #ebd8ff; }
+  .retro-local-nav a { display: inline-block; min-width: 94px; padding: 5px 9px; border: 2px outset #fff; background: #fff1fa; color: #7c1767; text-align: center; font-weight: 800; text-decoration: none; box-shadow: 2px 2px 0 #b58ac1; }
+  .retro-local-nav a:hover { border-style: inset; background: #ffdbef; color: #8d115c; }
+  .retro-columns { display: grid; grid-template-columns: 175px minmax(0,1fr) 170px; align-items: start; gap: 10px; padding: 12px 10px; }
+  .retro-left, .retro-right { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .retro-panel { padding: 9px; border: 3px double #c371a8; background: #fff4fa; overflow-wrap: anywhere; }
+  .retro-panel h2 { margin: -9px -9px 10px; padding: 4px 5px; background: #a8449c; color: #fff; font-size: .82rem; text-align: center; letter-spacing: .04em; }
+  .retro-panel p { margin: 7px 0; font-size: .8rem; }
+  .counter-box { text-align: center; background: #fffde8; }
+  .counter-label { margin: 2px 0!important; }
+  .counter-digits { display: inline-block; padding: 2px 8px; border: 3px inset #ab8c95; background: #151421; color: #e6fa46; font: 800 1.25rem/1.6 "Courier New", monospace; letter-spacing: .11em; }
+  .counter-note { color: #72536a; font-size: .68rem!important; }
+  .side-menu a { display: block; padding: 5px 4px; border-bottom: 1px dotted #d8b8d2; color: #5f1689; font-size: .82rem; font-weight: 700; }
+  .side-menu a:hover { background: #ffe1f4; }
+  .profile-avatar { color: #711a84; font: 900 1.55rem/1.5 monospace!important; text-align: center; white-space: nowrap; }
+  .profile-avatar span { margin-left: 3px; }
+  .profile-box strong { color: #9a1483; }
+  .profile-box > a { display: block; padding-top: 5px; text-align: right; font-size: .78rem; }
+  .retro-banners { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .mini-banner { display: grid; place-items: center; min-height: 42px; padding: 2px; border: 2px outset white; color: white; font: 700 .55rem/1.15 "Courier New",monospace; text-align: center; }
+  .mini-banner b { font-size: .65rem; }
+  .bn-purple { background: linear-gradient(120deg,#36145d,#a315be); }
+  .bn-blue { background: linear-gradient(120deg,#063b7a,#2484d4); }
+  .bn-green { background: linear-gradient(120deg,#14533b,#379363); }
+  .bn-orange { background: linear-gradient(120deg,#ae3202,#f59a2f); }
+  .retro-main { min-width: 0; }
+  .retro-section { margin: 0 0 13px; padding: 12px 14px 15px; border: 3px double #a56ca0; background: #fffdfa; }
+  .retro-section h2 { margin: -12px -14px 12px; padding: 7px 12px; border-bottom: 2px solid #d96eac; background: linear-gradient(90deg,#fee1ef,#eee1ff); color: #8d0e7c; font-size: 1.14rem; letter-spacing: .05em; }
+  .retro-section h2 span { color: #d31499; }
+  .retro-section p { margin: 9px 0; }
+  .greeting { background: #fffef2; }
+  .greeting-big { color: #d00675; font-weight: 800; font-size: 1.04rem; text-align: center; }
+  .pink-note { padding: 6px 8px; border-left: 4px solid #e93e97; background: #fff0f8; font-size: .82rem; }
+  .pickup-inner { position: relative; display: grid; grid-template-columns: 56px 1fr; gap: 10px; padding: 11px 9px; border: 2px dashed #ee8aa7; background: #fff8db; }
+  .new-stamp { align-self: start; padding: 4px 2px; transform: rotate(-7deg); border: 2px solid #cf0071; color: #cf0071; text-align: center; font-weight: 900; font-size: .85rem; }
+  .pickup-label { margin: 0!important; color: #9f3974; font-size: .76rem; font-weight: 800; }
+  .pickup-inner h3 { margin: 0; color: #7f075f; font-size: 1.06rem; }
+  .pickup-inner p { font-size: .83rem; }
+  .pickup-inner a { display: inline-block; margin: 2px 12px 2px 0; font-size: .84rem; font-weight: 700; }
+  .retro-small { color: #65537c; font-size: .82rem; }
+  .news-list { margin: 0; padding: 0; list-style: none; }
+  .news-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 9px; padding: 7px 2px; border-bottom: 1px dotted #c9a3c9; font-size: .86rem; }
+  .news-list time { flex: 0 0 auto; color: #726178; font: 700 .78rem monospace; }
+  .news-list a { flex: 1 1 200px; min-width: 0; }
+  .news-new { padding: 0 5px; background: #ec0e78; color: #fff; font: 800 .62rem/1.5 monospace; transform: rotate(-3deg); }
+  .more-link { margin-top: 11px!important; text-align: right; font-size: .86rem; font-weight: 700; }
+  .topic-board { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 5px; margin-top: 14px; }
+  .topic-board a { padding: 6px 7px; border: 1px dashed #bc8eb7; background: #fff5fc; font-size: .82rem; font-weight: 700; }
+  .topic-board a:hover { background: #fbe2fd; }
+  .topic-icon { color: #d21588; }
+  .topic-board small { color: #75607a; font-size: .72rem; }
+  .topic-board .topic-search { background: #fff1c6; }
+  .retro-work-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .work-item { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px; border: 2px outset #e8c8ea; background: #fff9fd; color: #243a8d!important; text-decoration: none!important; }
+  .work-item:hover { border-style: inset; background: #f4edff; }
+  .folder-icon { font-size: 1.5rem; line-height: 1; color: #d69e25; }
+  .work-item strong { font-size: .9rem; text-decoration: underline; }
+  .work-item small { color: #655676; font-size: .75rem; line-height: 1.55; }
+  .retro-books { display: grid; grid-template-columns: repeat(auto-fit,minmax(95px,1fr)); gap: 12px; }
+  .retro-book { min-width: 0; text-align: center; text-decoration: none!important; }
+  .retro-book-cover { display: grid; place-items: center; overflow: hidden; height: 112px; margin-bottom: 7px; border: 3px ridge #d9b1d4; background: linear-gradient(135deg,#fff5eb,#eee2ff); }
+  .retro-book-cover img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .no-cover { font: 800 1.3rem/1.1 serif; color: #7b1c84; }
+  .retro-book strong { display: block; font-size: .78rem; line-height: 1.45; text-decoration: underline; overflow-wrap: anywhere; }
+  .retro-book small { display: block; margin-top: 4px; color: #886b7d; font-size: .65rem; }
+  .retro-link-list { display: grid; gap: 6px; }
+  .retro-link-list a { padding: 4px 5px; border-bottom: 1px dotted #dec0da; }
+  .ascii-flower { color: #e6379d; font-size: 1.4rem!important; text-align: center; }
+  .side-emphasis { color: #ad127f; font-weight: 800; text-align: center; }
+  .construction { padding: 9px 3px; border: 2px dashed #b38c18; background: repeating-linear-gradient(45deg,#ffe875 0 8px,#ffe875 8px 12px,#fff7b0 12px 22px); color: #683413; font-size: .84rem; font-weight: 900; text-align: center; }
+  .secret-panel summary { cursor: pointer; color: #6230a5; font-size: .78rem; font-weight: 800; text-decoration: underline; }
+  .secret-panel details p { padding: 5px 0; border-top: 1px dotted #ddaed2; }
+  .net-etiquette p { margin: 5px 0; }
+  .retro-finale { padding: 17px 15px 25px; border-top: 5px double #df7eac; background: #ffe4f1; color: #852771; text-align: center; }
+  .retro-finale p { margin: 3px 0; font-weight: 800; }
+  .badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin: 12px auto; }
+  .badge-row span { padding: 3px 9px; border: 2px outset white; background: #4e277f; color: #fff; font: 800 .65rem/1.2 monospace; }
+  .retro-finale a { display: inline-block; font-size: .78rem; }
+  @keyframes scroll-left { to { transform: translateX(-100%); } }
+  @keyframes pulse { 50% { opacity: .3; } }
+  @media (max-width: 940px) {
+    .retro-columns { grid-template-columns: 170px minmax(0,1fr); }
+    .retro-right { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  }
+  @media (max-width: 640px) {
+    .retro-topline { flex-direction: column; gap: 0; text-align: center; }
+    .retro-page { border-width: 4px; }
+    .retro-columns { grid-template-columns: 1fr; gap: 9px; padding: 9px; }
+    .retro-left { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+    .retro-left .side-menu { grid-column: 1 / -1; order: -1; }
+    .retro-banners { align-content: start; }
+    .retro-main { grid-row: 2; }
+    .retro-right { grid-column: 1; grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .retro-work-grid { grid-template-columns: 1fr; }
+    .retro-masthead { padding: 26px 10px 20px; }
+  }
+  @media (max-width: 430px) {
+    .retro-local-nav a { min-width: 0; flex: 1 1 28%; padding-inline: 4px; font-size: .78rem; }
+    .retro-left, .retro-right, .topic-board { grid-template-columns: 1fr; }
+    .retro-section { padding: 12px 10px; }
+    .retro-section h2 { margin: -12px -10px 12px; }
+    .retro-masthead .retro-subtitle { font-size: .74rem; }
+    .pickup-inner { grid-template-columns: 1fr; }
+    .new-stamp { width: 55px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .retro-marquee span, .sparkle { animation: none!important; }
+    .retro-marquee span { padding-left: 12px; white-space: normal; }
   }
 </style>

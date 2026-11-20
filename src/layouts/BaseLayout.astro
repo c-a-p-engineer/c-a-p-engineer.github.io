@@ -10,6 +10,7 @@ interface Props {
   tags?: string[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   robots?: string;
+  theme?: 'retro';
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   tags = [],
   jsonLd,
   robots,
+  theme,
 } = Astro.props as Props;
 
 const siteOrigin = Astro.site ?? new URL(Astro.url.origin);
@@ -66,7 +68,7 @@ const jsonLdText = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : un
     {jsonLdText && <script type="application/ld+json" set:html={jsonLdText} />}
     <title>{title}</title>
   </head>
-  <body>
+  <body class={theme === 'retro' ? 'retro-mode' : undefined}>
     <header class="site-header">
       <a class="brand" href="/">Copy & Paste Engineer</a>
       <nav aria-label="Global navigation">
